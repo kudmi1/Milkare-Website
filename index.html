@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Milkare</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,400;1,1000&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		/>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
+		<script>
+			var options = {
+				animate: true,
+				patternWidth: 100,
+				patternHeight: 100,
+				grainOpacity: 0.05,
+				grainDensity: 1,
+				grainWidth: 1,
+				grainHeight: 1,
+			}
+
+			grained("#root", options)
+		</script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+
+		<!-- <script src="./src/zoom.mini.js" ></script> -->
+	</body>
+</html>
