@@ -70,7 +70,7 @@ img {
   padding: var(--_panel-padding);
   padding-right: calc(var(--_panel-padding) * 5);
   flex-basis: calc((var(--_panel-padding) * 3.5) + var(--_button-size));
-  border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 10);
+  /* border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 10); */
   @apply relative isolate overflow-hidden transition-all duration-500
 }
 /* .accordion_panel:has([aria-expanded="true"]) {
@@ -79,8 +79,7 @@ img {
 
 .accordion_panel {
   cursor: pointer;
-  filter: brightness(65%);
-  box-shadow: 3px 2px 4px black;
+  filter: brightness(65%) drop-shadow(0px 3px 4px black);
   /* transform: rotateZ(10deg); */
 }
 
@@ -88,17 +87,17 @@ img {
   transition: 0.1s;
   outline-offset: 3px;
   outline: 3px solid violet;
-  filter: drop-shadow(1px 1px 1px black);
+  filter: drop-shadow(0px 4px 6px black);
 }
 
 .accordion_panel:hover{
-  filter: drop-shadow(1px 1px 1px black);
+  filter: drop-shadow(0px 4px 6px black);
 }
 
 
 .accordion_panel.expanded {
   flex-basis: clamp(20rem, 40vh, 20rem);
-  filter: brightness(100%);
+  filter: brightness(100%) drop-shadow(0px 4px 6px black);
   flex-grow: 1;
   
 }
@@ -137,8 +136,21 @@ span {
 }
 
 .grid-block {
-  box-shadow: 3px 3px 2px black;
+  /* box-shadow: 3px 2px 2px #212121; */
+  filter: drop-shadow(0px 2px 4px black);
   /* @apply lg:h-[45vh] w-[35vw] h-[20vh] bg-black overflow-hidden */
+}
+
+.grid-block:hover {
+  /* box-shadow: 0px 0px 0px 3px #212121; */
+
+  /* transform: translate(2px, 3px); */
+}
+
+
+.grid-block:hover > .zoom-image {
+  /* transform: translateY(-4rem); */
+
 }
 
 .grid-block.loaded > .grid-image {
@@ -154,16 +166,21 @@ span {
   opacity: 1;
 }
 
+.inner-text {
+  transition: transform 300ms, opacity 300ms;
+}
+
 .grid-block:hover .inner-text {
+  /* transition: transform 300ms, opacity 0ms; */
+  transform: translate(-50%, -4rem );
   opacity: 1;
 }
 
-.grid-images {
+/* .grid-images {
 	grid-template-columns: repeat(3, [col] 1fr);
 	grid-template-rows: repeat(4, [row] 1fr);
 	grid-gap: 15px;
-  /* justify-content: center; */
-}
+} */
 
 .grid-image {
   
@@ -194,23 +211,30 @@ span {
   grid-column: span 2;
 }
 
-.medium-image4 {
-  grid-column: span 2;
 
-}
-
-.medium-image5 {
-  /* grid-column: span 2; */
+.medium-image4,
+.medium-image5,
+.medium-image6,
+.medium-image7,
+.medium-image9,
+.medium-image10 {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+/* .medium-image4 {
+  grid-column: span 2;
+
+}
+
+
 
 .medium-image10{
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 /* .div-acc {
   background-color: #32af9f;
@@ -247,14 +271,15 @@ span {
   /* background: rgb(33,33,33);
   background: linear-gradient(15deg, rgb(115,102,189) 0%, rgb(219, 109, 102) 40%, rgba(33,33,33,0.7) 100%); */
   background-color:#ff99ac;
-background-image:
-radial-gradient(at 13% 45%, hsla(217,80%,61%,1) 0px, transparent 50%),
-radial-gradient(at 76% 82%, hsla(162,77%,61%,1) 0px, transparent 50%),
-radial-gradient(at 4% 71%, hsla(97,65%,79%,1) 0px, transparent 50%),
-radial-gradient(at 66% 87%, hsla(110,66%,77%,1) 0px, transparent 50%),
-radial-gradient(at 72% 65%, hsla(69,78%,79%,1) 0px, transparent 50%),
-radial-gradient(at 66% 59%, hsla(320,68%,76%,1) 0px, transparent 50%),
-radial-gradient(at 45% 45%, hsla(247,94%,61%,1) 0px, transparent 50%);
+  background-image:
+  radial-gradient(at 13% 45%, hsla(217,80%,61%,1) 0px, transparent 50%),
+  radial-gradient(at 76% 82%, hsla(162,77%,61%,1) 0px, transparent 50%),
+  radial-gradient(at 4% 71%, hsla(97,65%,79%,1) 0px, transparent 50%),
+  radial-gradient(at 66% 87%, hsla(110,66%,77%,1) 0px, transparent 50%),
+  radial-gradient(at 72% 65%, hsla(69,78%,79%,1) 0px, transparent 50%),
+  radial-gradient(at 66% 59%, hsla(320,68%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 45%, hsla(247,94%,61%,1) 0px, transparent 50%);
+  /* background-color: #8b7979; */
 }
 
 .header-standart {
@@ -266,13 +291,13 @@ radial-gradient(at 45% 45%, hsla(247,94%,61%,1) 0px, transparent 50%);
   font-family: 'Cinzel', serif;
   /* font-style: italic; */
   /* text-shadow: 1px 2px 0px black;  */
-  color: transparent;
+  /* color: transparent;
   -webkit-text-stroke: 0px white;
   mix-blend-mode: difference;
   background-image: url("images/purplegirl.webp");
   background-position: center;
   background-clip: text;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 

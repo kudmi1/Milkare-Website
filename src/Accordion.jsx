@@ -16,7 +16,7 @@ function Panel1({ handlePanelClick, expandedPanel }) {
 				role="region"
 			>
 				<button
-					className="accordion_trigger left-3 bottom-0"
+					className="accordion_trigger bottom-0 left-3"
 					aria-controls="panel1_content"
 					aria-expanded="true"
 				>
@@ -50,7 +50,7 @@ function Panel2({ handlePanelClick, expandedPanel }) {
 				role="region"
 			>
 				<button
-					className="accordion_trigger left-3 bottom-0"
+					className="accordion_trigger bottom-0 left-3"
 					aria-controls="panel2_content"
 					aria-expanded="false"
 				>
@@ -77,7 +77,7 @@ function Panel3({ handlePanelClick, expandedPanel }) {
 		>
 			<h2 id="panel3_heading">
 				<button
-					className="accordion_trigger left-3 bottom-0"
+					className="accordion_trigger bottom-0 left-3"
 					aria-controls="panel3_content"
 					aria-expanded="false"
 				>
@@ -118,7 +118,7 @@ function Panel4({ handlePanelClick, expandedPanel }) {
 				role="region"
 			>
 				<button
-					className="accordion_trigger left-3 bottom-0"
+					className="accordion_trigger bottom-0 left-3"
 					aria-controls="panel4_content"
 					aria-expanded="false"
 				>
@@ -173,7 +173,6 @@ function Panel5({ handlePanelClick, expandedPanel }) {
 	)
 }
 
-
 export default function Accordion() {
 	const [expandedPanel, setExpandedPanel] = useState(1)
 
@@ -186,9 +185,13 @@ export default function Accordion() {
 	}
 
 	return (
-		<div className="accordion w-full max-w-5xl flex flex-col items-center">
-			
-			<div className="flex w-full flex-col gap-4 md:flex-row md:h-[700px] h-[70vh]">
+		<div className="accordion flex w-full max-w-7xl flex-col items-center border-t-2 border-[#212121] pt-24 md:px-14 lg:px-28  ">
+			<div className="absolute top-12 flex h-24 w-1/2  items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] md:w-1/3 lg:top-16 lg:h-16 ">
+				<h1 className="header-section my-4  select-none text-center text-4xl">
+					Recent Works
+				</h1>
+			</div>
+			<div className="flex h-[70vh] w-full flex-col gap-4 md:h-[700px] md:flex-row">
 				<Panel1
 					handlePanelClick={() => handlePanelClick(1)}
 					expandedPanel={expandedPanel}
