@@ -1,6 +1,8 @@
 import "react-medium-image-zoom/dist/styles.css"
 import "photoswipe/dist/photoswipe.css"
 import { Gallery, Item } from "react-photoswipe-gallery"
+import { useState, useEffect } from "react"
+import SpeedPaints from "./SpeedPaints"
 
 const names = [
 	"milka",
@@ -19,21 +21,36 @@ const names = [
 
 const options = {
 	zoom: false,
-	padding: { top: 20, bottom: 20, right: 20, left: 20 },
+	// padding: { top: 20, bottom: 20, right: 20, left: 20 },
 }
 
-const imagesPath = names.map((name) => {
-	const img = new Image()
-	img.src = `https://ik.imagekit.io/kudmi/images/${name}.webp`
-	return {
-		path: `https://ik.imagekit.io/kudmi/images/${name}.webp`,
-		width: img.width,
-		height: img.height,
-		sm: `images-sm/${name}-sm.jpeg`,
-	}
-})
-
 export default function LightBoxImages() {
+	const [imagesPath, setImagesPath] = useState([])
+
+	useEffect(() => {
+		const loadImages = async () => {
+			const images = await Promise.all(
+				names.map((name) => {
+					return new Promise((resolve) => {
+						const img = new Image()
+						img.onload = () => {
+							resolve({
+								path: `https://ik.imagekit.io/kudmi/images/${name}.webp`,
+								width: img.width,
+								height: img.height,
+								sm: `images-sm/${name}-sm.jpeg`,
+							})
+						}
+						img.src = `https://ik.imagekit.io/kudmi/images/${name}.webp`
+					})
+				})
+			)
+			setImagesPath(images)
+		}
+
+		loadImages()
+	}, [])
+
 	const uiElements = [
 		{
 			name: "bulletsIndicator",
@@ -107,17 +124,18 @@ export default function LightBoxImages() {
 	return (
 		<>
 			<div className="mediumWrapper relative flex flex-col items-center justify-center pt-24">
-				<div className="absolute top-16 flex h-16 w-1/3 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] ">
+				<div className="absolute top-16 flex h-16 w-1/2 xl:w-1/3 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] ">
 					<h1 className="header-section my-4 select-none text-center text-4xl ">
 						Gallery
 					</h1>
 				</div>
-				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-t-2 border-[#212121] px-4 pt-24 md:grid-cols-2 md:px-14 md:p-14 lg:grid-cols-3 lg:grid-rows-4">
+				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-t-2 border-[#212121] px-4 pt-24 md:grid-cols-2 md:p-14 md:px-14 lg:grid-cols-2 lg:grid-rows-4 xl:grid-cols-3">
 					<Gallery options={options} uiElements={uiElements}>
 						{imagesPath.map((image, index) => (
 							<div key={index}>
 								<div
-									className={`grid-block relative h-96 overflow-hidden medium-block${index} cursor-pointer transition-all duration-300`}
+									className={`grid-block relative h-96 overflow-hidden md:h-[300px] lg:h-[340px] xl:w-96 medium-block${index} cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all
+									duration-300`}
 								>
 									<Item
 										original={image.path}
@@ -128,15 +146,16 @@ export default function LightBoxImages() {
 										{({ ref, open }) => (
 											<img
 												ref={ref}
+												alt={names[index]}
 												onClick={open}
 												src={image.path}
-												className={`zoom-image w-full object-cover medium-image${index} transition-all duration-300 `}
+												className={`zoom-image w-full object-cover medium-image${index} transition-all duration-300`}
 												loading="lazy"
 											/>
 										)}
 									</Item>
 
-									<div className="inner-text absolute left-1/2 -translate-x-1/2 bottom-[-4rem] z-20 mb-2 h-[4rem] rounded-2xl bg-[#212121] p-4 opacity-0 ">
+									<div className="inner-text absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121] p-4 opacity-0 px-24 md:px-12 xl:px-4 ">
 										<h2 className="text-center text-2xl font-semibold leading-tight text-white ">
 											{names[index]}
 										</h2>

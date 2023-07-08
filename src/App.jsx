@@ -7,13 +7,15 @@ import GridImages from "./GridImages"
 import Socials from "./Socials"
 import MediumImages from "./MediumImages"
 import LightBoxImages from "./LightBoxImages"
+import SpeedPaints from "./SpeedPaints"
+import SpeedPaint from "./SpeedPaint"
 
 function App() {
 	return (
-		<div className="App" >
+		<div className="App">
 			<Header />
 			{/* <Socials /> */}
-			
+
 			<BigBanner />
 
 			{/* <div className="border-t-2 border-[#de928d] bg-[url('images/blurry-gradient-4.svg')] bg-cover"> */}
@@ -39,7 +41,18 @@ function App() {
 						<LightBoxImages />
 					</div>
 				</div>
-				<Footer />
+
+				{/* <div>
+					<SpeedPaints />
+				</div> */}
+
+				<div>
+					<SpeedPaint />
+				</div>
+
+				<div className="mt-12 md:mt-0">
+					<Footer />
+				</div>
 			</div>
 		</div>
 	)

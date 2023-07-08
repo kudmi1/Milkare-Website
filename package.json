@@ -18,8 +18,10 @@
     "react-draggable": "^4.4.5",
     "react-lazy-load-image-component": "^1.6.0",
     "react-medium-image-zoom": "^5.1.6",
+    "react-modal-video": "^2.0.1",
     "react-photoswipe-gallery": "^2.2.7",
-    "smooth-scrollbar": "^8.8.4"
+    "smooth-scrollbar": "^8.8.4",
+    "styled-react-modal": "^3.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

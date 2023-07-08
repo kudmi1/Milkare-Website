@@ -107,12 +107,12 @@ img {
   transition: 500ms 500ms;
 }
 
-span {
+.panel-span {
   opacity: 0;
   transition: opacity 500ms;
 }
 
-.accordion_panel.expanded .accordion_trigger > span{
+.accordion_panel.expanded .accordion_trigger > .panel-span{
   opacity: 1;
   /* transform: translateX(5rem); */
   transition: opacity 500ms;
@@ -164,6 +164,15 @@ span {
 
 .grid-block:hover .inner-shadow{
   opacity: 1;
+}
+
+.grid-block1,
+.grid-block2 {
+  padding-top: 224px;
+}
+
+.grid-block3 {
+  padding-top: 180px;
 }
 
 .inner-text {
@@ -219,7 +228,7 @@ span {
 .medium-image9,
 .medium-image10 {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -445,4 +454,13 @@ ion-icon {
 .profile-pic {
   /* outline-offset: 2px; */
   outline: 3px solid #212121;
+}
+
+.modal.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.modal-content.active {
+  transform: scale(1);
 }

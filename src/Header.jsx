@@ -59,8 +59,8 @@ export default function Header() {
 
 	return (
 		<header
-			className={`header bg-gradient-to-tr from-[#212121d2] to-[#212121] backdrop-blur-[10px]
-			h-20 fixed z-50 flex w-full justify-center transition-all duration-700
+			className={`header fixed z-50 flex h-20 w-full
+			 justify-center bg-gradient-to-tr from-[#212121d2] to-[#212121] opacity-100 backdrop-blur-[10px] transition-all duration-700
       ${show ? "top-0" : "-top-40 h-20"}`}
 		>
 			<div className="header-standart grid w-full max-w-7xl items-center justify-between bg-transparent">
@@ -70,12 +70,12 @@ export default function Header() {
         transition-all duration-300`}
 					>
 						<li className="header-item about transition-all duration-300">
-							<a href="">About</a>
+							<a href="http://яваскрипт.укр/%D0%BC%D0%B5%D0%BD%D1%8E">About</a>
 						</li>
 						<li className="header-item offer transition-all duration-300">
-							<a href="">Work</a>
+							<a href="http://яваскрипт.укр/%D0%BC%D0%B5%D0%BD%D1%8E">Work</a>
 						</li>
-						<div className="dropdown relative " data-dropdown ref={dropdownRef}>
+						<li className="dropdown relative " data-dropdown ref={dropdownRef}>
 							<button
 								className="dropdown-btn header-item contact flex transition-all duration-300"
 								data-dropdown-button
@@ -83,7 +83,7 @@ export default function Header() {
 								Contact
 								<img src="images/chevron.png" alt="" className="chevron" />
 							</button>
-							<div className="dropdown-menu flex flex-col rounded-lg bg-gradient-to-tr from-[#212121d2] to-[#212121] backdrop-blur-[10px] p-3 shadow-sm shadow-black ">
+							<div className="dropdown-menu flex flex-col rounded-lg bg-gradient-to-tr from-[#212121d2] to-[#212121] p-3 shadow-sm shadow-black backdrop-blur-[10px] ">
 								<a
 									href="https://www.instagram.com/milkareart/"
 									target={"_blank"}
@@ -109,7 +109,7 @@ export default function Header() {
 									Gmail
 								</a>
 							</div>
-						</div>
+						</li>
 					</ul>
 				</nav>
 				<div className="flex items-center justify-center">
