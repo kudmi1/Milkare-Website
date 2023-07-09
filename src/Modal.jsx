@@ -24,6 +24,10 @@ export default function Modal({
 		const handleKeyDown = (event) => {
 			if (event.key === "Escape") {
 				setActive(false)
+			} else if (event.key === " ") {
+				event.preventDefault()
+				handlePause()
+				setButtonState(true)
 			}
 		}
 
@@ -48,14 +52,14 @@ export default function Modal({
 	useEffect(() => {
 		let timeoutId
 
-		if (buttonState) {
+		if (buttonState && !paused) {
 			timeoutId = setTimeout(() => {
 				setButtonState(false)
 			}, 2000)
 		}
 
 		return () => clearTimeout(timeoutId)
-	}, [buttonState])
+	}, [buttonState, paused])
 
 	return (
 		<div
@@ -142,7 +146,9 @@ export default function Modal({
 						</svg>
 					)}
 				</button>
-				{children}
+				{children
+				
+				}
 			</div>
 		</div>
 	)

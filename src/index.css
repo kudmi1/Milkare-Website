@@ -311,21 +311,21 @@ img {
 
 
 .header-top {
-  font-family: "MyFont", sans-serif;
-  /* font-family: 'Cinzel', serif; */
+  /* font-family: "MyFont", sans-serif; */
+  font-family: 'Cinzel', serif;
   /* text-shadow: 3px 3px 2px #0e0a13; */
-  color: transparent;
-  -webkit-text-stroke: 1.5px white;
-  mix-blend-mode: difference;
+  /* color: transparent; */
+  /* -webkit-text-stroke: 1.5px white; */
+  /* mix-blend-mode: difference; */
   /* background-image: url("images/4.jpg"); */
-  background-clip: text;
-  -webkit-background-clip: text;
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
 }
 
 .header-top:hover {
   /* color: rgb(147, 112, 216); */
   color: rgb(115,102,189);
-  -webkit-text-stroke: 1.5px transparent;
+  /* -webkit-text-stroke: 1.5px transparent; */
 
 }
 

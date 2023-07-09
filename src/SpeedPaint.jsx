@@ -54,7 +54,7 @@ export default function SpeedPaint() {
 				onClick={() => setModalActive(true)}
 			>
 				<img
-					src="https://ik.imagekit.io/kudmi/images/Aqua.webp"
+					src="/images-sm/video-thumb.webp"
 					className="thumb-img h-full w-full cursor-pointer object-cover"
 					alt="Aqua thumbnail"
 				/>

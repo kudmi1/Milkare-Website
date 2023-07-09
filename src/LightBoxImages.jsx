@@ -2,7 +2,7 @@ import "react-medium-image-zoom/dist/styles.css"
 import "photoswipe/dist/photoswipe.css"
 import { Gallery, Item } from "react-photoswipe-gallery"
 import { useState, useEffect } from "react"
-import SpeedPaints from "./SpeedPaints"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const names = [
 	"milka",
@@ -10,18 +10,17 @@ const names = [
 	"purplegirl",
 	"Lucy",
 	"kokomi",
-	"Makima",
+	"Makima2",
 	"alhaitam",
 	"mybirthday",
 	"komi",
 	"himeno",
-	"pochita",
+	"pochita2",
 	"2B_9S",
 ]
 
 const options = {
 	zoom: false,
-	// padding: { top: 20, bottom: 20, right: 20, left: 20 },
 }
 
 export default function LightBoxImages() {
@@ -38,7 +37,7 @@ export default function LightBoxImages() {
 								path: `https://ik.imagekit.io/kudmi/images/${name}.webp`,
 								width: img.width,
 								height: img.height,
-								sm: `images-sm/${name}-sm.jpeg`,
+								sm: `images-sm/${name}-sm.webp`,
 							})
 						}
 						img.src = `https://ik.imagekit.io/kudmi/images/${name}.webp`
@@ -47,10 +46,8 @@ export default function LightBoxImages() {
 			)
 			setImagesPath(images)
 		}
-
 		loadImages()
 	}, [])
-
 	const uiElements = [
 		{
 			name: "bulletsIndicator",
@@ -134,7 +131,7 @@ export default function LightBoxImages() {
 						{imagesPath.map((image, index) => (
 							<div key={index}>
 								<div
-									className={`grid-block relative h-96 overflow-hidden md:h-[300px] lg:h-[340px] xl:w-96 medium-block${index} cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all
+									className={`grid-block relative h-96 overflow-hidden md:h-[300px] lg:h-[384px] xl:w-96 medium-block${index} cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all aspect-square
 									duration-300`}
 								>
 									<Item
@@ -148,22 +145,18 @@ export default function LightBoxImages() {
 												ref={ref}
 												alt={names[index]}
 												onClick={open}
-												src={image.path}
-												className={`zoom-image w-full object-cover medium-image${index} transition-all duration-300`}
+												src={image.sm}
+												className={`zoom-image w-full h-full object-cover medium-image${index} transition-all duration-300`}
 												loading="lazy"
 											/>
 										)}
 									</Item>
 
-									<div className="inner-text absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121] p-4 opacity-0 px-24 md:px-12 xl:px-4 ">
+									<div className="inner-text absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121] p-4 opacity-0 px-24 md:px-12 xl:px-4 pointer-events-none" >
 										<h2 className="text-center text-2xl font-semibold leading-tight text-white ">
 											{names[index]}
 										</h2>
 									</div>
-
-									{/* <div className="inner-text absolute bottom-[-4rem] left-12 h-[4rem] isolate flex items-center justify-center text-2xl font-bold after:absolute  after:-z-10 after:h-12 after:w-[162px] after:rounded-2xl after:bg-black/70  hover:underline">
-										<p className="text-center">{names[index]}</p>
-									</div> */}
 								</div>
 							</div>
 						))}
