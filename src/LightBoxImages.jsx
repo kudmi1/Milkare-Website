@@ -131,7 +131,7 @@ export default function LightBoxImages() {
 						{imagesPath.map((image, index) => (
 							<div key={index}>
 								<div
-									className={`grid-block relative h-96 overflow-hidden md:h-[300px] lg:h-[384px] xl:w-96 medium-block${index} cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all aspect-square
+									className={`grid-block relative h-[330px] overflow-hidden md:h-[300px] lg:h-[384px] xl:w-96 medium-block${index} cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all aspect-square
 									duration-300`}
 								>
 									<Item
