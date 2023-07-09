@@ -73,19 +73,6 @@ export default function Modal({
 		return () => clearTimeout(timeoutId)
 	}, [buttonState, paused])
 
-	useEffect(() => {
-    const handlePopstate = () => {
-      setActive(false)
-    }
-
-    window.addEventListener("popstate", handlePopstate)
-
-    return () => {
-      window.removeEventListener("popstate", handlePopstate)
-    }
-  }, [])
-
-
 	return (
 		<div
 			className={`${
@@ -99,11 +86,8 @@ export default function Modal({
 			}}
 		>
 			<button
-				className={`close-modal-btn fixed left-0 top-0 z-[110] flex h-16 w-16 items-center justify-center bg-[#21212181] transition-opacity duration-300 hover:bg-[#303030]  md:left-[100%] md:top-0 md:h-16 md:w-16 md:-translate-x-[100%] md:rounded-none md:border-none md:bg-transparent md:hover:bg-transparent ${
-					buttonState
-						? "pointer-events-auto opacity-100"
-						: "pointer-events-none opacity-0"
-				}`}
+				className={`close-modal-btn fixed left-0 top-0 z-[110] flex h-16 w-16 items-center justify-center bg-[#21212181] transition-opacity duration-300 hover:bg-[#303030]  md:left-[100%] md:top-0 md:h-16 md:w-16 md:-translate-x-[100%] md:rounded-none md:border-none md:bg-transparent md:hover:bg-transparent`}
+				// ${buttonState ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}
 				onClick={() => setActive(false)}
 			>
 				<svg
@@ -141,7 +125,7 @@ export default function Modal({
 					<button className="w-12 h-full hover:bg-[#303030] right-0 bottom-0" onClick={handleFullscreen}>[/p]</button>
 					<button className="w-12 h-full hover:bg-[#303030] right-0 bottom-0" onClick={handleFullscreen}>[  ]</button>
 				</div>
-
+{/* 
 				<button
 					className={`pause-rounded fixed left-1/2 top-1/2 z-[110] flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#2121219a]  transition-opacity duration-300 hover:bg-[#303030] ${
 						buttonState && active
@@ -184,7 +168,7 @@ export default function Modal({
 							/>
 						</svg>
 					)}
-				</button>
+				</button> */}
 				{children}
 			</div>
 		</div>

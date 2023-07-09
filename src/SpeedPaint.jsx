@@ -27,7 +27,7 @@ export default function SpeedPaint() {
 						ref={videoRef}
 						src="https://ik.imagekit.io/kudmi/Video/aqua_video.mp4?updatedAt=1688728147078"
 						className="modal-video absolute left-0 top-0 h-full w-full"
-						// controls
+						controls
 						// muted
 						// autoPlay
 						// loop
