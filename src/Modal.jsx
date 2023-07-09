@@ -9,7 +9,7 @@ export default function Modal({
 	setButtonState,
 }) {
 	const [paused, setPaused] = useState(false)
-
+	// videoRef.current.volume = 0.5
 	function handlePause() {
 		if (videoRef.current.paused) {
 			videoRef.current.play()
@@ -17,6 +17,18 @@ export default function Modal({
 		} else {
 			videoRef.current.pause()
 			setPaused(true)
+		}
+	}
+
+	function handleFullscreen() {
+		if (videoRef.current.requestFullscreen) {
+			videoRef.current.requestFullscreen()
+		} else if (videoRef.current.mozRequestFullScreen) {
+			videoRef.current.mozRequestFullScreen()
+		} else if (videoRef.current.webkitRequestFullscreen) {
+			videoRef.current.webkitRequestFullscreen()
+		} else if (videoRef.current.msRequestFullscreen) {
+			videoRef.current.msRequestFullscreen()
 		}
 	}
 
@@ -61,11 +73,24 @@ export default function Modal({
 		return () => clearTimeout(timeoutId)
 	}, [buttonState, paused])
 
+	useEffect(() => {
+    const handlePopstate = () => {
+      setActive(false)
+    }
+
+    window.addEventListener("popstate", handlePopstate)
+
+    return () => {
+      window.removeEventListener("popstate", handlePopstate)
+    }
+  }, [])
+
+
 	return (
 		<div
 			className={`${
 				active ? "modal active" : "modal"
-			} pointer-events-none fixed left-0 top-0 z-[899] flex h-screen w-screen flex-col items-center justify-center bg-[#212121] opacity-0 transition-opacity duration-500 md:bg-[#212121d2]`}
+			} pointer-events-none fixed left-0 top-0 z-[100] flex h-screen w-screen flex-col items-center justify-center bg-[#212121] opacity-0 transition-opacity duration-500 md:bg-[#212121d2]`}
 			onClick={() => {
 				if (active) {
 					setPaused(false)
@@ -74,7 +99,7 @@ export default function Modal({
 			}}
 		>
 			<button
-				className={`close-modal-btn fixed left-0 top-0 z-[999] flex h-16 w-16 items-center justify-center bg-[#21212181] transition-opacity duration-300 hover:bg-[#303030]  md:left-[100%] md:top-0 md:h-16 md:w-16 md:-translate-x-[100%] md:rounded-none md:border-none md:bg-transparent md:hover:bg-transparent ${
+				className={`close-modal-btn fixed left-0 top-0 z-[110] flex h-16 w-16 items-center justify-center bg-[#21212181] transition-opacity duration-300 hover:bg-[#303030]  md:left-[100%] md:top-0 md:h-16 md:w-16 md:-translate-x-[100%] md:rounded-none md:border-none md:bg-transparent md:hover:bg-transparent ${
 					buttonState
 						? "pointer-events-auto opacity-100"
 						: "pointer-events-none opacity-0"
@@ -100,11 +125,25 @@ export default function Modal({
 			<div
 				className={`${
 					active ? "modal-content active" : "modal-content"
-				} relative h-full w-full scale-50 rounded-xl bg-transparent transition-all duration-500 md:h-[80%] md:w-[80%] md:bg-[#212121] md:p-5 `}
-				onClick={(e) => e.stopPropagation()}
+				} relative h-full w-full scale-50 rounded-xl bg-transparent transition-all duration-500 md:h-[80%] md:w-[80%] md:bg-[#212121] md:p-5 overflow-hidden`}
+				onClick={(e) => {
+					e.stopPropagation()
+				}}
 			>
+				<div
+					className={`"video-control-panel z-[120] absolute bottom-0 left-0 h-12 w-full bg-[#2121219a] transition-opacity duration-300 flex justify-between
+					${buttonState
+							? "pointer-events-auto opacity-100"
+							: "pointer-events-none opacity-0"
+					}
+					`}
+				>
+					<button className="w-12 h-full hover:bg-[#303030] right-0 bottom-0" onClick={handleFullscreen}>[/p]</button>
+					<button className="w-12 h-full hover:bg-[#303030] right-0 bottom-0" onClick={handleFullscreen}>[  ]</button>
+				</div>
+
 				<button
-					className={`pause-rounded fixed left-1/2 top-1/2 z-[999] flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#2121219a]  transition-opacity duration-300 hover:bg-[#303030] ${
+					className={`pause-rounded fixed left-1/2 top-1/2 z-[110] flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#2121219a]  transition-opacity duration-300 hover:bg-[#303030] ${
 						buttonState && active
 							? "pointer-events-auto opacity-100"
 							: "pointer-events-none opacity-0"
@@ -146,9 +185,7 @@ export default function Modal({
 						</svg>
 					)}
 				</button>
-				{children
-				
-				}
+				{children}
 			</div>
 		</div>
 	)

@@ -6,8 +6,10 @@ export default function SpeedPaint() {
 	const videoRef = useRef(null)
 	const [showCloseButton, setShowCloseButton] = useState(false)
 
+
 	const handleVideoClick = (event) => {
 		event.stopPropagation()
+		event.preventDefault()
 		setShowCloseButton((prev) => !prev)
 	}
 
@@ -26,9 +28,10 @@ export default function SpeedPaint() {
 						src="https://ik.imagekit.io/kudmi/Video/aqua_video.mp4?updatedAt=1688728147078"
 						className="modal-video absolute left-0 top-0 h-full w-full"
 						// controls
-						muted
+						// muted
 						// autoPlay
-						loop
+						// loop
+						onVolumeChangeCapture={23}
 						onClick={handleVideoClick}
 					></video>
 				</div>
@@ -44,7 +47,7 @@ export default function SpeedPaint() {
 					<p className="text-lg">
 						More speedpaints on{" "}
 						<span className="font-bold italic underline">
-							<a href="https://boosty.to/milkareart">Boosty</a>
+							<a target={"_blank"} href="https://boosty.to/milkareart">Boosty</a>
 						</span>
 					</p>
 				</div>

@@ -126,12 +126,12 @@ export default function LightBoxImages() {
 						Gallery
 					</h1>
 				</div>
-				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-t-2 border-[#212121] px-4 pt-24 md:grid-cols-2 md:p-14 md:px-14 lg:grid-cols-2 lg:grid-rows-4 xl:grid-cols-3">
+				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-t-2 border-[#212121] px-4 pt-24 sm:grid-cols-2 md:p-14 md:px-14 lg:grid-cols-2 lg:grid-rows-4 xl:grid-cols-3">
 					<Gallery options={options} uiElements={uiElements}>
 						{imagesPath.map((image, index) => (
 							<div key={index}>
 								<div
-									className={`grid-block relative overflow-hidden md:h-[300px] lg:h-[384px] xl:w-96 medium-block${index} cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all aspect-square
+									className={`grid-block relative overflow-hidden sm:h-[300px] lg:h-[384px] xl:w-96 medium-block${index} cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all aspect-square
 									duration-300`}
 								>
 									<Item
