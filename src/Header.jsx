@@ -70,7 +70,7 @@ export default function Header() {
       ${show ? "top-0" : "-top-40 h-20"}`}
 		>
 			<div className="header-standart grid w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:grid-cols-3 sm:px-6 lg:px-0">
-				<nav className="hidden sm:block">
+				<nav className="hidden max-w-xs sm:block">
 					<ul
 						className={`headerBot  flex items-center justify-between
         transition-all duration-300`}
@@ -118,13 +118,10 @@ export default function Header() {
 						</li>
 					</ul>
 				</nav>
-				<div className="flex items-center justify-center">
+				<div className="ml-4 flex items-center justify-center md:ml-0">
 					<a
 						href="#"
-						className={`header-top ${
-							// prevScrollPos > 128 ? "text-5xl" : "text-7xl"
-							prevScrollPos > 128 ? "text-5xl" : "text-5xl"
-						} transition-all duration-500`}
+						className={`header-top text-4xl md:text-5xl transition-all duration-500`}
 					>
 						milkare
 						{/* <img src="icons/Logo.svg" alt="" className="logo-milkare"/> */}
