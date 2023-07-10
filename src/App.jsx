@@ -19,7 +19,7 @@ function App() {
 			<BigBanner />
 
 			{/* <div className="border-t-2 border-[#de928d] bg-[url('images/blurry-gradient-4.svg')] bg-cover"> */}
-			<div className="gradient-bg border-t-2 border-[#de928d] ">
+			<div className="gradient-bg border-t-2 border-[#de928d]">
 				<div>
 					{/* <div className="gallery-header flex justify-center bg-gradient-to-r from-transparent via-[#2121213f] to-transparent text-6xl font-semibold text-white backdrop-blur-[10px]">
 						<h1 className="header-section my-8 select-none">Recent Works</h1>
@@ -27,7 +27,7 @@ function App() {
 					<div className="flex flex-col justify-center backdrop-blur-[2px]">
 						{/* <div className="div-acc absolute h-full w-full"></div> */}
 
-						<div className="flex justify-center px-4 py-24 ">
+						<div className="flex justify-center px-4 ">
 							<Accordion />
 						</div>
 					</div>

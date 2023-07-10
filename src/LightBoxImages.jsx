@@ -120,18 +120,18 @@ export default function LightBoxImages() {
 
 	return (
 		<>
-			<div className="mediumWrapper relative flex flex-col items-center justify-center pt-24">
-				<div className="absolute top-16 flex h-16 w-1/2 xl:w-1/3 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] ">
-					<h1 className="header-section my-4 select-none text-center text-4xl ">
+			<div className="mediumWrapper relative flex flex-col items-center justify-center pt-12 ">
+				<div className="my-12 flex h-16 w-1/2 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] xl:w-1/3">
+					<h1 className="header-section my-4 select-none text-center text-4xl">
 						Gallery
 					</h1>
 				</div>
-				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-t-2 border-[#212121] px-4 pt-24 sm:grid-cols-2 md:p-14 md:px-14 lg:grid-cols-2 lg:grid-rows-4 xl:grid-cols-3">
+				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-[#212121] px-4 pt-24 sm:grid-cols-2 md:p-14 md:px-14 lg:grid-cols-2 lg:grid-rows-4 xl:grid-cols-3">
 					<Gallery options={options} uiElements={uiElements}>
 						{imagesPath.map((image, index) => (
 							<div key={index}>
 								<div
-									className={`grid-block relative overflow-hidden sm:h-[300px] lg:h-[384px] xl:w-96 medium-block${index} cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all aspect-square
+									className={`grid-block relative overflow-hidden sm:h-[300px] lg:h-[384px] xl:w-96 medium-block${index} aspect-square cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all
 									duration-300`}
 								>
 									<Item
@@ -146,13 +146,13 @@ export default function LightBoxImages() {
 												alt={names[index]}
 												onClick={open}
 												src={image.sm}
-												className={`zoom-image w-full h-full object-cover medium-image${index} transition-all duration-300`}
+												className={`zoom-image h-full w-full object-cover medium-image${index} transition-all duration-300`}
 												loading="lazy"
 											/>
 										)}
 									</Item>
 
-									<div className="inner-text absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121] p-4 opacity-0 px-24 md:px-12 xl:px-4 pointer-events-none" >
+									<div className="inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121] p-4 px-24 sm:px-12 opacity-0 xl:px-4">
 										<h2 className="text-center text-2xl font-semibold leading-tight text-white ">
 											{names[index]}
 										</h2>

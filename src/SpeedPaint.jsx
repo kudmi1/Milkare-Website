@@ -31,7 +31,6 @@ export default function SpeedPaint() {
 						// muted
 						// autoPlay
 						// loop
-						onVolumeChangeCapture={23}
 						onClick={handleVideoClick}
 					></video>
 				</div>
@@ -53,9 +52,13 @@ export default function SpeedPaint() {
 				</div>
 			</div>
 			<div
-				className="video-card-container relative max-h-[400px] w-full max-w-[690px] overflow-hidden border-2 border-[#212121d2]"
+				className="video-card-container h-96 relative max-h-[400px] w-full max-w-[690px] border-2 border-[#212121d2]"
 				onClick={() => setModalActive(true)}
 			>
+				<div className="absolute text-4xl text-black -left-3 -top-5">X</div>
+				<div className="absolute text-4xl text-black -right-3 -top-5">X</div>
+				<div className="absolute text-4xl text-black -right-3 -bottom-5">X</div>
+				<div className="absolute text-4xl text-black -left-3 -bottom-5">X</div>
 				<img
 					src="/images-sm/video-thumb.webp"
 					className="thumb-img h-full w-full cursor-pointer object-cover"
