@@ -88,7 +88,7 @@ img {
 
 
 .accordion_panel.expanded {
-  flex-basis: clamp(20rem, 40vh, 20rem);
+  /* flex-basis: clamp(20rem, 40vh, 20rem); */
   filter: brightness(100%) drop-shadow(0px 4px 6px black);
   /* min-height: 500px; */
   flex-grow: 1;

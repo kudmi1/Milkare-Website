@@ -63,7 +63,7 @@ export default function Accordion() {
 					Recent Works
 				</h1>
 			</div>
-			<div className="mt-12 flex h-[120dvh] w-full flex-col gap-4 md:h-[700px] md:flex-row">
+			<div className="mt-12 flex h-[1000px] w-full flex-col gap-4 md:h-[700px] md:flex-row">
 				{names.map((_, index) => (
 					<Panel
 						key={index}
