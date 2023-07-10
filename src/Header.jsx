@@ -1,10 +1,16 @@
 import { useEffect, useState, useRef } from "react"
+import HamburgerMenu from "./HamburgerMenu"
 
 export default function Header() {
 	const [prevScrollPos, setPrevScrollPos] = useState(0)
 	const [show, setShow] = useState(true)
 	const [activeDropdown, setActiveDropdown] = useState(null)
 	const dropdownRef = useRef(null)
+	const [showHamburger, setShowHamburger] = useState(false)
+
+	function toggleHamburger() {
+		setShowHamburger((prev) => !prev)
+	}
 
 	useEffect(() => {
 		function handleDocumentClick(e) {
@@ -63,8 +69,8 @@ export default function Header() {
 			 justify-center bg-gradient-to-tr from-[#212121d2] to-[#212121] opacity-100 backdrop-blur-[10px] transition-all duration-700
       ${show ? "top-0" : "-top-40 h-20"}`}
 		>
-			<div className="header-standart grid w-full max-w-7xl items-center justify-between bg-transparent">
-				<nav>
+			<div className="header-standart grid w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:grid-cols-3 sm:px-6 lg:px-0">
+				<nav className="hidden sm:block">
 					<ul
 						className={`headerBot  flex items-center justify-between
         transition-all duration-300`}
@@ -125,7 +131,7 @@ export default function Header() {
 					</a>
 				</div>
 
-				<div className="language-block flex items-center justify-end">
+				<div className="language-block hidden items-center justify-end sm:flex">
 					<button className="language-item language-eng mr-8 text-xl transition-all duration-500">
 						Eng
 					</button>
@@ -133,6 +139,30 @@ export default function Header() {
 						Rus
 					</button>
 				</div>
+				{showHamburger ? null : (
+					<div className="hamburger-btn flex h-full items-center justify-end px-6 sm:hidden">
+						<button onClick={toggleHamburger}>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth="1.5"
+								stroke="currentColor"
+								className="h-12 w-12"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+								/>
+							</svg>
+						</button>
+					</div>
+				)}
+				<HamburgerMenu
+					hamburgerState={showHamburger}
+					setHamburgerState={setShowHamburger}
+				/>
 			</div>
 		</header>
 	)

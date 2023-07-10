@@ -1,18 +1,18 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react"
+import { useState, memo } from "react"
 
 const names = ["Aqua", "milka", "himeno", "redgirl", "purplegirl"]
 
-function Panel({ handlePanelClick, expandedPanel, index }) {
+const Panel = memo(({ handlePanelClick, expandedPanel, index }) => {
 	const name = names[index]
 
 	return (
 		<div
-			className={`accordion_panel ${expandedPanel === index ? "expanded" : ""}`}
+			className={`accordion_panel ${expandedPanel === index ? "expanded" : ""} overflow-hidden`}
 			onClick={expandedPanel === index ? null : handlePanelClick}
 		>
-			<div className="inner-text pointer-events-none absolute bottom-2 left-6 z-20 mb-2 h-[4rem] rounded-2xl bg-[#212121] p-4 px-12 opacity-0 md:bottom-0 md:left-6 md:px-12 xl:px-4">
-				<h2 className="text-center text-2xl font-semibold leading-tight text-white ">
+			<div className="inner-text pointer-events-none absolute bottom-2 left-6 z-20 mb-2 h-[4rem] rounded-2xl bg-[#212121] p-4 opacity-0 md:bottom-0 md:left-1/2 md:-translate-x-1/2 lg:translate-x-0 lg:left-6 xl:px-4  xl:w-1/3">
+				<h2 className="text-center text-2xl md:text-lg lg:text-2xl font-semibold leading-tight text-white">
 					{name}
 				</h2>
 			</div>
@@ -43,7 +43,7 @@ function Panel({ handlePanelClick, expandedPanel, index }) {
 			</div>
 		</div>
 	)
-}
+})
 
 export default function Accordion() {
 	const [expandedPanel, setExpandedPanel] = useState(0)
@@ -57,8 +57,8 @@ export default function Accordion() {
 	}
 
 	return (
-		<div className="accordion flex w-full max-w-7xl flex-col items-center border-[#212121] py-12 md:px-14 lg:px-28">
-			<div className=" my-12 flex h-24  w-1/2 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] md:w-1/3 lg:top-16 lg:h-16">
+		<div className="accordion flex w-full max-w-7xl flex-col items-center border-[#212121] pt-12 md:px-14 lg:px-28">
+			<div className=" my-12 flex h-24  w-1/2 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] max-w-lg lg:top-16 lg:h-16">
 				<h1 className="header-section my-4 select-none text-center text-4xl">
 					Recent Works
 				</h1>

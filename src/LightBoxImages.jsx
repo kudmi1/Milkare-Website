@@ -121,12 +121,12 @@ export default function LightBoxImages() {
 	return (
 		<>
 			<div className="mediumWrapper relative flex flex-col items-center justify-center pt-12 ">
-				<div className="my-12 flex h-16 w-1/2 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] xl:w-1/3">
+				<div className="my-12 flex h-16 w-1/2 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] max-w-lg">
 					<h1 className="header-section my-4 select-none text-center text-4xl">
 						Gallery
 					</h1>
 				</div>
-				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-[#212121] px-4 pt-24 sm:grid-cols-2 md:p-14 md:px-14 lg:grid-cols-2 lg:grid-rows-4 xl:grid-cols-3">
+				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-[#212121] px-4 pt-12 sm:grid-cols-2 md:p-14 md:px-14 lg:grid-cols-2 lg:grid-rows-4 xl:grid-cols-3">
 					<Gallery options={options} uiElements={uiElements}>
 						{imagesPath.map((image, index) => (
 							<div key={index}>

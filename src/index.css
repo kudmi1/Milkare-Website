@@ -290,8 +290,7 @@ img {
 }
 
 .header-standart {
-  grid-template-columns: 20% 1fr 20%;
-
+  /* grid-template-columns: 20% 1fr 20%; */
 }
 
 .header-section {
