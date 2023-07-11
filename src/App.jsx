@@ -9,15 +9,14 @@ import MediumImages from "./MediumImages"
 import LightBoxImages from "./LightBoxImages"
 import SpeedPaints from "./SpeedPaints"
 import SpeedPaint from "./SpeedPaint"
+import Profile from "./Profile"
 
 function App() {
 	return (
 		<div className="App">
 			<Header />
 			{/* <Socials /> */}
-
-			<BigBanner />
-
+				<BigBanner />
 			{/* <div className="border-t-2 border-[#de928d] bg-[url('images/blurry-gradient-4.svg')] bg-cover"> */}
 			<div className="gradient-bg border-t-2 border-[#de928d]">
 				<div>

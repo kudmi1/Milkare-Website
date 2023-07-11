@@ -62,29 +62,6 @@ export default function SpeedPaints() {
 								onMouseOut={handleMouseOut}
 								onClick={handleVideoClick}
 							>
-								<div
-									className={`play-sign absolute left-1/2 top-1/2 z-50 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#212121d2] ${
-										isMouseOver
-											? "opacity-0"
-											: "opacity-100 transition-opacity duration-300"
-									}`}
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="-1 0 24 24"
-										stroke-width="1.0"
-										stroke="currentColor"
-										class="h-12 w-12"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
-										/>
-									</svg>
-								</div>
-
 								<img
 									src="https://ik.imagekit.io/kudmi/images/Aqua.webp"
 									className="thumb-img absolute h-full w-full cursor-pointer object-cover"

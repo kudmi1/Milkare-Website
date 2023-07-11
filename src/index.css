@@ -461,3 +461,7 @@ ion-icon {
 .modal-content.active {
   transform: scale(1);
 }
+
+.video-card-container:hover > .thumb-img-container > .thumb-img {
+  transform: scale(1.05);
+}

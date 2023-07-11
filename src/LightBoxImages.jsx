@@ -126,12 +126,12 @@ export default function LightBoxImages() {
 						Gallery
 					</h1>
 				</div>
-				<div className="grid-images grid max-w-7xl grid-cols-1 gap-[15px] border-[#212121] px-4 pt-12 sm:grid-cols-2 md:p-14 md:px-14 lg:grid-cols-2 lg:grid-rows-4 xl:grid-cols-3">
+				<div className="grid-images grid max-w-7xl grid-cols-2 gap-[15px] border-[#212121] px-4 pt-12  md:p-14 md:px-14 md:grid-cols-3">
 					<Gallery options={options} uiElements={uiElements}>
 						{imagesPath.map((image, index) => (
 							<div key={index}>
 								<div
-									className={`grid-block relative overflow-hidden sm:h-[300px] lg:h-[384px] xl:w-96 medium-block${index} aspect-square cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all
+									className={`grid-block relative overflow-hidden xl:h-96 xl:w-96 medium-block${index} aspect-square cursor-pointer bg-[url('images/blurry-gradient-4.svg')] transition-all
 									duration-300`}
 								>
 									<Item
@@ -152,7 +152,7 @@ export default function LightBoxImages() {
 										)}
 									</Item>
 
-									<div className="inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121] p-4 px-24 sm:px-12 opacity-0 xl:px-4">
+									<div className="inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121] p-4 px-6 sm:px-12 opacity-0 xl:px-4">
 										<h2 className="text-center text-2xl font-semibold leading-tight text-white ">
 											{names[index]}
 										</h2>
