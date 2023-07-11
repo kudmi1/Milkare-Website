@@ -152,7 +152,7 @@ export default function LightBoxImages() {
 										)}
 									</Item>
 
-									<div className="inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121] p-4 px-6 sm:px-12 opacity-0 xl:px-4">
+									<div className="inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121d2] p-4 px-6 sm:px-12 opacity-0 xl:px-4 backdrop-blur">
 										<h2 className="text-center text-2xl font-semibold leading-tight text-white ">
 											{names[index]}
 										</h2>

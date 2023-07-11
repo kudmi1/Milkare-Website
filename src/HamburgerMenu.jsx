@@ -21,7 +21,7 @@ export default function HamburgerMenu({ hamburgerState, setHamburgerState }) {
         : "opacity-0 pointer-events-none"}
     `} onClick={() => setHamburgerState(false)}>
 			<div
-				className={`slide-menu fixed top-0 right-[-80vw] w-[80vw] z-50 h-screen bg-[#212121] ${
+				className={`slide-menu fixed top-0 right-[-80vw] w-[80vw] z-50 h-screen bg-[#212121d2] backdrop-blur ${
 					hamburgerState
 						? "-translate-x-[80vw] opacity-100"
 						: "pointer-events-none opacity-0"

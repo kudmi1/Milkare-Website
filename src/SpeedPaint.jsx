@@ -107,7 +107,6 @@ export default function SpeedPaint() {
 								: "pointer-events-none opacity-0"
 						}`}
 						controls
-						autoPlay
 						loop
 					></video>
 				</div>
