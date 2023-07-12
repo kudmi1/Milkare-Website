@@ -60,7 +60,7 @@ export default function SpeedPaint() {
 					<p className="text-lg">
 						More speedpaints on{" "}
 						<span className="font-bold italic underline">
-							<a target={"_blank"} href="https://boosty.to/milkareart">
+							<a target={"_blank"} href="https://boosty.to/milkareart" className="effect-shine">
 								Boosty
 							</a>
 						</span>
@@ -120,7 +120,7 @@ export default function SpeedPaint() {
 						viewBox="-1 0 24 24"
 						strokeWidth="2"
 						stroke="currentColor"
-						className="h-8 w-8"
+						className="h-8 w-8 effect-shine"
 					>
 						<path
 							strokeLinecap="round"

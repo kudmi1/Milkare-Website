@@ -321,7 +321,7 @@ img {
 
 .header-top:hover {
   /* color: rgb(147, 112, 216); */
-  color: rgb(115,102,189);
+  /* color: rgb(115,102,189); */
   /* -webkit-text-stroke: 1.5px transparent; */
 
 }
@@ -354,7 +354,7 @@ img {
 .dropdown.active > .dropdown-btn,
 .header-item:hover,
 .language-item:hover {
-  color: rgb(115,102,189);
+  /* color: rgb(115,102,189); */
 }
 
 .dropdown.active > .dropdown-btn > .chevron {
@@ -465,3 +465,22 @@ ion-icon {
 .video-card-container:hover > .thumb-img-container > .thumb-img {
   transform: scale(1.05);
 }
+
+.effect-shine:hover {
+  mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  mask-size: 200%;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+

@@ -37,7 +37,7 @@ const Panel = memo(({ handlePanelClick, expandedPanel, index }) => {
 				</button>
 				<img
 					className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${index > 2 ? "object-top" : ""}`}
-					src={`https://ik.imagekit.io/kudmi/images/${name}.webp`}
+					src={`https://ik.imagekit.io/kudmi/accordion/${name}.jpeg`}
 					alt={`image${index}`}
 				/>
 			</div>
