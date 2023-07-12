@@ -67,7 +67,7 @@ export default function PhotoGallery() {
 
 	return (
 		<>
-			<div className="mediumWrapper relative flex flex-col items-center justify-center pt-12 ">
+			<div className="mediumWrapper relative flex flex-col items-center justify-center pt-12" id="gallery">
 				<div className="my-12 flex h-16 w-1/2 max-w-lg items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px]">
 					<h1 className="header-section my-4 select-none text-center text-4xl">
 						Gallery
@@ -99,8 +99,8 @@ export default function PhotoGallery() {
 										)}
 									</Item>
 
-									<div className="inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121e8] p-4 px-6 opacity-0 sm:px-12 xl:px-4">
-										<h2 className="text-center text-2xl font-semibold leading-tight text-white ">
+									<div className="inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 h-[3rem] xl:h-[4rem] -translate-x-1/2 rounded-2xl bg-[#212121e8] p-4 px-6 opacity-0 sm:px-12 xl:px-4 flex justify-center items-center">
+										<h2 className="text-center text-lg xl:text-2xl font-semibold leading-tight text-white ">
 											{names[index]}
 										</h2>
 									</div>

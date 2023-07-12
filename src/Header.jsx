@@ -84,7 +84,7 @@ export default function Header() {
 				<nav className="hidden h-full md:block">
 					<ul className={`headerBot h-full transition-all duration-300 flex items-center justify-evenly`}>
 						<li className="header-item effect-shine item-one h-full transition-all duration-300 flex items-center justify-center">
-							<a href="http://яваскрипт.укр/%D0%BC%D0%B5%D0%BD%D1%8E">
+							<a href="#gallery">
 								Gallery
 							</a>
 						</li>
