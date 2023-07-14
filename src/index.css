@@ -277,7 +277,7 @@ img {
 .gradient-bg {
   /* background: rgb(33,33,33);
   background: linear-gradient(15deg, rgb(115,102,189) 0%, rgb(219, 109, 102) 40%, rgba(33,33,33,0.7) 100%); */
-  background-color:#ff99ac;
+  /* background-color:#ff99ac;
   background-image:
   radial-gradient(at 13% 45%, hsla(217,80%,61%,1) 0px, transparent 50%),
   radial-gradient(at 76% 82%, hsla(162,77%,61%,1) 0px, transparent 50%),
@@ -285,7 +285,7 @@ img {
   radial-gradient(at 66% 87%, hsla(110,66%,77%,1) 0px, transparent 50%),
   radial-gradient(at 72% 65%, hsla(69,78%,79%,1) 0px, transparent 50%),
   radial-gradient(at 66% 59%, hsla(320,68%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 45% 45%, hsla(247,94%,61%,1) 0px, transparent 50%);
+  radial-gradient(at 45% 45%, hsla(247,94%,61%,1) 0px, transparent 50%); */
   /* background-color: #8b7979; */
 }
 
@@ -483,4 +483,49 @@ ion-icon {
     -webkit-mask-position: -50%;
   }
 }
+.myvan.black > .underline-animation {
+  background: #fff;
+  height: 0.25rem;
+}
 
+.underline-animation:nth-child(1) {
+  background: #fff;
+  transition: calc(0.3s * .8);
+}
+.underline-animation:nth-child(2) {
+  background: #fff;
+  transition: calc(0.3s * 1.2);
+}
+.underline-animation:nth-child(3) {
+  background: #fff;
+}
+
+.section {
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s;
+}
+
+.section.active {
+  opacity: 1;
+}
+
+.hidden-entry {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.show-entry {
+  opacity: 1;
+}
+
+.hidden-entry-slide {
+  opacity: 0;
+  transform: translateX(5%);
+  transition: all 0.5s;
+}
+
+.show-entry-slide {
+  transform: translateX(0);
+  opacity: 1;
+}

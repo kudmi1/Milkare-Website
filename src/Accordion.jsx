@@ -29,11 +29,6 @@ const Panel = memo(({ handlePanelClick, expandedPanel, index }) => {
 					aria-controls={`panel${index}_content`}
 					aria-expanded="true"
 				>
-					{/* <span
-						className={`panel5_title panel-span absolute bottom-4 left-12 isolate flex items-center justify-center text-2xl font-bold decoration-slate-50 decoration-2 underline-offset-4 after:absolute after:-left-12 after:-z-10 after:h-12 after:w-[162px] after:rounded-2xl after:bg-black/70  hover:underline border-2`}
-					>
-						{name}
-					</span> */}
 				</button>
 				<img
 					className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${index > 2 ? "object-top" : ""}`}
@@ -57,7 +52,7 @@ export default function Accordion() {
 	}
 
 	return (
-		<div className="accordion flex w-full max-w-7xl flex-col items-center border-[#212121] pt-12 md:px-14 lg:px-28">
+		<div className="accordion flex w-full max-w-7xl flex-col items-center border-[#212121] pt-12 md:px-14 lg:px-28" id="gallery">
 			<div className=" my-12 flex h-24  w-1/2 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] max-w-lg lg:top-16 lg:h-16">
 				<h1 className="header-section my-4 select-none text-center text-4xl">
 					Recent Works

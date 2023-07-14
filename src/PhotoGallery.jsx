@@ -53,7 +53,6 @@ const options = {
 }
 
 export default function PhotoGallery() {
-
 	const images = []
 	code_names.map((name) => {
 		const img = new Image()
@@ -65,9 +64,11 @@ export default function PhotoGallery() {
 		})
 	})
 
+
+
 	return (
 		<>
-			<div className="mediumWrapper relative flex flex-col items-center justify-center pt-12" id="gallery">
+			<div className="mediumWrapper relative flex flex-col items-center justify-center pt-12">
 				<div className="my-12 flex h-16 w-1/2 max-w-lg items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px]">
 					<h1 className="header-section my-4 select-none text-center text-4xl">
 						Gallery

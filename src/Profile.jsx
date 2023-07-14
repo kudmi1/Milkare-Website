@@ -9,7 +9,11 @@ export default function Profile() {
 						className="h-full w-full rounded-full"
 					/>
 				</div>
-				<div className="h-2/3 w-full"></div>
+				<div className="h-2/3 w-full flex justify-center items-center">
+					<p className="mt-8 text-2xl">Commision:
+						<span className="text-green-500"> Open</span>
+					</p>
+				</div>
 
 				<div className="h-1/3 w-[90%] md:w-3/4 lg:w-1/2 flex items-center justify-between md:mb-2">
 					<button className="flex h-10 w-10 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#212121] effect-shine">

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import Profile from "./Profile"
 export default function BigBanner() {
 	
