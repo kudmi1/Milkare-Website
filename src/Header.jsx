@@ -36,8 +36,10 @@ export default function Header({ section, setSection, headerHeight, fontSize }) 
 	}
 
 	return (
+		<div>
+
 		<header
-			className={`header fixed z-50 flex h-12 w-full justify-center 
+			className={`header fixed z-50 flex md:flex-row flex-col h-24 w-full justify-center 
 			 bg-gradient-to-tr from-[#212121d2] to-[#212121] opacity-100 backdrop-blur-[10px] transition-all duration-700 ${headerHeight}
 			 `}
 		>
@@ -50,7 +52,7 @@ export default function Header({ section, setSection, headerHeight, fontSize }) 
 						milkare
 					</a>
 				</div>
-				<nav className="mynav black sticky bottom-0 left-0 z-[100] flex h-full items-center justify-center">
+				<nav className="mynav  black sticky bottom-0 left-0 z-[100] hidden md:flex h-full items-center justify-center">
 					<div
 						className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
 					></div>
@@ -119,6 +121,41 @@ export default function Header({ section, setSection, headerHeight, fontSize }) 
 					setHamburgerState={setShowHamburger}
 				/>
 			</div>
+			<nav className="mynav black sticky bottom-0 left-0 z-[100] md:hidden flex h-full items-center justify-center">
+					<div
+						className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
+					></div>
+					<div
+						className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
+					></div>
+					<div
+						className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
+					></div>
+					<a
+						href="#gallery"
+						className="gallery-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center"
+						onClick={() => handleClick(0, "gallery")}
+					>
+						Gallery
+					</a>
+					<a
+						href="#price"
+						className="price-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center"
+						onClick={() => handleClick(1, "price")}
+					>
+						Price
+					</a>
+					<a
+						href="#info"
+						className="info-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center"
+						onClick={() => handleClick(2, "info")}
+					>
+						Info
+					</a>
+				</nav>
 		</header>
+		
+		</div>
+
 	)
 }

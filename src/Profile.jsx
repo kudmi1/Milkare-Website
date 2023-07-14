@@ -10,7 +10,7 @@ export default function Profile() {
 					/>
 				</div>
 				<div className="h-2/3 w-full flex justify-center items-center">
-					<p className="mt-8 text-2xl">Commision:
+					<p className="mt-12 text-2xl">Commision:
 						<span className="text-green-500"> Open</span>
 					</p>
 				</div>
