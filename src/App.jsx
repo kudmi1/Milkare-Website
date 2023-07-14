@@ -12,6 +12,7 @@ import PriceSection from "./PriceSection"
 
 function App() {
 	const [headerHeight, setHeaderHeight] = useState("lg:h-20")
+	const [fontSize, setFontSize] = useState("lg:text-5xl")
 	const headerRef = useRef(null)
 	const sectionRef = useRef(null)
 	const [section, setSection] = useState(
@@ -61,7 +62,6 @@ function App() {
 		const section = sectionRef.current
 
 		const options = {
-			// root: null,
 			threshold: 0.2,
 		}
 
@@ -70,8 +70,10 @@ function App() {
 				if (entry.target === section) {
 					if (entry.isIntersecting) {
 						setHeaderHeight("lg:h-14")
+						setFontSize("lg:text-4xl")
 					} else {
 						setHeaderHeight("lg:h-20")
+						setFontSize("lg:text-5xl")
 					}
 				}
 			})
@@ -101,9 +103,10 @@ function App() {
 					section={section}
 					setSection={handleSectionChange}
 					headerHeight={headerHeight}
+					fontSize={fontSize}
 				/>
 			</div>
-			<div className="hidden-entry" id="banner-section">
+			<div className="hidden-entry">
 				<BigBanner />
 			</div>
 			<div

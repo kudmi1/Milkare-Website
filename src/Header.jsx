@@ -1,7 +1,7 @@
 import { useEffect, useState, useLayoutEffect, useRef } from "react"
 import HamburgerMenu from "./HamburgerMenu"
 
-export default function Header({ section, setSection, headerHeight }) {
+export default function Header({ section, setSection, headerHeight, fontSize }) {
 	const [showHamburger, setShowHamburger] = useState(false)
 	const [position, setPosition] = useState(() => {
 		// Retrieve the stored position from localStorage
@@ -34,7 +34,6 @@ export default function Header({ section, setSection, headerHeight }) {
 	function toggleHamburger() {
 		setShowHamburger((prev) => !prev)
 	}
-	const milkareSize = `"lg:text-4xl" : "lg:text-5xl"`
 
 	return (
 		<header
@@ -46,7 +45,7 @@ export default function Header({ section, setSection, headerHeight }) {
 				<div className="mx-6 sm:mx-0 md:justify-center ">
 					<a
 						href="#"
-						className={`header-top effect-shine text-3xl transition-all duration-500 ${milkareSize}`}
+						className={`header-top effect-shine text-3xl transition-all duration-500 ${fontSize}`}
 					>
 						milkare
 					</a>
