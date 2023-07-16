@@ -97,7 +97,7 @@ function App() {
 	}
 
 	return (
-		<div className='App overflow-hidden'>
+		<div className='App overflow-hidden '>
 			<div ref={headerRef}>
 				<Header
 					section={section}
@@ -109,11 +109,11 @@ function App() {
 			<div className='hidden-entry'>
 				<BigBanner />
 			</div>
-			<div
+			<div 
 				ref={sectionRef}
-				className="gradient-bg border-t-2 border-[#de928d] bg-[url('https://ik.imagekit.io/kudmi/images/dark2.webp?updatedAt=1689269369952')]"
+				className="gradient-bg border-t-2 border-[#de928d] bg-[url('https://ik.imagekit.io/kudmi/images/dark2.webp?updatedAt=1689269369952')] "
 			>
-				<div className='mx-auto max-w-7xl my-12 rounded-md'>
+				<div className='my-12 backdrop-blur-[2px]'>
 					{section === 'gallery' ? (
 						<div>
 							<div className='hidden-entry flex justify-center px-4 motion-reduce:transition-none'>

@@ -35,7 +35,7 @@ export default function SpeedPaint() {
 						Speedpaint
 					</h1>
 				</div>
-				<div className='text-center lg:text-start bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] px-6 py-6 rounded-2xl backdrop-blur-[10px]
+				<div className='text-center lg:text-start bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] px-6 py-6 backdrop-blur-[10px]
 				'>
 					<h2 className='pb-4 text-3xl text-[#e5ec86]'>Speedpaint of Aqua</h2>
 					<p className='text-lg'>

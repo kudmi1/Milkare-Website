@@ -117,8 +117,8 @@ export default function PhotoGallery() {
 										)}
 									</Item>
 
-									<div className='inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 flex h-[3rem] -translate-x-1/2 items-center justify-center rounded-2xl bg-[#212121e8] p-4 px-6 opacity-0 sm:px-12 xl:h-[4rem] xl:px-4'>
-										<h2 className='text-center text-lg font-semibold leading-tight text-white xl:text-2xl '>
+									<div className='inner-text pointer-events-none absolute bottom-[-4rem] left-1/2 z-20 mb-2 flex h-[3rem] -translate-x-1/2 items-center justify-center rounded-2xl bg-[#212121] p-4 px-6 opacity-0 sm:px-12 xl:h-[4rem] xl:px-4'>
+										<h2 className='text-center text-lg font-semibold leading-tight text-white xl:text-2xl'>
 											{names[index]}
 										</h2>
 									</div>
