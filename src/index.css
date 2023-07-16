@@ -558,14 +558,3 @@ ion-icon {
 .show-entry {
   opacity: 1;
 }
-
-/* .hidden-entry-slide {
-  opacity: 0;
-  transform: translateX(5%);
-  transition: all 0.5s;
-}
-
-.show-entry-slide {
-  transform: translateX(0);
-  opacity: 1;
-} */
