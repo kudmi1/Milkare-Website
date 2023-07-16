@@ -52,8 +52,8 @@ export default function Accordion() {
 	}
 
 	return (
-		<div className="accordion flex w-full max-w-7xl flex-col items-center border-[#212121] pt-12 md:px-14 lg:px-28" id="gallery">
-			<div className=" my-12 flex h-24  w-1/2 items-center justify-center rounded-2xl border-2 border-[#212121] bg-[#212121d2] bg-cover backdrop-blur-[10px] max-w-lg lg:top-16 lg:h-16">
+		<div className="accordion flex w-full max-w-7xl flex-col items-center border-[#212121] md:px-14 lg:px-28" id="gallery">
+			<div className=" my-12 flex h-24  w-1/2 items-center justify-center rounded-2xl border-2 border-[#212121] bg-cover backdrop-blur-[40px] max-w-lg lg:top-16 lg:h-16 bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2]">
 				<h1 className="header-section my-4 select-none text-center text-4xl">
 					Recent Works
 				</h1>
