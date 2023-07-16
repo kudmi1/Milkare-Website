@@ -111,7 +111,7 @@ function App() {
 			</div>
 			<div 
 				ref={sectionRef}
-				className="gradient-bg border-t-2 border-[#de928d] bg-[url('./images/dark.webp')]"
+				className="gradient-bg border-t-2 border-[#de928d] bg-[url('https://ik.imagekit.io/kudmi/images/dark.webp?updatedAt=1689513153535')]"
 			>
 				<div className='my-12 '>
 					{section === 'gallery' ? (
