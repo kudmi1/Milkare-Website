@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import Modal from './Modal'
 
-export default function SpeedPaint() {
+export default function SpeedPaint({ language, content }) {
 	const [modalActive, setModalActive] = useState(false)
 	const videoRef = useRef(null)
 	const [showCloseButton, setShowCloseButton] = useState(false)
@@ -30,16 +30,16 @@ export default function SpeedPaint() {
 	return (
 		<div className='relative mx-auto mb-24 mt-12 flex max-w-7xl flex-col items-center justify-between px-4 lg:flex-row lg:items-start lg:px-14'>
 			<div className='mb-6 mr-3 flex w-2/3 lg:h-[340px] lg:mb-0 flex-col justify-between items-center lg:w-1/3 lg:items-start'>
-				<div className='mb-12 flex h-14 w-full items-center justify-center border-2 border-[#212121] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px] '>
-					<h1 className='header-section my-4 w-full select-none text-center text-3xl '>
-						Speedpaint
+				<div className='mb-12 flex h-14 w-full items-center justify-center border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px] '>
+					<h1 className='header-section my-4 w-full select-none text-center text-3xl text-mainText'>
+					{content.gallerySection?.speedpaint?.speedpaintTitle}
 					</h1>
 				</div>
 				<div className='text-center lg:text-start bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] px-6 py-6 backdrop-blur-[10px]
 				'>
-					<h2 className='pb-4 text-3xl text-[#e5ec86]'>Speedpaint of Aqua</h2>
-					<p className='text-lg'>
-						More speedpaints on{' '}
+					<h2 className='pb-4 text-3xl text-secondaryText'>{content.gallerySection?.speedpaint?.firstLine}</h2>
+					<p className='text-lg text-secondaryText'>
+						{content.gallerySection?.speedpaint?.secondLine} {""}
 						<span className='font-bold italic underline'>
 							<a
 								target={'_blank'}
@@ -53,8 +53,7 @@ export default function SpeedPaint() {
 				</div>
 			</div>
 			<div
-				className='video-card-container relative h-96 max-h-[400px] w-full max-w-[690px] cursor-pointer border-2 border-[#212121d2]'
-				// onClick={() => setModalActive(true)}
+				className='video-card-container relative h-96 max-h-[400px] w-full max-w-[690px] cursor-pointer border border-[#3b3b3b] '
 				ref={videoContainerRef}
 				onClick={(e) => {
 					setIsClicked(true)
@@ -75,7 +74,7 @@ export default function SpeedPaint() {
 					X
 				</div>
 
-				<div className='thumb-img-container relative h-full w-full overflow-hidden'>
+				<div className='thumb-img-container relative h-full w-full overflow-hidden '>
 					<img
 						src='/images-sm/video-thumb.webp'
 						className='thumb-img pointer-events-none absolute h-full w-full cursor-pointer object-cover transition-transform duration-300'
@@ -84,7 +83,8 @@ export default function SpeedPaint() {
 
 					<video
 						ref={videoRef}
-						src='https://ik.imagekit.io/kudmi/Video/aqua_video.mp4?updatedAt=1688728147078'
+						// src='video/speedpaint.MP4'
+						src=''
 						className={`thumb-video absolute z-[5] h-[102%] w-[102%] object-cover transition-opacity duration-300
 						${
 							isClicked
@@ -101,10 +101,10 @@ export default function SpeedPaint() {
 				>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
-						fill='white'
+						fill='#f9ded1'
 						viewBox='-1 0 24 24'
 						strokeWidth='2'
-						stroke='currentColor'
+						stroke='#f9ded1'
 						className='effect-shine h-8 w-8'
 					>
 						<path

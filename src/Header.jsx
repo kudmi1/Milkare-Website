@@ -1,11 +1,18 @@
 import { useEffect, useState, useLayoutEffect, useRef } from 'react'
 import HamburgerMenu from './HamburgerMenu'
+import NavigatorSmall from './NavigatorSmall'
+import NavigatorBig from './NavigatorBig'
+import Translate from './Translate'
 
 export default function Header({
 	section,
 	setSection,
 	headerHeight,
 	fontSize,
+	isScrollToSection,
+	language,
+	setLanguage,
+	content,
 }) {
 	const [showHamburger, setShowHamburger] = useState(false)
 	const [position, setPosition] = useState(() => {
@@ -13,6 +20,7 @@ export default function Header({
 		const storedPosition = localStorage.getItem('underlinePosition')
 		return storedPosition ? storedPosition : '0'
 	})
+	const [selectedLink, setSelectedLink] = useState(null)
 
 	useLayoutEffect(() => {
 		let underlines = document.querySelectorAll('.underline-animation')
@@ -34,6 +42,7 @@ export default function Header({
 	function handleClick(index, section) {
 		ul(index)
 		setSection(section)
+		setSelectedLink(index)
 	}
 
 	function toggleHamburger() {
@@ -41,62 +50,31 @@ export default function Header({
 	}
 
 	return (
-		<div>
+		<div >
 			<header
-				className={`header fixed z-50 flex h-24 w-full flex-col justify-center bg-gradient-to-tr 
-			 from-[#212121d2] to-[#212121] opacity-100 backdrop-blur-[10px] transition-all duration-700 md:flex-row ${headerHeight}
+				className={`header fixed z-50 flex h-24 w-full flex-col justify-center bg-gradient-to-tr
+			 from-mainGrayTransparent to-mainGray opacity-100 backdrop-blur-[10px] transition-all duration-700 md:flex-row ${headerHeight}
 			 `}
 			>
-				<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:px-6 md:grid-cols-3 xl:px-0 '>
-					<div className='mx-6 sm:mx-0 md:justify-center '>
+				<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:px-6 md:grid-cols-3 xl:px-0'>
+					<div className='mx-6 sm:mx-0 md:justify-center'>
 						<a
 							href='#'
-							className={`header-top effect-shine text-3xl transition-all duration-500 ${fontSize}`}
+							className={`header-top effect-shine text-3xl transition-all duration-500 ${fontSize} text-mainText`}
 						>
 							milkare
 						</a>
 					</div>
-					<nav className='mynav black sticky bottom-0 left-0 z-[100] hidden h-full items-center justify-center md:flex'>
-						<div
-							className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
-						></div>
-						<div
-							className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
-						></div>
-						<div
-							className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
-						></div>
-						<a
-							href='#gallery'
-							className='gallery-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center'
-							onClick={() => handleClick(0, 'gallery')}
-						>
-							Gallery
-						</a>
-						<a
-							href='#price'
-							className='price-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center'
-							onClick={() => handleClick(1, 'price')}
-						>
-							Price
-						</a>
-						<a
-							href='#info'
-							className='info-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center'
-							onClick={() => handleClick(2, 'info')}
-						>
-							Info
-						</a>
-					</nav>
+					<NavigatorBig
+						section={section}
+						isScrollToSection={isScrollToSection}
+						selectedLink={selectedLink}
+						handleClick={handleClick}
+						language={language}
+						content={content}
+					/>
 
-					<div className='language-block hidden items-center justify-end md:flex'>
-						<button className='language-item effect-shine language-eng mr-8 text-xl transition-all duration-500'>
-							Eng
-						</button>
-						<button className='language-item effect-shine language-rus text-xl transition-all duration-500'>
-							Rus
-						</button>
-					</div>
+					<Translate language={language} setLanguage={setLanguage} />
 					{showHamburger ? null : (
 						<div className='flex h-full items-center justify-end px-6 sm:px-0 md:hidden'>
 							<button
@@ -125,40 +103,13 @@ export default function Header({
 						setHamburgerState={setShowHamburger}
 					/>
 				</div>
-				<div className='relative flex h-full w-full items-center md:hidden'>
-					<nav className='mynav black z-[20] flex h-full w-full items-center justify-center '>
-						<div
-							className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
-						></div>
-						<div
-							className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
-						></div>
-						<div
-							className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}
-						></div>
-						<a
-							href='#gallery'
-							className='gallery-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center'
-							onClick={() => handleClick(0, 'gallery')}
-						>
-							Gallery
-						</a>
-						<a
-							href='#price'
-							className='price-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center'
-							onClick={() => handleClick(1, 'price')}
-						>
-							Price
-						</a>
-						<a
-							href='#info'
-							className='info-link header-item effect-shine z-10 inline-block w-1/3 cursor-pointer px-4 text-center'
-							onClick={() => handleClick(2, 'info')}
-						>
-							Info
-						</a>
-					</nav>
-				</div>
+				<NavigatorSmall
+					selectedLink={selectedLink}
+					isScrollToSection={isScrollToSection}
+					handleClick={handleClick}
+					language={language}
+					content={content}
+				/>
 			</header>
 		</div>
 	)

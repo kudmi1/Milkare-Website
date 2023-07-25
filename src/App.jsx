@@ -9,14 +9,18 @@ import PhotoGallery from './PhotoGallery'
 import { useState } from 'react'
 import InfoSection from './InfoSection'
 import PriceSection from './PriceSection'
+import Translation from "./text.json"
 
 function App() {
+	const [language, setLanguage] = useState("english")
+	const [content, setContent] = useState({})
+	const [isScrollToSection, setIsScrollToSection] = useState(false)
 	const [headerHeight, setHeaderHeight] = useState('lg:h-20')
 	const [fontSize, setFontSize] = useState('lg:text-5xl')
 	const headerRef = useRef(null)
 	const sectionRef = useRef(null)
 	const [section, setSection] = useState(
-		localStorage.getItem('section') || 'gallery'
+		sessionStorage.getItem('section') || 'gallery'
 	)
 
 	useEffect(() => {
@@ -25,24 +29,11 @@ function App() {
 				entries.forEach((entry) => {
 					entry.target.classList.toggle('show-entry', entry.isIntersecting)
 					if (entry.isIntersecting) {
+						setIsScrollToSection(true)
 						observer.unobserve(entry.target)
 					}
-				})
-			},
-			{
-				threshold: 0.1,
-			}
-		)
-
-		const observerSlide = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					entry.target.classList.toggle(
-						'show-entry-slide',
-						entry.isIntersecting
-					)
-					if (entry.isIntersecting) {
-						observerSlide.unobserve(entry.target)
+					else if(!entry.isIntersecting) {
+						setIsScrollToSection(false)
 					}
 				})
 			},
@@ -52,8 +43,28 @@ function App() {
 		)
 		const hiddenElements = document.querySelectorAll('.hidden-entry')
 		hiddenElements.forEach((el) => observer.observe(el))
-		const hiddenElementsslide = document.querySelectorAll('.hidden-entry-slide')
-		hiddenElementsslide.forEach((el) => observerSlide.observe(el))
+
+		return () => observer.disconnect()
+	}, [section])
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setIsScrollToSection(true)
+					}
+					else if(!entry.isIntersecting) {
+						setIsScrollToSection(false)
+					}
+				})
+			},
+			{
+				threshold: 0.1,
+			}
+		)
+		const hiddenElements = document.querySelectorAll('.section-entry')
+		hiddenElements.forEach((el) => observer.observe(el))
 
 		return () => observer.disconnect()
 	}, [section])
@@ -89,61 +100,74 @@ function App() {
 	}, [])
 
 	useEffect(() => {
-		localStorage.setItem('section', section)
+		sessionStorage.setItem('section', section)
 	}, [section])
 
 	const handleSectionChange = (newSection) => {
 		setSection(newSection)
 	}
 
+	useEffect(() => {
+		switch(language) {
+			case "english": setContent(Translation.english)
+			break
+			case "russian" : setContent(Translation.russian)
+			break
+		}
+	}, [language])
+
 	return (
-		<div className='App overflow-hidden '>
-			<div ref={headerRef}>
+		<div className='App'>
+			<header ref={headerRef}>
 				<Header
 					section={section}
 					setSection={handleSectionChange}
 					headerHeight={headerHeight}
 					fontSize={fontSize}
+					isScrollToSection={isScrollToSection}
+					language={language}
+					setLanguage={setLanguage}
+					content={content}
 				/>
-			</div>
+			</header>
 			<div className='hidden-entry'>
 				<BigBanner />
 			</div>
-			<div 
-				ref={sectionRef}
-				className="gradient-bg border-t-2 border-[#de928d] bg-[url('https://ik.imagekit.io/kudmi/images/dark.webp?updatedAt=1689513153535')]"
-			>
-				<div className='my-12 '>
-					{section === 'gallery' ? (
-						<div>
-							<div className='hidden-entry flex justify-center px-4 motion-reduce:transition-none'>
-								<Accordion />
-							</div>
-							<div className='hidden-entry motion-reduce:transition-none'>
-								<PhotoGallery />
-							</div>
-							<div className='hidden-entry motion-reduce:transition-none'>
-								<SpeedPaint />
-							</div>
+			<main ref={sectionRef} className='gradient-bg border-t-2 border-[#de928d]'>
+				{section === 'gallery' ? (
+					<section className='section-entry' id='gallery'>
+						<div className='motion-reduce:transition-none'>
+							<Accordion language={language} content={content}/>
 						</div>
-					) : null}
-					{section === 'price' ? (
-						<div className='hidden-entry flex justify-center motion-reduce:transition-none'>
-							<PriceSection />
+						<div className='motion-reduce:transition-none'>
+							<PhotoGallery language={language} content={content}/>
 						</div>
-					) : null}
-					{section === 'info' ? (
-						<div className='hidden-entry flex justify-center motion-reduce:transition-none'>
-							<InfoSection />
+						<div className='hidden-entry motion-reduce:transition-none'>
+							<SpeedPaint language={language} content={content} />
 						</div>
-					) : null}
-				</div>
+					</section>
 
-					<ToTop />
-					<div className='mt-12 md:mt-0'>
-						<Footer />
-					</div>
-			</div>
+					// <section className='section-entry hidden-entry flex flex-col justify-center motion-reduce:transition-none' id='gallery'>
+					// 	<PhotoGallery language={language} content={content} />
+					// </section>
+
+				) : null}
+				{section === 'price' ? (
+					<section className='flex justify-center motion-reduce:transition-none'>
+						<PriceSection language={language} content={content} />
+					</section>
+				) : null}
+				{section === 'info' ? (
+					<section className='section-entry hidden-entry flex justify-center motion-reduce:transition-none'>
+						<InfoSection language={language} content={content}/>
+					</section>
+				) : null}
+
+				<ToTop />
+			</main>
+			<footer className='mt-12 md:mt-0'>
+				<Footer />
+			</footer>
 		</div>
 	)
 }

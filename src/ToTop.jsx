@@ -22,7 +22,7 @@ export default function ToTop() {
 	return (
 		<div>
 			<div
-				className={`backdrop-blur=[10px] fixed bottom-8 right-6 md:bottom-12 md:right-12 z-50 h-12 w-12 md:h-16 md:w-16 rounded-full bg-[#212121d2] transition-colors ${
+				className={`backdrop-blur=[10px] fixed bottom-8 right-6 md:bottom-12 md:right-12 z-40 h-12 w-12 md:h-16 md:w-16 rounded-full bg-[#212121d2] transition-colors ${
 					showTopBtn
 						? "pointer-events-auto opacity-100"
 						: "pointer-events-none opacity-0"
@@ -31,10 +31,10 @@ export default function ToTop() {
 				<button className="flex h-full w-full items-center justify-center effect-shine" onClick={goToTop}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
+						fill="#f9ded1"
 						viewBox="0 0 24 24"
 						strokeWidth="1.5"
-						stroke="currentColor"
+						stroke="#f9ded1"
 						className="md:h-8 md:w-8 w-7 h-7"
 					>
 						<path
