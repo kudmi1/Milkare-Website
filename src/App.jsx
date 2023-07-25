@@ -9,10 +9,10 @@ import PhotoGallery from './PhotoGallery'
 import { useState } from 'react'
 import InfoSection from './InfoSection'
 import PriceSection from './PriceSection'
-import Translation from "./text.json"
+import Translation from './text.json'
 
 function App() {
-	const [language, setLanguage] = useState("english")
+	const [language, setLanguage] = useState('english')
 	const [content, setContent] = useState({})
 	const [isScrollToSection, setIsScrollToSection] = useState(false)
 	const [headerHeight, setHeaderHeight] = useState('lg:h-20')
@@ -31,8 +31,7 @@ function App() {
 					if (entry.isIntersecting) {
 						setIsScrollToSection(true)
 						observer.unobserve(entry.target)
-					}
-					else if(!entry.isIntersecting) {
+					} else if (!entry.isIntersecting) {
 						setIsScrollToSection(false)
 					}
 				})
@@ -53,8 +52,7 @@ function App() {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						setIsScrollToSection(true)
-					}
-					else if(!entry.isIntersecting) {
+					} else if (!entry.isIntersecting) {
 						setIsScrollToSection(false)
 					}
 				})
@@ -108,11 +106,13 @@ function App() {
 	}
 
 	useEffect(() => {
-		switch(language) {
-			case "english": setContent(Translation.english)
-			break
-			case "russian" : setContent(Translation.russian)
-			break
+		switch (language) {
+			case 'english':
+				setContent(Translation.english)
+				break
+			case 'russian':
+				setContent(Translation.russian)
+				break
 		}
 	}, [language])
 
@@ -133,25 +133,23 @@ function App() {
 			<div className='hidden-entry'>
 				<BigBanner />
 			</div>
-			<main ref={sectionRef} className='gradient-bg border-t-2 border-[#de928d]'>
+			<main
+				ref={sectionRef}
+				className='gradient-bg border-t-2 border-[#de928d]'
+			>
 				{section === 'gallery' ? (
 					<section className='section-entry' id='gallery'>
-						<div className='motion-reduce:transition-none'>
-							<Accordion language={language} content={content}/>
-						</div>
-						<div className='motion-reduce:transition-none'>
-							<PhotoGallery language={language} content={content}/>
-						</div>
-						<div className='hidden-entry motion-reduce:transition-none'>
-							<SpeedPaint language={language} content={content} />
-						</div>
+						<Accordion language={language} content={content} />
+
+						<PhotoGallery language={language} content={content} />
+
+						<SpeedPaint language={language} content={content} />
 					</section>
+				) : // <section className='section-entry hidden-entry flex flex-col justify-center motion-reduce:transition-none' id='gallery'>
+				// 	<PhotoGallery language={language} content={content} />
+				// </section>
 
-					// <section className='section-entry hidden-entry flex flex-col justify-center motion-reduce:transition-none' id='gallery'>
-					// 	<PhotoGallery language={language} content={content} />
-					// </section>
-
-				) : null}
+				null}
 				{section === 'price' ? (
 					<section className='flex justify-center motion-reduce:transition-none'>
 						<PriceSection language={language} content={content} />
@@ -159,7 +157,7 @@ function App() {
 				) : null}
 				{section === 'info' ? (
 					<section className='section-entry hidden-entry flex justify-center motion-reduce:transition-none'>
-						<InfoSection language={language} content={content}/>
+						<InfoSection language={language} content={content} />
 					</section>
 				) : null}
 

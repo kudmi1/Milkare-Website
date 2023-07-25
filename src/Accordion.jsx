@@ -25,7 +25,7 @@ export default function Accordion({ language, content }) {
 	}
 
 	return (
-		<div ref={ref} className={`flex justify-center px-4 ${showAccordion ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>
+		<div ref={ref} className={`flex justify-center px-4 ${showAccordion ? "opacity-100" : "opacity-0"} transition-opacity duration-500 motion-reduce:transition-none`}>
 			{inView ? (
 				<div className={`accordion flex w-full max-w-5xl flex-col items-center border-[#212121] pt-12 md:px-14`}>
 					<div className={`my-12 flex h-24 w-1/2 max-w-lg items-center justify-center rounded-2xl border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px] lg:top-16 lg:h-16 `}>

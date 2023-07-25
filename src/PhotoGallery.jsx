@@ -89,7 +89,7 @@ export default function PhotoGallery({ language, content }) {
 	}
 
 	return (
-		<div ref={ref}>
+		<div ref={ref} className="motion-reduce:transition-none">
 			{inView ? (
 				<div
 					className={`relative flex flex-col items-center justify-center pt-12`}

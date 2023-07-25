@@ -3,6 +3,7 @@ import HamburgerMenu from './HamburgerMenu'
 import NavigatorSmall from './NavigatorSmall'
 import NavigatorBig from './NavigatorBig'
 import Translate from './Translate'
+import { useInView } from 'react-intersection-observer'
 
 export default function Header({
 	section,
@@ -21,6 +22,11 @@ export default function Header({
 		return storedPosition ? storedPosition : '0'
 	})
 	const [selectedLink, setSelectedLink] = useState(null)
+
+	const { ref, inView } = useInView({
+		threshold: 0.1,
+		triggerOnce: true,
+	})
 
 	useLayoutEffect(() => {
 		let underlines = document.querySelectorAll('.underline-animation')
@@ -50,7 +56,7 @@ export default function Header({
 	}
 
 	return (
-		<div >
+		<div ref={ref} className={`${inView ? "opacity-100" : "opacity-0"}`}>
 			<header
 				className={`header fixed z-50 flex h-24 w-full flex-col justify-center bg-gradient-to-tr
 			 from-mainGrayTransparent to-mainGray opacity-100 backdrop-blur-[10px] transition-all duration-700 md:flex-row ${headerHeight}
