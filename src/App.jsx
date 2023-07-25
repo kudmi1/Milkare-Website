@@ -130,9 +130,7 @@ function App() {
 					content={content}
 				/>
 			</header>
-			<div className='hidden-entry'>
 				<BigBanner />
-			</div>
 			<main
 				ref={sectionRef}
 				className='gradient-bg border-t-2 border-[#de928d]'
