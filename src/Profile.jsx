@@ -9,7 +9,7 @@ export default function Profile() {
 						className="h-full w-full rounded-full"
 					/>
 				</div>
-				<div className="h-2/3 w-full flex justify-center items-center">
+				<div className="h-2/3 w-full flex justify-center items-center pointer-events-none select-none">
 					<p className="mt-12 text-2xl">Commission:
 						<span className="text-green-500"> Open</span>
 					</p>
