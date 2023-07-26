@@ -12,7 +12,7 @@ module.exports = {
         secondaryText: "#e5ec86",
         mainGray: "#212121",
         mainGrayTransparent: "#212121d2"
-      } 
+      }
     },
   },
   plugins: [],

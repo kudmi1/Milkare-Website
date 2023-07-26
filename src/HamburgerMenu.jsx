@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-export default function HamburgerMenu({ hamburgerState, setHamburgerState }) {
+export default function HamburgerMenu({ hamburgerState, setHamburgerState, setAriaExpanded }) {
 	const handleWindowResize = () => {
 		if (window.innerWidth > 640) {
 			setHamburgerState(false)
@@ -23,7 +23,10 @@ export default function HamburgerMenu({ hamburgerState, setHamburgerState }) {
 					: 'pointer-events-none opacity-0'
 			}
     `}
-			onClick={() => setHamburgerState(false)}
+			onClick={() => {
+				setAriaExpanded(false)
+				setHamburgerState(false)
+			}}
 		>
 			<div
 				className={`slide-menu fixed right-[-80vw] top-0 z-50 h-screen w-[80vw] bg-[#212121d2] backdrop-blur ${
@@ -34,30 +37,7 @@ export default function HamburgerMenu({ hamburgerState, setHamburgerState }) {
 				onClick={(e) => {
 					e.stopPropagation()
 				}}
-			>
-				{' '}
-				{/* <div className='h-full w-full relative border-2'> */}
-					<button
-						className='flex h-16 w-16 items-center justify-center hover:bg-[#303030] rounded-full'
-						onClick={() => setHamburgerState(false)}
-					>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							strokeWidth='1.5'
-							stroke='currentColor'
-							className='h-8 w-8'
-						>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								d='M6 18L18 6M6 6l12 12'
-							/>
-						</svg>
-					</button>
-				{/* </div> */}
-			</div>
+			></div>
 		</div>
 	)
 }

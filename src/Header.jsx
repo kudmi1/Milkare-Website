@@ -3,7 +3,6 @@ import HamburgerMenu from './HamburgerMenu'
 import NavigatorSmall from './NavigatorSmall'
 import NavigatorBig from './NavigatorBig'
 import Translate from './Translate'
-import { useInView } from 'react-intersection-observer'
 
 export default function Header({
 	section,
@@ -16,17 +15,13 @@ export default function Header({
 	content,
 }) {
 	const [showHamburger, setShowHamburger] = useState(false)
+	const [ariaExpanded, setAriaExpanded] = useState(false)
 	const [position, setPosition] = useState(() => {
 		// Retrieve the stored position from localStorage
 		const storedPosition = localStorage.getItem('underlinePosition')
 		return storedPosition ? storedPosition : '0'
 	})
 	const [selectedLink, setSelectedLink] = useState(null)
-
-	const { ref, inView } = useInView({
-		threshold: 0.1,
-		triggerOnce: true,
-	})
 
 	useLayoutEffect(() => {
 		let underlines = document.querySelectorAll('.underline-animation')
@@ -53,10 +48,11 @@ export default function Header({
 
 	function toggleHamburger() {
 		setShowHamburger((prev) => !prev)
+		setAriaExpanded(prev => !prev)
 	}
 
 	return (
-		<div ref={ref} className={`${inView ? "opacity-100" : "opacity-0"}`}>
+		<div>
 			<header
 				className={`header fixed z-50 flex h-24 w-full flex-col justify-center bg-gradient-to-tr
 			 from-mainGrayTransparent to-mainGray opacity-100 backdrop-blur-[10px] transition-all duration-700 md:flex-row ${headerHeight}
@@ -81,32 +77,27 @@ export default function Header({
 					/>
 
 					<Translate language={language} setLanguage={setLanguage} />
-					{showHamburger ? null : (
-						<div className='flex h-full items-center justify-end px-6 sm:px-0 md:hidden'>
+					
+						<div className='flex h-full items-center justify-end px-6 sm:px-0 md:hidden z-[100]'>
 							<button
 								onClick={toggleHamburger}
-								className='hamburger-btn effect-shine'
+								className='hamburger-btn effect-shine flex'
+								aria-controls='primary-navigation'
+								aria-expanded={ariaExpanded}
+								id="hamburger-btn"
 							>
-								<svg
-									xmlns='http://www.w3.org/2000/svg'
-									fill='none'
-									viewBox='0 0 24 24'
-									strokeWidth='1.5'
-									stroke='currentColor'
-									className='h-8 w-8'
-								>
-									<path
-										strokeLinecap='round'
-										strokeLinejoin='round'
-										d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
-									/>
+								<svg className='hamburger fill-mainText' viewBox='0 0 100 100' width={30}>
+									<rect className='line top-bar' width={80} height={7} x={10} y={27} rx={5}></rect>
+									<rect className='line middle-bar' width={80} height={7} x={10} y={50} rx={5}></rect>
+									<rect className='line bottom-bar' width={80} height={7} x={10} y={73} rx={5}></rect>
 								</svg>
 							</button>
 						</div>
-					)}
+				
 					<HamburgerMenu
 						hamburgerState={showHamburger}
 						setHamburgerState={setShowHamburger}
+						setAriaExpanded={setAriaExpanded}
 					/>
 				</div>
 				<NavigatorSmall
