@@ -143,13 +143,9 @@ function App() {
 
 						<SpeedPaint language={language} content={content} />
 					</section>
-				) : // <section className='section-entry hidden-entry flex flex-col justify-center motion-reduce:transition-none' id='gallery'>
-				// 	<PhotoGallery language={language} content={content} />
-				// </section>
-
-				null}
+				) : null}
 				{section === 'price' ? (
-					<section className='flex justify-center motion-reduce:transition-none'>
+					<section className='section-entry flex justify-center motion-reduce:transition-none'>
 						<PriceSection language={language} content={content} />
 					</section>
 				) : null}
