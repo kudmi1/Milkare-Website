@@ -10,7 +10,7 @@ export default function Accordion({ language, content }) {
 	const [showAccordion, setShowAccordion] = useState(false)
 
 	const { ref, inView } = useInView({
-		threshold: 0.4,
+		threshold: 0.2,
 		triggerOnce: true,
 	})
 

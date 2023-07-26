@@ -18,11 +18,11 @@ export default function PriceCard({
 	})
 
 	const commonProps =
-		'price-card-section mb-48 h-[800px] md:h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 	backdrop-blur-[10px] rounded-md w-full'
+		'price-card-section mb-48 h-[800px] md:h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] rounded-md w-full'
 
 	function TextContent() {
 		return (
-			<div className='flex flex-col items-center justify-evenly text-5xl leading-normal lg:h-full lg:w-1/2'>
+			<div className='flex flex-col items-center justify-evenly text-5xl leading-normal lg:h-full w-full'>
 				<h1 className='text-3xl text-secondaryText lg:text-6xl'>
 					{contentTitle}
 				</h1>
@@ -58,10 +58,10 @@ export default function PriceCard({
 								showPriceCard ? 'opacity-100' : 'opacity-0'
 							} transition-opacity duration-500 `}
 						>
-							<div>
+							<div className='w-full sm:w-4/5 md:w-2/5 justify-center'>
 								<TextContent />
 							</div>
-							<div className='price-card-container accordion h-full w-4/5 min-w-[380px] md:w-2/5'>
+							<div className='price-card-container accordion h-full w-full sm:w-4/5 md:w-1/2 lg:w-2/5'>
 								<div
 									className={`flex h-full w-full ${
 										isAccordionVertical ? 'flex-col' : 'flex-row'
@@ -87,10 +87,10 @@ export default function PriceCard({
 								showPriceCard ? 'opacity-100' : 'opacity-0'
 							} transition-opacity duration-500 `}
 						>
-							<div className='block md:hidden'>
+							<div className='block md:hidden w-full sm:w-4/5'>
 								<TextContent />
 							</div>
-							<div className='price-card-container accordion h-full w-4/5 min-w-[380px] md:w-2/5'>
+							<div className='price-card-container accordion h-full w-full sm:w-4/5 md:w-1/2 lg:w-2/5'>
 								<div
 									className={`flex h-full w-full ${
 										isAccordionVertical ? 'flex-col' : 'flex-row'
@@ -111,7 +111,7 @@ export default function PriceCard({
 									))}
 								</div>
 							</div>
-							<div className='md:block hidden'>
+							<div className='md:flex hidden w-2/5 justify-center'>
 								<TextContent />
 							</div>
 						</div>

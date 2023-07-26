@@ -30,7 +30,7 @@ export default function SpeedPaint({ language, content }) {
 	}, [])
 
 	const { ref, inView } = useInView({
-		threshold: 1,
+		threshold: 0.2,
 		triggerOnce: true,
 	})
 
