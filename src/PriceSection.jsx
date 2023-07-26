@@ -24,7 +24,7 @@ export default function PriceSection({ language, content }) {
 
 	return (
 		<div
-			className='max-w-6xl flex-col items-center justify-center py-24 '
+			className='max-w-6xl w-full flex-col items-center justify-center py-24 '
 			id='price'
 		>
 				<PriceCard
