@@ -18,7 +18,7 @@ export default function PriceCard({
 	})
 
 	const commonProps =
-		'price-card-section mb-48 h-[800px] md:h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] rounded-md w-full'
+		'price-card-section mb-48 h-[600px] md:h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] rounded-md w-full'
 
 	function TextContent() {
 		return (
@@ -28,7 +28,7 @@ export default function PriceCard({
 				</h1>
 				<div className='px-6 py-6 text-start'>
 					<p
-						className='pb-4 text-xl text-secondaryText lg:text-3xl'
+						className='pb-4 text-lg text-secondaryText lg:text-3xl'
 						dangerouslySetInnerHTML={{
 							__html: textContent,
 						}}
