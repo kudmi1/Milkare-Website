@@ -59,7 +59,7 @@ export default function SpeedPaint({ language, content }) {
 						className={`mb-6 mr-3 w-full flex md:w-2/3 flex-col items-center justify-between lg:mb-0 lg:h-[340px] lg:w-1/3 lg:items-start`}
 					>
 						<div
-							className={`mb-12 flex h-14 w-full items-center justify-center border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px] `}
+							className={`mb-12 flex h-14 w-full items-center justify-center border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px] rounded-md`}
 						>
 							<h1 className='header-section my-4 w-full select-none text-center text-3xl text-mainText'>
 								{content.gallerySection?.speedpaint?.speedpaintTitle}
@@ -87,7 +87,7 @@ export default function SpeedPaint({ language, content }) {
 						</div>
 					</div>
 					<div
-						className='video-card-container relative h-96 max-h-[400px] w-full max-w-[690px] cursor-pointer border border-[#3b3b3b] '
+						className='video-card-container relative h-96 max-h-[400px] w-full max-w-[690px] cursor-pointer border border-[#3b3b3b] rounded-md'
 						ref={videoContainerRef}
 						onClick={(e) => {
 							setIsClicked(true)
@@ -111,7 +111,7 @@ export default function SpeedPaint({ language, content }) {
 						<div className='thumb-img-container relative h-full w-full overflow-hidden '>
 							<img
 								src='/images-sm/video-thumb.webp'
-								className='thumb-img pointer-events-none absolute h-full w-full cursor-pointer object-cover transition-transform duration-300'
+								className='thumb-img pointer-events-none absolute h-full w-full cursor-pointer object-cover transition-transform duration-300 rounded-md'
 								alt='Aqua thumbnail'
 							/>
 
