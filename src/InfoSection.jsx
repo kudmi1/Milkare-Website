@@ -24,10 +24,10 @@ export default function InfoSection({ language, content }) {
 				{testArray.map((_, index) => (
 					<div
 						key={index}
-						className='info-panel my-2 cursor-pointer rounded-sm border-2 p-4 md:w-2/3'
+						className='info-panel my-2 mx-4	 cursor-pointer rounded-sm border-2 p-4 md:w-2/3'
 						onClick={() => handleOpen(index)}
 					>
-						<div className='flex w-full items-center justify-between '>
+						<div className='flex w-full items-center justify-between'>
 							<p className='text-2xl'>Grid is awesome</p>
 							<img src='icons/chevron.svg' alt='chevron' />
 						</div>
