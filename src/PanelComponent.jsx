@@ -1,4 +1,4 @@
-import { useState, memo } from "react"
+import { useState, memo } from 'react'
 
 export default memo(function PanelComponent({
 	expandedPanel,
@@ -16,14 +16,15 @@ export default memo(function PanelComponent({
 		} else {
 			setExpandedPanel(panelIndex)
 		}
-
 	}
-	
+
 	return (
 		<div
 			className={`accordion_panel ${
 				expandedPanel === index ? 'expanded' : ''
-			} ${imageLoaded ? '' : 'effect-shine-skeleton'} overflow-hidden rounded-md relative isolate cursor-pointer transition-all duration-300 bg-slate-600`}
+			} ${
+				imageLoaded ? '' : 'effect-shine-skeleton'
+			} relative isolate cursor-pointer overflow-hidden rounded-md bg-slate-600 transition-all duration-300`}
 			onClick={expandedPanel === index ? null : () => handlePanelClick(index)}
 		>
 			{isText ? (
@@ -49,8 +50,18 @@ export default memo(function PanelComponent({
 				></button>
 				<img
 					onLoad={() => setImageLoaded(true)}
-					className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${imageLoaded ? 'opacity-100' : 'opacity-0'} `}
-					src={`images-accordion/${picname} (Мелкое).jpeg`}
+					className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${
+						imageLoaded ? 'opacity-100' : 'opacity-0'
+					} `}
+					src={`images-accordion/${picname}.webp`}
+					srcSet={`
+    				images-accordion/${picname}-small.jpeg 600w,
+    				images-accordion/${picname}.webp 800w
+  				`}
+					sizes={`
+    				(max-width: 640px) 600px,
+    				800px
+  				`}
 					alt={`image${index}`}
 				/>
 			</div>

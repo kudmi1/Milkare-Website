@@ -70,6 +70,7 @@ export default function PhotoGallery({ language, content }) {
 			width: img.width,
 			height: img.height,
 			sm: `images-sm/${name}-sm.webp`,
+			big: `images-big/${name}-big.webp`,
 			bg: `images-bg/${name}-blur.webp`,
 		})
 	})
@@ -133,7 +134,12 @@ export default function PhotoGallery({ language, content }) {
 													ref={ref}
 													alt={names[index]}
 													onClick={open}
-													src={image.sm}
+													src={image.path}
+													srcSet={`${image.sm} 600w, ${image.big} 800w`}
+													sizes={`
+    												(max-width: 640px) 600px,
+    												800px
+  												`}
 													className={`zoom-image object-cover medium-image${index} transition-all duration-500 ${
 														imageLoaded ? 'opacity-100' : 'opacity-0'
 													}`}
