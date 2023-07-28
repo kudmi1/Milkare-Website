@@ -99,7 +99,7 @@ export default function PhotoGallery({ language, content }) {
 					<TitleComponent title='Gallery' />
 
 					<div
-						className={`grid-images grid max-w-7xl grid-cols-2 gap-[15px] px-4  md:grid-cols-3 md:p-14 md:px-14 ${
+						className={`grid-images grid max-w-7xl grid-cols-2 gap-[15px] px-4  md:grid-cols-3 ${
 							showGallery ? 'opacity-100' : 'opacity-0'
 						} transition-opacity duration-500`}
 						ref={gridRef}
