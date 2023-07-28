@@ -10,7 +10,7 @@ export default function InfoSection({ language, content }) {
 	}
 	return (
 		<div
-			className='flex py-24 w-full max-w-7xl flex-col items-center px-4'
+			className='flex py-24 w-full max-w-6xl flex-col items-center px-4'
 			id='info'
 		>
 			<TitleComponent title="Info"/>
@@ -23,7 +23,7 @@ export default function InfoSection({ language, content }) {
 						onClick={() => handleOpen(index)}
 					>
 						<div className='flex w-full items-center justify-between'>
-							<p className='text-2xl'>Grid is awesome</p>
+							<p className='text-2xl'>Some question</p>
 							<img src='icons/chevron.svg' alt='chevron' />
 						</div>
 
