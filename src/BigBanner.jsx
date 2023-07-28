@@ -14,7 +14,7 @@ export default function BigBanner() {
 				inView ? 'opacity-100' : 'opacity-0'
 			} transition-opacity duration-1000`}
 		>
-			<img
+			{/* <img
 				src='./images/aqua.webp'
 				srcSet='./images-accordion/aqua.webp 600w, ./images/aqua.webp 800w'
 				sizes={`
@@ -23,7 +23,7 @@ export default function BigBanner() {
   			`}
 				className='h-[70vh] w-full object-cover md:h-full'
 				alt='aqua_banner'
-			/>
+			/> */}
 			<Profile />
 		</section>
 	)
