@@ -2,6 +2,7 @@ import 'photoswipe/dist/photoswipe.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import { useInView } from 'react-intersection-observer'
 import { useState, useEffect, useRef } from 'react'
+import TitleComponent from './TitleComponent'
 
 const code_names = [
 	'lucy',
@@ -90,22 +91,15 @@ export default function PhotoGallery({ language, content }) {
 	}
 
 	return (
-		<div ref={ref} className="motion-reduce:transition-none">
+		<div ref={ref} className='motion-reduce:transition-none'>
 			{inView ? (
 				<div
 					className={`relative flex flex-col items-center justify-center pt-12`}
 				>
+					<TitleComponent title='Gallery' />
+
 					<div
-						className={`my-12 flex h-16 w-1/2 max-w-lg items-center justify-center rounded-2xl border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3fd2] to-mainGrayTransparent bg-cover backdrop-blur-[40px] ${
-							showGallery ? 'opacity-100' : 'opacity-0'
-						} transition-opacity duration-500`}
-					>
-						<h1 className='header-section my-4 select-none text-center text-4xl text-mainText'>
-							{content.gallerySection?.galleryTitle}
-						</h1>
-					</div>
-					<div
-						className={`grid-images grid max-w-7xl grid-cols-2 gap-[15px] px-4 pt-12  md:grid-cols-3 md:p-14 md:px-14 ${
+						className={`grid-images grid max-w-7xl grid-cols-2 gap-[15px] px-4  md:grid-cols-3 md:p-14 md:px-14 ${
 							showGallery ? 'opacity-100' : 'opacity-0'
 						} transition-opacity duration-500`}
 						ref={gridRef}

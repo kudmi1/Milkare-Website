@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import PanelComponent from './PanelComponent'
+import TitleComponent from './TitleComponent'
 
 const names = ['aqua', 'milka', 'himeno']
 
@@ -25,17 +26,11 @@ export default function Accordion({ language, content }) {
 	}
 
 	return (
-		<div ref={ref} className={`flex justify-center px-4 ${showAccordion ? "opacity-100" : "opacity-0"} transition-opacity duration-500 motion-reduce:transition-none`}>
+		<div ref={ref} className={`flex justify-center px-4 ${showAccordion ? "opacity-100" : "opacity-0"} transition-opacity duration-500 motion-reduce:transition-none pt-24 pb-12`}>
 			{inView ? (
-				<div className={`accordion flex w-full max-w-4xl flex-col items-center border-[#212121] pt-12 md:px-14`}>
-					<div className={`relative my-12 flex h-16 w-4/5 max-w-lg items-center justify-center rounded-2xl border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px] lg:top-16 lg:h-16`}>
-						<img src="icons/insta.svg" alt="" className='left-stroke absolute top-1/2 -translate-y-1/2 right-full'/>
-						<img src="icons/insta.svg" alt="" className='right-stroke absolute top-1/2 -translate-y-1/2 left-full'/>
-						<h1 className='header-section my-4 select-none text-center text-4xl text-mainText'>
-							{content.gallerySection?.accordionTitle}
-						</h1>
-					</div>
-					<div className={`mt-12 flex h-[600px] w-full flex-col gap-4 md:flex-row`}>
+				<div className={`accordion flex w-full max-w-4xl flex-col items-center border-[#212121] md:px-14`}>
+					<TitleComponent title="Recent Works"/>
+					<div className={` flex h-[600px] w-full flex-col gap-4 md:flex-row `}>
 						{names.map((_, index) => (
 							<PanelComponent
 								key={index}

@@ -1,6 +1,8 @@
 import PanelComponent from './PanelComponent'
 import { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 import PriceCard from './PriceCard'
+import TitleComponent from './TitleComponent'
 
 const panelData = [
 	{
@@ -22,11 +24,18 @@ export default function PriceSection({ language, content }) {
 	const [expandedPanel1, setExpandedPanel1] = useState(0)
 	const [expandedPanel2, setExpandedPanel2] = useState(0)
 
+	const { ref, inView } = useInView({
+		threshold: 0.2,
+		triggerOnce: true,
+	})
+
 	return (
-		<div
-			className='max-w-6xl w-full flex-col items-center justify-center py-24 '
+		<div 
+			className='w-full max-w-6xl flex flex-col items-center pt-24 px-4'
 			id='price'
 		>
+			<TitleComponent title="Price"/>
+			<div className='w-full'>
 				<PriceCard
 					contentTitle={content.priceSection?.bust?.title}
 					textContent={content.priceSection?.bust?.content}
@@ -65,6 +74,7 @@ export default function PriceSection({ language, content }) {
 					textOnLeft={true}
 					isAccordionVertical={false}
 				/>
+			</div>
 		</div>
 	)
 }

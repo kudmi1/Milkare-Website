@@ -18,7 +18,7 @@ export default function PriceCard({
 	})
 
 	const commonProps =
-		'price-card-section mb-12 lg:mb-36 h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] rounded-md w-full'
+		'price-card-section mb-12 lg:mb-24 h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] rounded-md w-full'
 
 	function TextContent() {
 		return (
@@ -49,7 +49,7 @@ export default function PriceCard({
 	}
 
 	return (
-		<div ref={ref} className='mx-4 xl:mx-0'>
+		<div ref={ref} >
 			{inView ? (
 				<div className={commonProps}>
 					{textOnLeft ? (

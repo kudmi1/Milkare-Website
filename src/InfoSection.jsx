@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TitleComponent from './TitleComponent'
 
 const testArray = [1, 2, 3, 4, 5]
 
@@ -9,18 +10,12 @@ export default function InfoSection({ language, content }) {
 	}
 	return (
 		<div
-			className='flex py-24 w-full max-w-7xl flex-col items-center px-4 '
+			className='flex py-24 w-full max-w-7xl flex-col items-center px-4'
 			id='info'
 		>
-			<div
-				className={`flex h-16 w-1/2 max-w-lg items-center justify-center rounded-2xl border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3fd2] to-mainGrayTransparent bg-cover backdrop-blur-[40px] transition-opacity duration-500`}
-			>
-				<h1 className='header-section my-4 select-none text-center text-4xl text-mainText'>
-					Information
-				</h1>
-			</div>
+			<TitleComponent title="Info"/>
 
-			<div className='mt-12 flex w-full flex-col items-center justify-center rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent py-12 backdrop-blur-[10px]'>
+			<div className='flex w-full flex-col items-center justify-center rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent py-12 backdrop-blur-[10px]'>
 				{testArray.map((_, index) => (
 					<div
 						key={index}

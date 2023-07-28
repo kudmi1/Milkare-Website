@@ -53,10 +53,10 @@ export default function SpeedPaint({ language, content }) {
 		>
 			{inView ? (
 				<div
-					className={`relative mx-auto mb-24 mt-12 flex max-w-7xl flex-col items-center justify-between px-4 lg:flex-row lg:items-start lg:px-14`}
+					className={`relative mx-auto mb-24 mt-24 flex max-w-7xl flex-col items-center justify-between px-4 lg:flex-row lg:items-start lg:px-14`}
 				>
 					<div
-						className={`mb-6 mr-3 flex w-2/3 flex-col items-center justify-between lg:mb-0 lg:h-[340px] lg:w-1/3 lg:items-start`}
+						className={`mb-6 mr-3 w-full flex md:w-2/3 flex-col items-center justify-between lg:mb-0 lg:h-[340px] lg:w-1/3 lg:items-start`}
 					>
 						<div
 							className={`mb-12 flex h-14 w-full items-center justify-center border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px] `}
@@ -66,7 +66,7 @@ export default function SpeedPaint({ language, content }) {
 							</h1>
 						</div>
 						<div
-							className='bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] px-6 py-6 text-center backdrop-blur-[10px] lg:text-start
+							className='w-full bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] px-6 py-6 text-center backdrop-blur-[10px] lg:text-start rounded-md
 				'
 						>
 							<h2 className='pb-4 text-3xl text-secondaryText'>
