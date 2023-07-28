@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState, memo } from "react"
 
-export default function PanelComponent({
+export default memo(function PanelComponent({
 	expandedPanel,
 	setExpandedPanel,
 	index,
@@ -56,4 +56,4 @@ export default function PanelComponent({
 			</div>
 		</div>
 	)
-}
+})

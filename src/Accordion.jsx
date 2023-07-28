@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, memo } from 'react'
+import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import PanelComponent from './PanelComponent'
 
