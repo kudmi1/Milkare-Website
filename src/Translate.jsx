@@ -9,7 +9,7 @@ export default function Translate({language, setLanguage}) {
 				}`}
 				onClick={() => setLanguage("english")}
 			>
-				<span className={`${language === 'english' ? '' : 'effect-shine'}`}>En</span> 
+				<h5><span className={`${language === 'english' ? '' : 'effect-shine'}`}>En</span></h5>
 			</button>
 			<button
 				className={`language-item language-rus text-xl ${
@@ -17,7 +17,7 @@ export default function Translate({language, setLanguage}) {
 				}`} 
 				onClick={() => setLanguage("russian")}
 			>
-				<span className={`${language === 'russian' ? '' : 'effect-shine'}`}>Ru</span>
+				<h5><span className={`${language === 'russian' ? '' : 'effect-shine'}`}>Ru</span></h5>
 			</button>
 		</div>
 	)

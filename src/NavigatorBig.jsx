@@ -27,7 +27,7 @@ export default function NavigatorBig({
 				}`}
 				onClick={() => handleClick(0, 'gallery')}
 			>
-				{content.header?.gallery}
+				<h5>{content.header?.gallery}</h5>
 			</a>
 			<a
 				href='#price'
@@ -38,7 +38,7 @@ export default function NavigatorBig({
 				}`}
 				onClick={() => handleClick(1, 'price')}
 			>
-				{content.header?.price}
+				<h5>{content.header?.price}</h5>
 			</a>
 			<a
 				href='#info'
@@ -49,7 +49,7 @@ export default function NavigatorBig({
 				}`}
 				onClick={() => handleClick(2, 'info')}
 			>
-				{content.header?.info}
+				<h5>{content.header?.info}</h5>
 			</a>
 		</nav>
 	)

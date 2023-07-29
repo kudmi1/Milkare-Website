@@ -15,15 +15,15 @@
 		"priceSection": {
 			"bust": {
 				"title": "Bust",
-				"content": "- Full render 2400 ₽ / 30 10$ <br/> - Sketch + flat color 800 ₽ / 10$"
+				"content": "- Full render 2400 ₽ / 30$ <br/> - Sketch + flat color 800 ₽ / 10$"
 			},
 			"halfBody": {
 				"title": "Half Body",
-				"content": "- Full render 3200 ₽ / 40 $ <br /> - Sketch + flat color 1200 ₽ / 15 $ <br /> - NSFW 4080 ₽ / 50 $ <br />☾ ADDITIONAL CHARACTER: double the price, Max. 2 characters"
+				"content": "- Full render 3200 ₽ / 40 $ <br /> - Sketch + flat color 1200 ₽ / 15 $ <br /> - NSFW 4080 ₽ / 50 $ <br />☾ ADDITIONAL CHARACTER: double the price <br /> Max. 2 characters"
 			},
 			"fullBody": {
 				"title": "Full Body",
-				"content": "- Full render 4080 ₽ / 50 $ ~ 75 $ <br /> - Sketch + flat color 1080 ₽ / 23 $ <br /> - NSFW 4900 ₽ / 60 $ ☾ <br />☾ ADDITIONAL CHARACTER: double the price, Max. 2 characters"
+				"content": "- Full render 4080 ₽ / 50 $ ~ 75 $ <br /> - Sketch + flat color 1080 ₽ / 23 $ <br /> - NSFW 4900 ₽ / 60 $ ☾ <br />☾ ADDITIONAL CHARACTER: double the price <br /> Max. 2 characters"
 			},
 			"background": {
 				"title": "Background",

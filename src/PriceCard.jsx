@@ -27,12 +27,12 @@ export default function PriceCard({
 					{contentTitle}
 				</h1>
 				<div className='px-6 py-6 text-start'>
-					<p
-						className='pb-4 text-lg text-secondaryText lg:text-3xl'
+					<h3
+						className='pb-4 text-lg text-mainText lg:text-2xl '
 						dangerouslySetInnerHTML={{
 							__html: textContent,
 						}}
-					></p>
+					></h3>
 				</div>
 			</div>
 		)
@@ -58,7 +58,7 @@ export default function PriceCard({
 								showPriceCard ? 'opacity-100' : 'opacity-0'
 							} transition-opacity duration-500 `}
 						>
-							<div className='w-full sm:w-4/5 md:w-2/5 justify-center'>
+							<div className='w-full sm:w-4/5 md:w-3/5'>
 								<TextContent />
 							</div>
 							<div className='price-card-container accordion h-full w-full sm:w-4/5 md:w-1/2 lg:w-2/5'>
@@ -111,7 +111,7 @@ export default function PriceCard({
 									))}
 								</div>
 							</div>
-							<div className='md:flex hidden w-2/5 justify-center'>
+							<div className='md:flex hidden w-3/5'>
 								<TextContent />
 							</div>
 						</div>
