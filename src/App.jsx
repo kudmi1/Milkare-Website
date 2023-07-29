@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Accordion from './Accordion'
-import BigBanner from './BigBanner'
+import HeroSection from './HeroSection'
 import Header from './Header'
 import Footer from './Footer'
 import SpeedPaint from './SpeedPaint'
@@ -130,7 +130,7 @@ function App() {
 					content={content}
 				/>
 			</header>
-				<BigBanner />
+				<HeroSection />
 			<main
 				ref={sectionRef}
 				className='gradient-bg border-t-2 border-[#de928d]'

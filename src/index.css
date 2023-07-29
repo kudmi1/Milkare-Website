@@ -458,10 +458,12 @@ ion-icon {
   overflow-y: scroll !important;
 }
 
-.profile-pic {
-  /* outline-offset: 2px; */
+.profile-pic-container {
   outline: 3px solid #212121;
+  mask: url('/public/svg/profile_border.svg') center / cover no-repeat;
 }
+
+
 
 .modal.active {
   pointer-events: all;

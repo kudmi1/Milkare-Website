@@ -6,7 +6,7 @@ export default function NavigatorSmall({
 	content
 }) {
 	return (
-		<div className='relative flex h-full w-full items-center md:hidden'>
+		<div className='relative flex h-full w-full items-center lg:hidden'>
 			<nav className='mynav black z-[20] flex h-full w-full items-center justify-center '>
 				<div
 					className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/3 rounded-full transition-transform duration-200`}

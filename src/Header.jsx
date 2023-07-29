@@ -55,10 +55,10 @@ export default function Header({
 		<div>
 			<header
 				className={`header fixed z-50 flex h-24 w-full flex-col justify-center bg-gradient-to-tr
-			 from-mainGrayTransparent to-mainGray opacity-100 backdrop-blur-[10px] transition-all duration-700 md:flex-row ${headerHeight}
+			 from-mainGrayTransparent to-mainGray opacity-100 backdrop-blur-[10px] transition-all duration-700 lg:flex-row ${headerHeight}
 			 `}
 			>
-				<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:px-6 md:grid-cols-3 xl:px-0'>
+				<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:px-6 lg:grid-cols-3 xl:px-0'>
 					<div className='mx-6 sm:mx-0 md:justify-center'>
 						<a
 							href='#'
@@ -78,7 +78,7 @@ export default function Header({
 
 					<Translate language={language} setLanguage={setLanguage} />
 					
-						<div className='flex h-full items-center justify-end px-6 sm:px-0 md:hidden z-[100]'>
+						<div className='flex h-full items-center justify-end px-6 sm:px-0 lg:hidden z-[100]'>
 							<button
 								onClick={toggleHamburger}
 								className='hamburger-btn effect-shine flex'

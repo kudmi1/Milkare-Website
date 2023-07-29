@@ -95,17 +95,17 @@ export default function SpeedPaint({ language, content }) {
 							e.stopPropagation()
 						}}
 					>
-						<div className='absolute -left-3 -top-5 z-10 text-4xl text-black pointer-events-none'>
-							<img src='icons/twitter.svg' alt='' />
+						<div className='absolute -left-4 -top-4 z-10 pointer-events-none'>
+							<img src='svg/star-thin.svg' alt='' className='w-8 h-8'/>
 						</div>
-						<div className='absolute -right-3 -top-5 z-10 text-4xl text-black pointer-events-none'>
-							<img src='icons/twitter.svg' alt='' />
+						<div className='absolute -right-4 -top-4 z-10 pointer-events-none'>
+							<img src='svg/star-thin.svg' alt='' className='w-8 h-8'/>
 						</div>
-						<div className='absolute -bottom-5 -right-3 z-10 text-4xl text-black pointer-events-none'>
-							<img src='icons/twitter.svg' alt='' />
+						<div className='absolute -bottom-4 -right-4 z-10 pointer-events-none'>
+							<img src='svg/star-thin.svg' alt='' className='w-8 h-8'/>
 						</div>
-						<div className='absolute -bottom-5 -left-3 z-10 text-4xl text-black pointer-events-none'>
-							<img src='icons/twitter.svg' alt='' />
+						<div className='absolute -bottom-4 -left-4 z-10 pointer-events-none'>
+							<img src='svg/star-thin.svg' alt='' className='w-8 h-8'/>
 						</div>
 
 						<div className='thumb-img-container relative h-full w-full overflow-hidden '>

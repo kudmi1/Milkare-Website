@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function Translate({language, setLanguage}) {
 	return (
-		<div className='language-block hidden items-center justify-end md:flex'>
+		<div className='language-block hidden items-center justify-end lg:flex'>
 			<button
 				className={`language-item language-eng mr-8 text-xl ${
 					language === 'english' ? 'text-secondaryText' : 'text-mainText'

@@ -48,7 +48,7 @@ export default memo(function PanelComponent({
 					aria-controls={`panel${index}_content`}
 					aria-expanded='true'
 				></button>
-				{/* <img
+				<img
 					onLoad={() => setImageLoaded(true)}
 					className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${
 						imageLoaded ? 'opacity-100' : 'opacity-0'
@@ -63,7 +63,7 @@ export default memo(function PanelComponent({
     				800px
   				`}
 					alt={`image${index}`}
-				/> */}
+				/>
 			</div>
 		</div>
 	)
