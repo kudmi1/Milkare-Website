@@ -1,4 +1,5 @@
 import { useState, memo } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 export default function PanelComponent({
 	expandedPanel,
@@ -6,9 +7,9 @@ export default function PanelComponent({
 	index,
 	imageNames,
 	isText,
-	isObjectTop
+	isObjectTop,
 }) {
-	const [imageLoaded, setImageLoaded] = useState(false)
+	const [showImage, setShowImage] = useState(false)
 	const picname = imageNames[index]
 
 	function handlePanelClick(panelIndex) {
@@ -19,12 +20,27 @@ export default function PanelComponent({
 		}
 	}
 
+	const { ref, inView } = useInView({
+		threshold: 0.2,
+		triggerOnce: true,
+	})
+
+	const showImageWithDelay = () => {
+		setTimeout(() => {
+			setShowImage(true)
+		}, 100)
+	}
+
+	if (inView) {
+		showImageWithDelay()
+	}
+
 	return (
 		<div
 			className={`accordion_panel ${
 				expandedPanel === index ? 'expanded' : ''
 			} ${
-				imageLoaded ? '' : 'effect-shine-skeleton'
+				showImage ? '' : 'effect-shine-skeleton'
 			} relative isolate cursor-pointer overflow-hidden rounded-md bg-slate-600 transition-all duration-300`}
 			onClick={expandedPanel === index ? null : () => handlePanelClick(index)}
 		>
@@ -38,6 +54,7 @@ export default function PanelComponent({
 
 			<h2 id={`panel${index}_heading`}></h2>
 			<div
+				ref={ref}
 				className='accordion_content h-full '
 				id={`panel${index}_content`}
 				aria-labelledby={`panel${index}_heading`}
@@ -49,22 +66,23 @@ export default function PanelComponent({
 					aria-controls={`panel${index}_content`}
 					aria-expanded='true'
 				></button>
-				<img
-					onLoad={() => setImageLoaded(true)}
-					className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${isObjectTop ? "object-top" : ""} ${
-						imageLoaded ? 'opacity-100' : 'opacity-0'
-					} `}
-					src={`images-accordion/${picname}.webp`}
-					srcSet={`
+				{inView ? (
+					<img
+						className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${
+							isObjectTop ? 'object-top' : ''
+						} ${showImage ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
+						src={`images-accordion/${picname}.webp`}
+						srcSet={`
     				images-accordion/${picname}-small.jpeg 600w,
     				images-accordion/${picname}.webp 800w
   				`}
-					sizes={`
+						sizes={`
     				(max-width: 640px) 600px,
     				800px
   				`}
-					alt={`image${index}`}
-				/>
+						alt={`image${index}`}
+					/>
+				) : null}
 			</div>
 		</div>
 	)
