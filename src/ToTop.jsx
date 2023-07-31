@@ -28,7 +28,7 @@ export default function ToTop() {
 						: "pointer-events-none opacity-0 translate-y-20"
 				} ` }
 			>
-				<button className="flex h-full w-full items-center justify-center effect-shine" onClick={goToTop} id="to-top-btn">
+				<button className="flex h-full w-full items-center justify-center effect-shine outline-none bg-none border-none" onClick={goToTop} id="to-top-btn">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="#f9ded1"
