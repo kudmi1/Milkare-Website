@@ -1,18 +1,6 @@
 import { useEffect } from 'react'
 
 export default function HamburgerMenu({ hamburgerState, setHamburgerState, setAriaExpanded }) {
-	const handleWindowResize = () => {
-		if (window.innerWidth > 640) {
-			setHamburgerState(false)
-		}
-	}
-
-	useEffect(() => {
-		window.addEventListener('resize', handleWindowResize)
-		return () => {
-			window.removeEventListener('resize', handleWindowResize)
-		}
-	}, [])
 
 	return (
 		<div
@@ -29,11 +17,11 @@ export default function HamburgerMenu({ hamburgerState, setHamburgerState, setAr
 			}}
 		>
 			<div
-				className={`slide-menu fixed right-[-80vw] top-0 z-50 h-screen w-[80vw] bg-[#212121d2] backdrop-blur ${
+				className={`slide-menu fixed right-0 top-[-80vh] z-50 h-[50vh] w-full bg-[#212121d2] backdrop-blur ${
 					hamburgerState
-						? '-translate-x-[80vw] opacity-100'
+						? 'translate-y-[80vh] opacity-100'
 						: 'pointer-events-none opacity-0'
-				} transition-all duration-300 md:hidden`}
+				} transition-all duration-300 lg:hidden`}
 				onClick={(e) => {
 					e.stopPropagation()
 				}}

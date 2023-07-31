@@ -20,14 +20,14 @@ export default function NavigatorBig({
 			></div>
 			<a
 				href='#gallery'
-				className={`gallery-link header-item z-10 inline-block w-1/3 cursor-pointer px-4 text-center  ${
+				className={`gallery-link header-item z-10 inline-block w-1/3 cursor-pointer px-4 text-center ${
 					selectedLink === 0 && isScrollToSection
 						? 'text-secondaryText'
 						: 'effect-shine text-mainText'
 				}`}
 				onClick={() => handleClick(0, 'gallery')}
 			>
-				<h5>{content.header?.gallery}</h5>
+				<p className="text-xl">{content.header?.gallery}</p>
 			</a>
 			<a
 				href='#price'
@@ -38,7 +38,7 @@ export default function NavigatorBig({
 				}`}
 				onClick={() => handleClick(1, 'price')}
 			>
-				<h5>{content.header?.price}</h5>
+				<p className="text-xl ">{content.header?.price}</p>
 			</a>
 			<a
 				href='#info'
@@ -49,7 +49,7 @@ export default function NavigatorBig({
 				}`}
 				onClick={() => handleClick(2, 'info')}
 			>
-				<h5>{content.header?.info}</h5>
+				<p className="text-xl">{content.header?.info}</p>
 			</a>
 		</nav>
 	)

@@ -46,6 +46,20 @@ export default function Header({
 		setSelectedLink(index)
 	}
 
+	const handleWindowResize = () => {
+		if (window.innerWidth > 1024) {
+			setShowHamburger(false)
+			setAriaExpanded(false)
+		}
+	}
+
+	useEffect(() => {
+		window.addEventListener('resize', handleWindowResize)
+		return () => {
+			window.removeEventListener('resize', handleWindowResize)
+		}
+	}, [])
+
 	function toggleHamburger() {
 		setShowHamburger((prev) => !prev)
 		setAriaExpanded(prev => !prev)

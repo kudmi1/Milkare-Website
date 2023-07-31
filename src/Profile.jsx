@@ -1,12 +1,16 @@
+import { useState } from "react"
+
 export default function Profile() {
+	const [loaded, setLoaded] = useState(false)
 	return (
 		<footer className='info-footer absolute bottom-0 left-0 flex h-60 w-full justify-center bg-gradient-to-br from-mainGray to-mainGrayTransparent backdrop-blur-[10px]'>
 			<div className='footer-content relative z-50 flex w-full max-w-7xl flex-col items-center'>
 				<div className='profile-pic-container absolute bottom-[77%] left-[50%] h-28 w-28 -translate-x-1/2 rounded-full overflow-hidden'>
 					<img
+					onLoad={() => setLoaded(true)}
 						src='images/milka-pic.webp'
 						alt='profile-pic'
-						className='profile-pic h-full w-full'
+						className={`profile-pic h-full w-full ${loaded ? "opacity-100" : "opacity-0"} transition-opacity duration-200`}
 					/>
 				</div>
 				<div className='pointer-events-none flex h-2/3 w-full select-none items-center justify-center'>

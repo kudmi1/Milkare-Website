@@ -141,7 +141,7 @@ function App() {
 				{section === 'gallery' ? (
 					<section className='section-entry' id='gallery'>
 						<Accordion language={language} content={content} />
-
+						
 						<PhotoGallery language={language} content={content} />
 
 						<SpeedPaint language={language} content={content} />

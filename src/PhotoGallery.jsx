@@ -170,8 +170,8 @@ export default function PhotoGallery({ language, content }) {
 					className={`relative flex max-w-7xl flex-col items-center justify-center mt-12 border border-[#3b3b3b] rounded-md`}
 				>
 					{/* <TitleComponent title='Gallery' /> */}
-					<div className='w-full rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px]'>
-						<h1 className='section-title text-6xl lg:text-8xl font-extrabold lg:mb-20 lg:mt-6 mb-8 flex justify-start sm:justify-center'>Gallery</h1>
+					<div className='w-full  rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] '>
+						<h1 className='section-title  text-6xl lg:text-8xl font-extrabold lg:mb-20 lg:mt-6 mb-8 flex justify-start sm:justify-center'>Gallery</h1>
 						<div
 							className={`grid-images grid grid-cols-2 gap-[15px] md:grid-cols-3 ${
 								showGallery ? 'opacity-100' : 'opacity-0'
@@ -183,7 +183,7 @@ export default function PhotoGallery({ language, content }) {
 									<div key={index}>
 										<div
 											className={`grid-block relative overflow-hidden xl:h-96 xl:w-96 medium-block${index} aspect-square cursor-pointer rounded-md
-									transition-all duration-500`}
+											 transition-all duration-500`}
 											style={{
 												backgroundImage: `url(${image.bg})`,
 												backgroundRepeat: 'no-repeat',

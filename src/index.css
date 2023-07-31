@@ -1,4 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css?family=Brygada+1918:400'); */
+@import url('https://fonts.googleapis.com/css?family=JetBrains+Mono:600');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,6 +75,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   margin-top: 0;
+  letter-spacing: -0.03em;
   font-size: 4.209rem;
 }
 
@@ -100,7 +102,7 @@ img {
   color: #fcf3f3;
   height: min-content;
   /* max-width: 600px; */
-  padding: 4px 12px;
+  padding: 4px 12px 4px 32px;
   border-radius: 4px;
   text-align: center;
   position: fixed;
@@ -127,6 +129,7 @@ img {
 
 .section-title {
   font-family: "JetBrains mono", serif;
+  font-weight: 600;
 }
 
 .wrapper {
@@ -432,11 +435,6 @@ img {
   @apply p-2
 }
 
-.dropdown.active > .dropdown-btn,
-.header-item:hover,
-.language-item:hover {
-  /* color: rgb(115,102,189); */
-}
 
 .dropdown.active > .dropdown-btn > .chevron {
   transform: rotate(180deg);

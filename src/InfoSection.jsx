@@ -13,17 +13,22 @@ export default function InfoSection({ language, content }) {
 			className='flex w-full max-w-6xl flex-col items-center py-24 '
 			id='info'
 		>
-			<TitleComponent title='Info' />
+			{/* <TitleComponent title='Info' /> */}
 
-			<div className='flex w-full flex-col items-center justify-center rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent py-12 backdrop-blur-[10px] border border-[#3b3b3b]'>
+			<div className='flex w-full flex-col items-center justify-center rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent pb-12 pt-4 backdrop-blur-[10px]'>
+				<h1 className='section-title mb-8 flex justify-start text-5xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl'>
+					Information
+				</h1>
 				{testArray.map((_, index) => (
 					<div
-						key={index}
-						className='info-panel mx-4 my-2	 cursor-pointer rounded-sm border-2 p-4 md:w-2/3'
 						onClick={() => handleOpen(index)}
+						key={index}
+						className={`info-panel mx-4 my-2	 cursor-pointer rounded-sm border-2 border-white/50 p-4 hover:border-white md:w-2/3 ${
+							isOpen === index ? 'border-mainText' : ''
+						}`}
 					>
 						<div className='flex w-full items-center justify-between'>
-							<p className='text-2xl'>Some question</p>
+							<p className='select-none text-2xl'>Some question</p>
 							{isOpen === index ? (
 								<img src='svg/eye-close.svg' alt='chevron' />
 							) : (
@@ -37,7 +42,7 @@ export default function InfoSection({ language, content }) {
 							} duration-500' transition-[grid-template-rows]`}
 						>
 							<div className='overflow-hidden'>
-								<p className='mt-6'>
+								<p className='mt-6 select-none'>
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
 									autem, deleniti commodi natus reprehenderit architecto iusto
 									aliquam libero? Omnis magnam rerum molestiae maxime, nam iusto
