@@ -22,13 +22,13 @@ export default function ToTop() {
 	return (
 		<div>
 			<div
-				className={`backdrop-blur-[10px] to-top-btn fixed bottom-8 right-6 md:bottom-12 md:right-12 z-[39] h-12 w-12 md:h-16 md:w-16 rounded-full bg-[#212121d2] transition-colors${
+				className={`backdrop-blur-[10px] to-top-btn fixed bottom-8 right-6 md:bottom-12 md:right-12 z-[39] h-12 w-12 md:h-16 md:w-16 rounded-full bg-[#212121d2] outline-none bg-none border-none transition-colors${
 					showTopBtn
 						? "pointer-events-auto opacity-100 translate-y-0"
 						: "pointer-events-none opacity-0 translate-y-20"
 				} ` }
 			>
-				<button className="flex h-full w-full items-center justify-center effect-shine outline-none bg-none border-none" onClick={goToTop} id="to-top-btn">
+				<button className="flex h-full w-full items-center justify-center effect-shine outline-none bg-none border-none bg-transparent" onClick={goToTop} id="to-top-btn">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="#f9ded1"
