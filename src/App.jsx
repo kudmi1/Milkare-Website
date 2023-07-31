@@ -130,10 +130,13 @@ function App() {
 					content={content}
 				/>
 			</header>
+			<div className=''>
+				
+			</div>
 				<HeroSection />
 			<main
 				ref={sectionRef}
-				className='gradient-bg border-t-2 border-[#de928d]'
+				className='gradient-bg border-t border-[#3b3b3b]'
 			>
 				{section === 'gallery' ? (
 					<section className='section-entry' id='gallery'>

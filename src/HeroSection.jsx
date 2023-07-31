@@ -10,10 +10,13 @@ export default function HeroSection() {
 	return (
 		<section
 			ref={ref}
-			className={`big-banner relative flex h-[50vh] max-h-[1080px] min-h-[600px] w-full flex-col items-center justify-center bg-[url('/images/aqua.webp')] transition-opacity 
-			${inView ? 'opacity-100' : 'opacity-0'}  
-			duration-1000 md:h-[70vh] lg:h-screen`}
+			className={`hero-section relative flex h-[50vh] max-h-[1080px] min-h-[600px] w-full flex-col items-center justify-center  md:h-[75vh] lg:h-screen`}
 		>
+			<div className={`big-banner w-full h-full bg-[url('/images/aqua.webp')] transition-opacity 
+			${inView ? 'opacity-100' : 'opacity-0'}  
+			duration-1000`}>
+
+			</div>
 			{/* <img
 				src='./images/aqua.jpg'
 				srcSet='./images-accordion/aqua.webp 768w, ./images/aqua.jpg 800w'

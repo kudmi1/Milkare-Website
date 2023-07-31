@@ -10,21 +10,25 @@ export default function InfoSection({ language, content }) {
 	}
 	return (
 		<div
-			className='flex py-24 w-full max-w-6xl flex-col items-center px-4'
+			className='flex w-full max-w-6xl flex-col items-center px-4 py-24 '
 			id='info'
 		>
-			<TitleComponent title="Info"/>
+			<TitleComponent title='Info' />
 
-			<div className='flex w-full flex-col items-center justify-center rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent py-12 backdrop-blur-[10px]'>
+			<div className='flex w-full flex-col items-center justify-center rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent py-12 backdrop-blur-[10px] border border-[#3b3b3b]'>
 				{testArray.map((_, index) => (
 					<div
 						key={index}
-						className='info-panel my-2 mx-4	 cursor-pointer rounded-sm border-2 p-4 md:w-2/3'
+						className='info-panel mx-4 my-2	 cursor-pointer rounded-sm border-2 p-4 md:w-2/3'
 						onClick={() => handleOpen(index)}
 					>
 						<div className='flex w-full items-center justify-between'>
 							<p className='text-2xl'>Some question</p>
-							<img src='icons/chevron.svg' alt='chevron' />
+							{isOpen === index ? (
+								<img src='svg/eye-close.svg' alt='chevron' />
+							) : (
+								<img src='svg/eye-open.svg' alt='chevron' />
+							)}
 						</div>
 
 						<div
@@ -34,7 +38,13 @@ export default function InfoSection({ language, content }) {
 						>
 							<div className='overflow-hidden'>
 								<p className='mt-6'>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod autem, deleniti commodi natus reprehenderit architecto iusto aliquam libero? Omnis magnam rerum molestiae maxime, nam iusto necessitatibus cupiditate enim dolore, accusantium dolorum saepe repellat, iure aliquid fuga alias quam beatae! Obcaecati maxime officiis adipisci maiores quasi sunt voluptas ipsum modi qui!
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+									autem, deleniti commodi natus reprehenderit architecto iusto
+									aliquam libero? Omnis magnam rerum molestiae maxime, nam iusto
+									necessitatibus cupiditate enim dolore, accusantium dolorum
+									saepe repellat, iure aliquid fuga alias quam beatae! Obcaecati
+									maxime officiis adipisci maiores quasi sunt voluptas ipsum
+									modi qui!
 								</p>
 							</div>
 						</div>
