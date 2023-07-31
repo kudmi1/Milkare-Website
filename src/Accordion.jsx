@@ -28,7 +28,7 @@ export default function Accordion({ language, content }) {
 	return (
 		<div
 			ref={ref}
-			className={`flex justify-center px-4 ${
+			className={`flex justify-center ${
 				showAccordion ? 'opacity-100' : 'opacity-0'
 			} pb-12 pt-24 transition-opacity duration-500 motion-reduce:transition-none`}
 		>
@@ -38,7 +38,7 @@ export default function Accordion({ language, content }) {
 				>
 					{/* <TitleComponent title='Recent Works' /> */}
 					<div className=' w-full flex-col rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] border border-[#3b3b3b]'>
-						<h1 className='section-title text-6xl lg:text-7xl font-extrabold lg:mb-20 lg:mt-6 mb-8 flex justify-center'>Recent Works</h1>
+						<h1 className='section-title text-5xl lg:text-7xl font-extrabold lg:mb-20 lg:mt-6 mb-8 flex justify-start sm:justify-center'>Recent Works</h1>
 						<div className='lg:grid hidden h-[600px] md:grid-cols-3 md:grid-rows-1 gap-4 grid-rows-3'>
 							<img src="images-accordion/aqua.webp" alt="" className='w-full h-full object-cover rounded-md grid-block pointer-events-none'/>
 							<img src="images-accordion/himeno.webp" alt="" className='w-full h-full object-cover rounded-md grid-block pointer-events-none'/>

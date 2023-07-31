@@ -10,7 +10,7 @@ export default function InfoSection({ language, content }) {
 	}
 	return (
 		<div
-			className='flex w-full max-w-6xl flex-col items-center px-4 py-24 '
+			className='flex w-full max-w-6xl flex-col items-center py-24 '
 			id='info'
 		>
 			<TitleComponent title='Info' />

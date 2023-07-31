@@ -1,11 +1,12 @@
 import { useState, memo } from 'react'
 
-export default memo(function PanelComponent({
+export default function PanelComponent({
 	expandedPanel,
 	setExpandedPanel,
 	index,
 	imageNames,
 	isText,
+	isObjectTop
 }) {
 	const [imageLoaded, setImageLoaded] = useState(false)
 	const picname = imageNames[index]
@@ -50,7 +51,7 @@ export default memo(function PanelComponent({
 				></button>
 				<img
 					onLoad={() => setImageLoaded(true)}
-					className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${
+					className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${isObjectTop ? "object-top" : ""} ${
 						imageLoaded ? 'opacity-100' : 'opacity-0'
 					} `}
 					src={`images-accordion/${picname}.webp`}
@@ -67,4 +68,4 @@ export default memo(function PanelComponent({
 			</div>
 		</div>
 	)
-})
+}

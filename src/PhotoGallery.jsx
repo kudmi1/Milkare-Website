@@ -171,7 +171,7 @@ export default function PhotoGallery({ language, content }) {
 				>
 					{/* <TitleComponent title='Gallery' /> */}
 					<div className='w-full rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px]'>
-						<h1 className='section-title text-6xl lg:text-8xl font-extrabold lg:mb-20 lg:mt-6 mb-8 flex justify-center'>Gallery</h1>
+						<h1 className='section-title text-6xl lg:text-8xl font-extrabold lg:mb-20 lg:mt-6 mb-8 flex justify-start sm:justify-center'>Gallery</h1>
 						<div
 							className={`grid-images grid grid-cols-2 gap-[15px] md:grid-cols-3 ${
 								showGallery ? 'opacity-100' : 'opacity-0'

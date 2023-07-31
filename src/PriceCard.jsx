@@ -10,6 +10,7 @@ export default function PriceCard({
 	contentTitle,
 	textContent,
 	isAccordionVertical,
+	isObjectTop
 }) {
 	const [showPriceCard, setShowPriceCard] = useState(false)
 	const { ref, inView } = useInView({
@@ -76,8 +77,10 @@ export default function PriceCard({
 											imageNames={panelData}
 											isText={false}
 											initialExpandedIndex={0}
+											isObjectTop={isObjectTop}
 										/>
 									))}
+
 								</div>
 							</div>
 						</div>
@@ -104,9 +107,9 @@ export default function PriceCard({
 											setExpandedPanel={setState}
 											imageNames={panelData}
 											imageFolder={'images'}
-											format={'webp'}
 											isText={false}
 											initialExpandedIndex={0}
+											isObjectTop={isObjectTop}
 										/>
 									))}
 								</div>

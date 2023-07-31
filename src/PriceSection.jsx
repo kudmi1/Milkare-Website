@@ -31,7 +31,7 @@ export default function PriceSection({ language, content }) {
 
 	return (
 		<div 
-			className='w-full max-w-6xl flex flex-col items-center pt-24 px-4'
+			className='w-full max-w-6xl flex flex-col items-center pt-24'
 			id='price'
 		>
 			<TitleComponent title="Price"/>
@@ -44,6 +44,7 @@ export default function PriceSection({ language, content }) {
 					state={expandedPanel}
 					textOnLeft={false}
 					isAccordionVertical={true}
+					isObjectTop={false}
 				/>
 
 				<PriceCard
@@ -54,6 +55,7 @@ export default function PriceSection({ language, content }) {
 					state={expandedPanel1}
 					textOnLeft={true}
 					isAccordionVertical={false}
+					isObjectTop={true}
 				/>
 
 				<PriceCard
@@ -64,6 +66,7 @@ export default function PriceSection({ language, content }) {
 					state={expandedPanel2}
 					textOnLeft={false}
 					isAccordionVertical={false}
+					isObjectTop={true}
 				/>
 
 				<PriceCard
