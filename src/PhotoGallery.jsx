@@ -3,7 +3,6 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 import { useInView } from 'react-intersection-observer'
 import { useState, useEffect, useRef } from 'react'
 import TitleComponent from './TitleComponent'
-import PhotoSwipeLightbox from 'photoswipe/dist/types/lightbox/lightbox'
 
 const code_names = [
 	'lucy',
