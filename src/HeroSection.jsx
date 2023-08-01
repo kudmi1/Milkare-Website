@@ -14,7 +14,7 @@ export default function HeroSection() {
 		>
 			<div className={`big-banner w-full h-full bg-[url('/images/aqua.webp')] transition-opacity 
 			${inView ? 'opacity-100' : 'opacity-0'}  
-			duration-1000`}>
+			duration-500`}>
 
 			</div>
 			{/* <img

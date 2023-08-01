@@ -10,7 +10,7 @@ export default function Profile() {
 					onLoad={() => setLoaded(true)}
 						src='images/milka-pic.webp'
 						alt='profile-pic'
-						className={`profile-pic h-full w-full ${loaded ? "opacity-100" : "opacity-0"} transition-opacity duration-200`}
+						className={`profile-pic h-full w-full ${loaded ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
 					/>
 				</div>
 				<div className='pointer-events-none flex h-2/3 w-full select-none items-center justify-center'>
