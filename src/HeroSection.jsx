@@ -24,7 +24,9 @@ export default function HeroSection() {
     			(max-width: 768px) 600px,
     			800px
   			`}
-				className='hero-image w-full object-cover h-full '
+				className={`'hero-image w-full object-cover h-full ${inView ? 'opacity-100' : 'opacity-0'} transition-opacity 
+				${inView ? 'opacity-100' : 'opacity-0'}  
+				duration-500`}
 				alt='aqua_banner'
 			/>
 			<Profile />
