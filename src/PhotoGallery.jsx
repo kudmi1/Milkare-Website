@@ -3,6 +3,7 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 import { useInView } from 'react-intersection-observer'
 import { useState, useEffect, useRef } from 'react'
 import TitleComponent from './TitleComponent'
+import { delay } from 'lodash'
 
 const code_names = [
 	'lucy',
@@ -55,13 +56,12 @@ const options = {
 }
 
 export default function PhotoGallery({ language, content }) {
-	const [showGallery, setShowGallery] = useState(false)
-	const gridRef = useRef(null)
-	const [imageLoaded, setImageLoaded] = useState(false)
+	const [showImage, setShowImage] = useState(false)
+
 	const images = []
 
 	const { ref, inView } = useInView({
-		threshold: 0.2,
+		threshold: 0.1,
 		triggerOnce: true,
 	})
 
@@ -77,19 +77,15 @@ export default function PhotoGallery({ language, content }) {
 		})
 	})
 
-	const handleImageLoad = () => {
-		setImageLoaded(true)
-	}
-
-	const showGalleryWithDelay = () => {
+	const showImageWithDelay = () => {
 		setTimeout(() => {
-			setShowGallery(true)
-		}, 100)
+			setShowImage(true)
+		}, 200)
 	}
 
-	if (inView) {
-		showGalleryWithDelay()
-	}
+	// if (inView) {
+	// 	showImageWithDelay()
+	// }
 
 	const uiElements = [
 		{
@@ -164,42 +160,47 @@ export default function PhotoGallery({ language, content }) {
 	]
 
 	return (
-		<div ref={ref} className='motion-reduce:transition-none w-full flex justify-center'>
-			{inView ? (
-				<div
-					className={`relative flex max-w-7xl flex-col items-center justify-center mt-12 border border-[#3b3b3b] rounded-md`}
-				>
-					{/* <TitleComponent title='Gallery' /> */}
-					<div className='w-full  rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] '>
-						<h1 className='section-title text-6xl lg:text-8xl font-extrabold lg:mb-20 lg:mt-6 mb-8 flex justify-start sm:justify-center'>Gallery</h1>
-						<div
-							className={`grid-images grid grid-cols-2 gap-[15px] md:grid-cols-3 ${
-								showGallery ? 'opacity-100' : 'opacity-0'
-							} transition-opacity duration-500`}
-							ref={gridRef}
-						>
-							<Gallery options={options} uiElements={uiElements} withCaption>
-								{images.map((image, index) => (
-									<div key={index}>
-										<div
-											className={`grid-block relative overflow-hidden xl:h-96 xl:w-96 medium-block${index} aspect-square cursor-pointer rounded-md
+		<div
+			ref={ref}
+			className='flex w-full justify-center motion-reduce:transition-none'
+		>
+			<div
+				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border border-[#3b3b3b] lg:w-max`}
+			>
+				{/* <TitleComponent title='Gallery' /> */}
+				<div className='w-full rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] '>
+					<h1
+						className={`section-title mb-8 flex justify-start text-6xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-8xl 
+					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
+					>
+						Gallery
+					</h1>
+					<div
+						className={`grid-images grid w-full grid-cols-2 gap-[15px] transition-opacity duration-500 md:grid-cols-3`}
+					>
+						<Gallery options={options} uiElements={uiElements} withCaption>
+							{images.map((image, index) => (
+								<div key={index}>
+									<div
+										className={`grid-block relative overflow-hidden xl:h-96 xl:w-96 medium-block${index} aspect-square cursor-pointer rounded-md
 											 transition-all duration-500`}
-											style={{
-												backgroundImage: `url(${image.bg})`,
-												backgroundRepeat: 'no-repeat',
-												backgroundSize: 'cover',
-											}}
+										style={{
+											backgroundImage: `url(${image.bg})`,
+											backgroundRepeat: 'no-repeat',
+											backgroundSize: 'cover',
+										}}
+									>
+										<Item
+											original={image.path}
+											thumbnail={image.sm}
+											width={dimensions[index].width}
+											height={dimensions[index].height}
+											caption={`<h1 class="pswp__custom-caption">${names[index]}<h1/>`}
 										>
-											<Item
-												original={image.path}
-												thumbnail={image.sm}
-												width={dimensions[index].width}
-												height={dimensions[index].height}
-												caption={`<h1 class="pswp__custom-caption">${names[index]}<h1/>`}
-											>
-												{({ ref, open }) => (
+											{({ ref, open }) =>
+												inView ? (
 													<img
-														onLoad={handleImageLoad}
+													onLoad={showImageWithDelay}
 														ref={ref}
 														alt={names[index]}
 														onClick={open}
@@ -209,48 +210,26 @@ export default function PhotoGallery({ language, content }) {
     												(max-width: 640px) 600px,
     												800px
   												`}
-														className={`zoom-image object-cover medium-image${index} transition-all duration-500 ${
-															imageLoaded ? 'opacity-100' : 'opacity-0'
-														}`}
+														className={`zoom-image object-cover medium-image${index}  ${
+															showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
+														} transition-all duration-500`}
 														loading='lazy'
 													/>
-												)}
-											</Item>
-
-											<div className='inner-text pointer-events-none absolute bottom-[-4rem] left-0 z-20 hidden h-[3rem] w-full items-center justify-center border-t border-[#3b3b3b] bg-gradient-to-r from-mainGray via-[#3f3f3f] to-mainGray opacity-0 md:flex xl:h-[4rem] '>
-												<h2 className='text-center text-lg font-semibold leading-tight text-white xl:text-2xl'>
-													{names[index]}
-												</h2>
-											</div>
+												) : null
+											}
+										</Item>
+										<div className='inner-text pointer-events-none absolute bottom-[-4rem] left-0 z-20 hidden h-[3rem] w-full items-center justify-center border-t border-[#3b3b3b] bg-gradient-to-r from-mainGray via-[#3f3f3f] to-mainGray opacity-0 md:flex xl:h-[4rem] '>
+											<h2 className='text-center text-lg font-semibold leading-tight text-white xl:text-2xl'>
+												{names[index]}
+											</h2>
 										</div>
 									</div>
-								))}
-							</Gallery>
-						</div>
-					</div>
-				</div>
-			) : (
-				<div className='gallery-skeleton'>
-					<div className='relative flex flex-col items-center justify-center pt-12'>
-						<div className='effect-shine-skeleton my-12 flex h-16 w-1/2 max-w-lg items-center justify-center rounded-2xl border-2 border-mainGray bg-gradient-to-r  bg-cover backdrop-blur-[40px]'>
-							<h1 className='header-section my-4 select-none text-center text-4xl text-mainText'></h1>
-						</div>
-						<div
-							className='grid-images grid max-w-7xl grid-cols-2 gap-[15px] px-4 pt-12  md:grid-cols-3 md:p-14 md:px-14'
-							ref={gridRef}
-						>
-							{images.map((_, index) => (
-								<div key={index}>
-									<div
-										className={`grid-block effect-shine-skeleton relative aspect-square cursor-pointer overflow-hidden rounded-md transition-all
-									duration-500 xl:h-96 xl:w-96`}
-									></div>
 								</div>
 							))}
-						</div>
+						</Gallery>
 					</div>
 				</div>
-			)}
+			</div>
 		</div>
 	)
 }

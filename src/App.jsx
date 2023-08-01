@@ -23,28 +23,28 @@ function App() {
 		sessionStorage.getItem('section') || 'gallery'
 	)
 
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					entry.target.classList.toggle('show-entry', entry.isIntersecting)
-					if (entry.isIntersecting) {
-						setIsScrollToSection(true)
-						observer.unobserve(entry.target)
-					} else if (!entry.isIntersecting) {
-						setIsScrollToSection(false)
-					}
-				})
-			},
-			{
-				threshold: 0.1,
-			}
-		)
-		const hiddenElements = document.querySelectorAll('.hidden-entry')
-		hiddenElements.forEach((el) => observer.observe(el))
+	// useEffect(() => {
+	// 	const observer = new IntersectionObserver(
+	// 		(entries) => {
+	// 			entries.forEach((entry) => {
+	// 				entry.target.classList.toggle('show-entry', entry.isIntersecting)
+	// 				if (entry.isIntersecting) {
+	// 					setIsScrollToSection(true)
+	// 					observer.unobserve(entry.target)
+	// 				} else if (!entry.isIntersecting) {
+	// 					setIsScrollToSection(false)
+	// 				}
+	// 			})
+	// 		},
+	// 		{
+	// 			threshold: 0.1,
+	// 		}
+	// 	)
+	// 	const hiddenElements = document.querySelectorAll('.hidden-entry')
+	// 	hiddenElements.forEach((el) => observer.observe(el))
 
-		return () => observer.disconnect()
-	}, [section])
+	// 	return () => observer.disconnect()
+	// }, [section])
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -153,7 +153,7 @@ function App() {
 					</section>
 				) : null}
 				{section === 'info' ? (
-					<section className='section-entry hidden-entry flex justify-center motion-reduce:transition-none'>
+					<section className='section-entry flex justify-center motion-reduce:transition-none'>
 						<InfoSection language={language} content={content} />
 					</section>
 				) : null}

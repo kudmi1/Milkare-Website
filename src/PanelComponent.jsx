@@ -28,12 +28,12 @@ export default function PanelComponent({
 	const showImageWithDelay = () => {
 		setTimeout(() => {
 			setShowImage(true)
-		}, 100)
+		}, 50)
 	}
 
-	if (inView) {
-		showImageWithDelay()
-	}
+	// if (inView) {
+	// 	showImageWithDelay()
+	// }
 
 	return (
 		<div
@@ -68,9 +68,10 @@ export default function PanelComponent({
 				></button>
 				{inView ? (
 					<img
+					onLoad={showImageWithDelay}
 						className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${
 							isObjectTop ? 'object-top' : ''
-						} ${showImage ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
+						} ${showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-105'} transition-all duration-500`}
 						src={`images-accordion/${picname}.webp`}
 						srcSet={`
     				images-accordion/${picname}-small.jpeg 600w,

@@ -20,7 +20,7 @@ export default function NavigatorBig({
 			></div>
 			<a
 				href='#gallery'
-				className={`gallery-link header-item z-10 inline-block w-1/3 cursor-pointer px-4 text-center ${
+				className={`gallery-link header-item z-10 flex justify-center items-center h-full w-1/3 cursor-pointer px-4 text-center ${
 					selectedLink === 0 && isScrollToSection
 						? 'text-secondaryText'
 						: 'effect-shine text-mainText'
@@ -31,7 +31,7 @@ export default function NavigatorBig({
 			</a>
 			<a
 				href='#price'
-				className={`price-link header-item z-10 inline-block w-1/3 cursor-pointer px-4 text-center ${
+				className={`price-link header-item z-10 flex justify-center items-center h-full w-1/3 cursor-pointer px-4 text-center ${
 					selectedLink === 1 && isScrollToSection
 						? 'text-secondaryText'
 						: 'effect-shine text-mainText'
@@ -42,7 +42,7 @@ export default function NavigatorBig({
 			</a>
 			<a
 				href='#info'
-				className={`'info-link header-item z-10 inline-block w-1/3 cursor-pointer px-4 text-center ${
+				className={`'info-link header-item z-10 flex justify-center items-center h-full w-1/3 cursor-pointer px-4 text-center ${
 					selectedLink === 2 && isScrollToSection
 						? 'text-secondaryText'
 						: 'effect-shine text-mainText'
