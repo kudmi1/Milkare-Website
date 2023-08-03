@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 const testArray = [1, 2, 3, 4, 5]
 
 export default function InfoSection({ language, content }) {
-	const [isOpen, setIsOpen] = useState(0)
+	const [isOpen, setIsOpen] = useState()
 	function handleOpen(index) {
 		setIsOpen((prev) => (prev === index ? null : index))
 	}

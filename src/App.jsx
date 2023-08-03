@@ -23,29 +23,6 @@ function App() {
 		sessionStorage.getItem('section') || 'gallery'
 	)
 
-	// useEffect(() => {
-	// 	const observer = new IntersectionObserver(
-	// 		(entries) => {
-	// 			entries.forEach((entry) => {
-	// 				entry.target.classList.toggle('show-entry', entry.isIntersecting)
-	// 				if (entry.isIntersecting) {
-	// 					setIsScrollToSection(true)
-	// 					observer.unobserve(entry.target)
-	// 				} else if (!entry.isIntersecting) {
-	// 					setIsScrollToSection(false)
-	// 				}
-	// 			})
-	// 		},
-	// 		{
-	// 			threshold: 0.1,
-	// 		}
-	// 	)
-	// 	const hiddenElements = document.querySelectorAll('.hidden-entry')
-	// 	hiddenElements.forEach((el) => observer.observe(el))
-
-	// 	return () => observer.disconnect()
-	// }, [section])
-
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -118,6 +95,7 @@ function App() {
 
 	return (
 		<div className='App'>
+			<div className="full-content">
 			<header ref={headerRef}>
 				<Header
 					section={section}
@@ -163,6 +141,7 @@ function App() {
 			<footer className='mt-12 md:mt-0'>
 				<Footer />
 			</footer>
+			</div>
 		</div>
 	)
 }

@@ -3,7 +3,6 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 import { useInView } from 'react-intersection-observer'
 import { useState, useEffect, useRef } from 'react'
 import TitleComponent from './TitleComponent'
-import { delay } from 'lodash'
 
 const code_names = [
 	'lucy',
@@ -82,10 +81,6 @@ export default function PhotoGallery({ language, content }) {
 			setShowImage(true)
 		}, 200)
 	}
-
-	// if (inView) {
-	// 	showImageWithDelay()
-	// }
 
 	const uiElements = [
 		{
@@ -210,7 +205,7 @@ export default function PhotoGallery({ language, content }) {
     												(max-width: 640px) 600px,
     												800px
   												`}
-														className={`zoom-image object-cover medium-image${index}  ${
+														className={`zoom-image object-cover rounded-md medium-image${index}  ${
 															showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
 														} transition-all duration-500`}
 														loading='lazy'

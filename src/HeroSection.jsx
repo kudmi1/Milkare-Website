@@ -12,11 +12,6 @@ export default function HeroSection() {
 			ref={ref}
 			className={`hero-section relative flex h-[50vh] max-h-[1080px] min-h-[600px] w-full flex-col items-center justify-center  md:h-[75vh] lg:h-screen`}
 		>
-			{/* <div className={`big-banner w-full h-full bg-[url('/images/aqua.webp')] transition-opacity 
-			${inView ? 'opacity-100' : 'opacity-0'}  
-			duration-500`}>
-
-			</div> */}
 			<img
 				src='./images/aqua.jpg'
 				srcSet='./images-accordion/aqua.webp 768w, ./images/aqua.jpg 800w'

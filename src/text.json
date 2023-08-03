@@ -19,11 +19,11 @@
 			},
 			"halfBody": {
 				"title": "Half Body",
-				"content": "Full render 3200 ₽ / 40 $ <br /> Sketch + flat color 1200 ₽ / 15 $ <br /> NSFW 4080 ₽ / 50 $ <br />☾ ADDITIONAL CHARACTER: double the price <br /> Max. 2 characters"
+				"content": "Full render 3200 ₽ / 40 $ <br /> Sketch + flat color 1200 ₽ / 15 $ <br /> NSFW 4080 ₽ / 50 $ <br />☾ ADDITIONAL CHARACTER: price x2<br /> Max. 2 characters"
 			},
 			"fullBody": {
 				"title": "Full Body",
-				"content": "Full render 4080 ₽ / 50 $ ~ 75 $ <br /> Sketch + flat color 1080 ₽ / 23 $ <br /> NSFW 4900 ₽ / 60 $ ☾ <br />☾ ADDITIONAL CHARACTER: double the price <br /> Max. 2 characters"
+				"content": "Full render 4080 ₽ / 50 $ ~ 75 $ <br /> Sketch + flat color 1080 ₽ / 23 $ <br /> NSFW 4900 ₽ / 60 $ ☾ <br />☾ ADDITIONAL CHARACTER: price x2 <br /> Max. 2 characters"
 			},
 			"background": {
 				"title": "Background",
@@ -55,11 +55,11 @@
 			},
 			"halfBody": {
 				"title": "Половина роста",
-				"content": "Полный рендер 3200 ₽ / 40 $ <br /> Скетч + плоский цвет 1200 ₽ / 15 $ <br /> NSFW 4080 ₽ / 50 $ <br />☾ ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ: цена удваивается, Макс. 2 персонажа"
+				"content": "Полный рендер 3200 ₽ / 40 $ <br /> Скетч + плоский цвет 1200 ₽ / 15 $ <br /> NSFW 4080 ₽ / 50 $ <br />☾ ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ: цена x2, Макс. 2 персонажа"
 			},
 			"fullBody": {
 				"title": "Полный рост",
-				"content": "Полный рендер 4080 ₽ / 50 $ ~ 75 $ <br /> Скетч + плоский цвет 1080 ₽ / 23 $ <br /> NSFW 4900 ₽ / 60 $ ☾ <br />☾ ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ: цена удваивается, Макс. 2 персонажа"
+				"content": "Полный рендер 4080 ₽ / 50 $ ~ 75 $ <br /> Скетч + плоский цвет 1080 ₽ / 23 $ <br /> NSFW 4900 ₽ / 60 $ ☾ <br />☾ ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ: цена x2, Макс. 2 персонажа"
 			},
 			"background": {
 				"title": "Фон",

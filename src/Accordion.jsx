@@ -39,7 +39,7 @@ export default function Accordion({ language, content }) {
 						className={`section-title mb-8 flex justify-start text-5xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
 						${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					>
-						Recent Works
+						Последние работы
 					</h1>
 					<div className='hidden h-[600px] grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-1 lg:grid'>
 						{inView ? (
