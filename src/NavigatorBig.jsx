@@ -23,7 +23,7 @@ export default function NavigatorBig({
 					// to='/gallery'
 					href='#gallery'
 					className={`gallery-link header-item z-10 flex h-full w-1/3 cursor-pointer items-center justify-center px-4 text-center ${
-						selectedLink === 0 && isScrollToSection
+						selectedLink === 0 && isScrollToSection || section === 'gallery' && isScrollToSection
 							? 'text-secondaryText'
 							: 'effect-shine text-mainText'
 					}`}
@@ -35,7 +35,7 @@ export default function NavigatorBig({
 					// to='/price'
 					href='#price'
 					className={`price-link header-item z-10 flex h-full w-1/3 cursor-pointer items-center justify-center px-4 text-center ${
-						selectedLink === 1 && isScrollToSection
+						selectedLink === 1 && isScrollToSection || section === 'price' && isScrollToSection
 							? 'text-secondaryText'
 							: 'effect-shine text-mainText'
 					}`}
@@ -47,7 +47,7 @@ export default function NavigatorBig({
 					// to='/info'
 					href='#info'
 					className={`'info-link header-item z-10 flex h-full w-1/3 cursor-pointer items-center justify-center px-4 text-center ${
-						selectedLink === 2 && isScrollToSection
+						selectedLink === 2 && isScrollToSection || section === 'info' && isScrollToSection
 							? 'text-secondaryText'
 							: 'effect-shine text-mainText'
 					}`}

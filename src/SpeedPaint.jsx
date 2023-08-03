@@ -1,24 +1,15 @@
 import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
-import Modal from './Modal'
 
 export default function SpeedPaint({ language, content }) {
 	const [showSpeedpaint, setShowSpeedpaint] = useState(false)
-	const [modalActive, setModalActive] = useState(false)
-	const videoRef = useRef(null)
-	const [showCloseButton, setShowCloseButton] = useState(false)
+	const videoRef = useRef()
 	const [isClicked, setIsClicked] = useState(false)
 	const videoContainerRef = useRef()
 
 	function turnOffVideo() {
 		setIsClicked(false)
-		videoRef.current.pause()
-	}
-
-	const handleVideoClick = (event) => {
-		event.stopPropagation()
-		event.preventDefault()
-		setShowCloseButton((prev) => !prev)
+		videoRef.current?.pause()
 	}
 
 	useEffect(() => {

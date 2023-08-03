@@ -17,8 +17,8 @@ export default function Header({
 	const [showHamburger, setShowHamburger] = useState(false)
 	const [ariaExpanded, setAriaExpanded] = useState(false)
 	const [position, setPosition] = useState(() => {
-		// Retrieve the stored position from localStorage
-		const storedPosition = localStorage.getItem('underlinePosition')
+		// Retrieve the stored position from sessionStorage
+		const storedPosition = sessionStorage.getItem('underlinePosition')
 		return storedPosition ? storedPosition : '0'
 	})
 	const [selectedLink, setSelectedLink] = useState(null)
@@ -31,8 +31,8 @@ export default function Header({
 	}, [position])
 
 	useEffect(() => {
-		// Store the position in localStorage
-		localStorage.setItem('underlinePosition', position)
+		// Store the position in sessionStorage
+		sessionStorage.setItem('underlinePosition', position)
 	}, [position])
 
 	function ul(index) {

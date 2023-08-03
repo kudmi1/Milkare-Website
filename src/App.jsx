@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useState } from 'react'
 import Accordion from './Accordion'
 import HeroSection from './HeroSection'
 import Header from './Header'
@@ -6,7 +7,6 @@ import Footer from './Footer'
 import SpeedPaint from './SpeedPaint'
 import ToTop from './ToTop'
 import PhotoGallery from './PhotoGallery'
-import { useState } from 'react'
 import InfoSection from './InfoSection'
 import PriceSection from './PriceSection'
 import Translation from './text.json'
@@ -22,6 +22,8 @@ function App() {
 	const [section, setSection] = useState(
 		sessionStorage.getItem('section') || 'gallery'
 	)
+
+	// const [section, setSection] = useState('gallery')
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -93,9 +95,13 @@ function App() {
 		}
 	}, [language])
 
+	useEffect(() => {
+		console.log(section)
+
+	}, [section])
+
 	return (
 		<div className='App'>
-			<div className="full-content">
 			<header ref={headerRef}>
 				<Header
 					section={section}
@@ -117,11 +123,10 @@ function App() {
 				className='gradient-bg border-t border-[#3b3b3b]'
 			>
 				{section === 'gallery' ? (
+
 					<section className='section-entry' id='gallery'>
 						<Accordion language={language} content={content} />
-						
 						<PhotoGallery language={language} content={content} />
-
 						<SpeedPaint language={language} content={content} />
 					</section>
 				) : null}
@@ -141,7 +146,6 @@ function App() {
 			<footer className='mt-12 md:mt-0'>
 				<Footer />
 			</footer>
-			</div>
 		</div>
 	)
 }

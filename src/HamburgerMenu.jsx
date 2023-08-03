@@ -38,10 +38,10 @@ export default function HamburgerMenu({
 							<Translate language={language} setLanguage={setLanguage}/>
 						</div>
 						<div className='flex h-full w-full flex-col items-center justify-evenly '>
-							<div className='h-16 w-2/3 rounded-md border border-thinLine'></div>
-							<div className='h-16 w-2/3 rounded-md border border-thinLine'></div>
-							<div className='h-16 w-2/3 rounded-md border border-thinLine'></div>
-							<div className='h-16 w-2/3 rounded-md border border-thinLine'></div>
+							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>
+							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>
+							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>
+							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>
 						</div>
 					</div>
 				</div>
