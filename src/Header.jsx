@@ -62,14 +62,18 @@ export default function Header({
 
 	function toggleHamburger() {
 		setShowHamburger((prev) => !prev)
-		setAriaExpanded(prev => !prev)
+		setAriaExpanded((prev) => !prev)
 	}
 
 	return (
 		<div>
 			<header
-				className={`header fixed z-50 flex h-24 w-full flex-col justify-center bg-gradient-to-tr
-			 from-mainGrayTransparent to-mainGray opacity-100 backdrop-blur-[10px] transition-all duration-700 lg:flex-row ${headerHeight}
+				className={`header fixed z-50 flex h-24 w-full flex-col justify-center ${
+					ariaExpanded
+						? 'bg-mainGray'
+						: ''
+				} bg-gradient-to-tr
+			 from-mainGrayTransparent to-mainGray opacity-100 backdrop-blur-[10px] lg:flex-row ${headerHeight}
 			 `}
 			>
 				<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:px-6 lg:grid-cols-3 xl:px-0'>
@@ -89,29 +93,57 @@ export default function Header({
 						language={language}
 						content={content}
 					/>
+					<div className='hidden lg:block'>
+						<Translate language={language} setLanguage={setLanguage} />
+					</div>
 
-					<Translate language={language} setLanguage={setLanguage} />
-					
-						<div className='flex h-full items-center justify-end px-6 sm:px-0 lg:hidden z-[100]'>
-							<button
-								onClick={toggleHamburger}
-								className='hamburger-btn effect-shine flex'
-								aria-controls='primary-navigation'
-								aria-expanded={ariaExpanded}
-								id="hamburger-btn"
+					<div className='z-50 flex h-full items-center justify-end px-6 sm:px-0 lg:hidden'>
+						<button
+							onClick={toggleHamburger}
+							className='hamburger-btn effect-shine flex'
+							aria-controls='primary-navigation'
+							aria-expanded={ariaExpanded}
+							id='hamburger-btn'
+						>
+							<svg
+								className='hamburger fill-mainText'
+								viewBox='0 0 100 100'
+								width={30}
 							>
-								<svg className='hamburger fill-mainText' viewBox='0 0 100 100' width={30}>
-									<rect className='line top-bar' width={80} height={7} x={10} y={27} rx={5}></rect>
-									<rect className='line middle-bar' width={80} height={7} x={10} y={50} rx={5}></rect>
-									<rect className='line bottom-bar' width={80} height={7} x={10} y={73} rx={5}></rect>
-								</svg>
-							</button>
-						</div>
-				
+								<rect
+									className='line top-bar'
+									width={80}
+									height={7}
+									x={10}
+									y={27}
+									rx={5}
+								></rect>
+								<rect
+									className='line middle-bar'
+									width={80}
+									height={7}
+									x={10}
+									y={50}
+									rx={5}
+								></rect>
+								<rect
+									className='line bottom-bar'
+									width={80}
+									height={7}
+									x={10}
+									y={73}
+									rx={5}
+								></rect>
+							</svg>
+						</button>
+					</div>
+
 					<HamburgerMenu
 						hamburgerState={showHamburger}
 						setHamburgerState={setShowHamburger}
 						setAriaExpanded={setAriaExpanded}
+						language={language}
+						setLanguage={setLanguage}
 					/>
 				</div>
 				<NavigatorSmall

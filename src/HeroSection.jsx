@@ -10,7 +10,7 @@ export default function HeroSection() {
 	return (
 		<section
 			ref={ref}
-			className={`hero-section relative flex h-[50vh] max-h-[1080px] min-h-[600px] w-full flex-col items-center justify-center  md:h-[75vh] lg:h-screen`}
+			className={`hero-section relative flex h-[50vh] max-h-[1080px] min-h-[600px] w-full flex-col items-center justify-center  md:h-[75vh] lg:h-screen -z-50`}
 		>
 			<img
 				src='./images/aqua.jpg'

@@ -11,7 +11,8 @@ module.exports = {
         mainText: "#fcf3f3",
         secondaryText: "#e5ec86",
         mainGray: "#212121",
-        mainGrayTransparent: "#212121d2"
+        mainGrayTransparent: "#212121d2",
+        thinLine: '#3b3b3b'
       }
     },
   },

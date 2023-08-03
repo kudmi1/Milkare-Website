@@ -1,10 +1,16 @@
 import { useEffect } from 'react'
+import Translate from './Translate'
 
-export default function HamburgerMenu({ hamburgerState, setHamburgerState, setAriaExpanded }) {
-
+export default function HamburgerMenu({
+	hamburgerState,
+	setHamburgerState,
+	setAriaExpanded,
+	language,
+	setLanguage
+}) {
 	return (
 		<div
-			className={`fixed bottom-0 left-0 right-0 top-0 z-40 h-screen w-screen bg-[#212121a2] transition-all duration-300
+			className={`absolute bottom-0 left-0 right-0 top-14 z-30 h-screen w-screen bg-[#2121216b] transition-all duration-300
      ${
 				hamburgerState
 					? 'pointer-events-auto opacity-100'
@@ -16,16 +22,30 @@ export default function HamburgerMenu({ hamburgerState, setHamburgerState, setAr
 				setHamburgerState(false)
 			}}
 		>
-			<div
-				className={`slide-menu fixed right-0 top-[-80vh] z-50 h-[50vh] w-full bg-[#212121d2] backdrop-blur ${
-					hamburgerState
-						? 'translate-y-[80vh] opacity-100'
-						: 'pointer-events-none opacity-0'
-				} transition-all duration-300 lg:hidden`}
-				onClick={(e) => {
-					e.stopPropagation()
-				}}
-			></div>
+			<div className='relative w-full'>
+				<div
+					className={`slide-menu absolute right-0 top-0 z-40 w-full bg-mainGray backdrop-blur ${
+						hamburgerState
+							? 'h-[50vh] opacity-100'
+							: 'pointer-events-none h-0 opacity-0'
+					} transition-all duration-300 lg:hidden`}
+					onClick={(e) => {
+						e.stopPropagation()
+					}}
+				>
+					<div className='flex h-full w-full flex-col items-center max-w-[600px] mx-auto'>
+						<div className='w-2/3'>
+							<Translate language={language} setLanguage={setLanguage}/>
+						</div>
+						<div className='flex h-full w-full flex-col items-center justify-evenly '>
+							<div className='h-16 w-2/3 rounded-md border border-thinLine'></div>
+							<div className='h-16 w-2/3 rounded-md border border-thinLine'></div>
+							<div className='h-16 w-2/3 rounded-md border border-thinLine'></div>
+							<div className='h-16 w-2/3 rounded-md border border-thinLine'></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	)
 }
