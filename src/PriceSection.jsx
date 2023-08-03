@@ -32,9 +32,8 @@ export default function PriceSection({ language, content }) {
 	return (
 		<div 
 			className='w-full max-w-6xl flex flex-col items-center pt-24 sm:px-4'
-			id='price'
 		>
-			<TitleComponent title="Price"/>
+			{/* <TitleComponent title="Price"/> */}
 			<div className='w-full'>
 				<PriceCard
 					contentTitle={content.priceSection?.bust?.title}

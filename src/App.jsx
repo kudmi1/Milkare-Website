@@ -23,7 +23,6 @@ function App() {
 		sessionStorage.getItem('section') || 'gallery'
 	)
 
-	// const [section, setSection] = useState('gallery')
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -95,11 +94,6 @@ function App() {
 		}
 	}, [language])
 
-	useEffect(() => {
-		console.log(section)
-
-	}, [section])
-
 	return (
 		<div className='App'>
 			<header ref={headerRef}>
@@ -124,19 +118,19 @@ function App() {
 			>
 				{section === 'gallery' ? (
 
-					<section className='section-entry' id='gallery'>
+					<section className='section-entry pt-12 lg:pt-0' id='gallery'>
 						<Accordion language={language} content={content} />
 						<PhotoGallery language={language} content={content} />
 						<SpeedPaint language={language} content={content} />
 					</section>
 				) : null}
 				{section === 'price' ? (
-					<section className='section-entry flex justify-center motion-reduce:transition-none'>
+					<section className='section-entry pt-12 lg:pt-0 flex justify-center motion-reduce:transition-none' id='price'>
 						<PriceSection language={language} content={content} />
 					</section>
 				) : null}
 				{section === 'info' ? (
-					<section className='section-entry flex justify-center motion-reduce:transition-none'>
+					<section className='section-entry pt-12 lg:pt-0 flex justify-center motion-reduce:transition-none' id='info'>
 						<InfoSection language={language} content={content} />
 					</section>
 				) : null}
