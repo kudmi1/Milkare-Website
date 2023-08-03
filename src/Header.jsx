@@ -147,6 +147,7 @@ export default function Header({
 					/>
 				</div>
 				<NavigatorSmall
+					section={section}
 					selectedLink={selectedLink}
 					isScrollToSection={isScrollToSection}
 					handleClick={handleClick}
