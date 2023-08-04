@@ -1,5 +1,7 @@
 import { exec } from 'child_process'
 
+const gitTrigger = 'Some text'
+
 const code_names = [
 	'Lucy',
 	'kokomi',
