@@ -1,6 +1,9 @@
-import PhotoSwipeLightbox from '../src/PhotoSwipe-master/dist/photoswipe-lightbox.esm'
+// import PhotoSwipeLightbox from '../src/PhotoSwipe-master/dist/photoswipe-lightbox.esm'
+// import '../src/PhotoSwipe-master/src/photoswipe.css'
+import PhotoSwipeLightbox from './photoswipe-lightbox.esm'
+import './photoswipe.css'
+
 import React, { useEffect, useState } from 'react'
-import '../src/PhotoSwipe-master/src/photoswipe.css'
 import ObjectPosition from './photoswipe-object-position'
 import { useInView } from 'react-intersection-observer'
 
