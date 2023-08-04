@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import TitleComponent from './TitleComponent'
 import { useInView } from 'react-intersection-observer'
+import SimpleGallery from './SimpleGallery'
 
 const testArray = [1, 2, 3, 4, 5]
 
@@ -62,6 +63,19 @@ export default function InfoSection({ language, content }) {
 						</div>
 					</div>
 				))}
+			</div>
+
+			<div>
+				<SimpleGallery galleryID={"my-gallery"} images={[
+					{
+						largeURL:
+							'public/images/Lucy.webp',
+						thumbnailURL:
+							'public/images/Lucy.webp',
+						width: 2480,
+            height: 3508,
+					},
+				]} />
 			</div>
 
 			{/* <div>

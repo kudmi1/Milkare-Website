@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react'
-import { useState } from 'react'
+import { useEffect, useRef, useState, lazy, Suspense } from 'react'
 import Accordion from './Accordion'
 import HeroSection from './HeroSection'
 import Header from './Header'
@@ -7,9 +6,12 @@ import Footer from './Footer'
 import SpeedPaint from './SpeedPaint'
 import ToTop from './ToTop'
 import PhotoGallery from './PhotoGallery'
-import InfoSection from './InfoSection'
-import PriceSection from './PriceSection'
+// import InfoSection from './InfoSection'
+// import PriceSection from './PriceSection'
 import Translation from './text.json'
+
+const InfoSection = lazy(() =>  import('./InfoSection'))
+const PriceSection = lazy(() =>  import('./PriceSection'))
 
 function App() {
 	const [language, setLanguage] = useState('english')
@@ -126,12 +128,17 @@ function App() {
 				) : null}
 				{section === 'price' ? (
 					<section className='section-entry pt-12 lg:pt-0 flex justify-center motion-reduce:transition-none' id='price'>
+						<Suspense fallback={<h1>Loading...</h1>}>
+
 						<PriceSection language={language} content={content} />
+						</Suspense>
 					</section>
 				) : null}
 				{section === 'info' ? (
 					<section className='section-entry pt-12 lg:pt-0 flex justify-center motion-reduce:transition-none' id='info'>
+						<Suspense fallback={<h1>Loading...</h1>}>
 						<InfoSection language={language} content={content} />
+						</Suspense>
 					</section>
 				) : null}
 

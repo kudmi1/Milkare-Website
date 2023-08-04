@@ -102,6 +102,8 @@ img {
   left: 0;
   bottom: 2%;
   pointer-events: none;
+  user-select: none;
+  z-index: -10;
 }
 
 @media (max-width: 1280px){
@@ -602,6 +604,7 @@ ion-icon {
   opacity: 1;
 }
 
+
 .hamburger-btn .line {
   transition: 
   y 200ms ease-in 200ms,
@@ -639,4 +642,28 @@ ion-icon {
 
 .to-top-btn {
   transition: transform 300ms, opacity 300ms;
+}
+
+
+.pswp__bullets-indicator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.pswp__bullet {
+  border: .5px solid #3f3f3f;
+  width: 25px;
+  height: 10px;
+  border-radius: 5px;
+  background: #212121;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.pswp__bullet--active { 
+  background: #e2e2e2;
 }
