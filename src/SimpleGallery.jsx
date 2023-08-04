@@ -1,5 +1,3 @@
-// import PhotoSwipeLightbox from '../src/PhotoSwipe-master/dist/photoswipe-lightbox.esm'
-// import '../src/PhotoSwipe-master/src/photoswipe.css'
 import PhotoSwipeLightbox from './photoswipe-lightbox.esm'
 import './photoswipe.css'
 
