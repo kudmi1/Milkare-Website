@@ -67,22 +67,23 @@ export default function PanelComponent({
 					aria-expanded='true'
 				></button>
 				{inView ? (
-					<img
-					onLoad={showImageWithDelay}
-						className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${
-							isObjectTop ? 'object-top' : ''
-						} ${showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-105'} transition-all duration-500`}
-						src={`images-accordion/${picname}.webp`}
-						srcSet={`
-    				images-accordion/${picname}-small.jpeg 600w,
-    				images-accordion/${picname}.webp 800w
-  				`}
-						sizes={`
-    				(max-width: 640px) 600px,
-    				800px
-  				`}
-						alt={`image${index}`}
-					/>
+					<picture>
+						<source
+							media='(max-width: 600px)'
+							srcSet={`images-accordion/${picname}-small.webp`}
+							type='image/webp'
+						/>
+						<img
+							onLoad={showImageWithDelay}
+							className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${
+								isObjectTop ? 'object-top' : ''
+							} ${
+								showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+							} transition-all duration-500`}
+							src={`images-accordion/${picname}.webp`}
+							alt={`image${index}`}
+						/>
+					</picture>
 				) : null}
 			</div>
 		</div>
