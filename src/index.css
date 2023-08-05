@@ -157,7 +157,7 @@ img {
 }
 
 .accordion_panel {
-  filter: drop-shadow(0px 3px 4px black) brightness(65%);
+  /* filter: drop-shadow(0px 3px 4px black) brightness(65%); */
 
 }
 
@@ -165,17 +165,17 @@ img {
   transition: 0.1s;
   outline-offset: 3px;
   outline: 3px solid violet;
-  filter: drop-shadow(0px 4px 6px black);
+  /* filter: drop-shadow(0px 4px 6px black); */
 }
 
 .accordion_panel:hover{
-  filter: drop-shadow(0px 4px 6px black);
+  /* filter: drop-shadow(0px 4px 6px black); */
 }
 
 
 .accordion_panel.expanded {
   /* flex-basis: clamp(20rem, 40vh, 20rem); */
-  filter: brightness(100%) drop-shadow(0px 4px 6px black);
+  /* filter: brightness(100%) drop-shadow(0px 4px 6px black); */
   /* min-height: 500px; */
   flex-grow: 1;
 }
