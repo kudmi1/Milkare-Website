@@ -64,20 +64,6 @@ export default function InfoSection({ language, content }) {
 					</div>
 				))}
 			</div>
-
-			<div>
-				<SimpleGallery galleryID={"my-gallery"} images={[
-					{
-						largeURL:
-							'public/images/Lucy.webp',
-						thumbnailURL:
-							'public/images/Lucy.webp',
-						width: 2480,
-            height: 3508,
-					},
-				]} />
-			</div>
-
 			{/* <div>
 				{content.infoSection}
 			</div> */}

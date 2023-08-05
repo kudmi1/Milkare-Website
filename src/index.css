@@ -214,21 +214,7 @@ img {
 }
 
 .grid-block {
-  /* box-shadow: 3px 2px 2px #212121; */
-  filter: drop-shadow(0px 2px 4px black);
-  /* @apply lg:h-[45vh] w-[35vw] h-[20vh] bg-black overflow-hidden */
-}
-
-.grid-block:hover {
-  /* box-shadow: 0px 0px 0px 3px #212121; */
-
-  /* transform: translate(2px, 3px); */
-}
-
-
-.grid-block:hover > .zoom-image {
-  /* transform: translateY(-4rem); */
-
+  /* filter: drop-shadow(0px 2px 4px black); */
 }
 
 .grid-block.loaded > .grid-image {
@@ -242,15 +228,6 @@ img {
 
 .grid-block:hover .inner-shadow{
   opacity: 1;
-}
-
-.grid-block1,
-.grid-block2 {
-  padding-top: 224px;
-}
-
-.grid-block3 {
-  padding-top: 180px;
 }
 
 .zoom-image {
@@ -276,89 +253,7 @@ img {
   opacity: 1;
 }
 
-/* .grid-images {
-	grid-template-columns: repeat(3, [col] 1fr);
-	grid-template-rows: repeat(4, [row] 1fr);
-	grid-gap: 15px;
-} */
-
-.grid-image {
-  
-  @apply object-cover w-full h-full 
-}
-
-
-.image1, .image2 {
-  grid-row: span 2;
-}
-
-.image3 {
-  grid-row: span 2;
-}
-
-.image4 {
-  grid-column: span 2;
-  /* grid-row: span 2; */
-}
-
-
-.image10 {
-  grid-row: span 2;
-}
-.image11 {
-  grid-column: span 2;
-}
-
-
-.medium-image4,
-.medium-image5,
-.medium-image6,
-.medium-image7,
-.medium-image9,
-.medium-image10 {
-  width: 100%;
-  /* height: 100%; */
-  object-fit: cover;
-}
-
-/* .medium-image4 {
-  grid-column: span 2;
-
-}
-
-
-
-.medium-image10{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-/* .div-acc {
-  background-color: #32af9f;
-  background-image: 
-    radial-gradient(
-      circle,
-      transparent 1rem,
-      #32af9f 1rem),
-    linear-gradient(rgba(155, 78, 155, 0.8) .5rem, transparent .5rem),
-    linear-gradient(90deg, rgba(155, 78, 155, 0.8) .5rem, transparent .5rem);
-    background-size: 5rem 5rem;
-    background-position: 4.75rem 4.75rem, 2rem 2rem, 2rem 2rem;
-    filter:blur(1px)
-} */
-
-/* .banner-image {
-  mask-image: url("blob1.svg");
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: top;
-} */
-
-
 .big-banner {
-  /* background-color: #26163b;
-  /* background-image: url(https://ik.imagekit.io/kudmi/images/Makima.png?updatedAt=1682245504485); */
   background-position: center 25%; /* Adjust the values as needed */
   background-repeat: no-repeat; /* Optional: prevent background image from repeating */
   background-size: cover; 
