@@ -141,17 +141,13 @@ export default function SimpleGallery({ galleryID, images }) {
 						>
 							{inView ? (
 								<picture>
-									<source srcSet={`${image.sm}`} media="(max-width: 600px)" type="image/webp" />
+									<source srcSet={`${image.sm1}`} media="(max-width: 600px)" type="image/webp" />
 								<img
 									onLoad={showImageWithDelay}
 									className={`zoom-image rounded-md object-cover medium-image${index} h-full w-full object-top 
 									${
 									showImage ? 'scale-100 opacity-100' : 'scale-110 opacity-0'
 								} transition-all duration-500`}
-								src={image.thumbnailURL1}
-								alt={names[index]}
-								srcSet={`${image.sm1} 600w, ${image.thumbnailURL1} 800w`}
-								sizes={`(max-width: 640px) 600px, 800px`}
 								/>
 								</picture>
 							) : null}
