@@ -35,13 +35,11 @@ export default function PanelComponent({
 	// 	showImageWithDelay()
 	// }
 
+	// ${showImage ? '' : 'effect-shine-skeleton'} 
 	return (
 		<div
-			className={`accordion_panel ${
-				expandedPanel === index ? 'expanded' : ''
-			} ${
-				showImage ? '' : 'effect-shine-skeleton'
-			} relative isolate cursor-pointer overflow-hidden rounded-md bg-slate-600 transition-all duration-300`}
+			className={`accordion_panel ${expandedPanel === index ? 'expanded' : ''} 
+			relative isolate cursor-pointer overflow-hidden rounded-md bg-slate-600 transition-all duration-300`}
 			onClick={expandedPanel === index ? null : () => handlePanelClick(index)}
 		>
 			{isText ? (
