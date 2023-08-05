@@ -5,7 +5,22 @@ import React, { useEffect, useState } from 'react'
 import ObjectPosition from './photoswipe-object-position'
 import { useInView } from 'react-intersection-observer'
 
-export default function SimpleGallery({ galleryID, images, names }) {
+const names = [
+	'Lucy',
+	'Kokomi',
+	'Makima',
+	'Alhaitam',
+	'My Birthday',
+	'Komi',
+	'Himeno',
+	'Pochita',
+	'2B & 9S',
+	'Milka',
+	'Red Girl',
+	'Purple Girl',
+]
+
+export default function SimpleGallery({ galleryID, images }) {
 	const [showImage, setShowImage] = useState(false)
 	const { ref, inView } = useInView({
 		threshold: 0.1,

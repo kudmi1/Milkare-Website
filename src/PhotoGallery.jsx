@@ -80,7 +80,6 @@ export default function PhotoGallery({ language, content }) {
 						<SimpleGallery
 							galleryID={'main-gallery'}
 							images={imagesTwo}
-							names={names}
 							inView={inView}
 						/>
 					</div>

@@ -6,12 +6,12 @@ import Footer from './Footer'
 import SpeedPaint from './SpeedPaint'
 import ToTop from './ToTop'
 import PhotoGallery from './PhotoGallery'
-// import InfoSection from './InfoSection'
-// import PriceSection from './PriceSection'
+import InfoSection from './InfoSection'
+import PriceSection from './PriceSection'
 import Translation from './text.json'
 
-const InfoSection = lazy(() =>  import('./InfoSection'))
-const PriceSection = lazy(() =>  import('./PriceSection'))
+// const InfoSection = lazy(() =>  import('./InfoSection'))
+// const PriceSection = lazy(() =>  import('./PriceSection'))
 
 function App() {
 	const [language, setLanguage] = useState('english')
@@ -128,17 +128,17 @@ function App() {
 				) : null}
 				{section === 'price' ? (
 					<section className='section-entry pt-12 lg:pt-0 flex justify-center motion-reduce:transition-none' id='price'>
-						<Suspense fallback={<h1>Loading...</h1>}>
+						{/* <Suspense fallback={<h1>Loading...</h1>}> */}
 
 						<PriceSection language={language} content={content} />
-						</Suspense>
+						{/* </Suspense> */}
 					</section>
 				) : null}
 				{section === 'info' ? (
 					<section className='section-entry pt-12 lg:pt-0 flex justify-center motion-reduce:transition-none' id='info'>
-						<Suspense fallback={<h1>Loading...</h1>}>
+						{/* <Suspense fallback={<h1>Loading...</h1>}> */}
 						<InfoSection language={language} content={content} />
-						</Suspense>
+						{/* </Suspense> */}
 					</section>
 				) : null}
 
