@@ -72,8 +72,7 @@ export default function Header({
 					ariaExpanded
 						? 'bg-mainGray'
 						: ''
-				} bg-gradient-to-tr
-			 from-mainGrayTransparent to-mainGray opacity-100 backdrop-blur-[10px] lg:flex-row ${headerHeight}
+				} bg-gradient-to-r from-mainGray via-[#292929] to-mainGray opacity-100 lg:flex-row ${headerHeight}
 			 `}
 			>
 				<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:px-6 lg:grid-cols-3 xl:px-0'>

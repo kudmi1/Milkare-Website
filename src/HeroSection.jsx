@@ -10,27 +10,21 @@ export default function HeroSection() {
 	return (
 		<section
 			ref={ref}
-			className={`hero-section relative flex h-[50vh] max-h-[1080px] min-h-[600px] w-full flex-col items-center justify-center  sm:h-[75vh] lg:h-screen`}
+			className={`hero-section relative flex h-[50vh] max-h-[1080px] min-h-[600px] w-full flex-col sm:h-[60vh] 
+			lg:h-screen`}
 		>
 			<picture
-			className='w-full h-full'
-				// src='./images/aqua-hero.webp'
-				// srcSet='./images/aqua-hero-mobile.webp 800w, ./images/aqua-hero-tablet.webp 1024w, ./images/aqua-hero.webp 1920w'
-				// sizes={`
-    		// 	(max-width: 800px) 800px,
-				// 	(max-width: 1024px) 1024,
-    		// 	1920px
-  			// `}
+			className='w-full h-1/2 grow '
 				alt='aqua_banner'
 			>
 				<source media='(max-width: 500px)' srcSet='./images/aqua-hero-mobile.webp' type="image/webp"/>
 				<source media='(max-width: 1024px)' srcSet='./images/aqua-hero-tablet.webp' type="image/webp"/>
-				<img src="./images/aqua-hero.webp" alt='Aqua hero' className={`'hero-image w-full object-cover h-full ${inView ? 'opacity-100' : 'opacity-0'} transition-opacity 
+				<img src="./images/aqua-hero.webp" alt='Aqua hero' className={`'hero-image w-full object-cover object-top sm:object-top lg:object-center h-full ${inView ? 'opacity-100' : 'opacity-0'} transition-opacity 
 				${inView ? 'opacity-100' : 'opacity-0'}  
 				duration-500`}/>
 			</picture>
-			
 			<Profile />
+
 		</section>
 	)
 }
