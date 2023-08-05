@@ -148,9 +148,9 @@ export default function SimpleGallery({ galleryID, images }) {
 									${
 									showImage ? 'scale-100 opacity-100' : 'scale-110 opacity-0'
 								} transition-all duration-500`}
-								src={image.thumbnailURL}
+								src={image.thumbnailURL1}
 								alt={names[index]}
-								srcSet={`${image.sm} 600w, ${image.thumbnailURL} 800w`}
+								srcSet={`${image.sm1} 600w, ${image.thumbnailURL1} 800w`}
 								sizes={`(max-width: 640px) 600px, 800px`}
 								/>
 								</picture>

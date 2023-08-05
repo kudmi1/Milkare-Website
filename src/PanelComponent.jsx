@@ -70,7 +70,7 @@ export default function PanelComponent({
 					<picture>
 						<source
 							media='(max-width: 600px)'
-							srcSet={`images-accordion/${picname}-small.webp`}
+							srcSet={`images-accordion/${picname}-small.webp1`}
 							type='image/webp'
 						/>
 						<img
@@ -80,7 +80,7 @@ export default function PanelComponent({
 							} ${
 								showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
 							} transition-all duration-500`}
-							src={`images-accordion/${picname}.webp`}
+							src={`images-accordion/${picname}.webp1`}
 							alt={`image${index}`}
 						/>
 					</picture>
