@@ -19,7 +19,7 @@ export default function HeroSection() {
 			>
 				<source media='(max-width: 500px)' srcSet='./images/aqua-hero-mobile.webp' type="image/webp"/>
 				<source media='(max-width: 1024px)' srcSet='./images/aqua-hero-tablet.webp' type="image/webp"/>
-				<img src="./images/aqua-hero.webp" alt='Aqua hero' className={`'hero-image w-full object-cover object-top sm:object-top lg:object-center h-full ${inView ? 'opacity-100' : 'opacity-0'} transition-opacity 
+				<img src="./images/aqua-hero.jpg" alt='Aqua hero' className={`'hero-image w-full object-cover object-top sm:object-top lg:object-center h-full ${inView ? 'opacity-100' : 'opacity-0'} transition-opacity 
 				${inView ? 'opacity-100' : 'opacity-0'}  
 				duration-500`}/>
 			</picture>
