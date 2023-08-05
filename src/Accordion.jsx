@@ -53,7 +53,7 @@ export default function Accordion({ language, content }) {
 								>
 									<img
 										onLoad={showImageWithDelay}
-										src='images-accordion/aqua.webp1'
+										src='images-accordion/aqua.webp'
 										alt=''
 										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
 											showImage
@@ -71,7 +71,7 @@ export default function Accordion({ language, content }) {
 								>
 									<img
 										onLoad={showImageWithDelay}
-										src='images-accordion/himeno.webp1'
+										src='images-accordion/himeno.webp'
 										alt=''
 										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
 											showImage
@@ -89,7 +89,7 @@ export default function Accordion({ language, content }) {
 								>
 									<img
 										onLoad={showImageWithDelay}
-										src='images-accordion/milka.webp1'
+										src='images-accordion/milka.webp'
 										alt=''
 										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
 											showImage
