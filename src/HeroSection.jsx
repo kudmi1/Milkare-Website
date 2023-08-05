@@ -23,9 +23,9 @@ export default function HeroSection() {
   			// `}
 				alt='aqua_banner'
 			>
-				<source media='(max-width: 500px)' srcSet='./images/aqua-hero-mobile.webp'/>
-				<source media='(max-width: 1024px)' srcSet='./images/aqua-hero-tablet.webp'/>
-				<img src="./images/aqua-hero.webp" type="image/webp" className={`'hero-image w-full object-cover h-full ${inView ? 'opacity-100' : 'opacity-0'} transition-opacity 
+				<source media='(max-width: 500px)' srcSet='./images/aqua-hero-mobile.webp' type="image/webp"/>
+				<source media='(max-width: 1024px)' srcSet='./images/aqua-hero-tablet.webp' type="image/webp"/>
+				<img src="./images/aqua-hero.webp" alt='Aqua hero' className={`'hero-image w-full object-cover h-full ${inView ? 'opacity-100' : 'opacity-0'} transition-opacity 
 				${inView ? 'opacity-100' : 'opacity-0'}  
 				duration-500`}/>
 			</picture>
