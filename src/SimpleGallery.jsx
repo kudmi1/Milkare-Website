@@ -140,17 +140,20 @@ export default function SimpleGallery({ galleryID, images }) {
 							rel='noreferrer'
 						>
 							{inView ? (
+								<picture>
+									<source srcSet={`${image.sm}`} media="(max-width: 600px)" type="image/webp" />
 								<img
 									onLoad={showImageWithDelay}
 									className={`zoom-image rounded-md object-cover medium-image${index} h-full w-full object-top 
-								${
+									${
 									showImage ? 'scale-100 opacity-100' : 'scale-110 opacity-0'
 								} transition-all duration-500`}
-									src={image.thumbnailURL}
-									alt={names[index]}
-									srcSet={`${image.sm} 600w, ${image.thumbnailURL} 800w`}
-									sizes={`(max-width: 640px) 600px, 800px`}
+								src={image.thumbnailURL}
+								alt={names[index]}
+								srcSet={`${image.sm} 600w, ${image.thumbnailURL} 800w`}
+								sizes={`(max-width: 640px) 600px, 800px`}
 								/>
+								</picture>
 							) : null}
 
 							<div className='inner-text pointer-events-none absolute bottom-[-4rem] left-0 z-20 hidden h-[3rem] w-full items-center justify-center border-t border-[#3b3b3b] bg-gradient-to-r from-mainGray via-[#3f3f3f] to-mainGray opacity-0 md:flex xl:h-[4rem] '>
