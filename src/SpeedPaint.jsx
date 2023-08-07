@@ -108,7 +108,8 @@ export default function SpeedPaint({ language, content }) {
 
 							<video
 								ref={videoRef}
-								src='video/speedpaint.MP4'
+								// src='video/speedpaint.MP4'
+								src=''
 								className={`thumb-video absolute z-[5] h-[102%] w-[102%] object-cover transition-opacity duration-300
 						${
 							isClicked
