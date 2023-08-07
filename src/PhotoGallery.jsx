@@ -4,7 +4,7 @@ import TitleComponent from './TitleComponent'
 import SimpleGallery from './SimpleGallery'
 
 const code_names = [
-	'lucy',
+	'lucy-test',
 	'kokomi',
 	'makima',
 	'alhaitam',
@@ -16,21 +16,6 @@ const code_names = [
 	'milka',
 	'redgirl',
 	'purplegirl',
-]
-
-const names = [
-	'Lucy',
-	'Kokomi',
-	'Makima',
-	'Alhaitam',
-	'My Birthday',
-	'Komi',
-	'Himeno',
-	'Pochita',
-	'2B & 9S',
-	'Milka',
-	'Red Girl',
-	'Purple Girl',
 ]
 
 const dimensions = [
