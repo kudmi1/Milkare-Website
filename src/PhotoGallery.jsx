@@ -4,7 +4,7 @@ import TitleComponent from './TitleComponent'
 import SimpleGallery from './SimpleGallery'
 
 const code_names = [
-	'lucy-test',
+	'lucy',
 	'kokomi',
 	'makima',
 	'alhaitam',
