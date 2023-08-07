@@ -4,15 +4,15 @@ import TitleComponent from './TitleComponent'
 import SimpleGallery from './SimpleGallery'
 
 const code_names = [
-	'lucy',
+	'lucy1',
 	'kokomi',
-	'makima',
+	'makima1',
 	'alhaitam',
 	'mybirthday',
 	'komi',
 	'himeno',
 	'pochita',
-	'2b_9s',
+	'2b_9s1',
 	'milka',
 	'redgirl',
 	'purplegirl',
