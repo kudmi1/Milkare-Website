@@ -1,7 +1,10 @@
 import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
+import { useLanguageContext } from '../Providers/LanguageContext'
 
-export default function SpeedPaint({ language, content }) {
+export default function SpeedPaint() {
+	const { content } = useLanguageContext()
+
 	const [showSpeedpaint, setShowSpeedpaint] = useState(false)
 	const videoRef = useRef()
 	const [isClicked, setIsClicked] = useState(false)
@@ -47,17 +50,17 @@ export default function SpeedPaint({ language, content }) {
 					className={`relative mx-auto mb-24 mt-24 flex max-w-7xl flex-col items-center justify-between px-4 lg:flex-row lg:items-start lg:px-14`}
 				>
 					<div
-						className={`mb-6 mr-3 w-full flex md:w-2/3 flex-col items-center justify-between lg:mb-0 lg:h-[340px] lg:w-1/3 lg:items-start`}
+						className={`mb-6 mr-3 flex w-full flex-col items-center justify-between md:w-2/3 lg:mb-0 lg:h-[340px] lg:w-1/3 lg:items-start`}
 					>
 						<div
-							className={`mb-12 flex h-14 w-full items-center justify-center border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px] rounded-md`}
+							className={`mb-12 flex h-14 w-full items-center justify-center rounded-md border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px]`}
 						>
 							<h1 className='header-section my-4 w-full select-none text-center text-3xl text-mainText'>
 								{content.gallerySection?.speedpaint?.speedpaintTitle}
 							</h1>
 						</div>
 						<div
-							className='w-full bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] px-6 py-6 text-center backdrop-blur-[10px] lg:text-start rounded-md
+							className='w-full rounded-md bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] px-6 py-6 text-center backdrop-blur-[10px] lg:text-start
 				'
 						>
 							<h2 className='pb-4 text-3xl text-secondaryText'>
@@ -78,7 +81,7 @@ export default function SpeedPaint({ language, content }) {
 						</div>
 					</div>
 					<div
-						className='video-card-container relative h-96 max-h-[400px] w-full max-w-[690px] cursor-pointer border border-[#3b3b3b] rounded-md'
+						className='video-card-container relative h-96 max-h-[400px] w-full max-w-[690px] cursor-pointer rounded-md border border-[#3b3b3b]'
 						ref={videoContainerRef}
 						onClick={(e) => {
 							setIsClicked(true)
@@ -86,23 +89,23 @@ export default function SpeedPaint({ language, content }) {
 							e.stopPropagation()
 						}}
 					>
-						<div className='absolute -left-4 -top-4 z-10 pointer-events-none'>
-							<img src='svg/star-thin.svg' alt='' className='w-8 h-8'/>
+						<div className='pointer-events-none absolute -left-4 -top-4 z-10'>
+							<img src='svg/star-thin.svg' alt='' className='h-8 w-8' />
 						</div>
-						<div className='absolute -right-4 -top-4 z-10 pointer-events-none'>
-							<img src='svg/star-thin.svg' alt='' className='w-8 h-8'/>
+						<div className='pointer-events-none absolute -right-4 -top-4 z-10'>
+							<img src='svg/star-thin.svg' alt='' className='h-8 w-8' />
 						</div>
-						<div className='absolute -bottom-4 -right-4 z-10 pointer-events-none'>
-							<img src='svg/star-thin.svg' alt='' className='w-8 h-8'/>
+						<div className='pointer-events-none absolute -bottom-4 -right-4 z-10'>
+							<img src='svg/star-thin.svg' alt='' className='h-8 w-8' />
 						</div>
-						<div className='absolute -bottom-4 -left-4 z-10 pointer-events-none'>
-							<img src='svg/star-thin.svg' alt='' className='w-8 h-8'/>
+						<div className='pointer-events-none absolute -bottom-4 -left-4 z-10'>
+							<img src='svg/star-thin.svg' alt='' className='h-8 w-8' />
 						</div>
 
 						<div className='thumb-img-container relative h-full w-full overflow-hidden '>
 							<img
 								src='/images-sm/video-thumb.webp'
-								className='thumb-img pointer-events-none absolute h-full w-full cursor-pointer object-cover transition-transform duration-300 rounded-md'
+								className='thumb-img pointer-events-none absolute h-full w-full cursor-pointer rounded-md object-cover transition-transform duration-300'
 								alt='Aqua thumbnail'
 							/>
 

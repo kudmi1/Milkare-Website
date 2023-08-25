@@ -24,18 +24,19 @@ export default function PriceCard({
 		return (
 			<div className='w-full md:w-[80%]'>
 				<div
-					className={`flex w-full flex-col items-center justify-evenly text-start text-5xl lg:h-full `}
+					className={`flex w-full flex-col items-center justify-evenly text-start text-5xl lg:h-full`}
 				>
 					<h1 className='text-3xl text-secondaryText lg:text-6xl '>
 						{contentTitle}
 					</h1>
-					<div className=' py-6 text-start'>
-						<h3
+					<div className=' py-6 text-center lg:text-start lg:pt-16'>
+						<p
 							className='pb-4 text-lg text-mainText lg:text-2xl '
 							dangerouslySetInnerHTML={{
 								__html: textContent,
 							}}
-						></h3>
+						></p>
+						
 					</div>
 				</div>
 			</div>
@@ -53,7 +54,7 @@ export default function PriceCard({
 					<div
 						className={`w-full sm:w-4/5 md:w-3/5 ${
 							inView ? 'opacity-100' : 'opacity-0'
-						} transition-opacity duration-500 block md:flex justify-center`}
+						} block justify-center transition-opacity duration-500 md:flex`}
 					>
 						<TextContent />
 					</div>

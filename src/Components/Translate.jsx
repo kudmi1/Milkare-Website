@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useLanguageContext } from '../Providers/LanguageContext'
 
-export default function Translate({ language, setLanguage }) {
+export default function Translate() {
+	const { language, setLanguage } = useLanguageContext()
 	return (
 		<div className='language-block flex w-full items-center justify-between lg:justify-end'>
 			<button

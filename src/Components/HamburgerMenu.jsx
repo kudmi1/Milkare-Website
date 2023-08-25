@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
+import { useLanguageContext } from '../Providers/LanguageContext'
 import Translate from './Translate'
 
 export default function HamburgerMenu({
 	hamburgerState,
 	setHamburgerState,
 	setAriaExpanded,
-	language,
-	setLanguage
 }) {
+	const { language, setLanguage } = useLanguageContext()
+
 	return (
 		<div
 			className={`absolute bottom-0 left-0 right-0 top-14 z-30 h-screen w-screen bg-[#2121216b] transition-all duration-300
@@ -33,9 +34,9 @@ export default function HamburgerMenu({
 						e.stopPropagation()
 					}}
 				>
-					<div className='flex h-full w-full flex-col items-center max-w-[600px] mx-auto'>
+					<div className='mx-auto flex h-full w-full max-w-[600px] flex-col items-center'>
 						<div className='w-2/3'>
-							<Translate language={language} setLanguage={setLanguage}/>
+							<Translate language={language} setLanguage={setLanguage} />
 						</div>
 						<div className='flex h-full w-full flex-col items-center justify-evenly '>
 							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>

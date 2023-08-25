@@ -1,11 +1,14 @@
+import { useLanguageContext } from '../Providers/LanguageContext'
+import { useSectionContext } from '../Providers/SectionContext'
+
 export default function NavigatorSmall({
-	section,
 	selectedLink,
 	isScrollToSection,
 	handleClick,
-	language,
-	content
 }) {
+	const { content } = useLanguageContext()
+	const section = useSectionContext()
+
 	return (
 		<div className='relative flex h-full w-full items-center lg:hidden'>
 			<nav className='mynav black z-[20] flex h-full w-full items-center justify-center '>
@@ -21,7 +24,8 @@ export default function NavigatorSmall({
 				<a
 					href='#gallery'
 					className={`gallery-link header-item z-10 inline-block w-1/3 cursor-pointer px-4 text-center ${
-						selectedLink === 0 && isScrollToSection || section === 'gallery' && isScrollToSection
+						(selectedLink === 0 && isScrollToSection) ||
+						(section === 'gallery' && isScrollToSection)
 							? 'text-secondaryText'
 							: 'effect-shine text-mainText'
 					}`}
@@ -32,7 +36,8 @@ export default function NavigatorSmall({
 				<a
 					href='#price'
 					className={`price-link header-item z-10 inline-block w-1/3 cursor-pointer px-4 text-center ${
-						selectedLink === 1 && isScrollToSection || section === 'price' && isScrollToSection
+						(selectedLink === 1 && isScrollToSection) ||
+						(section === 'price' && isScrollToSection)
 							? 'text-secondaryText'
 							: 'effect-shine text-mainText'
 					}`}
@@ -44,7 +49,8 @@ export default function NavigatorSmall({
 				<a
 					href='#info'
 					className={`info-link header-item z-10 inline-block w-1/3 cursor-pointer px-4 text-center ${
-						selectedLink === 2 && isScrollToSection || section === 'info' && isScrollToSection
+						(selectedLink === 2 && isScrollToSection) ||
+						(section === 'info' && isScrollToSection)
 							? 'text-secondaryText'
 							: 'effect-shine text-mainText'
 					}`}

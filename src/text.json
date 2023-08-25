@@ -15,19 +15,19 @@
 		"priceSection": {
 			"bust": {
 				"title": "Bust",
-				"content": "Full render 2400 ₽ / 30$ <br/> Sketch + flat color 800 ₽ / 10$"
+				"content": "- Full render 20 $ <br/> - Line art + flat color 10 $"
 			},
 			"halfBody": {
 				"title": "Half Body",
-				"content": "Full render 3200 ₽ / 40 $ <br /> Sketch + flat color 1200 ₽ / 15 $ <br /> NSFW 4080 ₽ / 50 $ <br />☾ ADDITIONAL CHARACTER: price x2<br /> Max. 2 characters"
+				"content": "- Full render 40 $ <br /> - Line art + flat color 15 $"
 			},
 			"fullBody": {
 				"title": "Full Body",
-				"content": "Full render 4080 ₽ / 50 $ ~ 75 $ <br /> Sketch + flat color 1080 ₽ / 23 $ <br /> NSFW 4900 ₽ / 60 $ ☾ <br />☾ ADDITIONAL CHARACTER: price x2 <br /> Max. 2 characters"
+				"content": "- Full render 50 $ ~ 75 $ <br /> - Line art + flat color 23 $"
 			},
 			"background": {
 				"title": "Background",
-				"content": "Simple free <br />flat color / gradient / simple texture <br />Medium 6-12 $ <br /> blurred background / simple landscapes <br/>Hard +50% <br />complicated landscapes / rooms / etc"
+				"content": "Simple <b>free</b> <br />flat color / gradient / simple texture <br />Medium 6-12 $ <br /> blurred background / simple landscapes <br/>Hard +50% <br />complicated landscapes / rooms / etc"
 			}
 		},
 		"infoSection": "Combining lazy loading with low-quality placeholders You have the option to lazy-load the original image only when the user scrolls near them. Until then, only a low-quality placeholder is loaded. This saves a lot of network bandwidth if the user never scrolls further down. Yo also specify a raw transformation if you want more control over the URL of the low-quality image placeholder. In this case, the SDK ignores quali and blur parameters. will not throw an error and simply display nothing. This way, once the useEffect sets the correct content based on the selected language, the content will be displayed automatically without any issues."
@@ -50,20 +50,20 @@
 		},
 		"priceSection": {
 			"bust": {
-				"title": "Бюст",
-				"content": "Полный рендер 2400 ₽ / 30 $ <br />Скетч + плоский цвет 800 ₽ / 10$"
+				"title": "Портрет",
+				"content": "- Полный рендер 2400 ₽ <br /> - Лайн арт + однотонный цвет 800 ₽"
 			},
 			"halfBody": {
-				"title": "Половина роста",
-				"content": "Полный рендер 3200 ₽ / 40 $ <br /> Скетч + плоский цвет 1200 ₽ / 15 $ <br /> NSFW 4080 ₽ / 50 $ <br />☾ ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ: цена x2, Макс. 2 персонажа"
+				"title": "Полтела",
+				"content": "- Полный рендер 4090 ₽ <br /> - Лайн арт + однотонный цвет 1500 ₽"
 			},
 			"fullBody": {
 				"title": "Полный рост",
-				"content": "Полный рендер 4080 ₽ / 50 $ ~ 75 $ <br /> Скетч + плоский цвет 1080 ₽ / 23 $ <br /> NSFW 4900 ₽ / 60 $ ☾ <br />☾ ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ: цена x2, Макс. 2 персонажа"
+				"content": "- Полный рендер 5100 ₽ <br /> - Лайн арт + однотонный цвет 2300 ₽"
 			},
 			"background": {
 				"title": "Фон",
-				"content": "Simple free <br />flat color / gradient / simple texture <br />Medium 6-12 $ <br /> blurred background / simple landscapes <br/>Hard +50% <br />complicated landscapes / rooms / etc"
+				"content": "Простой - <b>бесплатно</b> <br />однотонный /градиент/простые текстуры <br />Средний - 600-200₽ <br /> размытый фон/простой пейзаж <br/>Сложный - +50% <br />сложный пейзаж/комната/тд"
 			}
 		},
 		"infoSection": "Сочетание ленивой загрузки с некачественными заполнителями У вас есть возможность лениво загружать исходное изображение только тогда, когда пользователь прокручивает его. До тех пор загружается только низкокачественный заполнитель. Это значительно экономит пропускную способност сети, если пользователь никогда не прокручивает дальше вниз. Вы также можете указать необработанное преобразование, если хотите больше контролировать URL-адрес заполнителя низкокачественного изображения. В этом случае SDK игнорирует параметры качества и размытия. не выдаст ошибку и просто ничего не отобразит. Таким образом, как только useEffect установит правильный контент на основе выбранного языка, контент будет отображаться автоматически без каких-либо проблем."

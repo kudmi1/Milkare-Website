@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
+import { useLanguageContext } from '../Providers/LanguageContext'
 import PanelComponent from './PanelComponent'
 import TitleComponent from './TitleComponent'
 
 const names = ['aqua', 'milka', 'himeno']
 
-export default function Accordion({ language, content }) {
+export default function Accordion() {
+	const { language, content } = useLanguageContext()
 	const [expandedPanel, setExpandedPanel] = useState(0)
 	const [showImage, setShowImage] = useState(false)
 
@@ -20,10 +22,6 @@ export default function Accordion({ language, content }) {
 			setShowImage(true)
 		}, 50)
 	}
-
-	// if (inView) {
-	// 	showImageWithDelay()
-	// }
 
 	return (
 		<div
@@ -39,16 +37,14 @@ export default function Accordion({ language, content }) {
 						className={`section-title mb-8 flex justify-start text-5xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
 						${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					>
-						Последние работы
+						{language === 'english' ? 'Recent Works' : 'Последние работы'}
 					</h1>
 					<div className='hidden h-[600px] grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-1 lg:grid'>
 						{inView ? (
 							<>
 								<div
 									className={`bg-slate-600 ${
-										showImage
-											? ''
-											: 'effect-shine-skeleton'
+										showImage ? '' : 'effect-shine-skeleton'
 									} rounded-md `}
 								>
 									<img
@@ -64,9 +60,7 @@ export default function Accordion({ language, content }) {
 								</div>
 								<div
 									className={`bg-slate-600 ${
-										showImage
-											? ''
-											: 'effect-shine-skeleton'
+										showImage ? '' : 'effect-shine-skeleton'
 									} rounded-md `}
 								>
 									<img
@@ -82,9 +76,7 @@ export default function Accordion({ language, content }) {
 								</div>
 								<div
 									className={`bg-slate-600 ${
-										showImage
-											? ''
-											: 'effect-shine-skeleton'
+										showImage ? '' : 'effect-shine-skeleton'
 									} rounded-md `}
 								>
 									<img

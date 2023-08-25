@@ -12,7 +12,8 @@ module.exports = {
         secondaryText: "#e5ec86",
         mainGray: "#212121",
         mainGrayTransparent: "#212121d2",
-        thinLine: '#3b3b3b'
+        thinLine: '#3b3b3b',
+        priceColor: "#e4e7af"
       }
     },
   },

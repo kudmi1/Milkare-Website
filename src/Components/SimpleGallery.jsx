@@ -1,8 +1,8 @@
-import PhotoSwipeLightbox from './photoswipe-lightbox.esm'
-import './photoswipe.css'
+import PhotoSwipeLightbox from '../Scripts/photoswipe-lightbox.esm'
+import '../Styles/photoswipe.css'
 
 import React, { useEffect, useState } from 'react'
-import ObjectPosition from './photoswipe-object-position'
+import ObjectPosition from '../Scripts/photoswipe-object-position'
 import { useInView } from 'react-intersection-observer'
 
 const names = [
@@ -30,7 +30,7 @@ export default function SimpleGallery({ galleryID, images }) {
 	const showImageWithDelay = () => {
 		setTimeout(() => {
 			setShowImage(true)
-		}, 200)
+		}, 50)
 	}
 	useEffect(() => {
 		const options = {
@@ -115,7 +115,8 @@ export default function SimpleGallery({ galleryID, images }) {
 	}, [])
 
 	return (
-		<div ref={ref}
+		<div
+			ref={ref}
 			className='pswp-gallery grid-images grid w-full grid-cols-2 gap-[15px] transition-opacity duration-500 md:grid-cols-3'
 			id={galleryID}
 		>
@@ -141,16 +142,21 @@ export default function SimpleGallery({ galleryID, images }) {
 						>
 							{inView ? (
 								<picture>
-									<source srcSet={`${image.sm}`} media="(max-width: 600px)" type="image/webp" />
-								<img
-									onLoad={showImageWithDelay}
-									className={` rounded-md object-cover h-full w-full object-top 
+									<source
+										srcSet={`${image.sm}`}
+										media='(max-width: 600px)'
+										type='image/webp'
+									/>
+									<img
+										onLoad={showImageWithDelay}
+										className={` h-full w-full rounded-md object-cover object-top 
 									${
-									showImage ? 'scale-100 opacity-100' : 'scale-110 opacity-0'
-								} transition-all duration-500`}
-								src={image.thumbnailURL}
-								alt={names[index]}
-								/>
+										showImage ? 'scale-100 opacity-100' : 'scale-105 opacity-0'
+									} transition-all duration-500`}
+										src={image.thumbnailURL}
+										alt={names[index]}
+										loading='lazy'
+									/>
 								</picture>
 							) : null}
 

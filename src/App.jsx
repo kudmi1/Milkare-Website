@@ -1,30 +1,25 @@
 import { useEffect, useRef, useState, lazy, Suspense } from 'react'
-import Accordion from './Accordion'
-import HeroSection from './HeroSection'
-import Header from './Header'
-import Footer from './Footer'
-import SpeedPaint from './SpeedPaint'
-import ToTop from './ToTop'
-import PhotoGallery from './PhotoGallery'
-import InfoSection from './InfoSection'
-import PriceSection from './PriceSection'
-import Translation from './text.json'
+import Accordion from './Components/Accordion'
+import HeroSection from './Components/HeroSection'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import SpeedPaint from './Components/SpeedPaint'
+import ToTop from './Components/ToTop'
+import PhotoGallery from './Components/PhotoGallery'
+import InfoSection from './Components/InfoSection'
+import PriceSection from './Components/PriceSection'
+import { useSectionContext } from './Providers/SectionContext'
 
 // const InfoSection = lazy(() =>  import('./InfoSection'))
 // const PriceSection = lazy(() =>  import('./PriceSection'))
 
 function App() {
-	const [language, setLanguage] = useState('english')
-	const [content, setContent] = useState({})
+	const { section, handleSectionChange } = useSectionContext()
 	const [isScrollToSection, setIsScrollToSection] = useState(false)
 	const [headerHeight, setHeaderHeight] = useState('lg:h-20')
 	const [fontSize, setFontSize] = useState('lg:text-5xl')
 	const headerRef = useRef(null)
 	const sectionRef = useRef(null)
-	const [section, setSection] = useState(
-		sessionStorage.getItem('section') || 'gallery'
-	)
-
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -77,67 +72,46 @@ function App() {
 		}
 	}, [])
 
-	useEffect(() => {
-		sessionStorage.setItem('section', section)
-	}, [section])
-
-	const handleSectionChange = (newSection) => {
-		setSection(newSection)
-	}
-
-	useEffect(() => {
-		switch (language) {
-			case 'english':
-				setContent(Translation.english)
-				break
-			case 'russian':
-				setContent(Translation.russian)
-				break
-		}
-	}, [language])
-
 	return (
 		<div className='App'>
 			<header ref={headerRef}>
 				<Header
-					section={section}
 					setSection={handleSectionChange}
 					headerHeight={headerHeight}
 					fontSize={fontSize}
 					isScrollToSection={isScrollToSection}
-					language={language}
-					setLanguage={setLanguage}
-					content={content}
 				/>
 			</header>
-			<div className=''>
-				
-			</div>
-				<HeroSection />
-			<main
-				ref={sectionRef}
-				className='gradient-bg border-t border-[#3b3b3b]'
-			>
+			<HeroSection />
+			<main ref={sectionRef} className='gradient-bg border-t border-[#3b3b3b]'>
 				{section === 'gallery' ? (
-
-					<section className='section-entry pt-12 lg:pt-0' id='gallery'>
-						<Accordion language={language} content={content} />
-						<PhotoGallery language={language} content={content} />
-						<SpeedPaint language={language} content={content} />
+					<section
+						className='section-entry scroll-m-12 lg:scroll-m-0'
+						id='gallery'
+					>
+						<Accordion />
+						<PhotoGallery />
+						<SpeedPaint />
 					</section>
 				) : null}
 				{section === 'price' ? (
-					<section className='section-entry pt-12 lg:pt-0 flex justify-center motion-reduce:transition-none' id='price'>
+					<section
+						className='section-entry flex scroll-m-12 justify-center motion-reduce:transition-none lg:scroll-m-0'
+						id='price'
+					>
 						{/* <Suspense fallback={<h1>Loading...</h1>}> */}
 
-						<PriceSection language={language} content={content} />
+						<PriceSection />
 						{/* </Suspense> */}
 					</section>
 				) : null}
 				{section === 'info' ? (
-					<section className='section-entry pt-12 lg:pt-0 flex justify-center motion-reduce:transition-none' id='info'>
+					<section
+						className='section-entry flex scroll-m-12 justify-center motion-reduce:transition-none lg:scroll-m-0'
+						id='info'
+					>
 						{/* <Suspense fallback={<h1>Loading...</h1>}> */}
-						<InfoSection language={language} content={content} />
+						<InfoSection />
 						{/* </Suspense> */}
 					</section>
 				) : null}
