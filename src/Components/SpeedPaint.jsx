@@ -47,65 +47,38 @@ export default function SpeedPaint() {
 		>
 			{inView ? (
 				<div
-					className={`relative mx-auto mb-24 mt-24 flex max-w-7xl flex-col items-center justify-between px-4 lg:flex-row lg:items-start lg:px-14`}
+					className={`relative mx-auto mb-24 mt-24 flex max-w-7xl items-center justify-center px-4 lg:flex-row lg:items-start lg:px-14`}
 				>
-					<div
+					{/* <div
 						className={`mb-6 mr-3 flex w-full flex-col items-center justify-between md:w-2/3 lg:mb-0 lg:h-[340px] lg:w-1/3 lg:items-start`}
 					>
-						<div
-							className={`mb-12 flex h-14 w-full items-center justify-center rounded-md border border-[#3b3b3b] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover backdrop-blur-[40px]`}
-						>
-							<h1 className='header-section my-4 w-full select-none text-center text-3xl text-mainText'>
-								{content.gallerySection?.speedpaint?.speedpaintTitle}
-							</h1>
-						</div>
-						<div
-							className='w-full rounded-md bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] px-6 py-6 text-center backdrop-blur-[10px] lg:text-start
-				'
-						>
-							<h2 className='pb-4 text-3xl text-secondaryText'>
-								{content.gallerySection?.speedpaint?.firstLine}
-							</h2>
-							<p className='text-lg text-secondaryText'>
-								{content.gallerySection?.speedpaint?.secondLine} {''}
-								<span className='font-bold italic underline'>
-									<a
-										target={'_blank'}
-										href='https://boosty.to/milkareart'
-										className='effect-shine'
-									>
-										Boosty
-									</a>
-								</span>
-							</p>
-						</div>
-					</div>
-					<div
-						className='video-card-container relative h-96 max-h-[400px] w-full max-w-[690px] cursor-pointer rounded-md border border-[#3b3b3b]'
-						ref={videoContainerRef}
-						onClick={(e) => {
-							setIsClicked(true)
-							videoRef.current.play()
-							e.stopPropagation()
-						}}
-					>
-						<div className='pointer-events-none absolute -left-4 -top-4 z-10'>
-							<img src='svg/star-thin.svg' alt='' className='h-8 w-8' />
-						</div>
-						<div className='pointer-events-none absolute -right-4 -top-4 z-10'>
-							<img src='svg/star-thin.svg' alt='' className='h-8 w-8' />
-						</div>
-						<div className='pointer-events-none absolute -bottom-4 -right-4 z-10'>
-							<img src='svg/star-thin.svg' alt='' className='h-8 w-8' />
-						</div>
-						<div className='pointer-events-none absolute -bottom-4 -left-4 z-10'>
-							<img src='svg/star-thin.svg' alt='' className='h-8 w-8' />
+					</div> */}
+					<div className='video-card-container relative flex h-96 sm:h-[450px] max-h-[500px] w-full sm:w-[90%] lg:w-full max-w-[800px] flex-col rounded-md border border-thinLine shadow-lg shadow-[#9562be63]'>
+						<div className='flex h-[12%] w-full items-center justify-between border-b-2 border-[#292929d2] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover px-4 backdrop-blur-[40px] rounded-t-md'>
+							<div>
+								<p className='text-xl'>
+									{content.gallerySection?.speedpaint?.firstLine} {''}
+								</p>
+							</div>
+							<div className='flex gap-3'>
+								<div className='h-4 w-4 rounded-full bg-pink-300'></div>
+								<div className='h-4 w-4 rounded-full bg-violet-300'></div>
+								<div className='h-4 w-4 rounded-full bg-violet-400'></div>
+							</div>
 						</div>
 
-						<div className='thumb-img-container relative h-full w-full overflow-hidden '>
+						<div
+							className='thumb-img-container relative h-[88%] w-full cursor-pointer overflow-hidden rounded-b-md'
+							ref={videoContainerRef}
+							onClick={(e) => {
+								setIsClicked(true)
+								videoRef.current.play()
+								e.stopPropagation()
+							}}
+						>
 							<img
 								src='/images-sm/video-thumb.webp'
-								className='thumb-img pointer-events-none absolute h-full w-full cursor-pointer rounded-md object-cover transition-transform duration-300'
+								className='thumb-img pointer-events-none absolute h-full w-full object-cover transition-transform duration-300'
 								alt='Aqua thumbnail'
 							/>
 
@@ -121,26 +94,39 @@ export default function SpeedPaint() {
 								controls
 								loop
 							></video>
-						</div>
 
-						<div
-							className={`play-sign absolute left-1/2 top-1/2  flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#212121d2]`}
-						>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								fill='#f9ded1'
-								viewBox='-1 0 24 24'
-								strokeWidth='2'
-								stroke='#f9ded1'
-								className='effect-shine h-8 w-8'
+							<div
+								className={`play-sign pointer-events-auto absolute left-1/2  top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#212121d2]`}
+								// onClick={e => e.preventDefault()}
 							>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									d='M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z'
-								/>
-							</svg>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									fill='#f9ded1'
+									viewBox='-1 0 24 24'
+									strokeWidth='2'
+									stroke='#f9ded1'
+									className='effect-shine h-8 w-8'
+								>
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										d='M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z'
+									/>
+								</svg>
+							</div>
 						</div>
+						<p className='absolute top-[100%] right-0 text-md text-mainText bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] rounded-md px-3 mt-2 backdrop-blur-[10px]'>
+							{content.gallerySection?.speedpaint?.secondLine} {''}
+							<span className='font-bold italic underline text-secondaryText'>
+								<a
+									target={'_blank'}
+									href='https://boosty.to/milkareart'
+									className='effect-shine'
+								>
+									Boosty
+								</a>
+							</span>
+						</p>
 					</div>
 				</div>
 			) : (

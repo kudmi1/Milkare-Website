@@ -14,15 +14,15 @@ export const data = {
 			speedpaint: {
 				speedpaintTitle: 'Speedpaint',
 				firstLine: 'Speedpaint of Aqua',
-				secondLine: 'More speedpaints on',
+				secondLine: 'More on',
 			},
 		},
 		priceSection: {
 			bust: {
 				title: 'Bust',
-				content: `<p> Full render ${price(
+				content: `Full render ${price(
 					'20$'
-				)} ${divider} Line art + flat color ${price('10$')}</p>`,
+				)} ${divider} Line art + flat color ${price('10$')}`,
 			},
 			halfBody: {
 				title: 'Half Body',
@@ -32,19 +32,13 @@ export const data = {
 			},
 			fullBody: {
 				title: 'Full Body',
-				content: `Full render ${price(
-					'58 - 75$'
-				)} ${divider} Line art + flat color ${price('23$')}`,
+				content: `Full render ${price('58 - 75$')} ${divider} Line art + flat color ${price('23$')}`,
 			},
 			background: {
 				title: 'Background',
-				content: `Simple <b>${price(
-					'free'
-				)}</b> <br/> <span class='text-lg'>flat color / gradient / simple texture</span> ${divider} Medium ${price(
+				content: `Simple <b>${price('free')}</b> <br/> <span class='text-lg'>flat color / gradient / simple texture</span> ${divider} Medium ${price(
 					'6 - 12$'
-				)} <br/>  <span class='text-lg'>blurred background / simple landscapes</span> ${divider} Hard ${price(
-					'+50%'
-				)} <br/> <span class='text-lg'>complicated landscapes / rooms / etc</span>`,
+				)} <br/>  <span class='text-lg'>blurred background / simple landscapes</span> ${divider} Hard ${price('+50%')} <br/> <span class='text-lg'>complicated landscapes / rooms / etc</span>`,
 			},
 		},
 		infoSection:
@@ -63,7 +57,7 @@ export const data = {
 			speedpaint: {
 				speedpaintTitle: 'Спидпеинт',
 				firstLine: 'Спидпеинт Аквы',
-				secondLine: 'Больше спидпеинтов в',
+				secondLine: 'Больше в',
 			},
 		},
 		priceSection: {
@@ -81,17 +75,11 @@ export const data = {
 			},
 			fullBody: {
 				title: 'Полный рост',
-				content: `Полный рендер ${price(
-					'5100₽'
-				)} ${divider} Лайн арт + однотонный цвет ${price('2300₽')}`,
+				content: `Полный рендер ${price('5100₽')} ${divider} Лайн арт + однотонный цвет ${price('2300₽')}`,
 			},
 			background: {
 				title: 'Фон',
-				content: `Простой - <b>${price('бесплатно')}</b> <br/> <span class='text-lg'>однотонный /градиент/простые текстуры</span> ${divider} Средний - ${price(
-					'600 - 2000₽'
-				)} <br/> <span class='text-lg'>размытый фон/простой пейзаж</span> ${divider}Сложный - ${price(
-					'+50%'
-				)} <br/> <span class='text-lg'>сложный пейзаж/комната/тд</span>`,
+				content: `Простой - <b>${price('бесплатно')}</b> <br/> <span class='text-lg'>однотонный /градиент/простые текстуры</span> ${divider} Средний - ${price('600 - 2000₽')} <br/> <span class='text-lg'>размытый фон/простой пейзаж</span> ${divider}Сложный - ${price('+50%')} <br/> <span class='text-lg'>сложный пейзаж/комната/тд</span>`,
 			},
 		},
 		infoSection:
