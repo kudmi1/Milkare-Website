@@ -7,9 +7,12 @@ import { useInView } from 'react-intersection-observer'
 
 const names = [
 	'Lucy',
+	'Eleonora',
+	'Blade Runner 2049',
 	'Kokomi',
 	'Makima',
 	'Alhaitam',
+	'Aqua',
 	'My Birthday',
 	'Komi',
 	'Himeno',

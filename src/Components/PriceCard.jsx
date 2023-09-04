@@ -18,7 +18,7 @@ export default function PriceCard({
 	})
 
 	const commonProps =
-		'price-card-section mb-12 lg:mb-24 h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] rounded-md w-full border border-[#3b3b3b]'
+		'price-card-section mb-12 lg:mb-24 h-[650px] lg:h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] rounded-md w-full border border-[#3b3b3b]'
 
 	function TextContent() {
 		return (

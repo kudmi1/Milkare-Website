@@ -6,9 +6,12 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 
 const code_names = [
 	'lucy1',
+	'eleonora',
+	'bladerunner2049',
 	'kokomi',
 	'makima1',
 	'alhaitam',
+	'aqua',
 	'mybirthday',
 	'komi',
 	'himeno',
@@ -21,9 +24,12 @@ const code_names = [
 
 const dimensions = [
 	{ width: 2480, height: 3508 },
+	{ width: 1536, height: 2048 },
+	{ width: 1920, height: 1080 },
 	{ width: 2048, height: 2048 },
 	{ width: 2720, height: 2720 },
 	{ width: 2048, height: 2048 },
+	{ width: 3001, height: 2720 },
 	{ width: 2048, height: 2048 },
 	{ width: 2388, height: 3196 },
 	{ width: 3000, height: 3000 },

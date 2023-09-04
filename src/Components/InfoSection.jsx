@@ -97,7 +97,7 @@ export default function InfoSection() {
 		>
 			{/* <TitleComponent title='Info' /> */}
 
-			<div className='flex w-full flex-col items-center justify-center rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent px-6 pb-12 pt-4 backdrop-blur-[10px] lg:px-0'>
+			<div className='flex w-full flex-col items-center justify-center rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent px-4 pb-12 pt-4 backdrop-blur-[10px] lg:px-0'>
 				<h1
 					className={`section-title mb-8 flex justify-start text-5xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl ${
 						inView ? 'opacity-100' : 'opacity-0'

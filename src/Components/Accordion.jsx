@@ -5,7 +5,7 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 import PanelComponent from './PanelComponent'
 import TitleComponent from './TitleComponent'
 
-const names = ['aqua', 'milka', 'himeno']
+const names = ['eleonora', 'bladerunner2049', 'aqua']
 
 export default function Accordion() {
 	const { language, content } = useLanguageContext()
@@ -49,7 +49,7 @@ export default function Accordion() {
 								>
 									<img
 										onLoad={showImageWithDelay}
-										src='images-accordion/aqua.webp'
+										src='images-accordion/eleonora.webp'
 										alt=''
 										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
 											showImage
@@ -65,7 +65,7 @@ export default function Accordion() {
 								>
 									<img
 										onLoad={showImageWithDelay}
-										src='images-accordion/himeno.webp'
+										src='images-accordion/bladerunner2049.webp'
 										alt=''
 										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
 											showImage
@@ -81,7 +81,7 @@ export default function Accordion() {
 								>
 									<img
 										onLoad={showImageWithDelay}
-										src='images-accordion/milka.webp'
+										src='images-accordion/aqua.webp'
 										alt=''
 										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
 											showImage
@@ -104,6 +104,7 @@ export default function Accordion() {
 								setExpandedPanel={setExpandedPanel}
 								imageNames={names}
 								isText={true}
+								isObjectTop={index === 0 ? true : false}
 							/>
 						))}
 					</div>
