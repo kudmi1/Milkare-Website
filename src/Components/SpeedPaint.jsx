@@ -54,7 +54,7 @@ export default function SpeedPaint() {
 					>
 					</div> */}
 					<div className='video-card-container relative flex h-96 sm:h-[450px] max-h-[500px] w-full sm:w-[90%] lg:w-full max-w-[800px] flex-col rounded-md border border-thinLine shadow-lg shadow-[#9562be63]'>
-						<div className='flex h-[12%] w-full items-center justify-between border-b-2 border-[#292929d2] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover px-4 backdrop-blur-[40px] rounded-t-md'>
+						<div className='flex h-[10%] w-full items-center justify-between border-b-2 border-[#292929d2] bg-gradient-to-r from-[#212121d2] via-[#3f3f3fd2] to-[#212121d2] bg-cover px-4 backdrop-blur-[40px] rounded-t-md'>
 							<div>
 								<p className='text-xl'>
 									{content.gallerySection?.speedpaint?.firstLine} {''}
@@ -68,7 +68,7 @@ export default function SpeedPaint() {
 						</div>
 
 						<div
-							className='thumb-img-container relative h-[88%] w-full cursor-pointer overflow-hidden rounded-b-md'
+							className='thumb-img-container relative h-[90%] w-full cursor-pointer overflow-hidden rounded-b-md'
 							ref={videoContainerRef}
 							onClick={(e) => {
 								setIsClicked(true)

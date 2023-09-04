@@ -3,11 +3,92 @@ import TitleComponent from './TitleComponent'
 import { useInView } from 'react-intersection-observer'
 import SimpleGallery from './SimpleGallery'
 import { useLanguageContext } from '../Providers/LanguageContext'
+import Table from './Table'
 
-const testArray = [1, 2, 3, 4, 5]
+// const testArray = [1, 2, 3, 4, 5]
 
 export default function InfoSection() {
 	const { language, content } = useLanguageContext()
+
+	const infoContent = [
+		<Table />,
+		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+			{language === 'english' ? (
+				<>
+					- Character (name, title and fandom) <br />- Сommercial use/a drawing
+					with detailed background/additional character(s)/ idea ( pose, angle,
+					etc.).
+				</>
+			) : (
+				<>
+					- Персонаж (имя, фандом) <br />- Коммерческое использование/рисунок с
+					детализированным фоном/дополнительный персонаж/ идея (поза, ракурс и
+					т.д.).
+				</>
+			)}
+		</div>,
+		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+			{language === 'english' ? (
+				<>Art, description, etc.</>
+			) : (
+				<>Арт, описание и т.д.</>
+			)}
+		</div>,
+		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+			{language === 'english' ? (
+				<>
+					If you have a deadline, please let me know in advance. With deadline{' '}
+					<span className='text-priceColor'> +50%</span>
+				</>
+			) : (
+				<>
+					Если у Вас есть дедлайн, пожалуйста, сообщите мне об этом заранее. С
+					дедлайном <span className='text-priceColor'> +50%</span>
+				</>
+			)}
+		</div>,
+		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+			{language === 'english' ? (
+				<>
+					☾ One art work takes from <span className='text-priceColor'> 10</span>{' '}
+					to <span className='text-priceColor'>40</span> hours of work! <br />
+					☾ Once payment is received, allow me up to two weeks to finish. <br />
+					☾ Feel free to tell me about any necessary corrections while it's
+					still a sketch. Slight revisions are allowed throughout the whole
+					process, major revisions are only
+				</>
+			) : (
+				<>
+					☾ Работа над одним рисунок занимает от{' '}
+					<span className='text-priceColor'> 10</span> до{' '}
+					<span className='text-priceColor'>40</span> часов! <br />
+					☾ После получения оплаты, дайте мне до двух недель на завершение
+					работы. <br />☾ Не стесняйтесь сообщать мне о любых необходимых
+					исправлениях, пока это ещё скетч. Незначительные изменения допускаются
+					в течение всего процесса работы, значительные - только в процессе
+					работы над скетчем. Однако за кардинальные изменения может взиматься
+					дополнительная плата.
+				</>
+			)}
+		</div>,
+	]
+
+	const infoQuestion =
+		language === 'english'
+			? [
+					"Can Do / Won't Do",
+					'Commission style',
+					'Character reference',
+					'Deadline',
+					'Etc.',
+			  ]
+			: [
+					'Рисую / Не рисую',
+					'Стиль заказа',
+					'Референс персонажа',
+					'Сроки',
+					'Прочее',
+			  ]
 
 	const [isOpen, setIsOpen] = useState()
 	function handleOpen(index) {
@@ -25,7 +106,7 @@ export default function InfoSection() {
 		>
 			{/* <TitleComponent title='Info' /> */}
 
-			<div className='flex w-full flex-col items-center justify-center rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent pb-12 pt-4 backdrop-blur-[10px]'>
+			<div className='flex w-full flex-col items-center justify-center rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent px-6 pb-12 pt-4 backdrop-blur-[10px] lg:px-0'>
 				<h1
 					className={`section-title mb-8 flex justify-start text-5xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl ${
 						inView ? 'opacity-100' : 'opacity-0'
@@ -33,19 +114,19 @@ export default function InfoSection() {
 				>
 					Information
 				</h1>
-				{testArray.map((_, index) => (
+				{infoQuestion.map((text, index) => (
 					<div
 						onClick={() => handleOpen(index)}
 						key={index}
-						className={`info-panel mx-4 my-2 cursor-pointer rounded-sm border-2  p-4 hover:border-white md:w-2/3 ${
-							isOpen === index ? 'border-mainText' : 'border-white/50'
+						className={`info-panel mx-4 my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 backdrop-blur-md hover:border-b-secondaryText md:w-2/3 ${
+							isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'
 						} ${
 							inView ? 'opacity-100' : 'opacity-0'
 						} transition-opacity duration-500`}
 						style={{ transitionDelay: `${index * 100 + 100}ms` }}
 					>
 						<div className='flex w-full items-center justify-between'>
-							<p className='select-none text-2xl'>Some question</p>
+							<p className='select-none text-2xl'>{text}</p>
 							{isOpen === index ? (
 								<img src='svg/eye-close.svg' alt='chevron' />
 							) : (
@@ -58,16 +139,8 @@ export default function InfoSection() {
 								isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
 							} duration-500' transition-[grid-template-rows]`}
 						>
-							<div className='overflow-hidden'>
-								<p className='mt-6 select-none'>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-									autem, deleniti commodi natus reprehenderit architecto iusto
-									aliquam libero? Omnis magnam rerum molestiae maxime, nam iusto
-									necessitatibus cupiditate enim dolore, accusantium dolorum
-									saepe repellat, iure aliquid fuga alias quam beatae! Obcaecati
-									maxime officiis adipisci maiores quasi sunt voluptas ipsum
-									modi qui!
-								</p>
+							<div className='overflow-hidden '>
+								<p className='mt-6 select-none '>{infoContent[index]}</p>
 							</div>
 						</div>
 					</div>

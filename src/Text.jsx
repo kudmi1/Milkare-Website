@@ -57,7 +57,7 @@ export const data = {
 			speedpaint: {
 				speedpaintTitle: 'Спидпеинт',
 				firstLine: 'Спидпеинт Аквы',
-				secondLine: 'Больше в',
+				secondLine: 'Больше на',
 			},
 		},
 		priceSection: {

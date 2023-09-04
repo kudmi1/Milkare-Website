@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import PriceCard from './PriceCard'
 import TitleComponent from './TitleComponent'
 import { useLanguageContext } from '../Providers/LanguageContext'
+import AdditionPriceInfo from './AdditionPriceInfo'
 
 const panelData = [
 	{
@@ -78,6 +79,8 @@ export default function PriceSection() {
 					textOnLeft={true}
 					isAccordionVertical={false}
 				/>
+
+				<AdditionPriceInfo/>
 			</div>
 		</div>
 	)
