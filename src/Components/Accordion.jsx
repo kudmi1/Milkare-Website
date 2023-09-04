@@ -103,7 +103,7 @@ export default function Accordion() {
 								expandedPanel={expandedPanel}
 								setExpandedPanel={setExpandedPanel}
 								imageNames={names}
-								isText={true}
+								isText={false}
 								isObjectTop={index === 0 ? true : false}
 							/>
 						))}
