@@ -573,7 +573,7 @@ ion-icon {
   }
 }
 
-.star-header::before {
+/* .star-header::before {
   content: '✦';
   position: absolute;
   right: 100%;
@@ -586,4 +586,4 @@ ion-icon {
     content: '';
     
   }
-}
+} */

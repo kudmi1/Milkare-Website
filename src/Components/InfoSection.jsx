@@ -39,17 +39,7 @@ export default function InfoSection() {
 				<>
 					If you have a deadline, please let me know in advance. With deadline{' '}
 					<span className='text-priceColor'> +50%</span>
-				</>
-			) : (
-				<>
-					Если у Вас есть дедлайн, пожалуйста, сообщите мне об этом заранее. С
-					дедлайном <span className='text-priceColor'> +50%</span>
-				</>
-			)}
-		</div>,
-		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
-			{language === 'english' ? (
-				<>
+					<br />
 					☾ One art work takes from <span className='text-priceColor'> 10</span>{' '}
 					to <span className='text-priceColor'>40</span> hours of work! <br />
 					☾ Once payment is received, allow me up to two weeks to finish. <br />
@@ -59,6 +49,9 @@ export default function InfoSection() {
 				</>
 			) : (
 				<>
+					Если у Вас есть дедлайн, пожалуйста, сообщите мне об этом заранее. С
+					дедлайном <span className='text-priceColor'> +50%</span>
+					<br />
 					☾ Работа над одним рисунок занимает от{' '}
 					<span className='text-priceColor'> 10</span> до{' '}
 					<span className='text-priceColor'>40</span> часов! <br />
@@ -70,24 +63,22 @@ export default function InfoSection() {
 					дополнительная плата.
 				</>
 			)}
-		</div>,
+		</div>
 	]
 
 	const infoQuestion =
 		language === 'english'
 			? [
-					"Can Do / Won't Do",
+					"What i draw",
 					'Commission style',
 					'Character reference',
 					'Deadline',
-					'Etc.',
 			  ]
 			: [
-					'Рисую / Не рисую',
+					'Что я рисую',
 					'Стиль заказа',
 					'Референс персонажа',
 					'Сроки',
-					'Прочее',
 			  ]
 
 	const [isOpen, setIsOpen] = useState()

@@ -56,9 +56,10 @@ export default function PhotoGallery() {
 				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border border-[#3b3b3b] lg:w-max`}
 			>
 				{/* <TitleComponent title='Gallery' /> */}
+				
 				<div
 					ref={ref}
-					className='w-full rounded-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] '
+					className='w-full rounded-b-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] '
 				>
 					<h1
 						className={`section-title mb-8 flex justify-start text-6xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-8xl 
@@ -66,6 +67,7 @@ export default function PhotoGallery() {
 					>
 						{language === 'english' ? 'Gallery' : 'Галерея'}
 					</h1>
+					
 					<div className=''>
 						<SimpleGallery
 							galleryID={'main-gallery'}

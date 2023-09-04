@@ -22,16 +22,16 @@ export default function PriceCard({
 
 	function TextContent() {
 		return (
-			<div className='w-full md:w-[80%]'>
+			<div className='w-full md:w-[80%] '>
 				<div
 					className={`flex w-full flex-col items-center justify-evenly text-start text-5xl lg:h-full`}
 				>
 					<h1 className='text-3xl text-secondaryText lg:text-6xl '>
 						{contentTitle}
 					</h1>
-					<div className=' py-6 text-center lg:text-start lg:pt-16'>
+					<div className='w-full lg:w-max py-6 text-center lg:text-start lg:pt-16'>
 						<p
-							className='pb-4 text-lg text-mainText lg:text-2xl '
+							className='pb-4 text-lg text-mainText lg:text-2xl rounded-lg border border-thinLine bg-[#212121bb] px-8 py-4'
 							dangerouslySetInnerHTML={{
 								__html: textContent,
 							}}
