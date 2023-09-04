@@ -29,17 +29,17 @@ export default function Accordion() {
 			className={`flex justify-center pb-12 pt-24 transition-opacity duration-500 motion-reduce:transition-none`}
 		>
 			<div
-				className={`accordion flex w-full max-w-[1440px] flex-col items-center border-[#212121]`}
+				className={`accordion flex w-full max-w-full xl:max-w-[1380px] flex-col items-center border-[#212121]`}
 			>
 				{/* <TitleComponent title='Recent Works' /> */}
-				<div className=' w-full flex-col rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px]'>
+				<div className='w-full flex-col rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px]'>
 					<h1
 						className={`section-title mb-8 flex justify-start text-5xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
 						${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					>
 						{language === 'english' ? 'Recent Works' : 'Последние работы'}
 					</h1>
-					<div className='hidden h-[600px] grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-1 lg:grid'>
+					<div className='hidden h-[600px] grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-1 xl:grid'>
 						{inView ? (
 							<>
 								<div
@@ -94,7 +94,7 @@ export default function Accordion() {
 						) : null}
 					</div>
 					<div
-						className={`mx-auto flex h-[600px] w-full max-w-3xl flex-col gap-4 md:flex-row lg:hidden`}
+						className={`mx-auto flex h-[600px] w-full max-w-3xl flex-col gap-4 md:flex-row xl:hidden`}
 					>
 						{names.map((_, index) => (
 							<PanelComponent
