@@ -54,10 +54,10 @@ function App() {
 				if (entry.target === section) {
 					if (entry.isIntersecting) {
 						setHeaderHeight('lg:h-14')
-						setFontSize('lg:text-4xl')
+						setFontSize('lg:h-10')
 					} else {
 						setHeaderHeight('lg:h-20')
-						setFontSize('lg:text-5xl')
+						setFontSize('lg:h-12')
 					}
 				}
 			})

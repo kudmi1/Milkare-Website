@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLanguageContext } from '../Providers/LanguageContext'
+import GoogleFormButton from './GoogleFormButton'
 import Translate from './Translate'
 
 export default function HamburgerMenu({
@@ -42,7 +43,9 @@ export default function HamburgerMenu({
 							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>
 							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>
 							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>
-							<div className='h-16 w-2/3 rounded-sm border border-thinLine'></div>
+							<div className='h-16 w-2/3 rounded-sm border border-thinLine flex justify-center items-center'>
+								<GoogleFormButton/>
+							</div>
 						</div>
 					</div>
 				</div>

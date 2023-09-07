@@ -70,15 +70,13 @@ export default function Header({
 			} bg-gradient-to-r from-mainGray via-[#292929] to-mainGray opacity-100 lg:flex-row ${headerHeight}
 			 `}
 		>
-			<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-0 sm:px-6 lg:grid-cols-3 xl:px-0'>
-				<div className='mx-6 sm:mx-0 md:justify-center'>
+			<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-6 lg:grid-cols-3 xl:px-0'>
 					<a
 						href='#'
-						className={`header-top effect-shine text-3xl transition-all duration-500 ${fontSize} text- text-mainText`}
+						className={`header-top effect-shine transition-all duration-500`}
 					>
-						milkare
+						<img src="./images/Logo.png" alt="" className={`h-8 ${fontSize} transition-all duration-500`}/>
 					</a>
-				</div>
 				<NavigatorBig
 					isScrollToSection={isScrollToSection}
 					selectedLink={selectedLink}

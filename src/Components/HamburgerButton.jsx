@@ -1,6 +1,6 @@
 export default function HamburgerButton({ toggleHamburger, ariaExpanded }) {
 	return (
-		<div className='z-50 flex h-full items-center justify-end px-6 sm:px-0 lg:hidden'>
+		<div className='z-50 flex h-full items-center justify-end lg:hidden'>
 			<button
 				onClick={toggleHamburger}
 				className='hamburger-btn effect-shine flex'

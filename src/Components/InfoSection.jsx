@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import SimpleGallery from './SimpleGallery'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import Table from './Table'
+import GoogleFormButton from './GoogleFormButton'
 
 // const testArray = [1, 2, 3, 4, 5]
 
@@ -39,9 +40,9 @@ export default function InfoSection() {
 				<>
 					If you have a deadline, please let me know in advance. With deadline{' '}
 					<span className='text-priceColor'> +50%</span>
-					<br />
-					☾ One art work takes from <span className='text-priceColor'> 10</span>{' '}
-					to <span className='text-priceColor'>40</span> hours of work! <br />
+					<br />☾ One art work takes from{' '}
+					<span className='text-priceColor'> 10</span> to{' '}
+					<span className='text-priceColor'>40</span> hours of work! <br />
 					☾ Once payment is received, allow me up to two weeks to finish. <br />
 					☾ Feel free to tell me about any necessary corrections while it's
 					still a sketch. Slight revisions are allowed throughout the whole
@@ -51,8 +52,7 @@ export default function InfoSection() {
 				<>
 					Если у Вас есть дедлайн, пожалуйста, сообщите мне об этом заранее. С
 					дедлайном <span className='text-priceColor'> +50%</span>
-					<br />
-					☾ Работа над одним рисунок занимает от{' '}
+					<br />☾ Работа над одним рисунок занимает от{' '}
 					<span className='text-priceColor'> 10</span> до{' '}
 					<span className='text-priceColor'>40</span> часов! <br />
 					☾ После получения оплаты, дайте мне до двух недель на завершение
@@ -63,13 +63,13 @@ export default function InfoSection() {
 					дополнительная плата.
 				</>
 			)}
-		</div>
+		</div>,
 	]
 
 	const infoQuestion =
 		language === 'english'
 			? [
-					"What i draw",
+					'What i draw',
 					'Commission style',
 					'Character reference',
 					'Deadline',
@@ -105,6 +105,13 @@ export default function InfoSection() {
 				>
 					Information
 				</h1>
+				<div className='mb-12 flex flex-col md:flex-row w-full sm:w-2/3 items-center justify-center md:justify-between rounded-md border border-thinLine bg-[#212121bb] px-4 py-4'>
+					<p className='text-2xl lg:text-3xl mb-6 md:mb-0'>
+						{language === 'english' ? 'Make a commission' : 'Сделать заказ'}
+					</p>
+					<GoogleFormButton/>
+				</div>
+
 				{infoQuestion.map((text, index) => (
 					<div
 						onClick={() => handleOpen(index)}
