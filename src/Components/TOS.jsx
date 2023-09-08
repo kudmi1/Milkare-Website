@@ -1,16 +1,18 @@
 import { useLanguageContext } from '../Providers/LanguageContext'
+import InfoQuestions from './InfoQuestions'
 
 export default function TOS() {
 	const { language } = useLanguageContext()
 	return (
-		<div className='mt-12 flex w-full flex-col items-center rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 md:w-2/3'>
+		<div className='flex w-full flex-col items-center rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 md:w-2/3'>
 			<h4 className='mb-6'>
 				{language === 'english'
 					? 'Terms of Service'
 					: 'Условия предоставления услуг'}
 			</h4>
+      <InfoQuestions />
 			{language === 'english' ? (
-				<div className='w-full pl-4'>
+				<div className='w-full'>
 					<div className='mb-6 w-full'>
 						<p className='text-lg lg:text-xl'>PAYMENT METHOD: </p>
 						<p className='text-md lg:text-lg'>
@@ -18,7 +20,7 @@ export default function TOS() {
 						</p>
 					</div>
 					<p className='text-md lg:text-lg'>
-						<ul className='list-disc'>
+						<ul className='list-disc list-inside'>
 							<li>
 								<span className='text-priceColor'>50%</span> payment before I
 								start, then pay the rest after approving the sketch.

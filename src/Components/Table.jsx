@@ -49,7 +49,7 @@ export default function Table() {
 			{language === 'english' ? (
 				<>
 					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
-						FanArts (anime, game)
+						FanArts (anime, games)
 					</div>
 					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
 						OCs with not suitable for me design
