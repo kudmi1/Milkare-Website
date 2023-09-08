@@ -124,7 +124,7 @@ export default function SimpleGallery({ galleryID, images }) {
 			id={galleryID}
 		>
 			{images.map((image, index) => (
-				<div key={index} className={`${index === 13 ? 'row-span-2 sm:row-auto' : ''} `}>
+				<div key={index} className={`${index === 13 ? 'row-span-2 sm:row-auto' : ''} rounded-md`}>
 					<div
 						className={`grid-block relative xl:w-96 xl:h-96  ${index === 13 ? 'sm:aspect-square h-full sm:h-auto' : ' aspect-square'} overflow-hidden cursor-pointer rounded-md
 						transition-all duration-500`}
