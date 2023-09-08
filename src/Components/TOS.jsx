@@ -9,14 +9,6 @@ export default function TOS() {
 					? 'Terms of Service'
 					: 'Условия предоставления услуг'}
 			</h4>
-      <div className='w-60 h-60 grid grid-cols-3 gap-3'>
-        <div className=' h-12 bg-white col-span-2'></div>
-        <div className=' h-12 bg-white'></div>
-        <div className=' h-12 bg-white'></div>
-        <div className=' h-12 bg-white'></div>
-        <div className=' h-12 bg-white'></div>
-        <div className=' h-12 bg-white'></div>
-      </div>
 			{language === 'english' ? (
 				<div className='w-full pl-4'>
 					<div className='mb-6 w-full'>
