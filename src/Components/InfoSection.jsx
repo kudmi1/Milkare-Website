@@ -5,6 +5,7 @@ import SimpleGallery from './SimpleGallery'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import Table from './Table'
 import GoogleFormButton from './GoogleFormButton'
+import TOS from './TOS'
 
 // const testArray = [1, 2, 3, 4, 5]
 
@@ -68,18 +69,8 @@ export default function InfoSection() {
 
 	const infoQuestion =
 		language === 'english'
-			? [
-					'What i draw',
-					'Commission style',
-					'Character reference',
-					'Deadline',
-			  ]
-			: [
-					'Что я рисую',
-					'Стиль заказа',
-					'Референс персонажа',
-					'Сроки',
-			  ]
+			? ['What i draw', 'Commission style', 'Character reference', 'Deadline']
+			: ['Что я рисую', 'Стиль заказа', 'Референс персонажа', 'Сроки']
 
 	const [isOpen, setIsOpen] = useState()
 	function handleOpen(index) {
@@ -105,11 +96,11 @@ export default function InfoSection() {
 				>
 					Information
 				</h1>
-				<div className='mb-12 flex flex-col md:flex-row w-full sm:w-2/3 items-center justify-center md:justify-between rounded-md border border-thinLine bg-[#212121bb] px-4 py-4'>
-					<p className='text-2xl lg:text-3xl mb-6 md:mb-0'>
+				<div className='mb-12 flex w-full flex-col items-center justify-center rounded-md border border-thinLine bg-[#212121bb] px-4 py-4 sm:w-2/3 md:flex-row md:justify-between'>
+					<p className='mb-6 text-2xl md:mb-0 lg:text-3xl'>
 						{language === 'english' ? 'Make a commission' : 'Сделать заказ'}
 					</p>
-					<GoogleFormButton/>
+					<GoogleFormButton />
 				</div>
 
 				{infoQuestion.map((text, index) => (
@@ -124,7 +115,7 @@ export default function InfoSection() {
 						style={{ transitionDelay: `${index * 100 + 100}ms` }}
 					>
 						<div className='flex w-full items-center justify-between'>
-							<p className='select-none text-2xl'>{text}</p>
+							<p className='select-none text-xl'>{text}</p>
 							{isOpen === index ? (
 								<img src='svg/eye-close.svg' alt='chevron' />
 							) : (
@@ -143,6 +134,7 @@ export default function InfoSection() {
 						</div>
 					</div>
 				))}
+				<TOS />
 			</div>
 		</div>
 	)

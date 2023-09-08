@@ -19,8 +19,8 @@ const names = [
 	'Pochita',
 	'2B & 9S',
 	'Milka',
-	'Red Girl',
 	'Purple Girl',
+	'Red Girl',
 ]
 
 export default function SimpleGallery({ galleryID, images }) {
@@ -120,13 +120,13 @@ export default function SimpleGallery({ galleryID, images }) {
 	return (
 		<div
 			ref={ref}
-			className='pswp-gallery grid-images grid w-full grid-cols-2 gap-[15px] transition-opacity duration-500 md:grid-cols-3'
+			className='pswp-gallery grid-images grid w-full grid-cols-2 gap-[15px] transition-opacity duration-500 sm:grid-cols-3'
 			id={galleryID}
 		>
 			{images.map((image, index) => (
-				<div key={index}>
+				<div key={index} className={`${index === 13 ? 'row-span-2 sm:row-auto' : ''} `}>
 					<div
-						className={`grid-block relative overflow-hidden xl:h-96 xl:w-96 medium-block${index} aspect-square cursor-pointer rounded-md
+						className={`grid-block relative xl:w-96 xl:h-96  ${index === 13 ? 'sm:aspect-square h-full sm:h-auto' : ' aspect-square'} overflow-hidden cursor-pointer rounded-md
 						transition-all duration-500`}
 						style={{
 							backgroundImage: `url(${image.blur})`,
@@ -152,7 +152,7 @@ export default function SimpleGallery({ galleryID, images }) {
 									/>
 									<img
 										onLoad={showImageWithDelay}
-										className={` h-full w-full rounded-md object-cover object-top 
+										className={` h-full w-full rounded-md object-cover object-top
 									${
 										showImage ? 'scale-100 opacity-100' : 'scale-105 opacity-0'
 									} transition-all duration-500`}

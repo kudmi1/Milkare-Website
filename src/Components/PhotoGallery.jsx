@@ -18,8 +18,8 @@ const code_names = [
 	'pochita',
 	'2b_9s1',
 	'milka',
-	'redgirl',
 	'purplegirl',
+	'redgirl',
 ]
 
 const dimensions = [

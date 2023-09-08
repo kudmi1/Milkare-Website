@@ -20,7 +20,7 @@ export default function AdditionPriceInfo() {
 							Characters with a complex design come with an extra cost depending
 							on the difficulty: many details, guns, weapons, very long hair,
 							dynamic pose, bags, items, various skirt layers, wings, armor,
-							lace, complex clothing pattern, tattoos etc
+							lace, complex clothing pattern, tattoos etc.
 						</p>
 					</div>
 					<div className='star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
@@ -32,21 +32,21 @@ export default function AdditionPriceInfo() {
 					</div>
 					<p className='text-lg lg:text-xl star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						Nude version: <span className='text-priceColor'>+50%</span> of the
-						price character
+						price character.
 					</p>
 					<p className='text-lg lg:text-xl star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						Underwear/additional outfits:
 						<span className='text-priceColor'> +20% - 100%</span> of the price
-						character (depending on the complexity)
+						character (depending on the complexity).
 					</p>
 					<p className='text-lg lg:text-xl star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						ADDITIONAL CHARACTER:
 						<span className='text-priceColor'> +100%</span> of the price (Max.{' '}
-						<span>2</span> characters)
+						<span>2</span> characters).
 					</p>
 					<p className='text-lg lg:text-xl star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						Commercial rights: <span className='text-priceColor'>+100%</span> of
-						the price
+						the price.
 					</p>
 				</>
 			) : (
@@ -73,21 +73,21 @@ export default function AdditionPriceInfo() {
 					</div>
 					<p className='text-lg lg:text-xl star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						Обнаженная версия: <span className='text-priceColor'>+50%</span> от
-						стоимости персонажа
+						стоимости персонажа.
 					</p>
 					<p className='text-lg lg:text-xl star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						Нижнее белье/дополнительные наряды:
 						<span className='text-priceColor'> +20% - 100%</span> от стоимости
-						персонажа, в зависимости от сложности
+						персонажа, в зависимости от сложности.
 					</p>
 					<p className='text-lg lg:text-xl star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ:
 						<span className='text-priceColor'> +100%</span> от суммы персонажа
-						(Максимум <span>2</span> персонажа)
+						(Максимум <span>2</span> персонажа).
 					</p>
 					<p className='text-lg star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						Коммерческое использование:{' '}
-						<span className='text-priceColor'>+100%</span> от суммы
+						<span className='text-priceColor'>+100%</span> от суммы.
 					</p>
 				</>
 			)}
