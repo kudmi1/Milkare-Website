@@ -112,10 +112,9 @@ img {
   .pswp__custom-caption {
     display: flex;
     justify-content: center;
-    margin-top: 6px;
     background-color: #00000034;
     text-shadow: #000 1px 0.5px 0px;
-    padding: 4px 0px 4px 0px;
+    padding: 10px 0px 12px 0px;
     width: 100vw;
     font-size: 1.3rem;
     left: 50%;
