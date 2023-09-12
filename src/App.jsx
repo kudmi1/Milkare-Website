@@ -9,6 +9,7 @@ import PhotoGallery from './Components/PhotoGallery'
 import InfoSection from './Components/InfoSection'
 import PriceSection from './Components/PriceSection'
 import { useSectionContext } from './Providers/SectionContext'
+import { useInView } from 'react-intersection-observer'
 
 // const InfoSection = lazy(() =>  import('./InfoSection'))
 // const PriceSection = lazy(() =>  import('./PriceSection'))
@@ -17,6 +18,7 @@ function App() {
 	const { section, handleSectionChange } = useSectionContext()
 	const [isScrollToSection, setIsScrollToSection] = useState(false)
 	const [headerHeight, setHeaderHeight] = useState('lg:h-20')
+	const [toTopPos, setToTopPos] = useState('md:bottom-12 bottom-8')
 	const [fontSize, setFontSize] = useState('lg:text-5xl')
 	const headerRef = useRef(null)
 	const sectionRef = useRef(null)
@@ -72,6 +74,14 @@ function App() {
 		}
 	}, [])
 
+
+	const { ref, inView } = useInView({
+		threshold: 0.5,
+	})
+	useEffect(() => {
+		setToTopPos(inView ? 'md:bottom-44 bottom-44' : 'md:bottom-12 bottom-8')
+	}, [inView])
+
 	return (
 		<div className='App'>
 			<header ref={headerRef}>
@@ -116,10 +126,10 @@ function App() {
 					</section>
 				) : null}
 
-				<ToTop />
+				<ToTop position={toTopPos} />
 			</main>
-			<footer className='mt-12 md:mt-0'>
-				<Footer />
+			<footer className='mt-12 md:mt-0' ref={ref}>
+				<Footer/>
 			</footer>
 		</div>
 	)
