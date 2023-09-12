@@ -1,8 +1,15 @@
-export default function HamburgerButton({ toggleHamburger, ariaExpanded }) {
+export default function HamburgerButton({
+	toggleHamburger,
+	ariaExpanded,
+	setShowContactModal,
+}) {
 	return (
 		<div className='z-50 flex h-full items-center justify-end lg:hidden'>
 			<button
-				onClick={toggleHamburger}
+				onClick={() => {
+					toggleHamburger()
+					setShowContactModal(false)
+				}}
 				className='hamburger-btn effect-shine flex'
 				aria-controls='primary-navigation'
 				aria-expanded={ariaExpanded}

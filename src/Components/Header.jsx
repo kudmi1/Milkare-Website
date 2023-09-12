@@ -13,6 +13,7 @@ export default function Header({
 	isScrollToSection,
 }) {
 	const [showHamburger, setShowHamburger] = useState(false)
+	const [showContactModal, setShowContactModal] = useState(false)
 	const [ariaExpanded, setAriaExpanded] = useState(false)
 	const [position, setPosition] = useState(() => {
 		// Retrieve the stored position from sessionStorage
@@ -61,6 +62,7 @@ export default function Header({
 	function toggleHamburger() {
 		setShowHamburger((prev) => !prev)
 		setAriaExpanded((prev) => !prev)
+		setShowContactModal(prev => !prev)
 	}
 
 	return (
@@ -89,12 +91,15 @@ export default function Header({
 				<HamburgerButton
 					toggleHamburger={toggleHamburger}
 					ariaExpanded={ariaExpanded}
+					setShowContactModal={setShowContactModal}
 				/>
 
 				<HamburgerMenu
 					hamburgerState={showHamburger}
 					setHamburgerState={setShowHamburger}
 					setAriaExpanded={setAriaExpanded}
+					setShowContactModal={setShowContactModal}
+					showContactModal={showContactModal}
 				/>
 			</div>
 			<NavigatorSmall

@@ -9,10 +9,10 @@ export default function AdditionPriceInfo() {
 		</div>
 	)
 	return (
-		<div className='mb-12 w-full rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent px-4 backdrop-blur-[10px] md:px-12 lg:mb-24 lg:px-24 lg:py-6'>
+		<div className='mb-12 w-full rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent px-4 backdrop-blur-[10px] md:px-12 lg:mb-24 lg:px-24 py-6'>
 			{language === 'english' ? (
 				<>
-					<div className='star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+					<div className='star-header relative rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 						<p className='text-lg lg:text-xl'>
 							CHARACTERS WITH COMPLEX DESIGN:{' '}
 							<span className='text-priceColor'>+10-75 $</span>
