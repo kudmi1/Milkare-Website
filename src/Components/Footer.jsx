@@ -9,23 +9,23 @@ export default function Footer() {
 
 	return (
 		<div className='footer flex h-40 flex-col items-center border-t border-t-[#3b3b3b] bg-gradient-to-br from-mainGrayTransparent to-mainGray backdrop-blur-[10px] relative'>
-			<div className='flex flex-col md:flex-row h-2/3 md:h-full w-full max-w-7xl items-center justify-evenly md:justify-between px-6'>
-				<div className=''>
+			<div className='flex flex-row h-3/4 md:h-full w-full max-w-7xl items-center justify-between px-6'>
+				<div className='w-full'>
 					<img
 						src='./images/Logo.png'
 						alt=''
-						className={`h-8`}
+						className={`h-6 md:h-8`}
 					/>
 				</div>
-				<div className='flex justify-between items-center w-3/4 sm:w-1/2 md:w-auto'>
-					<p className='underline underline-offset-4 mr-4'>CONTACT ME:</p>
+				<div className='flex flex-col md:flex-row gap-2 justify-between items-center w-3/4 sm:w-3/4 lg:w-1/2 xl:w-1/3'>
+					<p className='underline underline-offset-4'>CONTACT ME:</p>
 					<div className='flex justify-evenly'>
 						<button className='effect-shine flex h-10 w-10 items-center justify-center md:h-14 md:w-14'>
 							<a href='https://twitter.com/milkareart' target={'_blank'}>
 								<img
 									src='./svg/twitter.svg'
 									alt='twitter-logo'
-									className='h-6 w-6 md:h-8 md:w-8'
+									className='h-7 w-7 md:h-8 md:w-8'
 								/>
 							</a>
 						</button>
@@ -34,7 +34,7 @@ export default function Footer() {
 								<img
 									src='./svg/instagram.svg'
 									alt='instagram-logo'
-									className='h-6 w-6 md:h-8 md:w-8'
+									className='h-7 w-7 md:h-8 md:w-8'
 								/>
 							</a>
 						</button>
@@ -45,7 +45,7 @@ export default function Footer() {
 									width='38'
 									height='38'
 									viewBox='0 0 256 256'
-									className='h-8 w-8 md:h-10 md:w-10'
+									className='h-9 w-9 md:h-10 md:w-10'
 								>
 									<path
 										fill='currentColor'
