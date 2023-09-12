@@ -17,7 +17,7 @@ export default function Footer() {
 						className={`h-6 md:h-8`}
 					/>
 				</div>
-				<div className='flex flex-col md:flex-row gap-2 justify-between items-center w-3/4 sm:w-3/4 lg:w-1/2 xl:w-1/3'>
+				<div className='flex flex-col md:flex-row gap-2  justify-evenly items-center w-3/4 sm:w-3/4 lg:w-1/2 xl:w-1/3'>
 					<p className='underline underline-offset-4'>CONTACT ME:</p>
 					<div className='flex justify-evenly'>
 						<button className='effect-shine flex h-10 w-10 items-center justify-center md:h-14 md:w-14'>
