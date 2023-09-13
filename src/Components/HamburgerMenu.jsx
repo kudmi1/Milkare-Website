@@ -8,7 +8,7 @@ export default function HamburgerMenu({
 	setHamburgerState,
 	setAriaExpanded,
 	showContactModal,
-	setShowContactModal
+	setShowContactModal,
 }) {
 	const { language, setLanguage } = useLanguageContext()
 	// const [modalOpened, setModalOpened] = useState(false)
@@ -40,9 +40,9 @@ export default function HamburgerMenu({
 				<div
 					className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray backdrop-blur ${
 						hamburgerState
-							? 'h-[55vh] opacity-100'
+							? 'h-[45vh] min-h-[300px] opacity-100'
 							: 'pointer-events-none h-0 opacity-0'
-					} transition-all duration-300 lg:hidden border-b-2 rounded-b-xl border-thinLine`}
+					} rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
 					onClick={(e) => {
 						e.stopPropagation()
 					}}
@@ -52,20 +52,70 @@ export default function HamburgerMenu({
 							<Translate language={language} setLanguage={setLanguage} />
 						</div>
 						<div className='flex h-full w-full flex-col items-center justify-evenly'>
-							<button className='effect-shine flex h-16 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
-								<a href='#gallery'>Gallery</a>
+							<button className='effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+								<a href='#gallery'>
+									{language === 'english' ? 'Gallery' : 'Галерея'}
+								</a>
 							</button>
-							<button className='effect-shine flex h-16 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
-								<a href='#price'>Price</a>
+							<button className='effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+								<a href='#price'>{language === 'english' ? 'Price' : 'Цены'}</a>
 							</button>
-							<button className='effect-shine flex h-16 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
-								<a href='#info'>Info</a>
+							<button className='effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+								<a href='#info'>
+									{language === 'english' ? 'Info' : 'Условия'}
+								</a>
 							</button>
 							<button
-								className='effect-shine flex h-16 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'
+								className='effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'
 								onClick={toggleContactModal}
 							>
-								<p>Contact</p>
+								<p>{language === 'english' ? 'Contact' : 'Связь со мной'}</p>
+								<div className='ml-2'>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='24'
+										height='24'
+										viewBox='0 0 24 24'
+									>
+										<g fill='none'>
+											<path
+												fillRule='evenodd'
+												clipRule='evenodd'
+												d='M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6zm10-1a1 1 0 1 0 0 2h2.586l-4.293 4.293a1 1 0 0 0 1.414 1.414L17 8.414V11a1 1 0 1 0 2 0V6a1 1 0 0 0-1-1h-5z'
+												fill='currentColor'
+											/>
+										</g>
+									</svg>
+								</div>
+							</button>
+
+							<button className='effect-shine flex h-12 w-2/3 rounded-sm border border-thinLine text-xl'>
+								<a
+									href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
+									target={'_blank'}
+									className='flex h-full w-full items-center justify-center'
+								>
+									<p>
+										{language === 'english' ? 'Commission' : 'Сделать заказ'}
+									</p>
+									<div className='ml-2'>
+										<svg
+											xmlns='http://www.w3.org/2000/svg'
+											width='24'
+											height='24'
+											viewBox='0 0 24 24'
+										>
+											<g fill='none'>
+												<path
+													fillRule='evenodd'
+													clipRule='evenodd'
+													d='M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6zm10-1a1 1 0 1 0 0 2h2.586l-4.293 4.293a1 1 0 0 0 1.414 1.414L17 8.414V11a1 1 0 1 0 2 0V6a1 1 0 0 0-1-1h-5z'
+													fill='currentColor'
+												/>
+											</g>
+										</svg>
+									</div>
+								</a>
 							</button>
 							{showContactModal ? (
 								<div
@@ -74,10 +124,10 @@ export default function HamburgerMenu({
 								>
 									<div className='relative h-48 w-96 rounded-sm border border-thinLine bg-mainGray'>
 										<button
-											className='absolute right-0 top-0 h-8 w-8 flex justify-center items-center effect-shine m-2'
+											className='effect-shine absolute right-0 top-0 m-2 flex h-8 w-8 items-center justify-center'
 											onClick={toggleContactModal}
 										>
-											<img src="./svg/x-mark.svg" alt="" />
+											<img src='./svg/x-mark.svg' alt='' />
 										</button>
 										<div className='flex h-full w-full items-center justify-evenly'>
 											<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
@@ -124,10 +174,10 @@ export default function HamburgerMenu({
 									</div>
 								</div>
 							) : null}
-							<div className='flex h-16 w-full items-center justify-evenly rounded-sm '>
+							{/* <div className='flex h-16 w-full items-center justify-evenly rounded-sm '>
 								<p className='text-lg underline underline-offset-4'>Commission</p>
 								<GoogleFormButton />
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState, lazy, Suspense } from 'react'
-import Accordion from './Components/Accordion'
 import HeroSection from './Components/HeroSection'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
-import SpeedPaint from './Components/SpeedPaint'
 import ToTop from './Components/ToTop'
-import PhotoGallery from './Components/PhotoGallery'
-import InfoSection from './Components/InfoSection'
-import PriceSection from './Components/PriceSection'
 import { useSectionContext } from './Providers/SectionContext'
 import { useInView } from 'react-intersection-observer'
+import SectionGallery from './Components/SectionGallery'
+import SectionPrice from './Components/SectionPrice'
+import SectionInfo from './Components/SectionInfo'
+import { router } from './Router'
+import { RouterProvider, Routes } from 'react-router-dom'
 
 // const InfoSection = lazy(() =>  import('./InfoSection'))
 // const PriceSection = lazy(() =>  import('./PriceSection'))
@@ -44,46 +44,46 @@ function App() {
 		return () => observer.disconnect()
 	}, [section])
 
-	useEffect(() => {
-		const section = sectionRef.current
+	// useEffect(() => {
+	// 	const section = sectionRef.current
 
-		const options = {
-			threshold: 0.1,
-		}
+	// 	const options = {
+	// 		threshold: 0.1,
+	// 	}
 
-		const handleIntersection = (entries) => {
-			entries.forEach((entry) => {
-				if (entry.target === section) {
-					if (entry.isIntersecting) {
-						setHeaderHeight('lg:h-14')
-						setFontSize('lg:h-10')
-					} else {
-						setHeaderHeight('lg:h-20')
-						setFontSize('lg:h-12')
-					}
-				}
-			})
-		}
+	// 	const handleIntersection = (entries) => {
+	// 		entries.forEach((entry) => {
+	// 			if (entry.target === section) {
+	// 				if (entry.isIntersecting) {
+	// 					setHeaderHeight('lg:h-14')
+	// 					setFontSize('lg:h-10')
+	// 				} else {
+	// 					setHeaderHeight('lg:h-20')
+	// 					setFontSize('lg:h-12')
+	// 				}
+	// 			}
+	// 		})
+	// 	}
 
-		const observer = new IntersectionObserver(handleIntersection, options)
+	// 	const observer = new IntersectionObserver(handleIntersection, options)
 
-		observer.observe(section)
+	// 	observer.observe(section)
 
-		return () => {
-			observer.disconnect()
-		}
-	}, [])
-
+	// 	return () => {
+	// 		observer.disconnect()
+	// 	}
+	// }, [])
 
 	const { ref, inView } = useInView({
 		threshold: 0.5,
 	})
 	useEffect(() => {
-		setToTopPos(inView ? 'md:bottom-44 bottom-44' : 'md:bottom-12 bottom-8')
+		setToTopPos(inView ? 'bottom-56' : 'md:bottom-12 bottom-8')
 	}, [inView])
 
 	return (
 		<div className='App'>
+
 			<header ref={headerRef}>
 				<Header
 					setSection={handleSectionChange}
@@ -94,43 +94,15 @@ function App() {
 			</header>
 			<HeroSection />
 			<main ref={sectionRef} className='gradient-bg border-t border-[#3b3b3b]'>
-				{section === 'gallery' ? (
-					<section
-						className='section-entry scroll-m-12 lg:scroll-m-0'
-						id='gallery'
-					>
-						<Accordion />
-						<PhotoGallery />
-						<SpeedPaint />
-					</section>
-				) : null}
-				{section === 'price' ? (
-					<section
-						className='section-entry flex scroll-m-12 justify-center motion-reduce:transition-none lg:scroll-m-0'
-						id='price'
-					>
-						{/* <Suspense fallback={<h1>Loading...</h1>}> */}
-
-						<PriceSection />
-						{/* </Suspense> */}
-					</section>
-				) : null}
-				{section === 'info' ? (
-					<section
-						className='section-entry flex scroll-m-12 justify-center motion-reduce:transition-none lg:scroll-m-0'
-						id='info'
-					>
-						{/* <Suspense fallback={<h1>Loading...</h1>}> */}
-						<InfoSection />
-						{/* </Suspense> */}
-					</section>
-				) : null}
-
+				{section === 'gallery' ? <SectionGallery /> : null}
+				{section === 'price' ? <SectionPrice /> : null}
+				{section === 'info' ? <SectionInfo /> : null}
 				<ToTop position={toTopPos} />
 			</main>
 			<footer className='mt-12 md:mt-0' ref={ref}>
-				<Footer/>
+				<Footer />
 			</footer>
+
 		</div>
 	)
 }

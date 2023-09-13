@@ -21,7 +21,7 @@ const panelData = [
 	},
 ]
 
-export default function PriceSection() {
+export default function Price() {
 	const { content } = useLanguageContext()
 	const priceContent = content.priceSection
 

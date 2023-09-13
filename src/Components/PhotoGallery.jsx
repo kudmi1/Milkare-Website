@@ -68,7 +68,7 @@ export default function PhotoGallery() {
 					className='w-full rounded-b-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] '
 				>
 					<h1
-						className={`section-title mb-8 flex justify-start text-6xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-8xl 
+						className={`section-title mb-8 flex justify-center text-6xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-8xl 
 					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					>
 						{language === 'english' ? 'Gallery' : 'Галерея'}

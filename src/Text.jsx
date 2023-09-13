@@ -8,7 +8,7 @@ export const data = {
 		header: {
 			gallery: 'Gallery',
 			price: 'Price',
-			info: 'Info',
+			info: 'ToS',
 		},
 		gallerySection: {
 			speedpaint: {
@@ -49,7 +49,7 @@ export const data = {
 		header: {
 			gallery: 'Галерея',
 			price: 'Цены',
-			info: 'Инфа',
+			info: 'Условия',
 		},
 		gallerySection: {
 			accordionTitle: 'Последние Работы',

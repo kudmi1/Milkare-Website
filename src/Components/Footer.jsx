@@ -1,24 +1,22 @@
 import { useEffect, useState } from 'react'
 import { InView, useInView } from 'react-intersection-observer'
+import { useLanguageContext } from '../Providers/LanguageContext'
 import GoogleFormButton from './GoogleFormButton'
 import Socials from './Socials'
 
-
 export default function Footer() {
-
+	const { language } = useLanguageContext()
 
 	return (
-		<div className='footer flex h-40 flex-col items-center border-t border-t-[#3b3b3b] bg-gradient-to-br from-mainGrayTransparent to-mainGray backdrop-blur-[10px] relative'>
-			<div className='flex flex-row h-3/4 md:h-full w-full max-w-7xl items-center justify-between px-6'>
-				<div className='w-full'>
-					<img
-						src='./images/Logo.png'
-						alt=''
-						className={`h-6 md:h-8`}
-					/>
+		<div className='footer flex h-52 flex-col items-center border-t border-t-[#3b3b3b] bg-gradient-to-br from-mainGrayTransparent to-mainGray backdrop-blur-[10px]'>
+			<div className='flex h-4/6 w-full max-w-7xl flex-row items-center justify-between px-6 md:h-full'>
+				<div className='w-full '>
+					<img src='./images/Logo.png' alt='' className={`h-6 md:h-8`} />
 				</div>
-				<div className='flex flex-col md:flex-row gap-2 justify-evenly items-center w-3/4 sm:w-3/4 lg:w-1/2 xl:w-1/3'>
-					<p className='underline underline-offset-4'>CONTACT ME:</p>
+				<div className='flex flex-col items-center justify-evenly gap-2'>
+					<p className='text-sm md:text-lg'>
+						{language === 'english' ? 'CONTACT ME' : 'СВЯЗЬ СО МНОЙ'}
+					</p>
 					<div className='flex justify-evenly'>
 						<button className='effect-shine flex h-10 w-10 items-center justify-center md:h-14 md:w-14'>
 							<a href='https://twitter.com/milkareart' target={'_blank'}>
@@ -57,19 +55,26 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className='flex absolute bottom-2 left-1/2 -translate-x-1/2 w-full items-center justify-center'>
-				<p>
-					Made by{' '}
-					<span className='font-bold italic text-secondaryText underline'>
-						<a
-							className='effect-shine'
-							href='https://github.com/kudmi1'
-							target={'_blank'}
-						>
-							Kudmi
-						</a>
-					</span>
-				</p>
+			<div className='h-2/6 flex w-full items-center justify-center border-t border-thinLine'>
+				<div className='flex w-full flex-col items-center justify-center'>
+					<p>Made by </p>
+					<div>
+						github:{' '}
+						<span className='font-bold italic text-secondaryText underline'>
+							<a
+								className='effect-shine'
+								href='https://github.com/kudmi1'
+								target={'_blank'}
+							>
+								Kudmi1
+							</a>
+						</span>{' '}
+						telegram:{' '}
+						<span className='font-bold italic text-secondaryText underline'>
+							@kudmi
+						</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	)

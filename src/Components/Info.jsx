@@ -3,7 +3,7 @@ import GoogleFormButton from './GoogleFormButton'
 import TOS from './TOS'
 
 
-export default function InfoSection() {
+export default function Info() {
 	const { language } = useLanguageContext()
 	return (
 		<div
