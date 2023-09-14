@@ -66,11 +66,11 @@ export default function HamburgerMenu({
 								</a>
 							</button>
 							<button
-								className='effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'
+								className='relative effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'
 								onClick={toggleContactModal}
 							>
 								<p>{language === 'english' ? 'Contact' : 'Связь со мной'}</p>
-								<div className='ml-2'>
+								<div className='absolute right-4'>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
 										width='24'
@@ -89,7 +89,7 @@ export default function HamburgerMenu({
 								</div>
 							</button>
 
-							<button className='effect-shine flex h-12 w-2/3 rounded-sm border border-thinLine text-xl'>
+							<button className='relative effect-shine flex h-12 w-2/3 rounded-sm border border-thinLine text-xl'>
 								<a
 									href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
 									target={'_blank'}
@@ -98,7 +98,7 @@ export default function HamburgerMenu({
 									<p>
 										{language === 'english' ? 'Commission' : 'Сделать заказ'}
 									</p>
-									<div className='ml-2'>
+									<div className='absolute right-4'>
 										<svg
 											xmlns='http://www.w3.org/2000/svg'
 											width='24'

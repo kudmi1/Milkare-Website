@@ -55,7 +55,7 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className='h-2/6 flex w-full items-center justify-center border-t border-thinLine'>
+			<div className='h-3/6 flex w-full items-center justify-center border-t border-thinLine'>
 				<div className='flex w-full flex-col items-center justify-center'>
 					<p>Made by </p>
 					<div>
