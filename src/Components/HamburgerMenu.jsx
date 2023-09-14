@@ -40,33 +40,33 @@ export default function HamburgerMenu({
 				<div
 					className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray backdrop-blur ${
 						hamburgerState
-							? 'h-[45vh] min-h-[300px] opacity-100'
+							? 'h-[50vh] min-h-min opacity-100'
 							: 'pointer-events-none h-0 opacity-0'
-					} rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
+					} overflow-scroll rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
 					onClick={(e) => {
 						e.stopPropagation()
 					}}
 				>
-					<div className='mx-auto flex h-full w-full max-w-[600px] flex-col items-center'>
+					<div className='mx-auto flex h-full w-full max-w-[600px] flex-col items-center gap-4 '>
 						<div className='w-2/3'>
 							<Translate language={language} setLanguage={setLanguage} />
 						</div>
-						<div className='flex h-full w-full flex-col items-center justify-evenly'>
-							<button className='effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+						<div className='mb-6 flex h-full w-full flex-col items-center gap-4 '>
+							<button className='effect-shine flex h-12 min-h-[48px] w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
 								<a href='#gallery'>
 									{language === 'english' ? 'Gallery' : 'Галерея'}
 								</a>
 							</button>
-							<button className='effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+							<button className='effect-shine flex h-12 min-h-[48px] w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
 								<a href='#price'>{language === 'english' ? 'Price' : 'Цены'}</a>
 							</button>
-							<button className='effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+							<button className='effect-shine flex h-12 min-h-[48px] w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
 								<a href='#info'>
 									{language === 'english' ? 'Info' : 'Условия'}
 								</a>
 							</button>
 							<button
-								className='relative effect-shine flex h-12 w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'
+								className='effect-shine relative flex h-12 min-h-[48px] w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'
 								onClick={toggleContactModal}
 							>
 								<p>{language === 'english' ? 'Contact' : 'Связь со мной'}</p>
@@ -89,7 +89,7 @@ export default function HamburgerMenu({
 								</div>
 							</button>
 
-							<button className='relative effect-shine flex h-12 w-2/3 rounded-sm border border-thinLine text-xl'>
+							<button className='effect-shine relative flex h-12 min-h-[48px] w-2/3 rounded-sm border border-thinLine text-xl'>
 								<a
 									href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
 									target={'_blank'}
