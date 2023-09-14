@@ -5,6 +5,7 @@ import NavigatorBig from './NavigatorBig'
 import Translate from './Translate'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import HamburgerButton from './HamburgerButton'
+import { Link } from 'react-router-dom'
 
 export default function Header({
 	setSection,
@@ -15,12 +16,9 @@ export default function Header({
 	const [showHamburger, setShowHamburger] = useState(false)
 	const [showContactModal, setShowContactModal] = useState(false)
 	const [ariaExpanded, setAriaExpanded] = useState(false)
-	const [position, setPosition] = useState(() => {
-		// Retrieve the stored position from sessionStorage
-		const storedPosition = sessionStorage.getItem('underlinePosition')
-		return storedPosition ? storedPosition : '0'
-	})
-	const [selectedLink, setSelectedLink] = useState(null)
+	const [activeLink, setActiveLink] = useState(null)
+
+	const [position, setPosition] = useState(0)
 
 	useLayoutEffect(() => {
 		let underlines = document.querySelectorAll('.underline-animation')
@@ -42,7 +40,6 @@ export default function Header({
 	function handleClick(index, section) {
 		ul(index)
 		setSection(section)
-		setSelectedLink(index)
 	}
 
 	const handleWindowResize = () => {
@@ -65,6 +62,13 @@ export default function Header({
 		setShowContactModal(prev => !prev)
 	}
 
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+		setActiveLink(null)
+		setSection('gallery')
+		setPosition(0)
+	}
+
 	return (
 		<header
 			className={`header fixed z-50 flex h-24 w-full flex-col justify-center ${
@@ -73,15 +77,17 @@ export default function Header({
 			 `}
 		>
 			<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-6 lg:grid-cols-3 xl:px-0'>
-					<a
-						href='#'
+					<Link
+						to={'/'}
 						className={`header-top effect-shine transition-all duration-500`}
+						onClick={scrollToTop}
 					>
 						<img src="./images/Logo.png" alt="" className={`h-8 ${fontSize} transition-all duration-500`}/>
-					</a>
+					</Link>
 				<NavigatorBig
 					isScrollToSection={isScrollToSection}
-					selectedLink={selectedLink}
+					activeLink={activeLink}
+					setActiveLink={setActiveLink}
 					handleClick={handleClick}
 				/>
 				<div className='hidden lg:block'>
@@ -103,9 +109,10 @@ export default function Header({
 				/>
 			</div>
 			<NavigatorSmall
-				selectedLink={selectedLink}
 				isScrollToSection={isScrollToSection}
 				handleClick={handleClick}
+				activeLink={activeLink}
+				setActiveLink={setActiveLink}
 			/>
 		</header>
 	)

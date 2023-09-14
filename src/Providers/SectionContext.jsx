@@ -3,9 +3,8 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 const SectionContext = createContext()
 
 export const SectionProvider = ({ children }) => {
-	const [section, setSection] = useState(
-		sessionStorage.getItem('section') || 'gallery'
-	)
+
+	const [section, setSection] = useState('gallery')
 
   const handleSectionChange = (newSection) => {
 		setSection(newSection)

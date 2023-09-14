@@ -3,9 +3,9 @@ import Accordion from "./Accordion";
 import PhotoGallery from "./PhotoGallery";
 import SpeedPaint from "./SpeedPaint";
 
-export default function SectionGallery() {
+export default function SectionGallery({ id }) {
 	return (
-		<section className='section-entry scroll-m-12 lg:scroll-m-0' id='gallery'>
+		<section className='section-entry scroll-m-12 lg:scroll-m-0' id={id}>
 			<Accordion />
 			<PhotoGallery />
 			<SpeedPaint />

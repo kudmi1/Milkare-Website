@@ -9,7 +9,7 @@ import SectionGallery from './Components/SectionGallery'
 import SectionPrice from './Components/SectionPrice'
 import SectionInfo from './Components/SectionInfo'
 import { router } from './Router'
-import { RouterProvider, Routes } from 'react-router-dom'
+import { Route, RouterProvider, Routes } from 'react-router-dom'
 
 // const InfoSection = lazy(() =>  import('./InfoSection'))
 // const PriceSection = lazy(() =>  import('./PriceSection'))
@@ -44,35 +44,35 @@ function App() {
 		return () => observer.disconnect()
 	}, [section])
 
-	// useEffect(() => {
-	// 	const section = sectionRef.current
+	useEffect(() => {
+		const section = sectionRef.current
 
-	// 	const options = {
-	// 		threshold: 0.1,
-	// 	}
+		const options = {
+			threshold: 0.1,
+		}
 
-	// 	const handleIntersection = (entries) => {
-	// 		entries.forEach((entry) => {
-	// 			if (entry.target === section) {
-	// 				if (entry.isIntersecting) {
-	// 					setHeaderHeight('lg:h-14')
-	// 					setFontSize('lg:h-10')
-	// 				} else {
-	// 					setHeaderHeight('lg:h-20')
-	// 					setFontSize('lg:h-12')
-	// 				}
-	// 			}
-	// 		})
-	// 	}
+		const handleIntersection = (entries) => {
+			entries.forEach((entry) => {
+				if (entry.target === section) {
+					if (entry.isIntersecting) {
+						setHeaderHeight('lg:h-14')
+						setFontSize('lg:h-10')
+					} else {
+						setHeaderHeight('lg:h-20')
+						setFontSize('lg:h-12')
+					}
+				}
+			})
+		}
 
-	// 	const observer = new IntersectionObserver(handleIntersection, options)
+		const observer = new IntersectionObserver(handleIntersection, options)
 
-	// 	observer.observe(section)
+		observer.observe(section)
 
-	// 	return () => {
-	// 		observer.disconnect()
-	// 	}
-	// }, [])
+		return () => {
+			observer.disconnect()
+		}
+	}, [])
 
 	const { ref, inView } = useInView({
 		threshold: 0.5,
@@ -94,9 +94,13 @@ function App() {
 			</header>
 			<HeroSection />
 			<main ref={sectionRef} className='gradient-bg border-t border-[#3b3b3b]'>
-				{section === 'gallery' ? <SectionGallery /> : null}
-				{section === 'price' ? <SectionPrice /> : null}
-				{section === 'info' ? <SectionInfo /> : null}
+				<Routes>
+					<Route path='/' element={<SectionGallery/>}/>
+					<Route path='/gallery' element={<SectionGallery id={'gallery'} />}/>
+					<Route path='/price' element={<SectionPrice id={'price'}/>}/>
+					<Route path='/info' element={<SectionInfo id={'info'}/>}/>
+					{/* <Route path='*' element={<SectionGallery/>}/> */}
+				</Routes>
 				<ToTop position={toTopPos} />
 			</main>
 			<footer className='mt-12 md:mt-0' ref={ref}>

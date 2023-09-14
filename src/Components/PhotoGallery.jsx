@@ -60,9 +60,7 @@ export default function PhotoGallery() {
 		<div className='flex w-full justify-center motion-reduce:transition-none'>
 			<div
 				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border border-[#3b3b3b] lg:w-max`}
-			>
-				{/* <TitleComponent title='Gallery' /> */}
-				
+			>				
 				<div
 					ref={ref}
 					className='w-full rounded-b-md bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px] '
