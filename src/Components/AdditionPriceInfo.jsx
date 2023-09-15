@@ -62,7 +62,7 @@ export default function AdditionPriceInfo() {
 				</>
 			) : (
 				<>
-					<div className='star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+					<div className='star-header relative rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
 					{star}
 						<p className='text-lg lg:text-xl'>
 							ПЕРСОНАЖИ СО СЛОЖНЫМ ДИЗАЙНОМ:{' '}
