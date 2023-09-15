@@ -36,9 +36,22 @@ export default function HamburgerMenu({
 				closeAllModals()
 			}}
 		>
-			{showContactModal ? (
+			
+			
+			<div className='relative w-full'>
 				<div
-					className='fixed bottom-0 left-0 z-[100] flex h-full w-full items-center justify-center border bg-[#2121216b]'
+					className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray backdrop-blur ${
+						hamburgerState
+							? 'min-h-min opacity-100'
+							: 'pointer-events-none h-0 opacity-0'
+					} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
+					onClick={(e) => {
+						e.stopPropagation()
+					}}
+				>
+					{showContactModal ? (
+				<div
+					className='fixed bottom-0 left-0 z-[999] flex h-full w-full items-center justify-center bg-[#212121e7]'
 					onClick={() => setShowContactModal(false)}
 				>
 					<div className='relative h-48 w-96 rounded-sm border border-thinLine bg-mainGray'>
@@ -87,18 +100,6 @@ export default function HamburgerMenu({
 					</div>
 				</div>
 			) : null}
-			
-			<div className='relative w-full'>
-				<div
-					className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray backdrop-blur ${
-						hamburgerState
-							? 'min-h-min opacity-100'
-							: 'pointer-events-none h-0 opacity-0'
-					} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
-					onClick={(e) => {
-						e.stopPropagation()
-					}}
-				>
 					<div className='mx-auto flex h-full w-full max-w-[600px] flex-col items-center gap-4'>
 						<div className='w-2/3 '>
 							<Translate language={language} setLanguage={setLanguage} />

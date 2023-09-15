@@ -154,7 +154,7 @@ export default function SimpleGallery({ galleryID, images }) {
 										onLoad={showImageWithDelay}
 										className={` h-full w-full rounded-md object-cover object-top
 									${
-										showImage ? 'scale-100 opacity-100' : 'scale-105 opacity-0'
+										showImage ? 'scale-100 opacity-100' : 'scale-[101%] opacity-0'
 									} transition-all duration-500`}
 										src={image.thumbnailURL}
 										alt={names[index]}

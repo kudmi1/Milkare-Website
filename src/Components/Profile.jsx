@@ -4,7 +4,7 @@ import Socials from "./Socials"
 export default function Profile() {
 	const [loaded, setLoaded] = useState(false)
 	return (
-		<footer className='info-footer flex h-52 lg:h-60 max-h-[25vh] w-full justify-center bg-gradient-to-r from-mainGray via-[#292929] to-mainGray'>
+		<footer className='info-footer flex min-h-[208px] h-52 lg:h-60 max-h-[25vh] w-full justify-center bg-gradient-to-r from-mainGray via-[#292929] to-mainGray'>
 			<div className='footer-content relative z-40 flex w-full max-w-7xl flex-col items-center'>
 				<div className='profile-pic-container absolute top-0 -translate-y-1/2 left-[50%] h-24 w-24 lg:h-28 lg:w-28 -translate-x-1/2 rounded-full overflow-hidden'>
 					<img

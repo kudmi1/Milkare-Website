@@ -76,7 +76,7 @@ export default function PanelComponent({
 							className={`accordion_image absolute inset-0 -z-10 h-full w-full object-cover ${
 								isObjectTop ? 'object-top' : ''
 							} ${
-								showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+								showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-[102%]'
 							} transition-all duration-500`}
 							src={`images-accordion/${picname}.webp`}
 							alt={`image${index}`}

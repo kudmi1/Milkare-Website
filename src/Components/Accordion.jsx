@@ -44,49 +44,49 @@ export default function Accordion() {
 								<div
 									className={`bg-slate-600 ${
 										showImage ? '' : 'effect-shine-skeleton'
-									} rounded-md `}
+									} rounded-md overflow-hidden`}
 								>
 									<img
 										onLoad={showImageWithDelay}
 										src='images-accordion/eleonora.webp'
 										alt=''
-										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
+										className={`grid-block h-full w-full rounded-md object-cover hover:scale-110 transition-all ease-linear hover:duration-[3s] duration-500 delay-0 ${
 											showImage
-												? 'scale-100 opacity-100'
-												: 'scale-110 opacity-0'
-										} transition-all duration-500`}
+												? 'scale-100 opacity-100 blur-0'
+												: 'opacity-50 blur-[2px]'
+										} `}
 									/>
 								</div>
 								<div
 									className={`bg-slate-600 ${
 										showImage ? '' : 'effect-shine-skeleton'
-									} rounded-md `}
+									} rounded-md overflow-hidden`}
 								>
 									<img
 										onLoad={showImageWithDelay}
 										src='images-accordion/bladerunner2049.webp'
 										alt=''
-										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
+										className={`grid-block h-full w-full rounded-md object-cover hover:scale-110 transition-all ease-linear hover:duration-[3s] duration-500 delay-0 ${
 											showImage
-												? 'scale-100 opacity-100'
-												: 'scale-110 opacity-0'
-										} transition-all delay-200 duration-500`}
+												? 'scale-100 opacity-100 blur-0'
+												: 'opacity-50 blur-[2px]'
+										} `}
 									/>
 								</div>
 								<div
 									className={`bg-slate-600 ${
 										showImage ? '' : 'effect-shine-skeleton'
-									} rounded-md `}
+									} rounded-md overflow-hidden`}
 								>
 									<img
 										onLoad={showImageWithDelay}
 										src='images-accordion/aqua.webp'
 										alt=''
-										className={`grid-block pointer-events-none h-full w-full rounded-md object-cover ${
+										className={`grid-block h-full w-full rounded-md object-cover hover:scale-110 transition-all ease-linear hover:duration-[3s] duration-500 delay-0 ${
 											showImage
-												? 'scale-100 opacity-100'
-												: 'scale-110 opacity-0'
-										} transition-all delay-[400ms] duration-500`}
+												? 'scale-100 opacity-100 blur-0'
+												: 'opacity-50 blur-[2px]'
+										} `}
 									/>
 								</div>
 							</>
