@@ -36,45 +36,97 @@ export default function HamburgerMenu({
 				closeAllModals()
 			}}
 		>
+			{showContactModal ? (
+				<div
+					className='fixed bottom-0 left-0 z-[100] flex h-full w-full items-center justify-center border bg-[#2121216b]'
+					onClick={() => setShowContactModal(false)}
+				>
+					<div className='relative h-48 w-96 rounded-sm border border-thinLine bg-mainGray'>
+						<button
+							className='effect-shine absolute right-0 top-0 m-2 flex h-8 w-8 items-center justify-center'
+							onClick={toggleContactModal}
+						>
+							<img src='./svg/x-mark.svg' alt='' />
+						</button>
+						<div className='flex h-full w-full items-center justify-evenly'>
+							<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
+								<a href='https://twitter.com/milkareart' target={'_blank'}>
+									<img
+										src='./svg/twitter.svg'
+										alt='twitter-logo'
+										className='h-12 w-12 md:h-8 md:w-8'
+									/>
+								</a>
+							</button>
+							<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
+								<a href='http://instagram.com/milkareart/' target={'_blank'}>
+									<img
+										src='./svg/instagram.svg'
+										alt='instagram-logo'
+										className='h-12 w-12 md:h-8 md:w-8'
+									/>
+								</a>
+							</button>
+							<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
+								<a href='mailto:milkareart@gmail.com' target={'_blank'}>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='38'
+										height='38'
+										viewBox='0 0 256 256'
+										className='h-14 w-14 md:h-10 md:w-10'
+									>
+										<path
+											fill='currentColor'
+											d='M224 50H32a6 6 0 0 0-6 6v136a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V56a6 6 0 0 0-6-6Zm-15.42 12L128 135.86L47.42 62ZM216 194H40a2 2 0 0 1-2-2V69.64l86 78.78a6 6 0 0 0 8.1 0L218 69.64V192a2 2 0 0 1-2 2Z'
+										/>
+									</svg>
+								</a>
+							</button>
+						</div>
+					</div>
+				</div>
+			) : null}
+			
 			<div className='relative w-full'>
 				<div
 					className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray backdrop-blur ${
 						hamburgerState
-							? 'h-[50vh] min-h-min opacity-100'
+							? 'min-h-min opacity-100'
 							: 'pointer-events-none h-0 opacity-0'
-					} overflow-scroll rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
+					} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
 					onClick={(e) => {
 						e.stopPropagation()
 					}}
 				>
-					<div className='mx-auto flex h-full w-full max-w-[600px] flex-col items-center gap-4 '>
-						<div className='w-2/3'>
+					<div className='mx-auto flex h-full w-full max-w-[600px] flex-col items-center gap-4'>
+						<div className='w-2/3 '>
 							<Translate language={language} setLanguage={setLanguage} />
 						</div>
-						<div className='mb-6 flex h-full w-full flex-col items-center gap-4 '>
-							<button className='effect-shine flex h-12 min-h-[48px] w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+						<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 '>
+							<button className='effect-shine flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'>
 								<a href='#gallery'>
 									{language === 'english' ? 'Gallery' : 'Галерея'}
 								</a>
 							</button>
-							<button className='effect-shine flex h-12 min-h-[48px] w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+							<button className='effect-shine flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'>
 								<a href='#price'>{language === 'english' ? 'Price' : 'Цены'}</a>
 							</button>
-							<button className='effect-shine flex h-12 min-h-[48px] w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'>
+							<button className='effect-shine flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'>
 								<a href='#info'>
 									{language === 'english' ? 'Info' : 'Условия'}
 								</a>
 							</button>
 							<button
-								className='effect-shine relative flex h-12 min-h-[48px] w-2/3 items-center justify-center rounded-sm border border-thinLine text-xl'
+								className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'
 								onClick={toggleContactModal}
 							>
 								<p>{language === 'english' ? 'Contact' : 'Связь со мной'}</p>
-								<div className='absolute right-4'>
+								<div className='absolute right-2 top-2'>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
-										width='24'
-										height='24'
+										width='16'
+										height='16'
 										viewBox='0 0 24 24'
 									>
 										<g fill='none'>
@@ -89,7 +141,7 @@ export default function HamburgerMenu({
 								</div>
 							</button>
 
-							<button className='effect-shine relative flex h-12 min-h-[48px] w-2/3 rounded-sm border border-thinLine text-xl'>
+							<button className='effect-shine relative flex h-12 min-h-[48px] w-full rounded-sm border border-thinLine text-xl'>
 								<a
 									href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
 									target={'_blank'}
@@ -98,11 +150,11 @@ export default function HamburgerMenu({
 									<p>
 										{language === 'english' ? 'Commission' : 'Сделать заказ'}
 									</p>
-									<div className='absolute right-4'>
+									<div className='absolute right-2 top-2'>
 										<svg
 											xmlns='http://www.w3.org/2000/svg'
-											width='24'
-											height='24'
+											width='16'
+											height='16'
 											viewBox='0 0 24 24'
 										>
 											<g fill='none'>
@@ -117,63 +169,7 @@ export default function HamburgerMenu({
 									</div>
 								</a>
 							</button>
-							{showContactModal ? (
-								<div
-									className='absolute bottom-0 left-0 flex h-full w-full items-center justify-center bg-[#2121216b]'
-									onClick={() => setShowContactModal(false)}
-								>
-									<div className='relative h-48 w-96 rounded-sm border border-thinLine bg-mainGray'>
-										<button
-											className='effect-shine absolute right-0 top-0 m-2 flex h-8 w-8 items-center justify-center'
-											onClick={toggleContactModal}
-										>
-											<img src='./svg/x-mark.svg' alt='' />
-										</button>
-										<div className='flex h-full w-full items-center justify-evenly'>
-											<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
-												<a
-													href='https://twitter.com/milkareart'
-													target={'_blank'}
-												>
-													<img
-														src='./svg/twitter.svg'
-														alt='twitter-logo'
-														className='h-12 w-12 md:h-8 md:w-8'
-													/>
-												</a>
-											</button>
-											<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
-												<a
-													href='http://instagram.com/milkareart/'
-													target={'_blank'}
-												>
-													<img
-														src='./svg/instagram.svg'
-														alt='instagram-logo'
-														className='h-12 w-12 md:h-8 md:w-8'
-													/>
-												</a>
-											</button>
-											<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
-												<a href='mailto:milkareart@gmail.com' target={'_blank'}>
-													<svg
-														xmlns='http://www.w3.org/2000/svg'
-														width='38'
-														height='38'
-														viewBox='0 0 256 256'
-														className='h-14 w-14 md:h-10 md:w-10'
-													>
-														<path
-															fill='currentColor'
-															d='M224 50H32a6 6 0 0 0-6 6v136a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V56a6 6 0 0 0-6-6Zm-15.42 12L128 135.86L47.42 62ZM216 194H40a2 2 0 0 1-2-2V69.64l86 78.78a6 6 0 0 0 8.1 0L218 69.64V192a2 2 0 0 1-2 2Z'
-														/>
-													</svg>
-												</a>
-											</button>
-										</div>
-									</div>
-								</div>
-							) : null}
+
 							{/* <div className='flex h-16 w-full items-center justify-evenly rounded-sm '>
 								<p className='text-lg underline underline-offset-4'>Commission</p>
 								<GoogleFormButton />
