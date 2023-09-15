@@ -1,4 +1,4 @@
-import Price from "./Price";
+import Price from "../Components/Price";
 
 export default function SectionPrice({ id }) {
 	return (
@@ -6,10 +6,7 @@ export default function SectionPrice({ id }) {
 			className='section-entry flex scroll-m-12 justify-center motion-reduce:transition-none lg:scroll-m-0'
 			id={id}
 		>
-			{/* <Suspense fallback={<h1>Loading...</h1>}> */}
-
 			<Price />
-			{/* </Suspense> */}
 		</section>
 	)
 }

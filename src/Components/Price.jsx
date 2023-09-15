@@ -2,7 +2,6 @@ import PanelComponent from './PanelComponent'
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import PriceCard from './PriceCard'
-import TitleComponent from './TitleComponent'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import AdditionPriceInfo from './AdditionPriceInfo'
 

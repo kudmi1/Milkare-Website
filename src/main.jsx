@@ -4,7 +4,6 @@ import { RouterProvider } from 'react-router-dom'
 import App from './App'
 import { LanguageProvider } from './Providers/LanguageContext'
 import { SectionProvider } from './Providers/SectionContext'
-import { router } from './Router'
 import { BrowserRouter } from 'react-router-dom'
 // import './index.css'
 

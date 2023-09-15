@@ -5,10 +5,9 @@ import Footer from './Components/Footer'
 import ToTop from './Components/ToTop'
 import { useSectionContext } from './Providers/SectionContext'
 import { useInView } from 'react-intersection-observer'
-import SectionGallery from './Components/SectionGallery'
-import SectionPrice from './Components/SectionPrice'
-import SectionInfo from './Components/SectionInfo'
-import { router } from './Router'
+import SectionGallery from './Pages/SectionGallery'
+import SectionPrice from './Pages/SectionPrice'
+import SectionInfo from './Pages/SectionInfo'
 import { Route, RouterProvider, Routes } from 'react-router-dom'
 
 // const InfoSection = lazy(() =>  import('./InfoSection'))

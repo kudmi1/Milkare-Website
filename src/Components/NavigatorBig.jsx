@@ -42,7 +42,6 @@ export default function NavigatorBig({
 				scrollToId = 'info'
 				break
 			default:
-				index = null
 				scrollToId = null
 		}
 

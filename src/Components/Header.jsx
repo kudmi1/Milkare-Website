@@ -38,8 +38,17 @@ export default function Header({
 	}
 
 	function handleClick(index, section) {
-		ul(index)
-		setSection(section)
+		let sectionIndex
+		switch(section) {
+			case 'gallery': sectionIndex = 0
+			break
+			case 'price': sectionIndex = 1
+			break
+			case 'info': sectionIndex = 2
+			break
+		}
+		ul(sectionIndex)
+		setSection(section)  //нужно как то пофиксить этот код
 	}
 
 	const handleWindowResize = () => {

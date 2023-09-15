@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
-import Accordion from "./Accordion";
-import PhotoGallery from "./PhotoGallery";
-import SpeedPaint from "./SpeedPaint";
+import Accordion from "../Components/Accordion";
+import PhotoGallery from "../Components/PhotoGallery";
+import SpeedPaint from "../Components/SpeedPaint";
 
 export default function SectionGallery({ id }) {
 	return (

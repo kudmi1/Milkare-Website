@@ -1,6 +1,5 @@
 import 'photoswipe/dist/photoswipe.css'
 import { InView, useInView } from 'react-intersection-observer'
-import TitleComponent from './TitleComponent'
 import SimpleGallery from './SimpleGallery'
 import { useLanguageContext } from '../Providers/LanguageContext'
 
