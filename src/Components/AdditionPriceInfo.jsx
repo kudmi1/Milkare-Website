@@ -3,16 +3,30 @@ import GoogleFormButton from './GoogleFormButton'
 
 export default function AdditionPriceInfo() {
 	const { language } = useLanguageContext()
-	const divider = (
-		<div class='flex w-full justify-center '>
-			<div class='my-[12px] flex h-[1px] w-full items-center justify-center bg-priceColor text-center lg:my-[24px] '></div>
-		</div>
-	)
+
+	function stars() {
+		return (
+			<>
+				<img
+					src='./svg/star-thin.svg'
+					alt=''
+					className='absolute right-[100%] md:right-[101%] lg:right-[104%] top-1/2 h-4 w-4 md:h-6 md:w-6 -translate-y-1/2'
+				/>
+				{/* <img
+					src='./svg/star-thin.svg'
+					alt=''
+					className='absolute left-[100%] md:left-[101%] top-1/2 h-4 w-4 md:h-6 md:w-6 -translate-y-1/2'
+				/> */}
+			</>
+		)
+	}
+
 	return (
-		<div className='mb-12 w-full rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent px-4 backdrop-blur-[10px] md:px-12 lg:mb-24 lg:px-24 py-6'>
+		<div className='mb-12 w-full rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent px-4 py-6 backdrop-blur-[10px] md:px-12 lg:mb-24 lg:px-24'>
 			{language === 'english' ? (
 				<>
 					<div className='star-header relative rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+						{stars()}
 						<p className='text-lg lg:text-xl'>
 							CHARACTERS WITH COMPLEX DESIGN:{' '}
 							<span className='text-priceColor'>+10-75 $</span>
@@ -25,6 +39,7 @@ export default function AdditionPriceInfo() {
 						</p>
 					</div>
 					<div className='star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+						{stars()}
 						<p className='text-lg lg:text-xl'>LINE ART INFORMATION</p>
 						<p className='text-md mt-3 lg:text-lg'>
 							The simplest style. Only base color fills and gradients are
@@ -32,20 +47,24 @@ export default function AdditionPriceInfo() {
 						</p>
 					</div>
 					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-lg lg:text-xl'>
+						{stars()}
 						Nude version: <span className='text-priceColor'>+50%</span> of the
 						price character.
 					</p>
 					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-lg lg:text-xl'>
+						{stars()}
 						Underwear/additional outfits:
 						<span className='text-priceColor'> +20% - 100%</span> of the price
 						character (depending on the complexity).
 					</p>
 					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-lg lg:text-xl'>
+						{stars()}
 						ADDITIONAL CHARACTER:
 						<span className='text-priceColor'> +100%</span> of the price (Max.{' '}
 						<span>2</span> characters).
 					</p>
 					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-lg lg:text-xl'>
+						{stars()}
 						Commercial rights: <span className='text-priceColor'>+100%</span> of
 						the price.
 					</p>
@@ -93,7 +112,8 @@ export default function AdditionPriceInfo() {
 				</>
 			)}
 
-			<div className='flex w-full flex-col items-center justify-center rounded-md border border-thinLine bg-[#212121bb] px-4 py-4 md:flex-row md:justify-between'>
+			<div className='flex relative w-full flex-col items-center justify-center rounded-md border border-thinLine bg-[#212121bb] px-4 py-4 md:flex-row md:justify-between'>
+			{stars()}
 				<p className='mb-6 text-2xl md:mb-0 lg:text-2xl'>
 					{language === 'english' ? 'Make a commission' : 'Сделать заказ'}
 				</p>
