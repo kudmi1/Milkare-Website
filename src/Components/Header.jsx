@@ -82,6 +82,7 @@ export default function Header({
 						setSection('home')
 						setActiveLink('home')
 						setPosition(0)
+						setSelectedTab(0)
 					}}
 				>
 					<img
