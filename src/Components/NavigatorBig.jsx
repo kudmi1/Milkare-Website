@@ -7,11 +7,12 @@ export default function NavigatorBig({
 	isScrollToSection,
 	handleClick,
 	activeLink,
-	setActiveLink
+	setActiveLink,
+	selectedTab,
+	setSelectedTab
 }) {
 	const { content, language } = useLanguageContext()
 	const { section } = useSectionContext()
-	const [selectedTab, setSelectedTab] = useState(null) 
 
 
 	const scrollToComponent = (index, id) => {

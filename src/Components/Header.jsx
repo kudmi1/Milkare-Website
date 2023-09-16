@@ -17,6 +17,7 @@ export default function Header({
 	const [showContactModal, setShowContactModal] = useState(false)
 	const [ariaExpanded, setAriaExpanded] = useState(false)
 	const [activeLink, setActiveLink] = useState(null)
+	const [selectedTab, setSelectedTab] = useState(null)
 
 	const [position, setPosition] = useState(() => {
 		const storedPosition = sessionStorage.getItem('underlinePosition')
@@ -94,6 +95,8 @@ export default function Header({
 					activeLink={activeLink}
 					setActiveLink={setActiveLink}
 					handleClick={handleClick}
+					selectedTab={selectedTab}
+					setSelectedTab={setSelectedTab}
 				/>
 				<div className='hidden lg:block'>
 					<Translate />
@@ -118,6 +121,8 @@ export default function Header({
 				handleClick={handleClick}
 				activeLink={activeLink}
 				setActiveLink={setActiveLink}
+				selectedTab={selectedTab}
+				setSelectedTab={setSelectedTab}
 			/>
 		</header>
 	)
