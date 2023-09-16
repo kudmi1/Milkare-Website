@@ -468,7 +468,7 @@ ion-icon {
     -webkit-mask-position: -50%;
   }
 }
-.myvan.black > .underline-animation {
+.mynav.black > .underline-animation {
   background: #fcf3f3;
   height: 0.25rem;
 }
@@ -482,6 +482,10 @@ ion-icon {
   transition: calc(0.3s * 1.2);
 }
 .underline-animation:nth-child(3) {
+  background: #fcf3f3;
+  transition: calc(0.3s * 1.6);
+}
+.underline-animation:nth-child(4) {
   background: #fcf3f3;
 }
 
@@ -577,17 +581,6 @@ ion-icon {
   }
 }
 
-/* .star-header::before {
-  content: '✦';
-  position: absolute;
-  right: 100%;
-  bottom: 50%;
-  transform: translateY(50%);
-  margin-right: 16px;
-}
-@media (max-width: 1024px) {
-  .star-header::before {
-    content: '';
-    
-  }
+/* .hero-section {
+  height: calc(100vh - 142px);
 } */

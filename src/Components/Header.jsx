@@ -18,7 +18,10 @@ export default function Header({
 	const [ariaExpanded, setAriaExpanded] = useState(false)
 	const [activeLink, setActiveLink] = useState(null)
 
-	const [position, setPosition] = useState(0)
+	const [position, setPosition] = useState(() => {
+		const storedPosition = sessionStorage.getItem('underlinePosition')
+		return storedPosition !== null ? storedPosition : 0
+	})
 
 	useLayoutEffect(() => {
 		let underlines = document.querySelectorAll('.underline-animation')
@@ -32,23 +35,14 @@ export default function Header({
 		sessionStorage.setItem('underlinePosition', position)
 	}, [position])
 
-	function ul(index) {
+	function handleUnderline(index) {
 		const newPosition = index * 100 + '%'
 		setPosition(newPosition)
 	}
 
 	function handleClick(index, section) {
-		let sectionIndex
-		switch(section) {
-			case 'gallery': sectionIndex = 0
-			break
-			case 'price': sectionIndex = 1
-			break
-			case 'info': sectionIndex = 2
-			break
-		}
-		ul(sectionIndex)
-		setSection(section)  //нужно как то пофиксить этот код
+		handleUnderline(index)
+		setSection(section) //нужно как то пофиксить этот код
 	}
 
 	const handleWindowResize = () => {
@@ -68,31 +62,33 @@ export default function Header({
 	function toggleHamburger() {
 		setShowHamburger((prev) => !prev)
 		setAriaExpanded((prev) => !prev)
-		setShowContactModal(prev => !prev)
-	}
-
-	const scrollToTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' })
-		setActiveLink(null)
-		setSection('gallery')
-		setPosition(0)
+		setShowContactModal((prev) => !prev)
 	}
 
 	return (
 		<header
 			className={`header fixed z-50 flex h-24 w-full flex-col justify-center ${
 				ariaExpanded ? 'bg-mainGray' : ''
-			} bg-gradient-to-r from-mainGray via-[#292929] to-mainGray opacity-100 lg:flex-row ${headerHeight}
+			} bg-gradient-to-r from-mainGray via-[#292929] to-mainGray opacity-100 lg:h-14 lg:flex-row
 			 `}
 		>
-			<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-6 lg:grid-cols-3 xl:px-0'>
-					<Link
-						to={'/'}
-						className={`header-top effect-shine transition-all duration-500`}
-						onClick={scrollToTop}
-					>
-						<img src="./images/Logo.png" alt="" className={`h-8 ${fontSize} transition-all duration-500`}/>
-					</Link>
+			<div className='header-standart relative grid h-full w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-6 lg:flex xl:px-0'>
+				<Link
+					to={'/'}
+					className={`header-top effect-shine transition-all duration-500`}
+					// onClick={scrollToTop}
+					onClick={() => {
+						setSection('home')
+						setActiveLink('home')
+						setPosition(0)
+					}}
+				>
+					<img
+						src='./images/Logo.png'
+						alt=''
+						className={`h-8 transition-all duration-500 lg:h-10`}
+					/>
+				</Link>
 				<NavigatorBig
 					isScrollToSection={isScrollToSection}
 					activeLink={activeLink}

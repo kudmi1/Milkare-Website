@@ -91,10 +91,10 @@ function App() {
 					isScrollToSection={isScrollToSection}
 				/>
 			</header>
-			<HeroSection />
+			{/* <HeroSection /> */}
 			<main ref={sectionRef} className='gradient-bg border-t border-[#3b3b3b]'>
 				<Routes>
-					<Route path='/' element={<SectionGallery/>}/>
+					<Route path='/' element={<HeroSection/>}/>
 					<Route path='/gallery' element={<SectionGallery id={'gallery'} />}/>
 					<Route path='/price' element={<SectionPrice id={'price'}/>}/>
 					<Route path='/info' element={<SectionInfo id={'info'}/>}/>
@@ -102,7 +102,7 @@ function App() {
 				</Routes>
 				<ToTop position={toTopPos} />
 			</main>
-			<footer className='mt-12 md:mt-0' ref={ref}>
+			<footer ref={ref}>
 				<Footer />
 			</footer>
 

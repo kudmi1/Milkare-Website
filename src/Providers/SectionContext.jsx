@@ -4,7 +4,10 @@ const SectionContext = createContext()
 
 export const SectionProvider = ({ children }) => {
 
-	const [section, setSection] = useState('gallery')
+	const [section, setSection] = useState(() => {
+		const storedSection = sessionStorage.getItem('section')
+		return storedSection !== null ? storedSection : 'home'
+	})
 
   const handleSectionChange = (newSection) => {
 		setSection(newSection)

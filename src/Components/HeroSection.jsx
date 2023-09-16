@@ -10,30 +10,20 @@ export default function HeroSection() {
 	return (
 		<section
 			ref={ref}
-			className={`hero-section relative flex h-[50vh] max-h-[1080px] min-h-[600px] w-full flex-col sm:h-[60vh] 
-			lg:h-screen`}
+			className={`hero-section h-[calc(100vh-208px)] md:h-[calc(100vh-142px)] flex w-full flex-col
+			`}
 		>
-			<picture className='h-1/2 w-full grow ' alt='aqua_banner'>
-				<source
-					media='(max-width: 500px)'
-					srcSet='./images/aqua-hero-mobile.webp'
-					type='image/webp'
-				/>
-				<source
-					media='(max-width: 1024px)'
-					srcSet='./images/aqua-hero-tablet.webp'
-					type='image/webp'
-				/>
-				<img
-					src='./images/aqua-hero.jpg'
-					alt='Aqua hero'
-					className={`'hero-image h-full w-full object-cover object-top sm:object-top lg:object-center ${
-						inView ? 'opacity-100' : 'opacity-0'
-					} transition-opacity 
-				${inView ? 'opacity-100' : 'opacity-0'}  
-				duration-500`}
-				/>
-			</picture>
+			<img
+				src='./images/aqua-hero.jpg'
+				alt=''
+				className={`h-full w-full object-cover transition-opacity 
+				${inView ? 'opacity-100' : 'opacity-0'} duration-500`}
+				srcSet='./images/aqua-hero-mobile.webp 420w,
+				./images/aqua-hero-tablet.webp 768w,
+				./images/aqua-hero.jpg 1920w
+				'
+			/>
+
 			<Profile />
 		</section>
 	)

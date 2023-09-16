@@ -5,7 +5,7 @@ export default function ToTop({ position }) {
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			if (window.scrollY > 800) {
+			if (window.scrollY > 600) {
 				setShowTopBtn(true)
 			} else {
 				setShowTopBtn(false)

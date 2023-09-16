@@ -124,9 +124,18 @@ export default function SimpleGallery({ galleryID, images }) {
 			id={galleryID}
 		>
 			{images.map((image, index) => (
-				<div key={index} className={`${index === 13 ? 'row-span-2 sm:row-auto' : ''} rounded-md`}>
+				<div
+					key={index}
+					className={`${
+						index === 13 ? 'row-span-2 sm:row-auto' : ''
+					} rounded-md`}
+				>
 					<div
-						className={`grid-block relative xl:w-96 xl:h-96  ${index === 13 ? 'sm:aspect-square h-full sm:h-auto' : ' aspect-square'} overflow-hidden cursor-pointer rounded-md
+						className={`grid-block group relative xl:h-96 xl:w-96  ${
+							index === 13
+								? 'h-full sm:aspect-square sm:h-auto'
+								: ' aspect-square'
+						} overflow-hidden  rounded-md
 						transition-all duration-500`}
 						style={{
 							backgroundImage: `url(${image.blur})`,
@@ -154,7 +163,9 @@ export default function SimpleGallery({ galleryID, images }) {
 										onLoad={showImageWithDelay}
 										className={` h-full w-full rounded-md object-cover object-top
 									${
-										showImage ? 'scale-100 opacity-100' : 'scale-[101%] opacity-0'
+										showImage
+											? 'scale-100 opacity-100'
+											: 'scale-[101%] opacity-0'
 									} transition-all duration-500`}
 										src={image.thumbnailURL}
 										alt={names[index]}
@@ -163,10 +174,8 @@ export default function SimpleGallery({ galleryID, images }) {
 								</picture>
 							) : null}
 
-							<div className='inner-text pointer-events-none absolute bottom-[-4rem] left-0 z-20 hidden h-[3rem] w-full items-center justify-center border-t border-[#3b3b3b] bg-gradient-to-r from-mainGray via-[#3f3f3f] to-mainGray opacity-0 md:flex xl:h-[4rem] '>
-								<h2 className='text-center text-lg font-semibold leading-tight text-white xl:text-2xl'>
-									{names[index]}
-								</h2>
+							<div className='absolute hidden sm:block left-3 bottom-3 z-20 -translate-x-[50%] rounded-md border border-thinLine bg-mainGray px-3 py-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100'>
+								<p>{names[index]}</p>
 							</div>
 						</a>
 					</div>
