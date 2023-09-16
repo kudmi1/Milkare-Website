@@ -57,7 +57,7 @@ export default function Footer() {
 			</div>
 			<div className='flex h-3/6 w-full items-center justify-center border-t border-thinLine'>
 				<div className='flex w-full flex-col items-center justify-center'>
-					<p>Made by </p>
+					<p>website made by </p>
 					<div>
 						github:{' '}
 						<span className='font-bold italic text-secondaryText underline'>

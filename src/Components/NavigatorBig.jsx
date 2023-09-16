@@ -11,6 +11,7 @@ export default function NavigatorBig({
 }) {
 	const { content, language } = useLanguageContext()
 	const { section } = useSectionContext()
+	const [selectedTab, setSelectedTab] = useState(null) 
 
 
 	const scrollToComponent = (index, id) => {
@@ -21,22 +22,21 @@ export default function NavigatorBig({
 		}, 50)
 		
 	}
-
-	
 	const underlineStyle = section === null || !isScrollToSection ? 'hidden' : ''
+
 	return (
 		<nav className='mynav black relative z-[100] hidden h-full min-w-max items-center justify-center lg:flex '>
 			<div
-				className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/4 rounded-full ${underlineStyle} transition-transform duration-200`}
+				className={`underline-animation pointer-events-none z-40 absolute bottom-0 left-0 block h-1 w-1/4 rounded-full ${underlineStyle} transition-transform duration-200`}
 			></div>
 			<div
-				className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/4 rounded-full ${underlineStyle} transition-transform duration-200`}
+				className={`underline-animation pointer-events-none z-40 absolute bottom-0 left-0 block h-1 w-1/4 rounded-full ${underlineStyle} transition-transform duration-200`}
 			></div>
 			<div
-				className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/4 rounded-full ${underlineStyle} transition-transform duration-200`}
+				className={`underline-animation pointer-events-none z-40 absolute bottom-0 left-0 block h-1 w-1/4 rounded-full ${underlineStyle} transition-transform duration-200`}
 			></div>
 			<div
-				className={`underline-animation pointer-events-none absolute bottom-0 left-0 z-0 block h-1 w-1/4 rounded-full ${underlineStyle}transition-transform duration-200`}
+				className={`underline-animation pointer-events-none z-40 absolute bottom-0 left-0 block h-1 w-1/4 rounded-full ${underlineStyle}transition-transform duration-200`}
 			></div>
 			<NavLink
 				to='/'
@@ -45,9 +45,11 @@ export default function NavigatorBig({
 					(section === 'home')
 						? 'text-secondaryText'
 						: 'effect-shine text-mainText'
-				}`}
+				} ${selectedTab === 0 ? 'bg-[#313131] rounded-t-md delay-200 bg-opacity-100 ' : 'bg-opacity-0'} transition-all duration-300
+				`}
 				onClick={() => {
 					scrollToComponent(0, 'home')
+					setSelectedTab(0)
 				}}
 			>
 				<p className='text-xl  '>{language === 'english' ? 'Home' : 'Дом'}</p>
@@ -60,9 +62,10 @@ export default function NavigatorBig({
 					(section === 'gallery')
 						? 'text-secondaryText'
 						: 'effect-shine text-mainText'
-				}`}
+				} ${selectedTab === 1 ? 'bg-[#313131] rounded-t-md delay-200 bg-opacity-100 ' : 'bg-opacity-0'} transition-all duration-300`}
 				onClick={() => {
 					scrollToComponent(1, 'gallery')
+					setSelectedTab(1)
 				}}
 			>
 				<p className='text-xl '>{content.header?.gallery}</p>
@@ -74,9 +77,10 @@ export default function NavigatorBig({
 					(section === 'price')
 						? 'text-secondaryText'
 						: 'effect-shine text-mainText'
-				}`}
+				} ${selectedTab === 2 ? 'bg-[#313131] rounded-t-md delay-200 bg-opacity-100 ' : 'bg-opacity-0'} transition-all duration-300`}
 				onClick={() => {
 					scrollToComponent(2, 'price')
+					setSelectedTab(2)
 				}}
 			>
 				<p className='text-xl  '>{content.header?.price}</p>
@@ -88,9 +92,10 @@ export default function NavigatorBig({
 					(section === 'info')
 						? 'text-secondaryText'
 						: 'effect-shine text-mainText'
-				}`}
+				} ${selectedTab === 3 ? 'bg-[#313131] rounded-t-md delay-200 bg-opacity-100 ' : 'bg-opacity-0'} transition-all duration-300`}
 				onClick={() => {
 					scrollToComponent(3, 'info')
+					setSelectedTab(3)
 				}}
 			>
 				<p className='text-xl '>{content.header?.info}</p>
