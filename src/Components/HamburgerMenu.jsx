@@ -41,9 +41,9 @@ export default function HamburgerMenu({
 					<div
 						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray backdrop-blur ${
 							hamburgerState
-								? 'min-h-min opacity-100'
+								? 'h-[390px] sm:h-[260px] opacity-100'
 								: 'pointer-events-none h-0 opacity-0'
-						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
+						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-500 lg:hidden`}
 						onClick={(e) => {
 							e.stopPropagation()
 						}}
