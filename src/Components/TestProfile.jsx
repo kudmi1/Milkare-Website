@@ -2,7 +2,7 @@ import React from 'react'
 
 export const TestProfile = () => {
 	return (
-		<div className='absolute bottom-full flex h-60 w-full flex-row-reverse justify-center border-b lg:border-2 border-thinLine bg-gradient-to-r from-mainGray via-[#292929] to-mainGray p-2 backdrop-blur-md lg:bottom-[26%] lg:right-[3%] lg:block lg:h-auto lg:max-h-none lg:w-64 lg:rounded-md lg:bg-gradient-to-b lg:from-mainGray lg:to-[#2121219d] xl:right-[5%] 2xl:right-[15%]'>
+		<div className='absolute bottom-full flex h-60 w-full flex-row-reverse justify-center border-b lg:border-2 border-thinLine bg-gradient-to-r from-mainGray via-[#292929] to-mainGray p-2 backdrop-blur-md lg:bottom-[57%] lg:right-[3%] lg:block lg:h-auto lg:max-h-none lg:w-64 lg:rounded-md lg:bg-gradient-to-b lg:from-mainGray lg:to-[#2121219d] xl:right-[5%] 2xl:right-[15%]'>
 			<img
 				src='images/milka.webp'
 				alt='profile-pic'
