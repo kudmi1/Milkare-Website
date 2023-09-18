@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import PanelComponent from './PanelComponent'
-import TitleComponent from './TitleComponent'
 
 const names = ['eleonora', 'bladerunner2049', 'aqua']
 

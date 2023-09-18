@@ -1,7 +1,7 @@
 function price(amount) {
 	return `<span class='text-priceColor'>${amount}</span>`
 }
-const divider = `<div class="w-full flex justify-center "><div class='flex justify-center items-center bg-priceColor w-full text-center h-[1px] my-[12px] lg:my-[24px] '></div></div>`
+const divider = `<div class="w-full flex justify-center "><div class='w-full my-6 bg-gradient-to-r from-transparent via-secondaryText to-transparent h-[2px]'></div></div>`
 
 export const data = {
 	english: {

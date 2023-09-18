@@ -4,27 +4,27 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 export default function Translate() {
 	const { language, setLanguage } = useLanguageContext()
 	return (
-		<div className='language-block flex w-full items-center justify-between lg:justify-end'>
+		<div className='language-block h-full flex w-full items-center justify-between lg:justify-end'>
 			<button
-				className={`language-item language-eng mr-4 h-12 w-1/2 rounded-sm border border-thinLine text-xl lg:w-auto lg:border-none ${
-					language === 'english' ? 'text-secondaryText' : 'text-mainText'
+				className={`language-item language-eng mr-4 h-14 w-1/2 rounded-sm border border-thinLine text-xl lg:w-14 lg:rounded-t-md lg:border-none ${
+					language === 'english' ? 'text-secondaryText bg-[#313131]' : 'text-mainText effect-shine'
 				}`}
 				onClick={() => setLanguage('english')}
 			>
 				<p>
-					<span className={`${language === 'english' ? '' : 'effect-shine'}`}>
+					<span>
 						En
 					</span>
 				</p>
 			</button>
 			<button
-				className={`language-item language-rus h-12 w-1/2 rounded-sm border border-thinLine text-xl lg:w-auto lg:border-none ${
-					language === 'russian' ? 'text-secondaryText' : 'text-mainText'
-				}`}
+				className={`language-item language-rus h-14 w-1/2 rounded-sm border border-thinLine text-xl lg:w-14 lg:rounded-t-md lg:border-none ${
+					language === 'russian' ? 'text-secondaryText bg-[#313131]' : 'text-mainText effect-shine'
+				} `}
 				onClick={() => setLanguage('russian')}
 			>
 				<p>
-					<span className={`${language === 'russian' ? '' : 'effect-shine'}`}>
+					<span >
 						Ru
 					</span>
 				</p>

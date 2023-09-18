@@ -1,8 +1,4 @@
-import { useEffect, useState } from 'react'
-import { InView, useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
-import GoogleFormButton from './GoogleFormButton'
-import Socials from './Socials'
 
 export default function Footer() {
 	const { language } = useLanguageContext()

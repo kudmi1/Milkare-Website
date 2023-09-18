@@ -1,6 +1,5 @@
 import PanelComponent from './PanelComponent'
 import { useInView } from 'react-intersection-observer'
-import { useState } from 'react'
 
 export default function PriceCard({
 	panelData,

@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import { useLanguageContext } from '../Providers/LanguageContext'
-import GoogleFormButton from './GoogleFormButton'
 import Translate from './Translate'
 
 export default function HamburgerMenu({
@@ -9,9 +8,10 @@ export default function HamburgerMenu({
 	setAriaExpanded,
 	showContactModal,
 	setShowContactModal,
+	page,
+	setPage,
 }) {
 	const { language, setLanguage } = useLanguageContext()
-	// const [modalOpened, setModalOpened] = useState(false)
 
 	function toggleContactModal() {
 		setShowContactModal((prev) => !prev)
@@ -19,13 +19,12 @@ export default function HamburgerMenu({
 
 	function closeAllModals() {
 		setHamburgerState(false)
-		// setShowContactModal(false)
 	}
 
 	return (
 		<>
 			<div
-				className={`absolute bottom-0 left-0 right-0 top-14 z-30 h-screen w-screen bg-[#2121216b] transition-all duration-300
+				className={`absolute bottom-0 left-0 right-0 top-12 z-30 h-screen w-screen bg-[#2121216b] transition-all duration-300 
 			${
 				hamburgerState
 					? 'pointer-events-auto opacity-100'
@@ -39,11 +38,11 @@ export default function HamburgerMenu({
 			>
 				<div className='relative h-full w-full'>
 					<div
-						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray backdrop-blur ${
+						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray py-4 backdrop-blur ${
 							hamburgerState
-								? 'h-[390px] sm:h-[260px] opacity-100'
+								? 'h-[410px] opacity-100 sm:h-[280px]'
 								: 'pointer-events-none h-0 opacity-0'
-						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-500 lg:hidden`}
+						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
 						onClick={(e) => {
 							e.stopPropagation()
 						}}
@@ -53,20 +52,47 @@ export default function HamburgerMenu({
 								<Translate language={language} setLanguage={setLanguage} />
 							</div>
 							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 '>
-								<button className='effect-shine flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'>
-									<a href='#gallery'>
+								<button
+									className='effect-shine h-12 min-h-[48px] w-full rounded-sm border border-thinLine text-xl'
+									onClick={() => {
+										setHamburgerState(false)
+										setAriaExpanded(false)
+									}}
+								>
+									<NavLink
+										to={'/gallery'}
+										className='flex h-full w-full items-center justify-center'
+									>
 										{language === 'english' ? 'Gallery' : 'Галерея'}
-									</a>
+									</NavLink>
 								</button>
-								<button className='effect-shine flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'>
-									<a href='#price'>
+								<button
+									className='effect-shine h-12 min-h-[48px] w-full rounded-sm border border-thinLine text-xl'
+									onClick={() => {
+										setHamburgerState(false)
+										setAriaExpanded(false)
+									}}
+								>
+									<NavLink
+										to='/price'
+										className='flex h-full w-full items-center justify-center'
+									>
 										{language === 'english' ? 'Price' : 'Цены'}
-									</a>
+									</NavLink>
 								</button>
-								<button className='effect-shine flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'>
-									<a href='#info'>
+								<button
+									className='effect-shine h-12 min-h-[48px] w-full rounded-sm border border-thinLine text-xl'
+									onClick={() => {
+										setHamburgerState(false)
+										setAriaExpanded(false)
+									}}
+								>
+									<NavLink
+										to='/info'
+										className='flex h-full w-full items-center justify-center'
+									>
 										{language === 'english' ? 'Info' : 'Условия'}
-									</a>
+									</NavLink>
 								</button>
 								<button
 									className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'

@@ -3,26 +3,34 @@ import HamburgerMenu from './HamburgerMenu'
 import NavigatorSmall from './NavigatorSmall'
 import NavigatorBig from './NavigatorBig'
 import Translate from './Translate'
-import { useLanguageContext } from '../Providers/LanguageContext'
 import HamburgerButton from './HamburgerButton'
 import { Link } from 'react-router-dom'
 
-export default function Header({
-	setSection,
-	headerHeight,
-	fontSize,
-	isScrollToSection,
-}) {
+export default function Header({ page, setPage }) {
 	const [showHamburger, setShowHamburger] = useState(false)
 	const [showContactModal, setShowContactModal] = useState(false)
 	const [ariaExpanded, setAriaExpanded] = useState(false)
-	const [activeLink, setActiveLink] = useState(null)
-	const [selectedTab, setSelectedTab] = useState(null)
 
-	const [position, setPosition] = useState(() => {
-		const storedPosition = sessionStorage.getItem('underlinePosition')
-		return storedPosition !== null ? storedPosition : 0
-	})
+	const [position, setPosition] = useState(() => {})
+
+	useEffect(() => {
+		switch (page) {
+			case 'home':
+				setPosition(0 * 100 + '%')
+				break
+			case 'gallery':
+				setPosition(1 * 100 + '%')
+				break
+			case 'price':
+				setPosition(2 * 100 + '%')
+				break
+			case 'info':
+				setPosition(3 * 100 + '%')
+				break
+			default:
+				setPage(0 * 100 + '%')
+		}
+	}, [page])
 
 	useLayoutEffect(() => {
 		let underlines = document.querySelectorAll('.underline-animation')
@@ -30,21 +38,6 @@ export default function Header({
 			underlines[i].style.transform = `translate3d(${position}, 0, 0)`
 		}
 	}, [position])
-
-	useEffect(() => {
-		// Store the position in sessionStorage
-		sessionStorage.setItem('underlinePosition', position)
-	}, [position])
-
-	function handleUnderline(index) {
-		const newPosition = index * 100 + '%'
-		setPosition(newPosition)
-	}
-
-	function handleClick(index, section) {
-		handleUnderline(index)
-		setSection(section) //нужно как то пофиксить этот код
-	}
 
 	const handleWindowResize = () => {
 		if (window.innerWidth > 1024) {
@@ -77,12 +70,9 @@ export default function Header({
 				<Link
 					to={'/'}
 					className={`header-top effect-shine transition-all duration-500`}
-					// onClick={scrollToTop}
 					onClick={() => {
-						setSection('home')
-						setActiveLink('home')
 						setPosition(0)
-						setSelectedTab(0)
+						setPage('home')
 					}}
 				>
 					<img
@@ -91,14 +81,7 @@ export default function Header({
 						className={`h-8 transition-all duration-500 lg:h-10`}
 					/>
 				</Link>
-				<NavigatorBig
-					isScrollToSection={isScrollToSection}
-					activeLink={activeLink}
-					setActiveLink={setActiveLink}
-					handleClick={handleClick}
-					selectedTab={selectedTab}
-					setSelectedTab={setSelectedTab}
-				/>
+				<NavigatorBig page={page} setPage={setPage} />
 				<div className='hidden lg:block'>
 					<Translate />
 				</div>
@@ -117,14 +100,7 @@ export default function Header({
 					showContactModal={showContactModal}
 				/>
 			</div>
-			<NavigatorSmall
-				isScrollToSection={isScrollToSection}
-				handleClick={handleClick}
-				activeLink={activeLink}
-				setActiveLink={setActiveLink}
-				selectedTab={selectedTab}
-				setSelectedTab={setSelectedTab}
-			/>
+			<NavigatorSmall page={page} setPage={setPage} />
 		</header>
 	)
 }

@@ -4,11 +4,13 @@ import { data } from '../Text.jsx'
 const LanguageContext = createContext()
 
 export const LanguageProvider = ({ children }) => {
-	const [language, setLanguage] = useState('english')
+	const initialLanguage = sessionStorage.getItem('language') || 'english'
+	const [language, setLanguage] = useState(initialLanguage)
 	const [content, setContent] = useState(data[language])
 
 	useEffect(() => {
 		setContent(data[language])
+		sessionStorage.setItem('language', language);
 	}, [language])
 
 	return (
