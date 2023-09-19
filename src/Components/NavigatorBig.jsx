@@ -35,7 +35,7 @@ export default function NavigatorBig({ page }) {
 					scrollToTop()
 				}}
 			>
-				<p className='text-xl  '>{language === 'english' ? 'Home' : 'Начало'}</p>
+				<p className='text-xl'>{language === 'english' ? 'HOME' : 'НАЧАЛО'}</p>
 			</NavLink>
 			<NavLink
 				to='/price'
@@ -50,7 +50,7 @@ export default function NavigatorBig({ page }) {
 					scrollToTop()
 				}}
 			>
-				<p className='text-xl  '>{content.header?.price}</p>
+				<p className='text-xl'>{content.header?.price}</p>
 			</NavLink>
 			<NavLink
 				to='/info'
@@ -65,7 +65,7 @@ export default function NavigatorBig({ page }) {
 					scrollToTop()
 				}}
 			>
-				<p className='text-xl '>{content.header?.info}</p>
+				<p className='text-xl'>{content.header?.info}</p>
 			</NavLink>
 		</nav>
 	)

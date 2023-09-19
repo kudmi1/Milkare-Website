@@ -6,9 +6,9 @@ const divider = `<div class="w-full flex justify-center "><div class='w-full my-
 export const data = {
 	english: {
 		header: {
-			gallery: 'Gallery',
-			price: 'Price',
-			info: 'ToS',
+			gallery: 'GALLERY',
+			price: 'PRICE',
+			info: 'TOS',
 		},
 		gallerySection: {
 			speedpaint: {
@@ -47,9 +47,9 @@ export const data = {
 
 	russian: {
 		header: {
-			gallery: 'Галерея',
-			price: 'Цены',
-			info: 'Условия',
+			gallery: 'ГАЛЕРЕЯ',
+			price: 'ЦЕНЫ',
+			info: 'УСЛОВИЯ',
 		},
 		gallerySection: {
 			accordionTitle: 'Последние Работы',

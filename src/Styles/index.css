@@ -581,6 +581,6 @@ ion-icon {
   }
 }
 
-/* .header-section {
-  height: 100dvh;
-} */
+.hero-text {
+  font-size: clamp(30px, 8vw, 120px);
+}

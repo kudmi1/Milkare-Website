@@ -59,6 +59,12 @@ export default function Header({ page, setPage }) {
 		setShowContactModal((prev) => !prev)
 	}
 
+	const scrollToTop = () => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+		}, 50)
+	}
+
 	return (
 		<header
 			className={`header fixed z-50 flex h-24 w-full flex-col justify-center ${
@@ -73,6 +79,7 @@ export default function Header({ page, setPage }) {
 					onClick={() => {
 						setPosition(0)
 						setPage('home')
+						scrollToTop()
 					}}
 				>
 					<img
