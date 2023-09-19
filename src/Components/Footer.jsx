@@ -6,7 +6,7 @@ export default function Footer() {
 	return (
 		<div className='footer flex h-52 flex-col items-center border-t border-t-[#3b3b3b] bg-gradient-to-br from-mainGrayTransparent to-mainGray backdrop-blur-[10px]'>
 			<div className='relative flex h-4/6 w-full max-w-7xl flex-row items-center justify-between px-6 md:h-full'>
-				<p className='absolute bottom-0 left-1/2 -translate-x-1/2'>2023 © milkare</p>
+				
 				<div className='w-full '>
 					<img src='./images/Logo.png' alt='' className={`h-6 md:h-8`} />
 				</div>
@@ -52,8 +52,9 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className='flex h-3/6 w-full items-center justify-center border-t border-thinLine'>
+			<div className='relative flex h-3/6 w-full items-center justify-center border-t border-thinLine'>
 				<div className='flex w-full flex-col items-center justify-center'>
+			<p >2023 © milkare</p>
 					<p>website made by </p>
 					<div>
 						github:{' '}
