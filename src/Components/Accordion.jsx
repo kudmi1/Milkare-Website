@@ -32,7 +32,7 @@ export default function Accordion() {
 			>
 				<div className='w-full flex-col rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#3f3f3f9a] to-mainGrayTransparent p-4 backdrop-blur-[10px]'>
 					<h1
-						className={`section-title mb-8 flex justify-center text-5xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
+						className={`section-title mb-8 flex justify-center text-4xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
 						${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					>
 						{language === 'english' ? 'Recent Works' : 'Последние работы'}

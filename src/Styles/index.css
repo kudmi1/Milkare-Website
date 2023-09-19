@@ -26,27 +26,19 @@ html {
 }
 
 @font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/Nunito_Complete/Fonts/WEB/fonts/Nunito-Variable.woff2') format('woff2'),
-       url('/fonts/Nunito_Complete/Fonts/WEB/fonts/Nunito-Variable.woff') format('woff'),
-       url('/fonts/Nunito_Complete/Fonts/WEB/fonts/Nunito-Variable.ttf') format('truetype');
-       font-weight: 200 1000;
-       font-display: swap;
-       font-style: normal;
+  font-family: 'Gill Sans';
+  src: url('/fonts/gill/83-font.otf') ;
 }
 
 @font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/Nunito_Complete/Fonts/WEB/fonts/Nunito-VariableItalic.woff2') format('woff2'),
-       url('/fonts/Nunito_Complete/Fonts/WEB/fonts/Nunito-VariableItalic.woff') format('woff'),
-       url('/fonts/Nunito_Complete/Fonts/WEB/fonts/Nunito-VariableItalic.ttf') format('truetype');
-       font-weight: 200 1000;
-       font-display: swap;
-       font-style: italic;
+  font-family: 'macherie';
+  src:  url('/fonts/macherie/macherie.otf'),
+        url('/fonts/macherie/macherie.ttf') format('truetype')
 }
 
 :root {
-  font-family: 'alethia_proregular', serif;
+  /* font-family: 'alethia_proregular', serif; */
+  font-family: 'Gill Sans';
   line-height: 1.75;
   font-weight: 400;
   color-scheme: dark light;
@@ -124,9 +116,7 @@ img {
 }
 
 .section-title {
-  font-family: "Nunito", serif;
-  font-weight: 1000;
-  font-style: italic;
+  font-family: "macherie", serif;
 }
 
 
@@ -518,5 +508,17 @@ ion-icon {
 }
 
 .hero-text {
+  font-family: 'macherie';
+  text-shadow: 0px 0px 4px #c4b5fd;
   font-size: clamp(30px, 8vw, 100px);
+}
+
+.hero-text-mobile {
+  font-family: 'macherie';
+  text-shadow: 0px 0px 3px #c4b5fd;
+  font-size: clamp(20px, 7vw, 100px);
+}
+
+.content-title {
+  font-family: 'macherie';
 }

@@ -20,7 +20,7 @@ export default function Profile() {
 						<p className='h-12 pl-2 text-lg md:pl-4 lg:pl-6 lg:text-2xl'>
 							{language === 'english' ? 'Software' : 'Прог. обеспечение'}
 						</p>
-						<ul className='lg:text-md flex h-full flex-col justify-evenly pl-2 text-sm md:pl-4 lg:pl-6'>
+						<ul className='lg:text-lg flex h-full flex-col justify-evenly pl-2 text-sm md:pl-4 lg:pl-6'>
 							<li className='relative'>
 								{star}
 								Procreate
@@ -40,7 +40,7 @@ export default function Profile() {
 						<p className='h-12 pl-2 text-lg md:pl-4 lg:pl-6 lg:text-2xl'>
 						{language === 'english' ? 'Tablet' : 'Планшет'}
 						</p>
-						<ul className='lg:text-md flex h-full flex-col justify-evenly pl-2 text-sm md:pl-4 lg:pl-6'>
+						<ul className='lg:text-lg flex h-full flex-col justify-evenly pl-2 text-sm md:pl-4 lg:pl-6'>
 							<li className='relative'>
 								{star}
 								iPad (6th generation)

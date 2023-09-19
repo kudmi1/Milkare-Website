@@ -12,7 +12,7 @@ export default function SectionHome() {
 		<div className='flex flex-col'>
 			<section
 				ref={ref}
-				className={`hero-section relative md:h-[646px] w-full `}
+				className={`hero-section relative w-full md:h-[646px] `}
 			>
 				<div className='relative h-full w-full '>
 					<picture>
@@ -25,10 +25,10 @@ export default function SectionHome() {
 							${inView ? 'opacity-100' : 'opacity-0'} duration-500`}
 						/>
 					</picture>
-					<h1 className='hero-text absolute hidden sm:left-6 sm:block sm:bottom-36 lg:bottom-1/2 lg:translate-y-1/2 lg:left-12'>
+					<h1 className='hero-text absolute hidden sm:bottom-36 sm:left-6 sm:block lg:bottom-1/2 lg:left-20 lg:translate-y-1/2 '>
 						Commission <br /> Open
 					</h1>
-					<h1 className='hero-text absolute bottom-0 py-6 flex w-full justify-center sm:hidden bg-gradient-to-r from-[#21212162] via-mainGray to-[#21212162]'>
+					<h1 className='hero-text-mobile absolute bottom-0 flex w-full justify-center bg-gradient-to-r from-[#21212162] via-mainGray to-[#21212162] py-6 sm:hidden'>
 						Commission Open
 					</h1>
 				</div>
