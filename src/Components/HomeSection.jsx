@@ -1,8 +1,8 @@
-import Profile from '../Components/Profile'
+import Profile from './Profile'
 import { useInView } from 'react-intersection-observer'
-import { TestProfile } from './TestProfile'
+import SectionGallery from '../Pages/SectionGallery'
 
-export default function HeroSection() {
+export default function HomeSection() {
 	const { ref, inView } = useInView({
 		threshold: 0.2,
 		triggerOnce: true,
@@ -12,9 +12,10 @@ export default function HeroSection() {
 		<div className='flex flex-col'>
 			<section
 				ref={ref}
-				className={`hero-section relative h-[620px] w-full lg:h-[580px]`}
+				className={`hero-section relative h-[500px] w-full lg:h-[600px]`}
 			>
-				<div className='h-full w-full'>
+				<div className='relative h-full w-full'>
+					{/* <CardProfile/> */}
 					{/* <img
 						src='./images/aqua-hero.jpg'
 						alt=''
@@ -42,6 +43,7 @@ export default function HeroSection() {
 				</div>
 			</section>
 			<Profile />
+			<SectionGallery />
 		</div>
 	)
 }

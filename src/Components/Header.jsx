@@ -22,10 +22,10 @@ export default function Header({ page, setPage }) {
 				setPosition(1 * 100 + '%')
 				break
 			case 'price':
-				setPosition(2 * 100 + '%')
+				setPosition(1 * 100 + '%')
 				break
 			case 'info':
-				setPosition(3 * 100 + '%')
+				setPosition(2 * 100 + '%')
 				break
 			default:
 				setPage(0 * 100 + '%')

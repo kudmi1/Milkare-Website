@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, lazy, Suspense } from 'react'
-import HeroSection from './Components/HeroSection'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import ToTop from './Components/ToTop'
@@ -9,6 +8,7 @@ import SectionPrice from './Pages/SectionPrice'
 import SectionInfo from './Pages/SectionInfo'
 import { Route, RouterProvider, Routes, useLocation } from 'react-router-dom'
 import { NotFoundPage } from './Pages/NotFoundPage'
+import HomeSection from './Components/HomeSection'
 
 // const InfoSection = lazy(() =>  import('./InfoSection'))
 // const PriceSection = lazy(() =>  import('./PriceSection'))
@@ -49,14 +49,11 @@ function App() {
 	return (
 		<div className='App'>
 			<header ref={headerRef}>
-				<Header
-					page={page}
-					setPage={setPage}
-				/>
+				<Header page={page} setPage={setPage} />
 			</header>
 			<main ref={sectionRef} className='gradient-bg border-t border-[#3b3b3b]'>
 				<Routes>
-					<Route path='/' element={<HeroSection />} />
+					<Route path='/' element={<HomeSection />} />
 					<Route path='/gallery' element={<SectionGallery id={'gallery'} />} />
 					<Route path='/price' element={<SectionPrice id={'price'} />} />
 					<Route path='/info' element={<SectionInfo id={'info'} />} />
