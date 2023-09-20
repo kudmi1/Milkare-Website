@@ -67,7 +67,7 @@ export default function Header({ page, setPage }) {
 
 	return (
 		<header
-			className={`header fixed z-50 border-b border-thinLine flex h-[106px] justify-between lg:justify-center  w-full flex-col ${
+			className={`header fixed z-50 shadow-md flex h-24 justify-between lg:justify-center  w-full flex-col ${
 				ariaExpanded ? 'bg-mainGray' : ''
 			} bg-gradient-to-r from-mainGray via-[#292929] to-mainGray opacity-100 lg:h-14 lg:flex-row
 			 `}

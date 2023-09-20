@@ -43,12 +43,12 @@ function App() {
 	}, [inView])
 
 	return (
-		<div className='App flex flex-col justify-between'>
+		<div className='App flex flex-col min-h-screen'>
 			
 			<header ref={headerRef}>
 				<Header page={page} setPage={setPage} />
 			</header>
-			<main ref={sectionRef} className='gradient-bg border-t border-[#3b3b3b]'>
+			<main ref={sectionRef} className='gradient-bg border-t border-[#3b3b3b] '>
 				<Routes>
 					<Route path='/' element={<SectionHome />} />
 					<Route path='/price' element={<SectionPrice id={'price'} />} />
@@ -57,7 +57,7 @@ function App() {
 				</Routes>
 				<ToTop position={toTopPos} />
 			</main>
-			<footer ref={ref}>
+			<footer ref={ref} className="mt-auto">
 				<Footer />
 			</footer>
 		</div>

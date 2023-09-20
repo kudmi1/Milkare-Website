@@ -115,8 +115,8 @@ export default function SpeedPaint() {
 								</svg>
 							</div>
 						</div>
-						<p className='absolute top-[100%] right-0 text-md text-mainText bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] rounded-md px-3 mt-2 backdrop-blur-[10px]'>
-							{content.gallerySection?.speedpaint?.secondLine} {''}
+						<p className='absolute top-[100%] right-0 py-1 text-mainText bg-gradient-to-r from-[#212121d2] via-[#3f3f3f9a] to-[#212121d2] rounded-md px-3 mt-2 backdrop-blur-[10px]'>
+							{content.gallerySection?.speedpaint?.secondLine} {' '}
 							<span className='font-bold italic underline text-secondaryText'>
 								<a
 									target={'_blank'}
