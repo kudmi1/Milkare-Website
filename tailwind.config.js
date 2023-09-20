@@ -13,6 +13,7 @@ module.exports = {
         // secondaryText: "#92d9eb",
 
         mainGray: "#212121",
+        // mainGray: "rgb(167, 139, 250)",
         mainGrayTransparent: "#212121d2",
         thinLine: '#3b3b3b',
         priceColor: "#e4e7af"

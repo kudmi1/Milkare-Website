@@ -22,12 +22,17 @@ export default function SectionHome() {
 							src='./images/milka.jpg'
 							alt='hero-image'
 							className={`h-full w-full object-cover object-center transition-opacity 
-							${inView ? 'opacity-100' : 'opacity-0'} duration-500`}
+							${inView ? 'opacity-100' : 'opacity-0'} duration-500 `}
 						/>
 					</picture>
-					<h1 className='hero-text absolute hidden sm:bottom-36 sm:left-6 sm:block lg:bottom-1/2 lg:left-20 lg:translate-y-1/2 '>
-						Commission <br /> Open
-					</h1>
+					<div className='absolute top-0 h-full w-full flex justify-center'>
+						<div className='w-full h-full relative max-w-[1920px]'>
+
+						<h1 className='hero-text absolute hidden sm:bottom-36 sm:left-6 sm:block lg:bottom-1/2 lg:left-20 lg:translate-y-1/2 '>
+							Commission <br /> Open
+						</h1>
+						</div>
+					</div>
 					<h1 className='hero-text-mobile absolute bottom-0 flex w-full justify-center bg-gradient-to-r from-[#21212162] via-mainGray to-[#21212162] py-6 sm:hidden'>
 						Commission Open
 					</h1>

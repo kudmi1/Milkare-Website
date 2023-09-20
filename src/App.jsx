@@ -43,7 +43,8 @@ function App() {
 	}, [inView])
 
 	return (
-		<div className='App'>
+		<div className='App flex flex-col justify-between'>
+			
 			<header ref={headerRef}>
 				<Header page={page} setPage={setPage} />
 			</header>
