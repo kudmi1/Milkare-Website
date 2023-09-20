@@ -9,7 +9,7 @@ export default function GoogleFormButton() {
 				target={'_blank'}
 				className='flex h-full w-full items-center px-4 py-2'
 			>
-				{language === 'english' ? 'Google Form' : 'Гугл форма'}
+				<p className='form-text'>{language === 'english' ? 'Google Form' : 'Гугл форма'}</p> 
 
 				<div className='ml-2'>
 					<svg

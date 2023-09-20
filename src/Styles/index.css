@@ -26,6 +26,26 @@ html {
 }
 
 @font-face {
+  font-family: 'Village';
+  src: url('/fonts/Village.otf');
+}
+
+@font-face {
+  font-family: 'FrozenMemory';
+  src: url('/fonts/FrozenMemory.otf');
+}
+
+@font-face {
+  font-family: 'Lo-Res';
+  src:
+      url('/fonts/LoRes/LoRes9OTNarrow-Bold.woff2') format('woff2'),
+      url('/fonts/LoRes/LoRes9OTNarrow-Bold.woff') format('woff'),
+      url('/fonts/LoRes/LoRes9OTNarrow-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Gill Sans';
   src: url('/fonts/gill/83-font.otf') ;
 }
@@ -49,7 +69,9 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background-image: url('/images/dark.webp');
+  /* background-image: url('/images/dark.webp'); */
+  background-image: url('/svg/background.svg');
+  background-size: cover;
   /* background-image: url('/images/light.png'); */
 }
 
@@ -517,6 +539,19 @@ ion-icon {
   font-family: 'macherie';
   text-shadow: 0px 0px 3px #c4b5fd;
   font-size: clamp(20px, 7vw, 100px);
+}
+
+.form-text {
+  font-family: 'macherie';
+}
+
+.price-text {
+  font-family: 'macherie';
+  background-image: url('/glitters/3.JPG');
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .content-title {

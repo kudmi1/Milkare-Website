@@ -1,5 +1,5 @@
 function price(amount) {
-	return `<span class='text-priceColor'>${amount}</span>`
+	return `<span class='text-priceColor price-text pr-2'>${amount}</span>`
 }
 const divider = `<div class="w-full flex justify-center "><div class='w-full my-6 bg-gradient-to-r from-transparent via-secondaryText to-transparent h-[2px]'></div></div>`
 
