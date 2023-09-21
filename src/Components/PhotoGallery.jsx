@@ -62,7 +62,7 @@ export default function PhotoGallery() {
 			>				
 				<div
 					ref={ref}
-					className='w-full rounded-b-md bg-gradient-to-r from-[#323b5a] via-[#323b5ac4] to-[#323b5a] p-4 backdrop-blur-[10px] '
+					className='w-full rounded-b-md bg-gradient-to-r from-[#282f49] via-[#323b5aec] to-[#282f49] p-4 backdrop-blur-[10px] '
 				>
 					<h1
 						className={`section-title mb-8 flex justify-center text-4xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 

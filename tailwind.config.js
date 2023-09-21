@@ -13,7 +13,7 @@ module.exports = {
         // secondaryText: "#92d9eb",
         mainGray: "#212121",
         mainGrayTransparent: "#212121d2",
-        thinLine: '#e5ec86',
+        thinLine: '#4b5577',
         priceColor: "#e4e7af",
         myViolet: '#ad91e5',
         myDarkViolet: '#a78bfa',

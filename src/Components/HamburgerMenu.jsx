@@ -63,7 +63,7 @@ export default function HamburgerMenu({
 										to={'/'}
 										className='flex h-full w-full items-center justify-center'
 									>
-										{language === 'english' ? 'Home' : 'Начало'}
+										{language === 'english' ? 'Home' : 'Главная'}
 									</NavLink>
 								</button>
 								<button

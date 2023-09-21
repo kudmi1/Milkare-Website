@@ -32,7 +32,7 @@ export default function NavigatorSmall({ page, setPage }) {
 						scrollToTop()
 					}}
 				>
-					<p>{language === 'english' ? 'HOME' : 'НАЧАЛО'}</p>
+					<p>{language === 'english' ? 'HOME' : 'ГЛАВНАЯ'}</p>
 				</NavLink>
 				<NavLink
 					to='/price'

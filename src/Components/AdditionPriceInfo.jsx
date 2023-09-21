@@ -13,10 +13,10 @@ export default function AdditionPriceInfo() {
 	)
 
 	return (
-		<div className='mb-12 w-full rounded-md border border-[#3b3b3b] bg-gradient-to-r from-[#323b5a] via-[#323b5ac4] to-[#323b5a] px-4 py-6 backdrop-blur-[10px] md:px-12 lg:mb-24 lg:px-24'>
+		<div className='mb-12 w-full rounded-md border border-[#3b3b3b] bg-gradient-to-r from-[#282f49] via-[#323b5aec] to-[#282f49] px-4 py-6 backdrop-blur-[10px] md:px-12 lg:mb-24 lg:px-24'>
 			{language === 'english' ? (
 				<>
-					<div className='star-header relative rounded-lg  bg-[#2d3552] px-4 py-2'>
+					<div className='star-header relative rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2'>
 						{star}
 						<p className='text-lg lg:text-xl'>
 							CHARACTERS WITH COMPLEX DESIGN:{' '}
@@ -29,7 +29,7 @@ export default function AdditionPriceInfo() {
 							lace, complex clothing pattern, tattoos etc.
 						</p>
 					</div>
-					<div className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2'>
+					<div className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2'>
 						{star}
 						<p className='text-lg lg:text-xl'>LINE ART INFORMATION</p>
 						<p className='text-md mt-3 lg:text-lg'>
@@ -37,24 +37,24 @@ export default function AdditionPriceInfo() {
 							performed. The lowest detail.
 						</p>
 					</div>
-					<p className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2 text-lg lg:text-xl'>
 						{star}
 						Nude version: <span className='text-priceColor'>+50%</span> of the
 						price character.
 					</p>
-					<p className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2 text-lg lg:text-xl'>
 						{star}
 						Underwear/additional outfits:
 						<span className='text-priceColor'> +20% - 100%</span> of the price
 						character (depending on the complexity).
 					</p>
-					<p className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2 text-lg lg:text-xl'>
 						{star}
 						ADDITIONAL CHARACTER:
 						<span className='text-priceColor'> +100%</span> of the price (Max.{' '}
 						<span>2</span> characters).
 					</p>
-					<p className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2 text-lg lg:text-xl'>
 						{star}
 						Commercial rights: <span className='text-priceColor'>+100%</span> of
 						the price.
@@ -62,7 +62,7 @@ export default function AdditionPriceInfo() {
 				</>
 			) : (
 				<>
-					<div className='star-header relative rounded-lg  bg-[#2d3552] px-4 py-2'>
+					<div className='star-header relative rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2'>
 					{star}
 						<p className='text-lg lg:text-xl'>
 							ПЕРСОНАЖИ СО СЛОЖНЫМ ДИЗАЙНОМ:{' '}
@@ -76,7 +76,7 @@ export default function AdditionPriceInfo() {
 							татуировки и т.д.
 						</p>
 					</div>
-					<div className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2'>
+					<div className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2'>
 					{star}
 						<p className='text-lg lg:text-xl'>ЛАЙН АРТ ИНФОРМАЦИЯ</p>
 						<p className='text-md mt-3 lg:text-lg'>
@@ -84,24 +84,24 @@ export default function AdditionPriceInfo() {
 							Наименьшая детализация.
 						</p>
 					</div>
-					<p className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2 text-lg lg:text-xl'>
 					{star}
 						Обнаженная версия: <span className='text-priceColor'>+50%</span> от
 						стоимости персонажа.
 					</p>
-					<p className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2 text-lg lg:text-xl'>
 					{star}
 						Нижнее белье/дополнительные наряды:
 						<span className='text-priceColor'> +20% - 100%</span> от стоимости
 						персонажа, в зависимости от сложности.
 					</p>
-					<p className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2 text-lg lg:text-xl'>
 					{star}
 						ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ:
 						<span className='text-priceColor'> +100%</span> от суммы персонажа
 						(Максимум <span>2</span> персонажа).
 					</p>
-					<p className='star-header relative my-6 rounded-lg  bg-[#2d3552] px-4 py-2 text-lg'>
+					<p className='star-header relative my-6 rounded-lg  bg-[#21273d] border border-thinLine px-4 py-2 text-lg'>
 					{star}
 						Коммерческое использование:{' '}
 						<span className='text-priceColor'>+100%</span> от суммы.
@@ -109,7 +109,7 @@ export default function AdditionPriceInfo() {
 				</>
 			)}
 
-			<div className='relative flex w-full flex-col items-center justify-center rounded-md  bg-[#2d3552] px-4 py-4 md:flex-row md:justify-between'>
+			<div className='relative flex w-full flex-col items-center justify-center rounded-md  bg-[#21273d] border border-thinLine px-4 py-4 md:flex-row md:justify-between'>
 				{star}
 				<p className='mb-6 text-2xl md:mb-0 lg:text-2xl'>
 					{language === 'english' ? 'Make a commission' : 'Сделать заказ'}
