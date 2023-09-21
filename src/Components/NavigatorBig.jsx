@@ -26,7 +26,7 @@ export default function NavigatorBig({ page }) {
 				className={`price-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center
 				${
 					page === 'home'
-						? 'bg-[#313131] bg-opacity-100 text-secondaryText delay-200'
+						? 'bg-[#161621] bg-opacity-20 text-secondaryText delay-200 backdrop-blur-[10px]'
 						: 'effect-shine bg-opacity-0 text-mainText'
 				} 
 				transition-all duration-300
@@ -35,14 +35,14 @@ export default function NavigatorBig({ page }) {
 					scrollToTop()
 				}}
 			>
-				<p className='text-xl'>{language === 'english' ? 'HOME' : 'НАЧАЛО'}</p>
+				<p className='text-xl'>{language === 'english' ? 'HOME' : 'ГЛАВНАЯ'}</p>
 			</NavLink>
 			<NavLink
 				to='/price'
 				className={`price-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center
 				${
 					page === 'price'
-						? 'bg-[#313131] bg-opacity-100 text-secondaryText delay-200'
+						? 'bg-[#161621] bg-opacity-20 text-secondaryText delay-200 backdrop-blur-[10px]'
 						: 'effect-shine bg-opacity-0 text-mainText'
 				} 
 				transition-all duration-300`}
@@ -57,7 +57,7 @@ export default function NavigatorBig({ page }) {
 				className={`'info-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center 
 				${
 					page === 'info'
-						? 'bg-[#313131] bg-opacity-100 text-secondaryText delay-200'
+						? 'bg-[#161621] bg-opacity-20 text-secondaryText delay-200 backdrop-blur-[10px]'
 						: 'effect-shine bg-opacity-0 text-mainText'
 				} 
 				transition-all duration-300`}

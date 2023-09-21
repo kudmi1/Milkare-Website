@@ -1,0 +1,28 @@
+Copyright (c) 2022 Nasir Udin Studio
+
+
+------------------------------------------------------------------------------
+
+Bonche Light font is free for both personal and commercial use.
+
+THE FULL FAMILY (contains 14 fonts) is available at https://studionasir.com
+
+------------------------------------------------------------------------------
+
+
+ALLOWED USES
+
+- You are allowed to install the fonts on 1-5 devices (computer, phone, tablet).
+- You may use the fonts to create objects, such as logos, ad campaigns, books, 
+magazines, posters, t-shirts--anything that can be reproduced mechanically--
+as long as you don’t include the fonts in some way.
+- You may use the fonts for both commercial and personal projects, for yourself 
+or your clients.
+- You may use the fonts as web-fonts with @font-face declaration to create websites, 
+web templates, etc.
+- You may not modify, adapt, decompile, or create derivative works based on the 
+fonts. That means to edit or modify the fonts files itself in font editors/software/ 
+programs such as Fontlab Studio, Glyphs, Font Creator, etc.
+- You may not resell or redistribute the fonts.
+
+

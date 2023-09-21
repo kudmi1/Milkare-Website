@@ -11,12 +11,15 @@ module.exports = {
         mainText: "#fcf3f3",
         secondaryText: "#e5ec86",
         // secondaryText: "#92d9eb",
-
         mainGray: "#212121",
-        // mainGray: "rgb(167, 139, 250)",
         mainGrayTransparent: "#212121d2",
-        thinLine: '#3b3b3b',
-        priceColor: "#e4e7af"
+        thinLine: '#e5ec86',
+        priceColor: "#e4e7af",
+        myViolet: '#ad91e5',
+        myDarkViolet: '#a78bfa',
+        myPink: '#f9a8d4',
+        myBlue: '#92d9eb',
+        myYellow: '#e5ec86'
       }
     },
   },

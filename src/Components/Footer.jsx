@@ -4,7 +4,7 @@ export default function Footer() {
 	const { language } = useLanguageContext()
 
 	return (
-		<div className='footer w-full flex h-52 flex-col items-center border-t border-t-[#3b3b3b] bg-gradient-to-br from-mainGrayTransparent to-mainGray backdrop-blur-[10px]'>
+		<div className='footer w-full flex h-52 flex-col items-center border-t border-t-[#3b3b3b] bg-gradient-to-r from-[#161621] via-[#323b5a] to-[#161621] backdrop-blur-[10px]'>
 			<div className='relative flex h-4/6 w-full max-w-7xl flex-row items-center justify-between px-6 md:h-full'>
 				
 				<div className='w-full '>

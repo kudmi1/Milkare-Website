@@ -38,7 +38,7 @@ export default function HamburgerMenu({
 			>
 				<div className='relative h-full w-full'>
 					<div
-						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-mainGray via-[#292929] to-mainGray py-4 backdrop-blur ${
+						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-[#161621] via-[#323b5a] to-[#161621] py-4 backdrop-blur ${
 							hamburgerState
 								? 'h-[410px] opacity-100 sm:h-[280px]'
 								: 'pointer-events-none h-0 opacity-0'
@@ -53,7 +53,7 @@ export default function HamburgerMenu({
 							</div>
 							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 '>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-sm border border-thinLine text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-[#161621] bg-opacity-40 text-xl'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -67,7 +67,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-sm border border-thinLine text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-[#161621] bg-opacity-40 text-xl'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -81,7 +81,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-sm border border-thinLine text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-[#161621] bg-opacity-40 text-xl'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -95,7 +95,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-sm border border-thinLine text-xl'
+									className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-lg bg-[#161621] bg-opacity-40 text-xl'
 									onClick={toggleContactModal}
 								>
 									<p>{language === 'english' ? 'Contact' : 'Связь со мной'}</p>
@@ -118,7 +118,7 @@ export default function HamburgerMenu({
 									</div>
 								</button>
 
-								<button className='effect-shine relative flex h-12 min-h-[48px] w-full rounded-sm border border-thinLine text-xl'>
+								<button className='effect-shine relative flex h-12 min-h-[48px] w-full rounded-lg bg-[#161621] bg-opacity-40 text-xl'>
 									<a
 										href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
 										target={'_blank'}
@@ -156,7 +156,7 @@ export default function HamburgerMenu({
 					className='fixed bottom-0 left-0 z-[999] flex h-full w-full items-center justify-center bg-[#212121e7]'
 					onClick={() => setShowContactModal(false)}
 				>
-					<div className='relative h-48 w-96 rounded-sm border border-thinLine bg-mainGray'>
+					<div className='relative h-48 w-96 rounded-sm bg-[#323b5a]'>
 						<button
 							className='effect-shine absolute right-0 top-0 m-2 flex h-8 w-8 items-center justify-center'
 							onClick={toggleContactModal}

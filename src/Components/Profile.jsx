@@ -13,7 +13,7 @@ export default function Profile() {
 		/>
 	)
 	return (
-		<footer className='flex h-[300px] w-full flex-col items-center bg-gradient-to-r from-mainGray via-[#292929] to-mainGray lg:h-[300px] py-4'>
+		<footer className='flex h-[300px] w-full flex-col items-center bg-gradient-to-r from-[#161621] via-[#323b5a] to-[#161621] lg:h-[300px] py-4'>
 			<div className='footer-content relative z-40 flex h-full w-full max-w-7xl flex-col-reverse items-center'>
 				<div className='flex h-2/3 w-[90%] items-center justify-between py-2 md:w-3/5 lg:w-1/2 mt-4'>
 					<div className='mx-2 flex h-full w-1/2 flex-col rounded-md border border-thinLine px-3 py-2 sm:w-1/2 md:min-w-[230px] lg:min-w-[270px]'>

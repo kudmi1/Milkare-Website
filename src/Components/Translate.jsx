@@ -6,8 +6,8 @@ export default function Translate() {
 	return (
 		<div className='language-block h-full flex w-full items-center justify-between lg:justify-end'>
 			<button
-				className={`language-item language-eng mr-4 h-14 w-1/2 rounded-sm border border-thinLine text-xl lg:w-14 lg:border-none ${
-					language === 'english' ? 'text-secondaryText bg-[#313131]' : 'text-mainText effect-shine'
+				className={`language-item language-eng mr-4 h-14 w-1/2 rounded-lg text-xl lg:w-14 lg:border-none ${
+					language === 'english' ? 'text-secondaryText border border-thinLine lg:bg-[#161621] lg:bg-opacity-20 bg-[#161621] bg-opacity-40' : 'text-mainText effect-shine bg-[#161621] bg-opacity-20'
 				}`}
 				onClick={() => setLanguage('english')}
 			>
@@ -18,8 +18,8 @@ export default function Translate() {
 				</p>
 			</button>
 			<button
-				className={`language-item language-rus h-14 w-1/2 rounded-sm border border-thinLine text-xl lg:w-14 lg:border-none ${
-					language === 'russian' ? 'text-secondaryText bg-[#313131]' : 'text-mainText effect-shine'
+				className={`language-item language-rus h-14 w-1/2 rounded-lg text-xl lg:w-14 lg:border-none ${
+					language === 'russian' ? 'text-secondaryText border border-thinLine lg:bg-[#161621] lg:bg-opacity-20 bg-[#161621] bg-opacity-40' : 'text-mainText effect-shine bg-[#161621] bg-opacity-20'
 				} `}
 				onClick={() => setLanguage('russian')}
 			>

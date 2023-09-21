@@ -14,32 +14,52 @@ html {
 
 @font-face {
   font-family: 'Gill Sans';
-  src: url('/fonts/gill/83-font.otf') ;
+  src: url('/fonts/gill/83-font.otf');
 }
 
 @font-face {
   font-family: 'macherie';
   src:  url('/fonts/macherie/macherie.otf'),
-        url('/fonts/macherie/macherie.ttf') format('truetype')
+        url('/fonts/macherie/macherie.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'bonche';
+  src: url('/fonts/bonche/Bonche-Light.otf'),
+          ('Bonche-Light.woff' format('woff'));
+}
+
+@font-face {
+  font-family: 'bonche-bold';
+  src: url('/fonts/bonche/Demo_Fonts/Fontspring-DEMO-bonche-bold.otf');
+}
+
+@font-face {
+  font-family: 'glitch';
+  src: url('/fonts/glitch/Rubik-Glitch-Regular.ttf') format('truetype');
 }
 
 :root {
   font-family: 'Gill Sans';
-  line-height: 1.75;
+  line-height: 1.75; 
   font-weight: 400;
   color-scheme: dark light;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #fff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   /* background-image: url('/images/dark.webp'); */
-  background-attachment: fixed;
+  /* background-attachment: fixed;
   background: linear-gradient(to right top, #b095e6, #b095e6, #b095e6, #b095e6, #b095e6, #a69dec, #9da4f1, #94abf5, #84baf8, #7ec7f7, #83d2f2, #92dbec);
-  background-size: cover;
-  /* background: url(/public/svg/background.svg); */
+  background-size: cover; */
+  background-color:hsla(238,100%,80%,1);
+  background-image:
+  radial-gradient(at 55% 2%, hsla(260,100%,75%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 50%, hsla(192,100%,75%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 50%, hsla(327,100%,82%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 100%, hsla(239,100%,77%,1) 0px, transparent 50%);
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,11 +84,6 @@ h5 {font-size: 1.333rem;}
 img {
   max-width: 100%;
   display: block;
-}
-
-.vertical-text {
-  writing-mode: vertical-lr;
-  rotate: 180deg;
 }
 
 .pswp__custom-caption {
@@ -107,7 +122,6 @@ img {
 .section-title {
   font-family: "macherie", serif;
 }
-
 
 .accordion {
   --_button-size: 6rem;
@@ -497,6 +511,7 @@ ion-icon {
 }
 
 .hero-text {
+  /* font-family: 'bonche-bold'; */
   font-family: 'macherie';
   text-shadow: 0px 0px 4px #c4b5fd;
   font-size: clamp(30px, 8vw, 100px);
@@ -509,7 +524,7 @@ ion-icon {
 }
 
 .form-text {
-  font-family: 'macherie';
+  font-family: 'bonche-bold';
 }
 
 .price-text {

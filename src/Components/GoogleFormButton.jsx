@@ -3,7 +3,7 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 export default function GoogleFormButton() {
 	const { language } = useLanguageContext()
 	return (
-		<button className='text-skyborder-sky-300 overflow-hidden rounded-md border-2 border-[#92d9eb] bg-mainGray text-xl text-[#92d9eb]  transition-all duration-150 hover:shadow-lg hover:shadow-[#9562bede]'>
+		<button className='text-skyborder-sky-300 overflow-hidden rounded-md border-2 border-[#92d9eb] bg-transparent text-xl text-[#92d9eb]  transition-all duration-150 hover:shadow-lg hover:shadow-[#9562bede]'>
 			<a
 				href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
 				target={'_blank'}
