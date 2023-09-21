@@ -30,9 +30,9 @@ export default function Accordion() {
 			<div
 				className={`accordion flex w-full max-w-full xl:max-w-[1380px] flex-col items-center border-[#212121]`}
 			>
-				<div className='w-full flex-col rounded-md border border-[#3b3b3b] bg-gradient-to-r from-[#282f49] via-[#323b5aec] to-[#282f49] p-4 backdrop-blur-[10px]'>
+				<div className='w-full flex-col rounded-md border border-[#3b3b3b] bg-gradient-to-r from-mainGrayTransparent via-[#2b2b2b5b] to-mainGrayTransparent p-4 backdrop-blur-[10px]'>
 					<h1
-						className={`section-title mb-8 flex justify-center text-myYellow text-4xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
+						className={`section-title mb-8 flex justify-center text-4xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
 						${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					>
 						{language === 'english' ? 'Recent Works' : 'Последние работы'}

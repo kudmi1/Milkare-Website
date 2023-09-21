@@ -4,7 +4,7 @@ import InfoQuestions from './InfoQuestions'
 export default function TOS() {
 	const { language } = useLanguageContext()
 	return (
-		<div className='flex w-full flex-col items-center rounded-lg border border-thinLine bg-[#21273d] px-4 py-2 md:w-2/3'>
+		<div className='flex w-full flex-col items-center rounded-lg border border-thinLine bg-secondaryGray px-4 py-2 md:w-2/3'>
 			<h4 className='mb-6'>
 				{language === 'english'
 					? 'Terms of Service'

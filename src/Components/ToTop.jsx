@@ -22,7 +22,7 @@ export default function ToTop({ position }) {
 	return (
 		<div>
 			<div
-				className={`backdrop-blur-[10px] to-top-btn fixed right-6 ${position} z-[39] h-12 w-12 md:h-16 md:w-16 rounded-full bg-[#323b5a] transition-colors${
+				className={`backdrop-blur-[10px] to-top-btn fixed right-6 ${position} z-[39] h-12 w-12 md:h-16 md:w-16 rounded-full bg-mainGrayTransparent transition-colors${
 					showTopBtn
 						? "pointer-events-auto opacity-100 translate-y-0"
 						: "pointer-events-none opacity-0 translate-y-20"

@@ -62,11 +62,11 @@ export default function PhotoGallery() {
 			>				
 				<div
 					ref={ref}
-					className='w-full rounded-b-md bg-gradient-to-r from-[#282f49] via-[#323b5aec] to-[#282f49] p-4 backdrop-blur-[10px] '
+					className='w-full rounded-b-md bg-gradient-to-r from-mainGrayTransparent via-[#2b2b2b5b] to-mainGrayTransparent p-4 backdrop-blur-[10px] '
 				>
 					<h1
 						className={`section-title mb-8 flex justify-center text-4xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
-					${inView ? 'opacity-100' : 'opacity-0'} text-myYellow transition-opacity duration-500`}
+					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					>
 						{language === 'english' ? 'Gallery' : 'Галерея'}
 					</h1>
