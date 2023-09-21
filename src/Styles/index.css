@@ -44,22 +44,22 @@ html {
   line-height: 1.75; 
   font-weight: 400;
   color-scheme: dark light;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.8);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background-image: url('/images/dark.webp');
+  /* background-image: url('/images/dark.webp'); */
   background-attachment: fixed;
   /* background: linear-gradient(to right top, #b095e6, #b095e6, #b095e6, #b095e6, #b095e6, #a69dec, #9da4f1, #94abf5, #84baf8, #7ec7f7, #83d2f2, #92dbec); */
-  background-size: cover; 
-  /* background-color:hsla(238,100%,80%,1);
+  /* background-size: cover;  */
+  background-color:hsla(238,100%,80%,1);
   background-image:
   radial-gradient(at 55% 2%, hsla(260,100%,75%,1) 0px, transparent 50%),
   radial-gradient(at 0% 50%, hsla(192,100%,75%,1) 0px, transparent 50%),
   radial-gradient(at 80% 50%, hsla(327,100%,82%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 100%, hsla(239,100%,77%,1) 0px, transparent 50%); */
+  radial-gradient(at 0% 100%, hsla(239,100%,77%,1) 0px, transparent 50%);
 }
 
 h1, h2, h3, h4, h5 {

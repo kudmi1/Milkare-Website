@@ -23,7 +23,7 @@ const names = [
 	'Red Girl',
 ]
 
-export default function SimpleGallery({ galleryID, images }) {
+export default function GalleryGrid({ galleryID, images }) {
 	const [showImage, setShowImage] = useState(false)
 	const { ref, inView } = useInView({
 		threshold: 0.1,
@@ -131,7 +131,7 @@ export default function SimpleGallery({ galleryID, images }) {
 					} rounded-md`}
 				>
 					<div
-						className={`grid-block group relative xl:h-96 xl:w-96  ${
+						className={`grid-block h-max group relative xl:h-96 xl:w-96  ${
 							index === 13
 								? 'h-full sm:aspect-square sm:h-auto'
 								: ' aspect-square'

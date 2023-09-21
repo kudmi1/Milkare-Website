@@ -1,7 +1,7 @@
 import 'photoswipe/dist/photoswipe.css'
 import { InView, useInView } from 'react-intersection-observer'
-import SimpleGallery from './SimpleGallery'
 import { useLanguageContext } from '../Providers/LanguageContext'
+import GalleryGrid from './GalleryGrid'
 
 const code_names = [
 	'lucy1',
@@ -39,7 +39,7 @@ const dimensions = [
 	{ width: 1080, height: 1920 },
 ]
 
-export default function PhotoGallery() {
+export default function GalleryWrapper() {
 	const { content, language } = useLanguageContext()
 	const imagesTwo = code_names.map((name, index) => ({
 		largeURL: `images/${name}.webp`,
@@ -56,23 +56,23 @@ export default function PhotoGallery() {
 	})
 
 	return (
-		<div className='flex w-full justify-center motion-reduce:transition-none'>
+		<div className='flex justify-center motion-reduce:transition-none w-screen'>
 			<div
 				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border border-[#3b3b3b] lg:w-max`}
 			>				
 				<div
 					ref={ref}
-					className='w-full rounded-b-md bg-gradient-to-r from-mainGrayTransparent via-[#2b2b2b5b] to-mainGrayTransparent p-4 backdrop-blur-[10px] '
+					className='w-full rounded-b-md p-4 backdrop-blur-[10px] '
 				>
 					<h1
 						className={`section-title mb-8 flex justify-center text-4xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
-					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
+					${inView ? 'opacity-100' : 'opacity-0'} text-myYellow transition-opacity duration-500`}
 					>
 						{language === 'english' ? 'Gallery' : 'Галерея'}
 					</h1>
 					
-					<div className=''>
-						<SimpleGallery
+					<div className='w-full'>
+						<GalleryGrid
 							galleryID={'main-gallery'}
 							images={imagesTwo}
 							inView={inView}

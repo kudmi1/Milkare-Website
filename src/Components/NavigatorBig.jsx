@@ -26,7 +26,7 @@ export default function NavigatorBig({ page }) {
 				className={`price-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center
 				${
 					page === 'home'
-						? 'bg-[#4b4b4b] bg-opacity-20 text-secondaryText delay-200 backdrop-blur-[10px]'
+						? 'bg-opacity-20 text-secondaryText delay-200'
 						: 'effect-shine bg-opacity-0 text-mainText'
 				} 
 				transition-all duration-300
@@ -42,7 +42,7 @@ export default function NavigatorBig({ page }) {
 				className={`price-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center
 				${
 					page === 'price'
-						? 'bg-[#4b4b4b] bg-opacity-20 text-secondaryText delay-200 backdrop-blur-[10px]'
+						? 'bg-opacity-20 text-secondaryText delay-200'
 						: 'effect-shine bg-opacity-0 text-mainText'
 				} 
 				transition-all duration-300`}
@@ -57,7 +57,7 @@ export default function NavigatorBig({ page }) {
 				className={`'info-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center 
 				${
 					page === 'info'
-						? 'bg-[#4b4b4b] bg-opacity-20 text-secondaryText delay-200 backdrop-blur-[10px]'
+						? 'bg-opacity-20 text-secondaryText delay-200'
 						: 'effect-shine bg-opacity-0 text-mainText'
 				} 
 				transition-all duration-300`}

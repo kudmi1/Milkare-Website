@@ -17,7 +17,7 @@ export default function PriceCard({
 	})
 
 	const commonProps =
-		'price-card-section mb-12 lg:mb-24 h-[650px] lg:h-[600px] bg-gradient-to-r from-mainGrayTransparent via-[#2b2b2b5b] to-mainGrayTransparent p-4 backdrop-blur-[10px] rounded-md w-full border border-[#3b3b3b]'
+		'price-card-section mb-12 lg:mb-24 h-[650px] lg:h-[600px] p-4 backdrop-blur-[10px] rounded-md w-full border border-[#3b3b3b]'
 
 	function TextContent() {
 		return (
@@ -30,7 +30,7 @@ export default function PriceCard({
 					</h1>
 					<div className='w-full lg:w-max py-6 text-center lg:text-start lg:pt-16'>
 						<p
-							className='pb-4 text-lg text-mainText lg:text-2xl rounded-lg border border-thinLine bg-secondaryGray px-8 py-4'
+							className='pb-4 text-lg text-mainText lg:text-2xl rounded-lg border border-thinLine px-8 py-4'
 							dangerouslySetInnerHTML={{
 								__html: textContent,
 							}}

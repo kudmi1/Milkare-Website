@@ -25,8 +25,8 @@ export default function NavigatorSmall({ page, setPage }) {
 
 				<NavLink
 					to='/'
-					className={`home-link header-item z-10 flex h-full w-1/3 cursor-pointer items-center justify-center px-4 text-center
-					${page === 'home' ? 'text-secondaryText bg-[#4b4b4b] bg-opacity-20 delay-200' : 'effect-shine text-mainText bg-opacity-0'}
+					className={`home-link header-item z-10 flex h-full w-1/3 rounded-t-sm cursor-pointer items-center justify-center px-4 text-center
+					${page === 'home' ? 'text-secondaryText bg-[#161621] bg-opacity-20 delay-200' : 'effect-shine text-mainText bg-opacity-0'}
 					transition-all duration-300`}
 					onClick={() => {
 						scrollToTop()
@@ -36,8 +36,8 @@ export default function NavigatorSmall({ page, setPage }) {
 				</NavLink>
 				<NavLink
 					to='/price'
-					className={`price-link header-item z-10 flex h-full w-1/3 cursor-pointer items-center justify-center px-4 text-center 
-					${page === 'price' ? 'text-secondaryText bg-[#4b4b4b] bg-opacity-20 delay-200' : 'effect-shine text-mainText bg-opacity-0'} transition-all duration-300`}
+					className={`price-link header-item z-10 flex h-full w-1/3 rounded-t-sm cursor-pointer items-center justify-center px-4 text-center 
+					${page === 'price' ? 'text-secondaryText bg-[#161621] bg-opacity-20 delay-200' : 'effect-shine text-mainText bg-opacity-0'} transition-all duration-300`}
 					onClick={() => {
 						scrollToTop()
 					}}
@@ -46,8 +46,8 @@ export default function NavigatorSmall({ page, setPage }) {
 				</NavLink>
 				<NavLink
 					to='/info'
-					className={`info-link header-item z-10 flex h-full w-1/3 cursor-pointer items-center justify-center px-4 text-center 
-					${page === 'info' ? 'text-secondaryText bg-[#4b4b4b] bg-opacity-20 delay-200' : 'effect-shine text-mainText bg-opacity-0'} transition-all duration-300`}
+					className={`info-link header-item z-10 flex h-full w-1/3 rounded-t-sm cursor-pointer items-center justify-center px-4 text-center 
+					${page === 'info' ? 'text-secondaryText bg-[#161621] bg-opacity-20 delay-200' : 'effect-shine text-mainText bg-opacity-0'} transition-all duration-300`}
 					onClick={() => {
 						scrollToTop()
 					}}

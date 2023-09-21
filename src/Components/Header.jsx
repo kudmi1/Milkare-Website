@@ -67,12 +67,11 @@ export default function Header({ page, setPage }) {
 
 	return (
 		<header
-			className={`header fixed z-50 shadow-lg flex h-24 justify-between lg:justify-center  w-full flex-col ${
+			className={`header fixed z-50 flex h-24 w-full flex-col justify-between  shadow-lg lg:justify-center ${
 				ariaExpanded ? 'bg-mainGray' : ''
-			} bg-gradient-to-r from-mainGray via-[#2b2b2b] to-mainGray opacity-100 lg:h-14 lg:flex-row
-			 `}
+			} opacity-100 lg:h-14 lg:flex-row backdrop-blur-md`}
 		>
-			<div className='header-standart relative grid h-12 w-full lg:h-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-6 lg:flex xl:px-0'>
+			<div className='header-standart relative grid h-12 w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent px-6 lg:flex lg:h-full xl:px-0'>
 				<Link
 					to={'/'}
 					className={`header-top effect-shine transition-all duration-500`}
