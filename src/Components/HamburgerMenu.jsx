@@ -153,7 +153,7 @@ export default function HamburgerMenu({
 			</div>
 			{showContactModal ? (
 				<div
-					className='fixed bottom-0 left-0 z-[999] flex h-full w-full items-center justify-center bg-[#212121e7]'
+					className='fixed top-0 left-0 z-[999] flex h-screen w-full items-center justify-center bg-[#212121e7] '
 					onClick={() => setShowContactModal(false)}
 				>
 					<div className='relative h-48 w-96 rounded-sm bg-[#323b5a]'>
