@@ -24,7 +24,7 @@ export default function HamburgerMenu({
 	return (
 		<>
 			<div
-				className={`absolute bottom-0 left-0 right-0 top-12 z-30 h-screen w-screen bg-[#2121216b] transition-all duration-300 
+				className={`absolute bottom-0 left-0 right-0 top-12 z-30 h-screen w-screen backdrop-blur-2xl transition-all duration-300 
 			${
 				hamburgerState
 					? 'pointer-events-auto opacity-100'
@@ -153,7 +153,7 @@ export default function HamburgerMenu({
 			</div>
 			{showContactModal ? (
 				<div
-					className='fixed top-0 left-0 z-[999] flex h-screen w-full items-center justify-center bg-[#212121e7] '
+					className='fixed top-0 left-0 z-[999] flex h-screen w-full items-center justify-center backdrop-blur-2xl '
 					onClick={() => setShowContactModal(false)}
 				>
 					<div className='relative h-48 w-96 rounded-sm bg-[#323b5a]'>
