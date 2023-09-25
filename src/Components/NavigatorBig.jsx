@@ -23,11 +23,11 @@ export default function NavigatorBig({ page }) {
 			></div>
 			<NavLink
 				to='/'
-				className={`price-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center
+				className={`price-link nav-text z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center
 				${
 					page === 'home'
 						? 'bg-opacity-20 text-secondaryText delay-200'
-						: 'effect-shine bg-opacity-0 text-mainText'
+						: 'text-mainText effect-shine bg-opacity-0'
 				} 
 				transition-all duration-300
 				`}
@@ -39,11 +39,11 @@ export default function NavigatorBig({ page }) {
 			</NavLink>
 			<NavLink
 				to='/price'
-				className={`price-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center
+				className={`price-link nav-text z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center
 				${
 					page === 'price'
 						? 'bg-opacity-20 text-secondaryText delay-200'
-						: 'effect-shine bg-opacity-0 text-mainText'
+						: 'text-mainText effect-shine bg-opacity-0'
 				} 
 				transition-all duration-300`}
 				onClick={() => {
@@ -54,11 +54,11 @@ export default function NavigatorBig({ page }) {
 			</NavLink>
 			<NavLink
 				to='/info'
-				className={`'info-link header-item z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center 
+				className={`'info-link nav-text z-10 flex h-full w-36 cursor-pointer items-center justify-center px-4 text-center 
 				${
 					page === 'info'
 						? 'bg-opacity-20 text-secondaryText delay-200'
-						: 'effect-shine bg-opacity-0 text-mainText'
+						: 'text-mainText effect-shine bg-opacity-0'
 				} 
 				transition-all duration-300`}
 				onClick={() => {

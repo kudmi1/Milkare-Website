@@ -29,7 +29,7 @@ export default function SectionHome() {
 					</picture>
 					<div className='absolute top-0 flex h-full w-full justify-center'>
 						<div className='relative h-full w-full max-w-[1920px]'>
-							<h1 className='hero-text absolute hidden sm:bottom-36 sm:left-6 sm:block lg:bottom-1/2 lg:left-20 lg:translate-y-1/2 '>
+							<h1 className='hero-text absolute hidden sm:bottom-36 sm:left-6 sm:block lg:bottom-1/2 lg:left-20 lg:translate-y-1/2 text-mainText'>
 								Commission <br /> Open
 							</h1>
 						</div>

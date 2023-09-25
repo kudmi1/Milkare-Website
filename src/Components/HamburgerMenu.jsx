@@ -53,7 +53,7 @@ export default function HamburgerMenu({
 							</div>
 							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 '>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-[#161621] bg-opacity-40 text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -67,7 +67,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-[#161621] bg-opacity-40 text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -81,7 +81,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-[#161621] bg-opacity-40 text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -95,7 +95,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-lg bg-[#161621] bg-opacity-40 text-xl'
+									className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'
 									onClick={toggleContactModal}
 								>
 									<p>{language === 'english' ? 'Contact' : 'Связь со мной'}</p>
@@ -118,7 +118,7 @@ export default function HamburgerMenu({
 									</div>
 								</button>
 
-								<button className='effect-shine relative flex h-12 min-h-[48px] w-full rounded-lg bg-[#161621] bg-opacity-40 text-xl'>
+								<button className='effect-shine relative flex h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'>
 									<a
 										href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
 										target={'_blank'}

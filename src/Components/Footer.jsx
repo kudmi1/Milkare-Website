@@ -4,14 +4,14 @@ export default function Footer() {
 	const { language } = useLanguageContext()
 
 	return (
-		<div className='footer w-full flex h-52 flex-col items-center border-t border-t-[#3b3b3b] backdrop-blur-[10px]'>
+		<div className='footer w-full flex h-52 flex-col items-center border-t border-t-[#3b3b3b] backdrop-blur-[10px] bg-homeColor'>
 			<div className='relative flex h-4/6 w-full max-w-7xl flex-row items-center justify-between px-6 md:h-full'>
 				
 				<div className='w-full '>
 					<img src='./images/Logo.png' alt='' className={`h-6 md:h-8`} />
 				</div>
 				<div className='flex flex-col items-center justify-evenly gap-2'>
-					<p className='text-sm md:text-lg'>
+					<p className='text-sm md:text-lg text-mainText'>
 						{language === 'english' ? 'CONTACT ME' : 'СВЯЗЬ СО МНОЙ'}
 					</p>
 					<div className='flex justify-evenly'>
@@ -40,10 +40,9 @@ export default function Footer() {
 									width='38'
 									height='38'
 									viewBox='0 0 256 256'
-									className='h-9 w-9 md:h-10 md:w-10'
+									className='h-9 w-9 md:h-10 md:w-10 fill-mainText'
 								>
 									<path
-										fill='currentColor'
 										d='M224 50H32a6 6 0 0 0-6 6v136a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V56a6 6 0 0 0-6-6Zm-15.42 12L128 135.86L47.42 62ZM216 194H40a2 2 0 0 1-2-2V69.64l86 78.78a6 6 0 0 0 8.1 0L218 69.64V192a2 2 0 0 1-2 2Z'
 									/>
 								</svg>

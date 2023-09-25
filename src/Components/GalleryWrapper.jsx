@@ -56,21 +56,20 @@ export default function GalleryWrapper() {
 	})
 
 	return (
-		<div className='flex justify-center motion-reduce:transition-none w-screen'>
+		<div className='flex w-screen justify-center motion-reduce:transition-none '>
 			<div
-				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border border-[#3b3b3b] lg:w-max`}
-			>				
-				<div
-					ref={ref}
-					className='w-full rounded-b-md p-4 backdrop-blur-[10px] '
-				>
+				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border border-[#3b3b3b] bg-cardBg bg-opacity-60  backdrop-blur-[10px] lg:w-max`}
+			>
+				<div ref={ref} className='w-full rounded-b-md p-4 '>
 					<h1
 						className={`section-title mb-8 flex justify-center text-4xl font-extrabold sm:justify-center lg:mb-20 lg:mt-6 lg:text-7xl 
-					${inView ? 'opacity-100' : 'opacity-0'} text-myYellow transition-opacity duration-500`}
+					${
+						inView ? 'opacity-100' : 'opacity-0'
+					} text-secondaryText transition-opacity duration-500`}
 					>
 						{language === 'english' ? 'Gallery' : 'Галерея'}
 					</h1>
-					
+
 					<div className='w-full'>
 						<GalleryGrid
 							galleryID={'main-gallery'}

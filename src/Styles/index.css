@@ -13,8 +13,19 @@ html {
 }
 
 @font-face {
-  font-family: 'Gill Sans';
-  src: url('/fonts/gill/83-font.otf');
+  font-family: 'Gill Sans Light';
+  src: url('/fonts/gill_sans/GillSansLightC.eot') format('embedded-opentype'),
+  url('/fonts/gill_sans/GillSansLightC.woff2') format('woff2'),
+  url('/fonts/gill_sans/GillSansLightC.woff') format('woff'),
+  url('/fonts/gill_sans/GillSansLightC.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gill Sans Regular';
+  src: url('/fonts/gill_sans/GillSansC.eot') format('embedded-opentype'),
+  url('/fonts/gill_sans/GillSansC.woff2') format('woff2'),
+  url('/fonts/gill_sans/GillSansC.woff') format('woff'),
+  url('/fonts/gill_sans/GillSansC.ttf') format('truetype');
 }
 
 @font-face {
@@ -23,16 +34,6 @@ html {
         url('/fonts/macherie/macherie.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'bonche';
-  src: url('/fonts/bonche/Bonche-Light.otf'),
-          ('Bonche-Light.woff' format('woff'));
-}
-
-@font-face {
-  font-family: 'bonche-bold';
-  src: url('/fonts/bonche/Demo_Fonts/Fontspring-DEMO-bonche-bold.otf');
-}
 
 @font-face {
   font-family: 'glitch';
@@ -40,26 +41,29 @@ html {
 }
 
 :root {
-  font-family: 'Gill Sans';
+  font-family: 'Gill Sans Light';
   line-height: 1.75; 
   font-weight: 400;
   color-scheme: dark light;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(216, 216, 216, 0.8);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  /* background-image: url('/images/dark.webp'); */
-  background-attachment: fixed;
+  background-image: url('/images/dark.webp');
+  /* background-attachment: fixed; */
   /* background: linear-gradient(to right top, #b095e6, #b095e6, #b095e6, #b095e6, #b095e6, #a69dec, #9da4f1, #94abf5, #84baf8, #7ec7f7, #83d2f2, #92dbec); */
+
+  /* background-image: linear-gradient(to right top, #63896d, #5c8f7c, #57938c, #57979b, #5e9aa9); */
   /* background-size: cover;  */
-  background-color:hsla(238,100%,80%,1);
+  /* background-color: #2b364d; */
+  /* background-color:hsla(238,100%,80%,1);
   background-image:
   radial-gradient(at 55% 2%, hsla(260,100%,75%,1) 0px, transparent 50%),
   radial-gradient(at 0% 50%, hsla(192,100%,75%,1) 0px, transparent 50%),
   radial-gradient(at 80% 50%, hsla(327,100%,82%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 100%, hsla(239,100%,77%,1) 0px, transparent 50%);
+  radial-gradient(at 0% 100%, hsla(239,100%,77%,1) 0px, transparent 50%); */
 }
 
 h1, h2, h3, h4, h5 {
@@ -86,8 +90,42 @@ img {
   display: block;
 }
 
+.nav-text {
+  font-family: 'Gill Sans Regular';
+}
+
+.hero-text {
+  font-family: 'macherie';
+  text-shadow: 0px 0px 4px #c4b5fd;
+  font-size: clamp(30px, 8vw, 100px);
+}
+
+.hero-text-mobile {
+  font-family: 'macherie';
+  text-shadow: 0px 0px 3px #c4b5fd;
+  font-size: clamp(20px, 7vw, 100px);
+}
+
+.form-text {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.price-text {
+  font-family: 'macherie';
+  background-image: url('/glitters/3.JPG');
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.content-title {
+  font-family: 'macherie';
+}
+
 .pswp__custom-caption {
-  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 3.5rem;
   text-shadow: #000 2px 1px 2px;
   color: #fcf3f3;
@@ -418,6 +456,27 @@ ion-icon {
   background: #fcf3f3;
 }
 
+.mynav.black > .language-underline-animation {
+  background: #fcf3f3;
+  height: 0.25rem;
+}
+
+.language-underline-animation:nth-child(1) {
+  background: #fcf3f3;
+  transition: calc(0.3s * .8);
+}
+.language-underline-animation:nth-child(2) {
+  background: #fcf3f3;
+  transition: calc(0.3s * 1.2);
+}
+.language-underline-animation:nth-child(3) {
+  background: #fcf3f3;
+  transition: calc(0.3s * 1.6);
+}
+.language-underline-animation:nth-child(4) {
+  background: #fcf3f3;
+}
+
 .section {
   opacity: 0;
   overflow: hidden;
@@ -510,32 +569,3 @@ ion-icon {
   }
 }
 
-.hero-text {
-  /* font-family: 'bonche-bold'; */
-  font-family: 'macherie';
-  text-shadow: 0px 0px 4px #c4b5fd;
-  font-size: clamp(30px, 8vw, 100px);
-}
-
-.hero-text-mobile {
-  font-family: 'macherie';
-  text-shadow: 0px 0px 3px #c4b5fd;
-  font-size: clamp(20px, 7vw, 100px);
-}
-
-.form-text {
-  font-family: 'glitch';
-}
-
-.price-text {
-  font-family: 'macherie';
-  background-image: url('/glitters/3.JPG');
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.content-title {
-  font-family: 'macherie';
-}

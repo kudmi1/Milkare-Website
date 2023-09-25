@@ -1,7 +1,7 @@
 export default function Socials() {
 	return (
 		<>
-			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-[#161621] bg-opacity-10 md:h-14 md:w-14'>
+			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-accentColor bg-opacity-10 md:h-14 md:w-14'>
 				<a href='https://twitter.com/milkareart' target={'_blank'}>
 					<img
 						src='./svg/twitter.svg'
@@ -10,7 +10,7 @@ export default function Socials() {
 					/>
 				</a>
 			</button>
-			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-[#161621] bg-opacity-10 md:h-14 md:w-14'>
+			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-accentColor bg-opacity-10 md:h-14 md:w-14'>
 				<a href='http://instagram.com/milkareart/' target={'_blank'}>
 					<img
 						src='./svg/instagram.svg'
@@ -19,7 +19,7 @@ export default function Socials() {
 					/>
 				</a>
 			</button>
-			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-[#161621] bg-opacity-10 md:h-14 md:w-14'>
+			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-accentColor bg-opacity-10 md:h-14 md:w-14'>
 				<a href='http://boosty.to/milkareart' target={'_blank'}>
 					<img
 						src='./svg/boosty.svg'
@@ -28,7 +28,7 @@ export default function Socials() {
 					/>
 				</a>
 			</button>
-			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-[#161621] bg-opacity-10 md:h-14 md:w-14'>
+			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-accentColor bg-opacity-10 md:h-14 md:w-14'>
 				<a href='https://www.artstation.com/milkareart' target={'_blank'}>
 					<img
 						src='./svg/artstation.svg'
@@ -37,7 +37,7 @@ export default function Socials() {
 					/>
 				</a>
 			</button>
-			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-[#161621] bg-opacity-10 md:h-14 md:w-14'>
+			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-accentColor bg-opacity-10 md:h-14 md:w-14'>
 				<a href='https://www.deviantart.com/milkareart' target={'_blank'}>
 					<img
 						src='./svg/deviantart.svg'
@@ -46,7 +46,7 @@ export default function Socials() {
 					/>
 				</a>
 			</button>
-			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-[#161621] bg-opacity-10 md:h-14 md:w-14'>
+			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-accentColor bg-opacity-10 md:h-14 md:w-14'>
 				<a href='https://www.pixiv.net/en/users/78324163' target={'_blank'}>
 					<img
 						src='./svg/Pixiv.svg'
@@ -55,7 +55,7 @@ export default function Socials() {
 					/>
 				</a>
 			</button>
-			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-[#161621] bg-opacity-10 md:h-14 md:w-14'>
+			<button className='effect-shine flex h-10 w-10 items-center justify-center rounded-full bg-accentColor bg-opacity-10 md:h-14 md:w-14'>
 				<a href='https://youtube.com/@milkareart' target={'_blank'}>
 					<img
 						src='./svg/youtube.svg'

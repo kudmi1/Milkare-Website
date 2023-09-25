@@ -131,11 +131,11 @@ export default function GalleryGrid({ galleryID, images }) {
 					} rounded-md`}
 				>
 					<div
-						className={`grid-block h-max group relative xl:h-96 xl:w-96  ${
+						className={`grid-block group relative xl:h-96 xl:w-96 ${
 							index === 13
 								? 'h-full sm:aspect-square sm:h-auto'
 								: ' aspect-square'
-						} overflow-hidden  rounded-md
+						} rounded-md overflow-hidden
 						transition-all duration-500`}
 						style={{
 							backgroundImage: `url(${image.blur})`,
@@ -174,7 +174,7 @@ export default function GalleryGrid({ galleryID, images }) {
 								</picture>
 							) : null}
 
-							<div className='absolute hidden sm:block left-3 bottom-3 z-20 -translate-x-[50%] rounded-md border border-thinLine bg-mainGray px-3 py-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100'>
+							<div className='absolute hidden sm:block left-3 bottom-3 z-20 -translate-x-[50%] rounded-md border border-thinLine bg-cardBg px-3 py-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100'>
 								<p>{names[index]}</p>
 							</div>
 						</a>
