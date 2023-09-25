@@ -43,7 +43,7 @@ function App() {
 	}, [inView])
 
 	return (
-		<div className='App relative flex flex-col min-h-screen '>
+		<div className='App relative flex flex-col min-h-screen'>
 			
 			<header ref={headerRef}>
 				<Header page={page} setPage={setPage} />

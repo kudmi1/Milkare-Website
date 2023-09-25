@@ -24,7 +24,7 @@ export default function HamburgerMenu({
 	return (
 		<>
 			<div
-				className={`absolute bottom-0 left-0 right-0 top-12 z-30 h-screen w-screen backdrop-blur-2xl transition-all duration-300 
+				className={`absolute bottom-0 left-0 right-0 top-12 z-30 h-screen w-screen transition-all duration-300 backdrop-blur-2xl
 			${
 				hamburgerState
 					? 'pointer-events-auto opacity-100'
@@ -36,9 +36,9 @@ export default function HamburgerMenu({
 					closeAllModals()
 				}}
 			>
-				<div className='relative h-full w-full'>
+				<div className='relative h-full w-full '>
 					<div
-						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-gradient-to-r from-[#161621] via-[#323b5a] to-[#161621] py-4 backdrop-blur ${
+						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-homeColor py-4 ${
 							hamburgerState
 								? 'h-[410px] opacity-100 sm:h-[280px]'
 								: 'pointer-events-none h-0 opacity-0'
@@ -51,7 +51,7 @@ export default function HamburgerMenu({
 							<div className='w-2/3 '>
 								<Translate language={language} setLanguage={setLanguage} />
 							</div>
-							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 text-lg'>
+							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 text-md'>
 								<button
 									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
 									onClick={() => {
