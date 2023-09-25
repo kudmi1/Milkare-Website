@@ -58,7 +58,7 @@ export default function GalleryWrapper() {
 	return (
 		<div className='flex justify-center motion-reduce:transition-none'>
 			<div
-				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border border-[#3b3b3b] bg-cardBg bg-opacity-60  backdrop-blur-[10px] lg:w-max`}
+				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border border-[#3b3b3b] bg-cardBg bg-opacity-60  lg:w-max`}
 			>
 				<div ref={ref} className='w-full rounded-b-md p-4 '>
 					<h1
