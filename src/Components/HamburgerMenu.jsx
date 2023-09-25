@@ -51,9 +51,9 @@ export default function HamburgerMenu({
 							<div className='w-2/3 '>
 								<Translate language={language} setLanguage={setLanguage} />
 							</div>
-							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 '>
+							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 text-lg'>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -61,13 +61,13 @@ export default function HamburgerMenu({
 								>
 									<NavLink
 										to={'/'}
-										className='flex h-full w-full items-center justify-center'
+										className='flex h-full w-full items-center justify-center '
 									>
-										{language === 'english' ? 'Home' : 'Главная'}
+										{language === 'english' ? 'HOME' : 'ГЛАВНАЯ'}
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -77,11 +77,11 @@ export default function HamburgerMenu({
 										to='/price'
 										className='flex h-full w-full items-center justify-center'
 									>
-										{language === 'english' ? 'Price' : 'Цены'}
+										{language === 'english' ? 'PRICE' : 'ЦЕНЫ'}
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'
+									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -91,14 +91,14 @@ export default function HamburgerMenu({
 										to='/info'
 										className='flex h-full w-full items-center justify-center'
 									>
-										{language === 'english' ? 'Info' : 'Условия'}
+										{language === 'english' ? 'INFO' : 'УСЛОВИЯ'}
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'
+									className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
 									onClick={toggleContactModal}
 								>
-									<p>{language === 'english' ? 'Contact' : 'Связь со мной'}</p>
+									<p>{language === 'english' ? 'CONTACT' : 'СВЯЗЬ СО МНОЙ'}</p>
 									<div className='absolute right-2 top-2'>
 										<svg
 											xmlns='http://www.w3.org/2000/svg'
@@ -118,14 +118,14 @@ export default function HamburgerMenu({
 									</div>
 								</button>
 
-								<button className='effect-shine relative flex h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40 text-xl'>
+								<button className='effect-shine relative flex h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'>
 									<a
 										href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
 										target={'_blank'}
 										className='flex h-full w-full items-center justify-center'
 									>
 										<p>
-											{language === 'english' ? 'Commission' : 'Сделать заказ'}
+											{language === 'english' ? 'COMMISSION' : 'СДЕЛАТЬ ЗАКАЗ'}
 										</p>
 										<div className='absolute right-2 top-2'>
 											<svg
@@ -156,7 +156,7 @@ export default function HamburgerMenu({
 					className='fixed top-0 left-0 z-[999] flex h-screen w-full items-center justify-center backdrop-blur-2xl '
 					onClick={() => setShowContactModal(false)}
 				>
-					<div className='relative h-48 w-96 rounded-sm bg-[#323b5a]'>
+					<div className='relative h-48 w-96 rounded-lg bg-[#323b5a]'>
 						<button
 							className='effect-shine absolute right-0 top-0 m-2 flex h-8 w-8 items-center justify-center'
 							onClick={toggleContactModal}
