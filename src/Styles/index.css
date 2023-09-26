@@ -11,15 +11,6 @@
 html {
   scroll-behavior: smooth;
 }
-@font-face {
-  font-family: 'GothamLight';
-  src: url('/fonts/Gotham_Light.otf');
-}
-
-@font-face {
-  font-family: 'ChaletParis';
-  src: url('/fonts/ChaletParis.otf');
-}
 
 @font-face {
   font-family: 'Amsterdam';
