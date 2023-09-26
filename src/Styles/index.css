@@ -42,7 +42,8 @@ html {
 }
 
 :root {
-  font-family: 'Gill Sans Light';
+  /* font-family: 'Gill Sans Light'; */
+  font-family: 'Courier New', Courier, monospace;
   line-height: 1.75; 
   font-weight: 400;
   color-scheme: dark light;
@@ -87,14 +88,14 @@ h4 {font-size: 1.777rem;}
 h5 {font-size: 1.333rem;}
 
 p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 img {
