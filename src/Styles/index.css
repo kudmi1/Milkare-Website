@@ -42,7 +42,8 @@ html {
 }
 
 :root {
-  font-family: 'Gill Sans Light';
+  /* font-family: 'Gill Sans Light'; */
+  font-family: sans-serif;
   /* font-family: 'Courier New', Courier, monospace; */
   /* line-height: 1.75;  */
   /* font-weight: 400; */
