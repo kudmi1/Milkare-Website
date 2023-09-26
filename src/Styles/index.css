@@ -38,10 +38,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   /* background-image: url('/images/dark.webp'); */
+  background-image: url('/images/bg.PNG');
   /* background-attachment: fixed; */
   /* background: linear-gradient(to right top, #b095e6, #b095e6, #b095e6, #b095e6, #b095e6, #a69dec, #9da4f1, #94abf5, #84baf8, #7ec7f7, #83d2f2, #92dbec); */
 
-  background-image: linear-gradient(to right top, #63896d, #5c8f7c, #57938c, #57979b, #5e9aa9);
+  /* background-image: linear-gradient(to right top, #63896d, #5c8f7c, #57938c, #57979b, #5e9aa9); */
   /* background-size: cover;  */
   /* background-color: #2b364d; */
   /* background-color:hsla(238,100%,80%,1);
