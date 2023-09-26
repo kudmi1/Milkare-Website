@@ -42,10 +42,10 @@ html {
 }
 
 :root {
-  /* font-family: 'Gill Sans Light'; */
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.75; 
-  font-weight: 400;
+  font-family: 'Gill Sans Light';
+  /* font-family: 'Courier New', Courier, monospace; */
+  /* line-height: 1.75;  */
+  /* font-weight: 400; */
   color-scheme: dark light;
   color: rgba(216, 216, 216, 0.8);
   font-synthesis: none;
@@ -87,27 +87,13 @@ h4 {font-size: 1.777rem;}
 
 h5 {font-size: 1.333rem;}
 
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 img {
   max-width: 100%;
   display: block;
 }
 
 .nav-text {
-  /* font-family: 'Gill Sans Regular'; */
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-
+  font-family: 'Gill Sans Regular';
 }
 
 .hero-text {
