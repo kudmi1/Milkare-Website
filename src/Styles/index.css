@@ -48,11 +48,11 @@ html {
   /* font-weight: 400; */
   color-scheme: dark light;
   color: rgba(216, 216, 216, 0.8);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased; 
+  /* font-synthesis: none;
+  text-rendering: optimizeLegibility; */
+  /* -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; */
   /* background-image: url('/images/dark.webp'); */
   /* background-attachment: fixed; */
   /* background: linear-gradient(to right top, #b095e6, #b095e6, #b095e6, #b095e6, #b095e6, #a69dec, #9da4f1, #94abf5, #84baf8, #7ec7f7, #83d2f2, #92dbec); */
