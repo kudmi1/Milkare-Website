@@ -3,7 +3,7 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 export default function Table() {
 	const { language } = useLanguageContext()
 	return (
-		<div className='grid grid-cols-2 gap-3'>
+		<div className='grid grid-cols-2 gap-3 text-sm lg:text-base'>
 			<div className=' flex h-12 items-center justify-center rounded-sm border border-thinLine bg-mainGrayTransparent text-xl text-secondaryText'>
 				<div className='relative'>
 					{'(╹◡╹๑)'}{' '}

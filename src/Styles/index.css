@@ -35,6 +35,11 @@ html {
 }
 
 @font-face {
+  font-family: 'Amsterdam';
+  src: url('/fonts/amsterdam.otf');
+}
+
+@font-face {
   font-family: 'macherie';
   src:  url('/fonts/macherie/macherie.otf'),
         url('/fonts/macherie/macherie.ttf') format('truetype');
@@ -49,7 +54,8 @@ html {
 :root {
   /* font-family: 'Gill Sans Light'; */
   /* font-family:sans-serif; */
-  font-family: 'GothamLight';
+  /* font-family: 'GothamLight'; */
+  font-family: 'Amsterdam';
   color-scheme: dark light;
   color: rgba(216, 216, 216, 0.8);
   font-synthesis: none;

@@ -8,7 +8,7 @@ export default function InfoQuestions() {
 
 	const infoContent = [
 		<Table />,
-		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
 				<>
 					- Character (name, title and fandom) <br />- Сommercial use/a drawing
@@ -23,14 +23,14 @@ export default function InfoQuestions() {
 				</>
 			)}
 		</div>,
-		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
 				<>Art, description, etc.</>
 			) : (
 				<>Арт, описание и т.д.</>
 			)}
 		</div>,
-		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2'>
+		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
 				<>
 					If you have a deadline, please let me know in advance. With deadline{' '}
@@ -89,7 +89,7 @@ export default function InfoQuestions() {
 					style={{ transitionDelay: `${index * 100 + 100}ms` }}
 				>
 					<div className='flex w-full items-center justify-between'>
-						<p className='select-none text-xl'>{text}</p>
+						<p className='select-none text-lg lg:text-lg'>{text}</p>
 						{isOpen === index ? (
 							<img src='svg/eye-close.svg' alt='chevron' />
 						) : (

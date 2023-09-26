@@ -19,7 +19,7 @@ export default function TOS({ loaded }) {
 							Boosty (PayPal/credit card), EasyStaff
 						</p>
 					</div>
-					<p className='text-md lg:text-lg'>
+					<p className='text-sm lg:text-base'>
 						<ul className='list-inside list-disc'>
 							<li>
 								<span className='text-priceColor'>50%</span> payment before I

@@ -27,11 +27,11 @@ export default function AdditionPriceInfo() {
 				<>
 					<div className='star-header relative rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2'>
 						{star}
-						<p className='text-lg lg:text-xl'>
+						<p className='text-base lg:text-lg'>
 							CHARACTERS WITH COMPLEX DESIGN:{' '}
 							<span className='text-priceColor'>+10-75 $</span>
 						</p>
-						<p className='text-md mt-3 lg:text-lg'>
+						<p className='text-sm mt-3 lg:text-base'>
 							Characters with a complex design come with an extra cost depending
 							on the difficulty: many details, guns, weapons, very long hair,
 							dynamic pose, bags, items, various skirt layers, wings, armor,
@@ -40,30 +40,30 @@ export default function AdditionPriceInfo() {
 					</div>
 					<div className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2'>
 						{star}
-						<p className='text-lg lg:text-xl'>LINE ART INFORMATION</p>
-						<p className='text-md mt-3 lg:text-lg'>
+						<p className='text-base lg:text-lg'>LINE ART INFORMATION</p>
+						<p className='text-sm mt-3 lg:text-base'>
 							The simplest style. Only base color fills and gradients are
 							performed. The lowest detail.
 						</p>
 					</div>
-					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-base lg:text-lg'>
 						{star}
 						Nude version: <span className='text-priceColor'>+50%</span> of the
 						price character.
 					</p>
-					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-base lg:text-lg'>
 						{star}
 						Underwear/additional outfits:
 						<span className='text-priceColor'> +20% - 100%</span> of the price
 						character (depending on the complexity).
 					</p>
-					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-base lg:text-lg'>
 						{star}
 						ADDITIONAL CHARACTER:
 						<span className='text-priceColor'> +100%</span> of the price (Max.{' '}
 						<span>2</span> characters).
 					</p>
-					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-base lg:text-lg'>
 						{star}
 						Commercial rights: <span className='text-priceColor'>+100%</span> of
 						the price.
@@ -73,11 +73,11 @@ export default function AdditionPriceInfo() {
 				<>
 					<div className='star-header relative rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2'>
 					{star}
-						<p className='text-lg lg:text-xl'>
+						<p className='text-base lg:text-lg'>
 							ПЕРСОНАЖИ СО СЛОЖНЫМ ДИЗАЙНОМ:{' '}
 							<span className='text-priceColor'>+10-75 $</span>
 						</p>
-						<p className='text-md mt-3 lg:text-lg'>
+						<p className='text-sm mt-3 lg:text-base'>
 							Персонажи со сложным дизайном оплачиваются дополнительно в
 							зависимости от сложности: множество деталей, пистолеты, оружие,
 							очень длинные волосы, динамичные позы, сумки, предметы, различные
@@ -87,24 +87,24 @@ export default function AdditionPriceInfo() {
 					</div>
 					<div className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2'>
 					{star}
-						<p className='text-lg lg:text-xl'>ЛАЙН АРТ ИНФОРМАЦИЯ</p>
-						<p className='text-md mt-3 lg:text-lg'>
+						<p className='text-base lg:text-lg'>ЛАЙН АРТ ИНФОРМАЦИЯ</p>
+						<p className='text-sm mt-3 lg:text-base'>
 							Простой стиль. Выполняются базовым цветом заливка, градиент.
 							Наименьшая детализация.
 						</p>
 					</div>
-					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-base lg:text-lg'>
 					{star}
 						Обнаженная версия: <span className='text-priceColor'>+50%</span> от
 						стоимости персонажа.
 					</p>
-					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-base lg:text-lg'>
 					{star}
 						Нижнее белье/дополнительные наряды:
 						<span className='text-priceColor'> +20% - 100%</span> от стоимости
 						персонажа, в зависимости от сложности.
 					</p>
-					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-lg lg:text-xl'>
+					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-cardFieldBg px-4 py-2 text-base lg:text-lg'>
 					{star}
 						ДОПОЛНИТЕЛЬНЫЙ ПЕРСОНАЖ:
 						<span className='text-priceColor'> +100%</span> от суммы персонажа
