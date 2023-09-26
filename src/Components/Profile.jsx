@@ -20,7 +20,7 @@ export default function Profile() {
 						<p className='nav-text h-12 pl-2 text-lg md:pl-4 lg:pl-6 lg:text-2xl'>
 							{language === 'english' ? 'Software' : 'Прог. обеспечение'}
 						</p>
-						<ul className='flex h-full flex-col justify-evenly pl-2 text-sm md:pl-4 lg:pl-6 lg:text-lg'>
+						<ul className='flex h-full flex-col justify-evenly pl-2 text-xs md:pl-4 lg:pl-6 lg:text-lg'>
 							<li className='relative'>
 								{star}
 								<p>Procreate</p> 
@@ -31,7 +31,7 @@ export default function Profile() {
 							</li>
 							<li className='relative'>
 								{star}
-								<p>Clip Studio</p> 
+								<p>Clip Studio Paint</p> 
 							</li>
 						</ul>
 					</div>
@@ -40,7 +40,7 @@ export default function Profile() {
 						<p className='nav-text h-12 pl-2 text-lg md:pl-4 lg:pl-6 lg:text-2xl'>
 							{language === 'english' ? 'Tablet' : 'Планшет'}
 						</p>
-						<ul className='flex h-full flex-col justify-evenly pl-2 text-sm md:pl-4 lg:pl-6 lg:text-lg'>
+						<ul className='flex h-full flex-col justify-evenly pl-2 text-xs md:pl-4 lg:pl-6 lg:text-lg'>
 							<li className='relative'>
 								{star}
 								<p>iPad (6th generation)</p>

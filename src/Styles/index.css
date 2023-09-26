@@ -30,6 +30,11 @@ html {
 }
 
 @font-face {
+  font-family: 'GothamLight';
+  src: url('/fonts/Gotham_Light.otf');
+}
+
+@font-face {
   font-family: 'macherie';
   src:  url('/fonts/macherie/macherie.otf'),
         url('/fonts/macherie/macherie.ttf') format('truetype');
@@ -43,17 +48,15 @@ html {
 
 :root {
   /* font-family: 'Gill Sans Light'; */
-  font-family: sans-serif;
-  /* font-family: 'Courier New', Courier, monospace; */
-  /* line-height: 1.75;  */
-  /* font-weight: 400; */
+  /* font-family:sans-serif; */
+  font-family: 'GothamLight';
   color-scheme: dark light;
   color: rgba(216, 216, 216, 0.8);
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility; */
-  /* -webkit-font-smoothing: antialiased; 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%; */
+  -webkit-text-size-adjust: 100%;
   /* background-image: url('/images/dark.webp'); */
   /* background-attachment: fixed; */
   /* background: linear-gradient(to right top, #b095e6, #b095e6, #b095e6, #b095e6, #b095e6, #a69dec, #9da4f1, #94abf5, #84baf8, #7ec7f7, #83d2f2, #92dbec); */
