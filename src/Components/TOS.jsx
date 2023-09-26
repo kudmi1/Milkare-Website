@@ -19,7 +19,7 @@ export default function TOS({ loaded }) {
 							Boosty (PayPal/credit card), EasyStaff
 						</p>
 					</div>
-					<p className='text-sm lg:text-base'>
+					<p className='text-sm lg:text-base '>
 						<ul className='list-inside list-disc'>
 							<li>
 								<span className='text-priceColor'>50%</span> payment before I
@@ -50,7 +50,7 @@ export default function TOS({ loaded }) {
 						<p className='nav-text text-lg lg:text-xl'>СПОСОБ ОПЛАТЫ: </p>
 						<p className='text-md lg:text-lg'>Карта (Тинькофф), Boosty</p>
 					</div>
-					<p className='text-md lg:text-lg'>
+					<p className='text-sm lg:text-base'>
 						<ul className='list-disc list-inside'>
 							<li>
 								<span className='text-priceColor'>50%</span> оплаты до начала

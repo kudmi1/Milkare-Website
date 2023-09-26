@@ -11,27 +11,14 @@
 html {
   scroll-behavior: smooth;
 }
-
-@font-face {
-  font-family: 'Gill Sans Light';
-  src: url('/fonts/gill_sans/GillSansLightC.eot') format('embedded-opentype'),
-  url('/fonts/gill_sans/GillSansLightC.woff2') format('woff2'),
-  url('/fonts/gill_sans/GillSansLightC.woff') format('woff'),
-  url('/fonts/gill_sans/GillSansLightC.ttf') format('truetype');
-  
-}
-
-@font-face {
-  font-family: 'Gill Sans Regular';
-  src: url('/fonts/gill_sans/GillSansC.eot') format('embedded-opentype'),
-  url('/fonts/gill_sans/GillSansC.woff2') format('woff2'),
-  url('/fonts/gill_sans/GillSansC.woff') format('woff'),
-  url('/fonts/gill_sans/GillSansC.ttf') format('truetype');
-}
-
 @font-face {
   font-family: 'GothamLight';
   src: url('/fonts/Gotham_Light.otf');
+}
+
+@font-face {
+  font-family: 'ChaletParis';
+  src: url('/fonts/ChaletParis.otf');
 }
 
 @font-face {
@@ -40,22 +27,18 @@ html {
 }
 
 @font-face {
+  font-family: 'AGForeigner';
+  src: url('/fonts/AGForeigner.otf');
+}
+
+@font-face {
   font-family: 'macherie';
   src:  url('/fonts/macherie/macherie.otf'),
         url('/fonts/macherie/macherie.ttf') format('truetype');
 }
 
-
-@font-face {
-  font-family: 'glitch';
-  src: url('/fonts/glitch/Rubik-Glitch-Regular.ttf') format('truetype');
-}
-
 :root {
-  /* font-family: 'Gill Sans Light'; */
-  /* font-family:sans-serif; */
-  /* font-family: 'GothamLight'; */
-  font-family: 'Amsterdam';
+  font-family: 'AGForeigner';
   color-scheme: dark light;
   color: rgba(216, 216, 216, 0.8);
   font-synthesis: none;
@@ -103,7 +86,11 @@ img {
 }
 
 .nav-text {
-  font-family: 'Gill Sans Regular';
+  font-family: 'Amsterdam';
+}
+
+.subtitle-text {
+  font-family: 'Amsterdam';
 }
 
 .hero-text {
@@ -119,7 +106,7 @@ img {
 }
 
 .form-text {
-  font-family: monospace;
+  font-family: 'Amsterdam';
   font-weight: bold;
 }
 

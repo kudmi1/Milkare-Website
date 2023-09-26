@@ -36,7 +36,7 @@ export default function HamburgerMenu({
 					closeAllModals()
 				}}
 			>
-				<div className='relative h-full w-full '>
+				<div className='relative h-full w-full subtitle-text'>
 					<div
 						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-homeColor py-4 ${
 							hamburgerState
