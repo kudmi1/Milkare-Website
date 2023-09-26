@@ -18,6 +18,7 @@ html {
   url('/fonts/gill_sans/GillSansLightC.woff2') format('woff2'),
   url('/fonts/gill_sans/GillSansLightC.woff') format('woff'),
   url('/fonts/gill_sans/GillSansLightC.ttf') format('truetype');
+  
 }
 
 @font-face {
@@ -84,6 +85,17 @@ h3 {font-size: 2.369rem;}
 h4 {font-size: 1.777rem;}
 
 h5 {font-size: 1.333rem;}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 img {
   max-width: 100%;

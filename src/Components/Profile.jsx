@@ -23,15 +23,15 @@ export default function Profile() {
 						<ul className='flex h-full flex-col justify-evenly pl-2 text-sm md:pl-4 lg:pl-6 lg:text-lg'>
 							<li className='relative'>
 								{star}
-								Procreate
+								<p>Procreate</p> 
 							</li>
 							<li className='relative'>
 								{star}
-								Photoshop
+								<p>Photoshop</p> 
 							</li>
 							<li className='relative'>
 								{star}
-								Clip Studio Paint
+								<p>Clip Studio Paint</p> 
 							</li>
 						</ul>
 					</div>
@@ -43,11 +43,11 @@ export default function Profile() {
 						<ul className='flex h-full flex-col justify-evenly pl-2 text-sm md:pl-4 lg:pl-6 lg:text-lg'>
 							<li className='relative'>
 								{star}
-								iPad (6th generation)
+								<p>iPad (6th generation)</p>
 							</li>
 							<li className='relative'>
 								{star}
-								Wacom One Medium CTL-671
+								<p>Wacom One Medium CTL-671</p>
 							</li>
 						</ul>
 					</div>
