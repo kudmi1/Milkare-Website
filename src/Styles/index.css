@@ -104,7 +104,10 @@ img {
 }
 
 .nav-text {
-  font-family: 'Gill Sans Regular';
+  /* font-family: 'Gill Sans Regular'; */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+
 }
 
 .hero-text {

@@ -31,7 +31,7 @@ export default function Profile() {
 							</li>
 							<li className='relative'>
 								{star}
-								<p>Clip Studio Paint</p> 
+								<p>Clip Studio</p> 
 							</li>
 						</ul>
 					</div>
