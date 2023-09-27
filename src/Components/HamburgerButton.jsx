@@ -10,7 +10,7 @@ export default function HamburgerButton({
 					toggleHamburger()
 					setShowContactModal(false)
 				}}
-				className='hamburger-btn effect-shine flex border border-transparent rounded-lg h-10 w-10 justify-center active:bg-activeButton'
+				className='hamburger-btn effect-shine flex border border-transparent rounded-lg h-10 w-10 justify-center items-center active:bg-activeButton'
 				aria-controls='primary-navigation'
 				aria-expanded={ariaExpanded}
 				id='hamburger-btn'
