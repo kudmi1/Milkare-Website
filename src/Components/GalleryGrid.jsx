@@ -131,11 +131,11 @@ export default function GalleryGrid({ galleryID, images }) {
 					} rounded-md`}
 				>
 					<div
-						className={`grid-block active:brightness-90 group relative w-full lg:h-80 lg:w-80 xl:h-96 xl:w-96 ${
+						className={`grid-block focus-within:ring-2 focus-within:ring-thinLine group relative w-full focus:blur-md active:brightness-75 lg:h-80 lg:w-80 xl:h-96 xl:w-96 ${
 							index === 13
 								? 'h-full sm:aspect-square sm:h-auto'
 								: ' aspect-square'
-						} rounded-md overflow-hidden
+						} overflow-hidden rounded-md
 						transition-all duration-500`}
 						style={{
 							backgroundImage: `url(${image.blur})`,
@@ -174,7 +174,7 @@ export default function GalleryGrid({ galleryID, images }) {
 								</picture>
 							) : null}
 
-							<div className='absolute hidden sm:block left-3 bottom-3 z-20 -translate-x-[50%] rounded-md border border-thinLine bg-cardBg px-3 py-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100'>
+							<div className='absolute bottom-3 left-3 z-20 hidden -translate-x-[50%] rounded-md border border-thinLine bg-cardBg px-3 py-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block'>
 								<p>{names[index]}</p>
 							</div>
 						</a>

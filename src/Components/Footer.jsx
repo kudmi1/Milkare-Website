@@ -55,7 +55,7 @@ export default function Footer() {
 					<div className='flex w-[270px] justify-between'>
 						<div>
 							github:{' '}
-							<button className='cursor-pointer rounded-md border-thinLine font-bold  italic text-secondaryText ring-1 ring-thinLine'>
+							<button className='cursor-pointer rounded-md border-thinLine font-bold  italic text-secondaryText ring-1 ring-thinLine overflow-hidden'>
 								<a
 									className='effect-shine w-full px-2 py-1'
 									href='https://github.com/kudmi1'
@@ -67,7 +67,7 @@ export default function Footer() {
 						</div>
 						<div>
 							telegram:{' '}
-							<button className='cursor-pointer rounded-md font-bold italic text-secondaryText ring-1 ring-thinLine'>
+							<button className='cursor-pointer rounded-md font-bold italic text-secondaryText ring-1 ring-thinLine overflow-hidden'>
 								<a
 									href='https://t.me/Kudmi'
 									className='effect-shine w-full px-2 py-1'
