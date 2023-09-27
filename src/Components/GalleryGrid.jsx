@@ -174,8 +174,8 @@ export default function GalleryGrid({ galleryID, images }) {
 								</picture>
 							) : null}
 
-							<div className='absolute bottom-3 left-3 z-20 hidden -translate-x-[50%] rounded-md border border-thinLine bg-cardBg px-3 py-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block'>
-								<p>{names[index]}</p>
+							<div className='absolute bottom-3 left-3 z-20 hidden -translate-x-[50%] rounded-md opacity-0 transition-all border border-thinLine duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block px-3 py-1 bg-cardBg overflow-hidden'>
+								<p >{names[index]}</p>
 							</div>
 						</a>
 					</div>
