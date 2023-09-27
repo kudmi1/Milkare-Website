@@ -40,6 +40,7 @@ html {
   /* background-image: url('/images/dark.webp'); */
   background-image: url('/images/bg.PNG');
   /* -webkit-tap-highlight-color: transparent; */
+  
   /* background-attachment: fixed; */
   /* background: linear-gradient(to right top, #b095e6, #b095e6, #b095e6, #b095e6, #b095e6, #a69dec, #9da4f1, #94abf5, #84baf8, #7ec7f7, #83d2f2, #92dbec); */
 
@@ -52,6 +53,12 @@ html {
   radial-gradient(at 0% 50%, hsla(192,100%,75%,1) 0px, transparent 50%),
   radial-gradient(at 80% 50%, hsla(327,100%,82%,1) 0px, transparent 50%),
   radial-gradient(at 0% 100%, hsla(239,100%,77%,1) 0px, transparent 50%); */
+}
+button,
+a {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 h1, h2, h3, h4, h5 {
