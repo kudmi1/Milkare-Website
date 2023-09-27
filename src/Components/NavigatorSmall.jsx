@@ -25,7 +25,7 @@ export default function NavigatorSmall({ page, setPage }) {
 
 				<NavLink
 					to='/'
-					className={`home-link nav-text z-10 flex h-full w-1/3 rounded-t-sm cursor-pointer items-center justify-center px-4 text-center
+					className={`home-link active:bg-activeButton border rounded-t-lg nav-text z-10 flex h-full w-1/3 border-transparent cursor-pointer items-center justify-center px-4 text-center
 					${page === 'home' ? 'text-secondaryText bg-[#161621] bg-opacity-20 delay-200' : 'text-mainText effect-shine bg-opacity-0'}
 					transition-all duration-300`}
 					onClick={() => {
@@ -36,7 +36,7 @@ export default function NavigatorSmall({ page, setPage }) {
 				</NavLink>
 				<NavLink
 					to='/price'
-					className={`price-link nav-text z-10 flex h-full w-1/3 rounded-t-sm cursor-pointer items-center justify-center px-4 text-center 
+					className={`price-link active:bg-activeButton border rounded-t-lg nav-text z-10 flex h-full w-1/3 border-transparent cursor-pointer items-center justify-center px-4 text-center 
 					${page === 'price' ? 'text-secondaryText bg-[#161621] bg-opacity-20 delay-200' : 'text-mainText effect-shine bg-opacity-0'} transition-all duration-300`}
 					onClick={() => {
 						scrollToTop()
@@ -46,7 +46,7 @@ export default function NavigatorSmall({ page, setPage }) {
 				</NavLink>
 				<NavLink
 					to='/info'
-					className={`info-link nav-text z-10 flex h-full w-1/3 rounded-t-sm cursor-pointer items-center justify-center px-4 text-center 
+					className={`info-link active:bg-activeButton border rounded-t-lg nav-text z-10 flex h-full w-1/3 border-transparent cursor-pointer items-center justify-center px-4 text-center 
 					${page === 'info' ? 'text-secondaryText bg-[#161621] bg-opacity-20 delay-200' : 'text-mainText effect-shine bg-opacity-0'} transition-all duration-300`}
 					onClick={() => {
 						scrollToTop()

@@ -4,13 +4,13 @@ export default function HamburgerButton({
 	setShowContactModal,
 }) {
 	return (
-		<div className='z-50 flex h-full items-center justify-end lg:hidden'>
+		<div className='z-50 flex h-full items-center justify-end lg:hidden pr-4'>
 			<button
 				onClick={() => {
 					toggleHamburger()
 					setShowContactModal(false)
 				}}
-				className='hamburger-btn effect-shine flex'
+				className='hamburger-btn effect-shine flex border border-transparent rounded-lg h-10 w-10 justify-center active:bg-activeButton'
 				aria-controls='primary-navigation'
 				aria-expanded={ariaExpanded}
 				id='hamburger-btn'
