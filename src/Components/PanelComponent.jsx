@@ -39,7 +39,7 @@ export default function PanelComponent({
 	return (
 		<div
 			className={`accordion_panel ${expandedPanel === index ? 'expanded' : ''} 
-			relative isolate cursor-pointer overflow-hidden rounded-md bg-slate-600 transition-all duration-300`}
+			relative isolate cursor-pointer overflow-hidden rounded-md bg-slate-600 transition-all duration-300 active:brightness-90`}
 			onClick={expandedPanel === index ? null : () => handlePanelClick(index)}
 		>
 			{isText ? (

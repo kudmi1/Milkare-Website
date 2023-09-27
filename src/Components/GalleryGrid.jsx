@@ -131,7 +131,7 @@ export default function GalleryGrid({ galleryID, images }) {
 					} rounded-md`}
 				>
 					<div
-						className={`grid-block group relative w-full lg:h-80 lg:w-80 xl:h-96 xl:w-96 ${
+						className={`grid-block active:brightness-90 group relative w-full lg:h-80 lg:w-80 xl:h-96 xl:w-96 ${
 							index === 13
 								? 'h-full sm:aspect-square sm:h-auto'
 								: ' aspect-square'
