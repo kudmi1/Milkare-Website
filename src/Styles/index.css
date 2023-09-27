@@ -39,7 +39,7 @@ html {
   -webkit-text-size-adjust: 100%;
   /* background-image: url('/images/dark.webp'); */
   background-image: url('/images/bg.PNG');
-  /* -webkit-tap-highlight-color: transparent; */
+  -webkit-tap-highlight-color: transparent;
   
   /* background-attachment: fixed; */
   /* background: linear-gradient(to right top, #b095e6, #b095e6, #b095e6, #b095e6, #b095e6, #a69dec, #9da4f1, #94abf5, #84baf8, #7ec7f7, #83d2f2, #92dbec); */
