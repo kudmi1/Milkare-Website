@@ -4,14 +4,13 @@ export default function Footer() {
 	const { language } = useLanguageContext()
 
 	return (
-		<div className='footer w-full flex h-52 flex-col items-center border-t border-t-[#3b3b3b] backdrop-blur-[10px] bg-homeColor'>
+		<div className='footer flex h-52 w-full flex-col items-center border-t border-t-[#3b3b3b] bg-homeColor backdrop-blur-[10px]'>
 			<div className='relative flex h-4/6 w-full max-w-7xl flex-row items-center justify-between px-6 md:h-full'>
-				
 				<div className='w-full '>
 					<img src='./images/Logo.png' alt='' className={`h-6 md:h-8`} />
 				</div>
 				<div className='flex flex-col items-center justify-evenly gap-2'>
-					<p className='text-sm md:text-base text-mainText'>
+					<p className='text-sm text-mainText md:text-base'>
 						{language === 'english' ? 'CONTACT ME' : 'СВЯЗЬ СО МНОЙ'}
 					</p>
 					<div className='flex justify-evenly'>
@@ -40,35 +39,35 @@ export default function Footer() {
 									width='38'
 									height='38'
 									viewBox='0 0 256 256'
-									className='h-9 w-9 md:h-10 md:w-10 fill-mainText'
+									className='h-9 w-9 fill-mainText md:h-10 md:w-10'
 								>
-									<path
-										d='M224 50H32a6 6 0 0 0-6 6v136a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V56a6 6 0 0 0-6-6Zm-15.42 12L128 135.86L47.42 62ZM216 194H40a2 2 0 0 1-2-2V69.64l86 78.78a6 6 0 0 0 8.1 0L218 69.64V192a2 2 0 0 1-2 2Z'
-									/>
+									<path d='M224 50H32a6 6 0 0 0-6 6v136a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V56a6 6 0 0 0-6-6Zm-15.42 12L128 135.86L47.42 62ZM216 194H40a2 2 0 0 1-2-2V69.64l86 78.78a6 6 0 0 0 8.1 0L218 69.64V192a2 2 0 0 1-2 2Z' />
 								</svg>
 							</a>
 						</button>
 					</div>
 				</div>
 			</div>
-			<div className='relative flex h-3/6 w-full items-center justify-center border-t border-thinLine'>
+			<div className='relative flex h-3/6 w-full items-center justify-center border-t border-thinLine py-2'>
 				<div className='flex w-full flex-col items-center justify-center'>
-			<p >2023 © milkare</p>
+					<p>2023 © milkare</p>
 					<p>website made by </p>
 					<div>
 						github:{' '}
-						<span className='font-bold italic text-secondaryText underline'>
+						<span className='translate-y-2 rounded-md border-thinLine px-2 font-bold  italic text-secondaryText ring-1 ring-thinLine transition-all duration-200 '>
 							<a
-								className='effect-shine'
+								className='effect-shine '
 								href='https://github.com/kudmi1'
 								target={'_blank'}
 							>
-								Kudmi1
+								kudmi
 							</a>
 						</span>{' '}
 						telegram:{' '}
-						<span className='font-bold italic text-secondaryText'>
-							@kudmi
+						<span className='rounded-md px-2 font-bold italic text-secondaryText ring-1 ring-thinLine'>
+							<a href='https://t.me/Kudmi' className='effect-shine' target={'_blank'}>
+								@kudmi
+							</a>
 						</span>
 					</div>
 				</div>
