@@ -52,23 +52,31 @@ export default function Footer() {
 				<div className='flex w-full flex-col items-center justify-center'>
 					<p>2023 © milkare</p>
 					<p>website made by </p>
-					<div>
-						github:{' '}
-						<span className='translate-y-2 rounded-md border-thinLine px-2 font-bold  italic text-secondaryText ring-1 ring-thinLine transition-all duration-200 '>
-							<a
-								className='effect-shine '
-								href='https://github.com/kudmi1'
-								target={'_blank'}
-							>
-								kudmi
-							</a>
-						</span>{' '}
-						telegram:{' '}
-						<span className='rounded-md px-2 font-bold italic text-secondaryText ring-1 ring-thinLine'>
-							<a href='https://t.me/Kudmi' className='effect-shine' target={'_blank'}>
-								@kudmi
-							</a>
-						</span>
+					<div className='flex w-[270px] justify-between'>
+						<div>
+							github:{' '}
+							<button className='cursor-pointer rounded-md border-thinLine font-bold  italic text-secondaryText ring-1 ring-thinLine'>
+								<a
+									className='effect-shine w-full px-2 py-1'
+									href='https://github.com/kudmi1'
+									target={'_blank'}
+								>
+									kudmi
+								</a>
+							</button>{' '}
+						</div>
+						<div>
+							telegram:{' '}
+							<button className='cursor-pointer rounded-md font-bold italic text-secondaryText ring-1 ring-thinLine'>
+								<a
+									href='https://t.me/Kudmi'
+									className='effect-shine w-full px-2 py-1'
+									target={'_blank'}
+								>
+									@kudmi
+								</a>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
