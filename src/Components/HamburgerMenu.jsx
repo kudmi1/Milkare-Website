@@ -153,7 +153,7 @@ export default function HamburgerMenu({
 			</div>
 			{showContactModal ? (
 				<div
-					className='fixed top-0 left-0 z-[999] flex h-screen w-full items-center justify-center backdrop-blur-2xl '
+					className='fixed top-0 left-0 z-[999] flex h-[100dvh] w-full items-center justify-center backdrop-blur-2xl '
 					onClick={() => setShowContactModal(false)}
 				>
 					<div className='relative h-48 w-96 rounded-lg bg-[#323b5a]'>
@@ -184,18 +184,11 @@ export default function HamburgerMenu({
 							</button>
 							<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
 								<a href='mailto:milkareart@gmail.com' target={'_blank'}>
-									<svg
-										xmlns='http://www.w3.org/2000/svg'
-										width='38'
-										height='38'
-										viewBox='0 0 256 256'
-										className='h-14 w-14 md:h-10 md:w-10'
-									>
-										<path
-											fill='currentColor'
-											d='M224 50H32a6 6 0 0 0-6 6v136a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V56a6 6 0 0 0-6-6Zm-15.42 12L128 135.86L47.42 62ZM216 194H40a2 2 0 0 1-2-2V69.64l86 78.78a6 6 0 0 0 8.1 0L218 69.64V192a2 2 0 0 1-2 2Z'
-										/>
-									</svg>
+								<img
+										src='./svg/gmail.svg'
+										alt='gmail-logo'
+										className='h-14 w-14 md:h-8 md:w-8'
+									/>
 								</a>
 							</button>
 						</div>

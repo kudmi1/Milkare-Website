@@ -16,7 +16,7 @@ export default function TOS({ loaded }) {
 					<div className='mb-6 w-full'>
 						<p className='nav-text text-lg lg:text-xl'>PAYMENT METHOD: </p>
 						<p className='text-md lg:text-lg'>
-							Boosty (PayPal/credit card), EasyStaff
+							Boosty (PayPal/credit card), DonationAlerts
 						</p>
 					</div>
 					<p className='text-sm lg:text-base '>
@@ -48,7 +48,7 @@ export default function TOS({ loaded }) {
 				<div className={`w-full ${loaded ? 'opacity-100 delay-[500ms] translate-y-0' : 'opacity-0 -translate-y-3'} transition-all duration-300`}>
 					<div className='mb-6 w-full'>
 						<p className='nav-text text-lg lg:text-xl'>СПОСОБ ОПЛАТЫ: </p>
-						<p className='text-md lg:text-lg'>Карта (Тинькофф), Boosty</p>
+						<p className='text-md lg:text-lg'>Карта (Тинькофф), DonationAlerts</p>
 					</div>
 					<p className='text-sm lg:text-base'>
 						<ul className='list-disc list-inside'>

@@ -1,7 +1,43 @@
+import { useEffect, useRef, useState } from 'react'
 import { useLanguageContext } from '../Providers/LanguageContext'
 
 export default function Footer() {
 	const { language } = useLanguageContext()
+	const [menuVisible, setMenuVisible] = useState(false)
+	const menuRef = useRef()
+	const buttonRef = useRef()
+
+	useEffect(() => {
+		// Add an event listener to the document to listen for clicks
+		const handleClickOutside = (e) => {
+			if (
+				menuRef.current &&
+				!menuRef.current.contains(e.target) &&
+				e.target !== buttonRef.current
+			) {
+				// If the click occurred outside of the menu, close it
+				setMenuVisible(false)
+			}
+		}
+
+		// Add the event listener when the menu becomes visible
+		if (menuVisible) {
+			document.addEventListener('mousedown', handleClickOutside)
+		} else {
+			// Remove the event listener when the menu is not visible
+			document.removeEventListener('mousedown', handleClickOutside)
+		}
+
+		console.log('menu is:  ' + menuVisible)
+		// Cleanup the event listener on component unmount
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside)
+		}
+	}, [menuVisible])
+
+	const handleButtonClick = () => {
+		setMenuVisible((prev) => !prev)
+	}
 
 	return (
 		<div className='footer flex h-52 w-full flex-col items-center border-t border-t-[#3b3b3b] bg-homeColor backdrop-blur-[10px]'>
@@ -51,33 +87,67 @@ export default function Footer() {
 			<div className='relative flex h-3/6 w-full items-center justify-center border-t border-thinLine py-2'>
 				<div className='flex w-full flex-col items-center justify-center'>
 					<p>2023 © milkare</p>
-					<p>website made by </p>
-					<div className='flex w-[270px] justify-between'>
-						<div>
-							github:{' '}
-							<button className='cursor-pointer rounded-md border-thinLine font-bold  italic text-secondaryText ring-1 ring-thinLine overflow-hidden'>
-								<a
-									className='effect-shine w-full px-2 py-1'
-									href='https://github.com/kudmi1'
-									target={'_blank'}
-								>
-									kudmi
-								</a>
-							</button>{' '}
+					<p className='flex'>
+						website made by{' '}
+						<button
+							className={`relative ml-1 flex cursor-pointer items-center justify-center overflow-hidden rounded-md px-2 font-bold italic text-secondaryText ring-1 ring-thinLine transition-colors duration-300 active:translate-y-[2px]`}
+							onClick={handleButtonClick}
+							ref={buttonRef}
+						>
+							Kudmi
+							{menuVisible ? (
+								<img
+									src='/svg/eye-close.svg'
+									alt=''
+									className='pointer-events-none ml-2 h-4 w-4'
+								/>
+							) : (
+								<img
+									src='/svg/eye-open.svg'
+									alt=''
+									className='pointer-events-none ml-2 h-4 w-4 '
+								/>
+							)}
+						</button>
+						<div
+							className={`absolute bottom-16 left-1/2 -translate-x-1/2 ${
+								menuVisible
+									? 'pointer-events-auto translate-y-0 opacity-100'
+									: 'pointer-events-none translate-y-2 opacity-0'
+							} transition-all duration-300`}
+							ref={menuRef}
+						>
+							<ul className='flex w-44 justify-evenly overflow-hidden rounded-md border border-thinLine bg-homeColor'>
+								<li className='h-12 w-full hover:bg-accentColor'>
+									<a
+										href='https://github.com/kudmi1'
+										target={'_blank'}
+										className='flex h-full w-full items-center justify-center transition-all duration-300'
+									>
+										<img src='/svg/github.svg' alt='github-icon' />
+									</a>
+								</li>
+								<li className=' h-12 w-full hover:bg-accentColor'>
+									<a
+										href='https://t.me/Kudmi'
+										target={'_blank'}
+										className='flex h-full w-full items-center justify-center transition-all duration-300'
+									>
+										<img src='/svg/telegram.svg' alt='telegram-icon' />
+									</a>
+								</li>
+								<li className=' h-12 w-full hover:bg-accentColor'>
+									<a
+										href='mailto:dimarull00@gmail.com'
+										target={'_blank'}
+										className='flex h-full w-full items-center justify-center transition-all duration-300'
+									>
+										<img src='/svg/gmail.svg' alt='gmail-icon' />
+									</a>
+								</li>
+							</ul>
 						</div>
-						<div>
-							telegram:{' '}
-							<button className='cursor-pointer rounded-md font-bold italic text-secondaryText ring-1 ring-thinLine overflow-hidden'>
-								<a
-									href='https://t.me/Kudmi'
-									className='effect-shine w-full px-2 py-1'
-									target={'_blank'}
-								>
-									@kudmi
-								</a>
-							</button>
-						</div>
-					</div>
+					</p>
 				</div>
 			</div>
 		</div>
