@@ -40,7 +40,7 @@ export default function Footer() {
 					<img src='./images/Logo.png' alt='' className={`h-6 md:h-8`} />
 				</div>
 				<div className='flex flex-col items-center justify-evenly gap-2'>
-					<p className='text-sm text-mainText md:text-base'>
+					<p className='form-text text-sm text-mainText md:text-base'>
 						{language === 'english' ? 'CONTACT ME' : 'СВЯЗЬ СО МНОЙ'}
 					</p>
 					<div className='flex justify-evenly'>
