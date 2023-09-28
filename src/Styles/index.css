@@ -150,13 +150,15 @@ img {
   .pswp__custom-caption {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #00000034;
     text-shadow: #000 1px 0.5px 0px;
-    padding: 10px 0px 12px 0px;
+    padding: 0;
+    height: 60px;
     width: 100vw;
-    font-size: 1.6rem;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: clamp(0.7rem, 1.3rem, 3.6rem);
+    /* left: 50%;
+    transform: translateX(-50%); */
     top: 0;
   }
 }
