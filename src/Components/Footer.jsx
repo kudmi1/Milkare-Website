@@ -8,28 +8,22 @@ export default function Footer() {
 	const buttonRef = useRef()
 
 	useEffect(() => {
-		// Add an event listener to the document to listen for clicks
 		const handleClickOutside = (e) => {
 			if (
 				menuRef.current &&
 				!menuRef.current.contains(e.target) &&
 				e.target !== buttonRef.current
 			) {
-				// If the click occurred outside of the menu, close it
 				setMenuVisible(false)
 			}
 		}
 
-		// Add the event listener when the menu becomes visible
 		if (menuVisible) {
 			document.addEventListener('mousedown', handleClickOutside)
 		} else {
-			// Remove the event listener when the menu is not visible
 			document.removeEventListener('mousedown', handleClickOutside)
 		}
 
-		console.log('menu is:  ' + menuVisible)
-		// Cleanup the event listener on component unmount
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside)
 		}
@@ -84,69 +78,58 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className='relative flex h-3/6 w-full items-center justify-center border-t border-thinLine py-2'>
+			<div className={`relative flex h-3/6 w-full items-center justify-center border-t border-thinLine py-2`}>
+				<div className={`absolute left-0 bottom-0 w-full h-full ${menuVisible ? 'visible backdrop-blur-sm' : 'invisible'} transition-all duration-300`}></div>
 				<div className='flex w-full flex-col items-center justify-center'>
 					<p>2023 © milkare</p>
 					<p className='flex'>
 						website made by{' '}
 						<button
-							className={`relative ml-1 flex cursor-pointer items-center justify-center overflow-hidden rounded-md px-2 font-bold italic text-secondaryText ring-1 ring-thinLine transition-colors duration-300 active:translate-y-[2px]`}
+							className={`relative ml-2 flex cursor-pointer items-center justify-center rounded-md px-2 font-bold italic text-secondaryText ring-1 ring-thinLine transition-colors duration-300 hover:ring-secondaryText `}
 							onClick={handleButtonClick}
 							ref={buttonRef}
 						>
 							Kudmi
-							{menuVisible ? (
-								<img
-									src='/svg/eye-close.svg'
-									alt=''
-									className='pointer-events-none ml-2 h-4 w-4'
-								/>
-							) : (
-								<img
-									src='/svg/eye-open.svg'
-									alt=''
-									className='pointer-events-none ml-2 h-4 w-4 '
-								/>
-							)}
+							<div
+								className={`absolute bottom-0 right-[122%] ${
+									menuVisible
+										? 'pointer-events-auto translate-x-0 scale-100 opacity-100'
+										: 'pointer-events-none translate-x-2 scale-90 opacity-0'
+								} transition-all duration-300`}
+								ref={menuRef}
+							>
+								<ul className='flex w-44 justify-evenly overflow-hidden rounded-md border border-thinLine bg-homeColor'>
+									<li className='h-12 w-full hover:bg-accentColor'>
+										<a
+											href='https://github.com/kudmi1'
+											target={'_blank'}
+											className='flex h-full w-full items-center justify-center transition-all duration-300'
+										>
+											<img src='/svg/github.svg' alt='github-icon' />
+										</a>
+									</li>
+									<li className=' h-12 w-full hover:bg-accentColor'>
+										<a
+											href='https://t.me/Kudmi'
+											target={'_blank'}
+											className='flex h-full w-full items-center justify-center transition-all duration-300'
+										>
+											<img src='/svg/telegram.svg' alt='telegram-icon' />
+										</a>
+									</li>
+									<li className=' h-12 w-full hover:bg-accentColor'>
+										<a
+											href='mailto:dimarull00@gmail.com'
+											target={'_blank'}
+											className='flex h-full w-full items-center justify-center transition-all duration-300'
+										>
+											<img src='/svg/gmail.svg' alt='gmail-icon' />
+										</a>
+									</li>
+								</ul>
+							</div>
+							
 						</button>
-						<div
-							className={`absolute bottom-16 left-1/2 -translate-x-1/2 ${
-								menuVisible
-									? 'pointer-events-auto translate-y-0 opacity-100'
-									: 'pointer-events-none translate-y-2 opacity-0'
-							} transition-all duration-300`}
-							ref={menuRef}
-						>
-							<ul className='flex w-44 justify-evenly overflow-hidden rounded-md border border-thinLine bg-homeColor'>
-								<li className='h-12 w-full hover:bg-accentColor'>
-									<a
-										href='https://github.com/kudmi1'
-										target={'_blank'}
-										className='flex h-full w-full items-center justify-center transition-all duration-300'
-									>
-										<img src='/svg/github.svg' alt='github-icon' />
-									</a>
-								</li>
-								<li className=' h-12 w-full hover:bg-accentColor'>
-									<a
-										href='https://t.me/Kudmi'
-										target={'_blank'}
-										className='flex h-full w-full items-center justify-center transition-all duration-300'
-									>
-										<img src='/svg/telegram.svg' alt='telegram-icon' />
-									</a>
-								</li>
-								<li className=' h-12 w-full hover:bg-accentColor'>
-									<a
-										href='mailto:dimarull00@gmail.com'
-										target={'_blank'}
-										className='flex h-full w-full items-center justify-center transition-all duration-300'
-									>
-										<img src='/svg/gmail.svg' alt='gmail-icon' />
-									</a>
-								</li>
-							</ul>
-						</div>
 					</p>
 				</div>
 			</div>
