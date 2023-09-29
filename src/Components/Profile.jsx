@@ -13,7 +13,7 @@ export default function Profile() {
 		/>
 	)
 	return (
-		<footer className='absolute bottom-0 flex h-[300px] w-full flex-col items-center bg-gradient-to-b from-[#191924ef] to-[#1600419a] py-4 text-mainText backdrop-blur-md lg:h-[300px]'>
+		<footer className='absolute bottom-0 flex h-[300px] w-full flex-col items-center bg-gradient-to-b border-thinLine from-[#191924ef] to-[#1600419a] py-4 text-mainText backdrop-blur-md lg:h-[300px]'>
 			<div className='absolute bottom-[100%] left-0 flex h-[100dvh] w-full justify-center'>
 				<div className='relative h-full w-full max-w-[1920px]'>
 					<h1 className='hero-text absolute hidden translate-y-1/2 text-mainText sm:bottom-[80px] md:bottom-[120px] lg:bottom-[150px] sm:left-12 sm:block lg:left-24'>
@@ -21,7 +21,7 @@ export default function Profile() {
 					</h1>
 				</div>
 			</div>
-			<h1 className='hero-text-mobile via-mainGray  from-[#19192456] to-[#19192456] absolute bottom-full flex w-full justify-center bg-gradient-to-r py-3 sm:hidden'>
+			<h1 className='hero-text-mobile via-mainGray from-[#19192456] to-[#19192456] absolute bottom-full flex w-full justify-center bg-gradient-to-r py-3 sm:hidden'>
 				Commission Open
 			</h1>
 			<div className='footer-content relative z-40 flex h-full w-full max-w-7xl flex-col-reverse items-center'>

@@ -156,7 +156,7 @@ export default function HamburgerMenu({
 					className='fixed top-0 left-0 z-[999] flex h-[100dvh] w-full items-center justify-center backdrop-blur-2xl '
 					onClick={() => setShowContactModal(false)}
 				>
-					<div className='relative h-48 w-96 rounded-lg bg-[#323b5a]'>
+					<div className='relative h-48 w-96 rounded-lg bg-gradient-to-br from-[#191924ef] to-[#1600419a]'>
 						<button
 							className='effect-shine absolute right-0 top-0 m-2 flex h-8 w-8 items-center justify-center'
 							onClick={toggleContactModal}

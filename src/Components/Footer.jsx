@@ -82,7 +82,7 @@ export default function Footer() {
 			</div>
 
 			<div
-				className={`relative flex h-3/6 w-full items-center justify-center border-t border-[#3b3b3b] py-2 bg-[#160041]`}
+				className={`relative flex h-3/6 w-full items-center justify-center border-t border-[#3b3b3b] py-2 bg-gradient-to-t from-[#191924ef] to-[#160041]`}
 			>
 				<div
 					className={`absolute bottom-0 left-0 h-full w-full ${
