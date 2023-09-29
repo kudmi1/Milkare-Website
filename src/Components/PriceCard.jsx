@@ -10,14 +10,16 @@ export default function PriceCard({
 	textContent,
 	isAccordionVertical,
 	isObjectTop,
+	
 }) {
 	const { ref, inView } = useInView({
 		threshold: 0.4,
 		triggerOnce: true,
 	})
+	const sda = "bg-gradient-to-b from-[#191924] to-[#1600419a]"
 
 	const commonProps =
-		'price-card-section mb-12 lg:mb-24 h-[650px] lg:h-[600px] p-4 bg-cardBg bg-opacity-80 rounded-md w-full border-t border-b sm:border border-[#3b3b3b]'
+		'price-card-section mb-12 lg:mb-24 h-[650px] lg:h-[600px] p-4 bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 rounded-md w-full border-t border-b sm:border border-[#3b3b3b]'
 
 	function TextContent() {
 		return (
@@ -30,7 +32,7 @@ export default function PriceCard({
 					</h1>
 					<div className='w-full lg:w-max py-6 text-center lg:text-start lg:pt-16'>
 						<p
-							className='pb-4 text-lg text-mainText lg:text-2xl rounded-lg border border-thinLine px-8 py-4 bg-cardFieldBg'
+							className='pb-4 text-lg text-mainText lg:text-2xl rounded-lg border border-thinLine px-8 py-4 bg-gradient-to-t from-[#2c2649cc] to-[#1600419a]'
 							dangerouslySetInnerHTML={{
 								__html: textContent,
 							}}

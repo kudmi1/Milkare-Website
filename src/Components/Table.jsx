@@ -48,55 +48,55 @@ export default function Table() {
 			</div>
 			{language === 'english' ? (
 				<>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						FanArts (anime, games)
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						OCs with not suitable for me design
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Slight NSFW (only women)
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Hentai
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						OCs
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Furries / Animals
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Real people
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Mecha
 					</div>
 				</>
 			) : (
 				<>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Фанарт (аниме, игры)
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Персонаж с неподходящим для меня дизайном
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Лёгкий NSFW (только жен.)
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Хентай
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Ваш персонаж
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Фурри / Животные
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Реальные люди
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-[#212121bb] px-4 py-2 text-center'>
+					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
 						Меха
 					</div>
 				</>

@@ -8,16 +8,21 @@ module.exports = {
     extend: {
       colors: {
         mainText: "#fcf3f3",
+        // mainText: "hsl(240, 17%, 12%)",
         secondaryText: "#ffed90",
         priceColor: "#e4e7af",
         thinLine: '#6c7765',
         cardBg: 'hsl(240, 17%, 12%)',
-        cardFieldBg: 'hsl(215, 36%, 18%)',
+        // cardBg: 'hsl(248, 39%, 15%)',
+        cardFieldBg: 'hsl(260, 100%, 13%, 20%)',
         homeColor: 'hsl(240, 17%, 12%)',
         accentColor: '#a78bfa',
-        activeButton: 'hsl(240, 17%, 20%)'
+        activeButton: 'hsl(240, 17%, 20%)',
+
+        gradientBg: 'bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70'
       }
     },
+    
   },
   plugins: [require("@tailwindcss/typography")],
 }

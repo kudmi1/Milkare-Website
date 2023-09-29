@@ -8,7 +8,7 @@ export default function InfoQuestions() {
 
 	const infoContent = [
 		<Table />,
-		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-sm lg:text-base'>
+		<div className='rounded-lg border border-thinLine bg-gradient-to-b from-[#644f9c60] to-[#7763af60] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
 				<>
 					- Character (name, title and fandom) <br />- Сommercial use/a drawing
@@ -23,14 +23,14 @@ export default function InfoQuestions() {
 				</>
 			)}
 		</div>,
-		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-sm lg:text-base'>
+		<div className='rounded-lg border border-thinLine bg-gradient-to-b from-[#644f9c60] to-[#7763af60] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
 				<>Art, description, etc.</>
 			) : (
 				<>Арт, описание и т.д.</>
 			)}
 		</div>,
-		<div className='rounded-lg border border-thinLine bg-[#212121bb] px-4 py-2 text-sm lg:text-base'>
+		<div className='rounded-lg border border-thinLine bg-gradient-to-b from-[#644f9c60] to-[#7763af60] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
 				<>
 					If you have a deadline, please let me know in advance. With deadline{' '}
@@ -81,7 +81,7 @@ export default function InfoQuestions() {
 				<div
 					onClick={() => handleOpen(index)}
 					key={index}
-					className={`info-panel active:bg-activeButton my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 backdrop-blur-md hover:border-b-secondaryText ${
+					className={`info-panel active:bg-[#644f9c60] my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText ${
 						isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'
 					} ${
 						inView ? 'opacity-100' : 'opacity-0'

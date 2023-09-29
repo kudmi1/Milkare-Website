@@ -42,7 +42,7 @@ export default function HamburgerMenu({
 							hamburgerState
 								? 'h-[440px] opacity-100 sm:h-[310px]'
 								: 'pointer-events-none h-0 opacity-0'
-						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden bg-[#1d1835]`}
+						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden bg-gradient-to-b from-[#191924ef] to-[#1600419a]`}
 						onClick={(e) => {
 							e.stopPropagation()
 						}}
