@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect} from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 import { useLanguageContext } from '../Providers/LanguageContext'
 
 export default function Translate() {
@@ -26,17 +26,17 @@ export default function Translate() {
 	}, [position])
 
 	return (
-		<div className='language-block relative flex h-full w-full items-center justify-between lg:justify-end gap-3 lg:gap-0'>
+		<div className='language-block relative flex h-full w-full items-center justify-between gap-3 lg:justify-end lg:gap-0'>
 			<div
-				className={`language-underline-animation hidden pointer-events-none absolute bottom-0 left-0 z-40 lg:block h-1 w-1/2 rounded-full transition-transform duration-200`}
+				className={`language-underline-animation pointer-events-none absolute bottom-0 left-0 z-40 hidden h-1 w-1/2 rounded-full transition-transform duration-200 lg:block`}
 			></div>
 			<div
-				className={`language-underline-animation hidden pointer-events-none absolute bottom-0 left-0 z-40 lg:block h-1 w-1/2 rounded-full transition-transform duration-200`}
+				className={`language-underline-animation pointer-events-none absolute bottom-0 left-0 z-40 hidden h-1 w-1/2 rounded-full transition-transform duration-200 lg:block`}
 			></div>
 			<button
-				className={`language-item border border-thinLine language-eng h-12 lg:h-14 w-1/2 rounded-lg text-xl lg:w-14 lg:border-none ${
+				className={`language-item language-eng h-12 w-1/2 rounded-lg border border-thinLine bg-cardFieldBg text-xl lg:h-14 lg:w-14 lg:border-none lg:bg-transparent ${
 					language === 'english'
-						? '  bg-accentColor bg-opacity-40 text-secondaryText lg:bg-transparent'
+						? 'border-secondaryText text-secondaryText '
 						: 'effect-shine bg-cardFieldBg text-mainText lg:bg-opacity-0'
 				}`}
 				onClick={() => setLanguage('english')}
@@ -46,10 +46,10 @@ export default function Translate() {
 				</p>
 			</button>
 			<button
-				className={`language-item border border-thinLine language-rus h-12 lg:h-14 w-1/2 rounded-lg text-xl lg:w-14 lg:border-none ${
+				className={`language-item language-rus h-12 w-1/2 rounded-lg border border-thinLine bg-cardFieldBg text-xl lg:h-14 lg:w-14 lg:border-none lg:bg-transparent ${
 					language === 'russian'
-						? '  bg-accentColor bg-opacity-40 text-secondaryText lg:bg-transparent'
-						: 'effect-shine bg-cardFieldBg text-mainText lg:bg-opacity-0'
+						? 'border-secondaryText text-secondaryText'
+						: 'effect-shine text-mainText lg:bg-opacity-0'
 				} `}
 				onClick={() => setLanguage('russian')}
 			>
