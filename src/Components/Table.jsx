@@ -4,7 +4,7 @@ export default function Table() {
 	const { language } = useLanguageContext()
 	return (
 		<div className='grid grid-cols-2 gap-3 text-sm lg:text-base'>
-			<div className=' flex h-12 items-center justify-center rounded-sm border border-thinLine bg-mainGrayTransparent text-xl text-secondaryText'>
+			<div className=' flex h-12 items-center justify-center rounded-sm border border-thinLine bg-gradient-to-t from-[#644f9c3a] to-[#35275aa2] text-xl text-secondaryText'>
 				<div className='relative'>
 					{'(╹◡╹๑)'}{' '}
 					<span className='absolute left-[100%]'>
@@ -25,7 +25,7 @@ export default function Table() {
 					</span>
 				</div>
 			</div>
-			<div className='flex h-12 items-center justify-center rounded-sm border border-thinLine bg-mainGrayTransparent text-xl text-red-500'>
+			<div className='flex h-12 items-center justify-center rounded-sm border border-thinLine bg-gradient-to-t from-[#644f9c3a] to-[#35275aa2] text-xl text-red-500'>
 				<div className='relative'>
 					{'(￣ヘ￣ ;)'}{' '}
 					<span className='absolute left-[100%]'>
