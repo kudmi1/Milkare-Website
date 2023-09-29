@@ -11,7 +11,7 @@ module.exports = {
         // mainText: "hsl(240, 17%, 12%)",
         secondaryText: "#ffed90",
         priceColor: "#e4e7af",
-        thinLine: '#6c7765',
+        thinLine: '#3b3b3b',
         cardBg: 'hsl(240, 17%, 12%)',
         // cardBg: 'hsl(248, 39%, 15%)',
         cardFieldBg: 'hsl(260, 100%, 13%, 20%)',

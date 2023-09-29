@@ -19,7 +19,7 @@ export default function PriceCard({
 	const sda = "bg-gradient-to-b from-[#191924] to-[#1600419a]"
 
 	const commonProps =
-		'price-card-section mb-12 lg:mb-24 h-[650px] lg:h-[600px] p-4 bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 rounded-md w-full border-t border-b sm:border border-[#3b3b3b]'
+		'price-card-section mb-12 lg:mb-24 h-[650px] lg:h-[600px] p-4 bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 rounded-md w-full border-t border-b sm:border border-thinLine'
 
 	function TextContent() {
 		return (

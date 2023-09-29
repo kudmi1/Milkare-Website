@@ -54,7 +54,7 @@ export default function SpeedPaint() {
 					>
 					</div> */}
 					<div className='video-card-container relative flex h-96 sm:h-[450px] max-h-[500px] w-full sm:w-[90%] lg:w-full max-w-[800px] flex-col rounded-md border border-thinLine shadow-lg shadow-[#9562be63]'>
-						<div className='flex h-[10%] w-full items-center justify-between border-b border-[#292929d2] bg-cardBg bg-opacity-60 bg-cover px-4 backdrop-blur-[40px] rounded-t-md'>
+						<div className='flex h-[10%] w-full items-center justify-between border-b border-[#292929d2] bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-60 bg-cover px-4 backdrop-blur-[40px] rounded-t-md'>
 							<div>
 								<p className='text-lg lg:text-xl text-mainText'>
 									{content.gallerySection?.speedpaint?.firstLine} {''}
@@ -115,7 +115,7 @@ export default function SpeedPaint() {
 								</svg>
 							</div>
 						</div>
-						<p className='absolute top-[100%] right-0 py-1 text-mainText bg-cardBg rounded-md px-3 mt-2 backdrop-blur-[10px] text-base'>
+						<p className='absolute top-[100%] right-0 py-1 text-mainText bg-gradient-to-r from-[#191924ef] to-[#1600419a] rounded-md px-3 mt-2 backdrop-blur-[10px] text-base'>
 							{content.gallerySection?.speedpaint?.secondLine} {' '}
 							<span className='font-bold italic underline text-secondaryText'>
 								<a

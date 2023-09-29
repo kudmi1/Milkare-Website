@@ -22,7 +22,7 @@ export default function AdditionPriceInfo() {
 	return (
 		<div ref={ref}>
 
-		<div className={`${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'} transition-all duration-500 mb-12 w-full rounded-md border border-[#3b3b3b] bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 px-4 py-6 md:px-12 lg:mb-24 lg:px-24 text-mainText`} >
+		<div className={`${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'} transition-all duration-500 mb-12 w-full rounded-md border border-thinLine bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 px-4 py-6 md:px-12 lg:mb-24 lg:px-24 text-mainText`} >
 			{language === 'english' ? (
 				<>
 					<div className='star-header relative rounded-lg border border-thinLine bg-gradient-to-t	r from-[#2c2649cc] to-[#1600419a] px-4 py-2'>
