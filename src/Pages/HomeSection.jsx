@@ -17,11 +17,10 @@ export default function SectionHome() {
 			>
 				<div className='relative h-full w-full '>
 					<picture>
-						<source srcSet='./images/milka.webp' media='(max-width: 640px)' />
-						<source srcSet='./images/milka.webp' media='(max-width: 1024)' />
+						<source srcSet='./images/milka-mobile.webp' media='(max-width: 640px)' />
+						<source srcSet='./images/milka.webp' media='(max-width: 1024px)' />
 						<img
-							src='./images/milka.jpg'
-							// src='./images/aqua.webp'
+							src='./images/milka-wide.webp'
 							alt='hero-image'
 							className={`h-full w-full object-cover object-center transition-opacity 
 							${inView ? 'opacity-100' : 'opacity-0'} duration-500 `}
