@@ -21,7 +21,7 @@ export default function Profile() {
 					</h1>
 				</div>
 			</div>
-			<h1 className='hero-text-mobile via-mainGray from-[#19192456] to-[#19192456] absolute bottom-full flex w-full justify-center bg-gradient-to-r py-3 sm:hidden'>
+			<h1 className='hero-text-mobile via-mainGray  from-[#19192456] to-[#19192456] absolute bottom-full flex w-full justify-center bg-gradient-to-r py-3 sm:hidden'>
 				Commission Open
 			</h1>
 			<div className='footer-content relative z-40 flex h-full w-full max-w-7xl flex-col-reverse items-center'>

@@ -96,15 +96,15 @@ export default function SpeedPaint() {
 							></video>
 
 							<div
-								className={`play-sign pointer-events-auto absolute left-1/2  top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-cardBg`}
+								className={`play-sign pointer-events-auto absolute left-1/2  top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-gradient-to-b from-[#191924ef] to-[#1600419a]`}
 								// onClick={e => e.preventDefault()}
 							>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
-									fill='#f9ded1'
+									fill='#fff'
 									viewBox='-1 0 24 24'
 									strokeWidth='2'
-									stroke='#f9ded1'
+									stroke='#fff'
 									className='effect-shine h-8 w-8'
 								>
 									<path
