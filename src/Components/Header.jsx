@@ -102,6 +102,7 @@ export default function Header({ page, setPage }) {
 					setAriaExpanded={setAriaExpanded}
 					setShowContactModal={setShowContactModal}
 					showContactModal={showContactModal}
+					page={page}
 				/>
 			</div>
 			<NavigatorSmall page={page} setPage={setPage} />

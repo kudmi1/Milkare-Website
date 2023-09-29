@@ -53,7 +53,7 @@ export default function HamburgerMenu({
 							</div>
 							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 text-md'>
 								<button
-									className='hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'
+									className={`hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine ${page === 'home' ? 'text-secondaryText border-secondaryText' : ''}`}
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -61,13 +61,13 @@ export default function HamburgerMenu({
 								>
 									<NavLink
 										to={'/'}
-										className='flex h-full w-full items-center justify-center '
+										className={`flex h-full w-full items-center justify-center`}
 									>
 										{language === 'english' ? 'HOME' : 'ГЛАВНАЯ'}
 									</NavLink>
 								</button>
 								<button
-									className='hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'
+									className={`hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine ${page === 'price' ? 'text-secondaryText border-secondaryText' : ''}`}
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -81,7 +81,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'
+									className={`hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine ${page === 'info' ? 'text-secondaryText border-secondaryText' : ''}`}
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -91,7 +91,7 @@ export default function HamburgerMenu({
 										to='/info'
 										className='flex h-full w-full items-center justify-center'
 									>
-										{language === 'english' ? 'INFO' : 'УСЛОВИЯ'}
+										{language === 'english' ? 'TOS' : 'УСЛОВИЯ'}
 									</NavLink>
 								</button>
 								<button
