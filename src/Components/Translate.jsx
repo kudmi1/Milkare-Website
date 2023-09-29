@@ -37,7 +37,7 @@ export default function Translate() {
 				className={`language-item language-eng h-12 w-1/2 rounded-lg border border-thinLine bg-cardFieldBg text-xl lg:h-14 lg:w-14 lg:border-none lg:bg-transparent ${
 					language === 'english'
 						? 'border-secondaryText text-secondaryText '
-						: 'effect-shine bg-cardFieldBg text-mainText lg:bg-opacity-0'
+						: 'effect-shine text-mainText lg:bg-opacity-0'
 				}`}
 				onClick={() => setLanguage('english')}
 			>
