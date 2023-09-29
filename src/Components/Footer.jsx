@@ -37,7 +37,7 @@ export default function Footer() {
 		<div className='footer flex h-52 w-full flex-col items-center border-t border-t-[#3b3b3b] bg-homeColor backdrop-blur-[10px]'>
 			<div className='relative flex h-4/6 w-full max-w-7xl flex-row items-center justify-between px-6 md:h-full'>
 				<div className='w-full '>
-					<img src='./images/Logo.png' alt='' className={`h-6 md:h-8`} />
+					<img src='./images/Logo.webp' alt='' className={`h-6 md:h-8`} />
 				</div>
 				<div className='flex flex-col items-center justify-evenly gap-2'>
 					<p className='form-text text-sm text-mainText md:text-base'>
