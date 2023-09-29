@@ -123,7 +123,7 @@ export default function Footer() {
 											target={'_blank'}
 											className='flex h-full w-full items-center justify-center transition-all duration-300'
 										>
-											<img src='/svg/gmail.svg' alt='gmail-icon' />
+											<img src='/svg/gmail2.svg' alt='gmail-icon' />
 										</a>
 									</li>
 								</ul>

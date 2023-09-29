@@ -15,17 +15,20 @@ html {
 @font-face {
   font-family: 'Amsterdam';
   src: url('/fonts/amsterdam.otf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'AGForeigner';
   src: url('/fonts/AGForeigner.otf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'macherie';
   src:  url('/fonts/macherie/macherie.otf'),
         url('/fonts/macherie/macherie.ttf') format('truetype');
+  font-display: swap;
 }
 
 :root {

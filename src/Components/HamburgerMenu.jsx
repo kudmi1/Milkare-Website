@@ -24,7 +24,7 @@ export default function HamburgerMenu({
 	return (
 		<>
 			<div
-				className={`absolute bottom-0 left-0 right-0 top-12 z-30 h-screen w-screen transition-all duration-300 backdrop-blur-2xl
+				className={`absolute bottom-0 left-0 right-0 top-0 z-30 h-[100dvh] w-screen transition-all duration-300 backdrop-blur-2xl
 			${
 				hamburgerState
 					? 'pointer-events-auto opacity-100'
@@ -36,24 +36,24 @@ export default function HamburgerMenu({
 					closeAllModals()
 				}}
 			>
-				<div className='relative h-full w-full subtitle-text'>
+				<div className='relative h-full w-full subtitle-text '>
 					<div
-						className={`slide-menu absolute right-0 top-0 z-40 w-full bg-homeColor py-4 ${
+						className={`slide-menu absolute right-0 top-0 z-40 w-full pt-12 py-4 ${
 							hamburgerState
-								? 'h-[410px] opacity-100 sm:h-[280px]'
+								? 'h-[440px] opacity-100 sm:h-[310px]'
 								: 'pointer-events-none h-0 opacity-0'
-						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden`}
+						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden bg-[#1d1835]`}
 						onClick={(e) => {
 							e.stopPropagation()
 						}}
 					>
-						<div className='mx-auto flex h-full w-full max-w-[600px] flex-col items-center gap-4'>
+						<div className='mx-auto flex h-full w-full max-w-[600px] flex-col items-center gap-4 '>
 							<div className='w-2/3 '>
 								<Translate language={language} setLanguage={setLanguage} />
 							</div>
 							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 text-md'>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
+									className='hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -67,7 +67,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
+									className='hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -81,7 +81,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
+									className='hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -95,7 +95,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='effect-shine relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'
+									className='hover:border-secondaryText overflow-hidden relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'
 									onClick={toggleContactModal}
 								>
 									<p>{language === 'english' ? 'CONTACT' : 'СВЯЗЬ СО МНОЙ'}</p>
@@ -118,7 +118,7 @@ export default function HamburgerMenu({
 									</div>
 								</button>
 
-								<button className='effect-shine relative flex h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-40'>
+								<button className='hover:border-secondaryText overflow-hidden relative flex h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'>
 									<a
 										href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
 										target={'_blank'}
@@ -182,12 +182,12 @@ export default function HamburgerMenu({
 									/>
 								</a>
 							</button>
-							<button className='effect-shine flex h-14 w-14 items-center justify-center md:h-14 md:w-14'>
+							<button className='effect-shine flex h-16 w-16 items-center justify-center md:h-14 md:w-14'>
 								<a href='mailto:milkareart@gmail.com' target={'_blank'}>
 								<img
 										src='./svg/gmail.svg'
 										alt='gmail-logo'
-										className='h-14 w-14 md:h-8 md:w-8'
+										className='h-16 w-16 md:h-10 md:w-10'
 									/>
 								</a>
 							</button>
