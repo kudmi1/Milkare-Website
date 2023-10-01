@@ -21,6 +21,12 @@ export default function HamburgerMenu({
 		setHamburgerState(false)
 	}
 
+	const scrollToTop = () => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+		}, 50)
+	}
+
 	return (
 		<>
 			<div
@@ -62,6 +68,7 @@ export default function HamburgerMenu({
 									<NavLink
 										to={'/'}
 										className={`flex h-full w-full items-center justify-center`}
+										onClick={scrollToTop}
 									>
 										{language === 'english' ? 'HOME' : 'ГЛАВНАЯ'}
 									</NavLink>
@@ -76,6 +83,7 @@ export default function HamburgerMenu({
 									<NavLink
 										to='/price'
 										className='flex h-full w-full items-center justify-center'
+										onClick={scrollToTop}
 									>
 										{language === 'english' ? 'PRICE' : 'ЦЕНЫ'}
 									</NavLink>
@@ -90,6 +98,7 @@ export default function HamburgerMenu({
 									<NavLink
 										to='/info'
 										className='flex h-full w-full items-center justify-center'
+										onClick={scrollToTop}
 									>
 										{language === 'english' ? 'TOS' : 'УСЛОВИЯ'}
 									</NavLink>
