@@ -64,7 +64,7 @@ export default function Footer() {
 								</a>
 							</button>
 							<button className='effect-shine flex h-10 w-10 items-center justify-center md:h-14 md:w-14' aria-label='milka-gmail'>
-								<a href='mailto:milkareart@gmail.com' target={'_blank'}>
+								<a href='mailto:milkareart@gmail.com' target={'_blank'} aria-label='milka-gmail' >
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
 										width='38'

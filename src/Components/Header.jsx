@@ -78,6 +78,7 @@ export default function Header({ page, setPage }) {
 						setPage('home')
 						scrollToTop()
 					}}
+					aria-label='milkare-logo'
 				>
 					<img
 						src='./images/Logo.webp'
