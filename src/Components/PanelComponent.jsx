@@ -63,6 +63,7 @@ export default function PanelComponent({
 					className='accordion_trigger bottom-0 left-3'
 					aria-controls={`panel${index}_content`}
 					aria-expanded='true'
+					aria-label={`panel${index}_content`}
 				></button>
 				{inView ? (
 					<picture>
