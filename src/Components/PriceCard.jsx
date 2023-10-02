@@ -50,7 +50,7 @@ export default function PriceCard({
 				<div
 					className={`flex ${
 						textOnLeft ? 'md:flex-row-reverse' : 'md:flex-row'
-					} h-full w-full flex-col items-center justify-between transition-opacity duration-500 md:flex-row `}
+					} h-full w-full flex-col items-center justify-between transition-opacity duration-500 md:flex-row`}
 				>
 					<div
 						className={`w-full sm:w-4/5 md:w-3/5 ${

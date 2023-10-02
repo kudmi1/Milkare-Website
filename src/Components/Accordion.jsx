@@ -28,7 +28,7 @@ export default function Accordion() {
 			className={`flex justify-center pb-12 pt-24 transition-opacity duration-500 motion-reduce:transition-none`}
 		>
 			<div
-				className={`accordion flex w-full max-w-full flex-col items-center border-[#212121] xl:max-w-[1380px] `}
+				className={`accordion flex w-full max-w-full flex-col items-center border-[#212121] xl:max-w-[1380px] z-20`}
 			>
 				<div className='w-full flex-col rounded-md border-t border-b lg:border border-thinLine bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 p-4 '>
 					<h1

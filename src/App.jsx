@@ -9,8 +9,6 @@ import { Route, RouterProvider, Routes, useLocation } from 'react-router-dom'
 import { NotFoundPage } from './Pages/NotFoundPage'
 import SectionHome from './Pages/HomeSection'
 
-// const InfoSection = lazy(() =>  import('./InfoSection'))
-// const PriceSection = lazy(() =>  import('./PriceSection'))
 
 function App() {
 	const [toTopPos, setToTopPos] = useState('md:bottom-12 bottom-8')
@@ -43,8 +41,7 @@ function App() {
 	}, [inView])
 
 	return (
-		<div className='App relative flex flex-col min-h-screen'>
-			
+		<div className='App relative flex min-h-screen flex-col md:bg-[url("/images/bg-transformed.webp")] bg-[url("/images/bg.webp")]'>
 			<header ref={headerRef}>
 				<Header page={page} setPage={setPage} />
 			</header>
@@ -57,7 +54,7 @@ function App() {
 				</Routes>
 				<ToTop position={toTopPos} />
 			</main>
-			<footer ref={ref} className="mt-auto">
+			<footer ref={ref} className='mt-auto'>
 				<Footer />
 			</footer>
 		</div>
