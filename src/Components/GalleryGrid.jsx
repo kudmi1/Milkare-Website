@@ -130,6 +130,7 @@ export default function GalleryGrid({ galleryID, images }) {
 						index === 13 ? 'row-span-2 sm:row-auto' : ''
 					} rounded-md`}
 				>
+					
 					<div
 						className={`grid-block group relative w-full focus:blur-md active:brightness-75 lg:h-80 lg:w-80 xl:h-96 xl:w-96 ${
 							index === 13
@@ -151,6 +152,7 @@ export default function GalleryGrid({ galleryID, images }) {
 							key={galleryID + '-' + index}
 							target='_blank'
 							rel='noreferrer'
+							aria-label={galleryID}
 						>
 							{inView ? (
 								<picture>
