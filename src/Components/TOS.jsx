@@ -16,7 +16,7 @@ export default function TOS({ loaded }) {
 					<div className='mb-6 w-full'>
 						<p className='nav-text text-lg lg:text-xl'>PAYMENT METHOD: </p>
 						<p className='text-md lg:text-lg'>
-							Boosty (PayPal/credit card), DonationAlerts
+							Boosty (PayPal / credit card), DonationAlerts
 						</p>
 					</div>
 					<p className='text-sm lg:text-base '>

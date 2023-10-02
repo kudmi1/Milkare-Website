@@ -11,14 +11,14 @@ export default function InfoQuestions() {
 		<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
 				<>
-					- Character (name, title and fandom) <br />- Сommercial use/a drawing
-					with detailed background/additional character(s)/ idea ( pose, angle,
+					- Character (name, title and fandom) <br />- Сommercial use / a drawing
+					with detailed background / additional character(s) / idea ( pose, angle,
 					etc.).
 				</>
 			) : (
 				<>
-					- Персонаж (имя, фандом) <br />- Коммерческое использование/рисунок с
-					детализированным фоном/дополнительный персонаж/ идея (поза, ракурс и
+					- Персонаж (имя, фандом) <br />- Коммерческое использование / рисунок с
+					детализированным фоном / дополнительный персонаж / идея (поза, ракурс и
 					т.д.).
 				</>
 			)}

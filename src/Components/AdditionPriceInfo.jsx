@@ -53,7 +53,7 @@ export default function AdditionPriceInfo() {
 					</p>
 					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-gradient-to-t	r from-[#2c2649cc] to-[#1600419a] px-4 py-2 text-base lg:text-lg'>
 						{star}
-						Underwear/additional outfits:
+						Underwear / additional outfits:
 						<span className='text-priceColor'> +20% - 100%</span> of the price
 						character (depending on the complexity).
 					</p>
@@ -100,7 +100,7 @@ export default function AdditionPriceInfo() {
 					</p>
 					<p className='star-header relative my-6 rounded-lg border border-thinLine bg-gradient-to-t	r from-[#2c2649cc] to-[#1600419a] px-4 py-2 text-base lg:text-lg'>
 					{star}
-						Нижнее белье/дополнительные наряды:
+						Нижнее белье / дополнительные наряды:
 						<span className='text-priceColor'> +20% - 100%</span> от стоимости
 						персонажа, в зависимости от сложности.
 					</p>

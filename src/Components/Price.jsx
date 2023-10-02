@@ -35,7 +35,6 @@ export default function Price() {
 
 	return (
 		<div className='flex w-full max-w-6xl flex-col items-center pt-24 sm:px-4 z-20'>
-			{/* <TitleComponent title="Price"/> */}
 			<div className='w-full'>
 				<PriceCard
 					contentTitle={priceContent.bust.title}
