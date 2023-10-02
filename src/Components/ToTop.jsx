@@ -31,6 +31,7 @@ export default function ToTop({ position }) {
 				className='effect-shine flex h-full w-full items-center justify-center'
 				onClick={goToTop}
 				id='to-top-btn'
+				aria-label='to-top-btn'
 			>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
