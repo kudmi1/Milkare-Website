@@ -29,7 +29,7 @@ export default function AdditionPriceInfo() {
 						{star}
 						<p className='text-base lg:text-lg'>
 							CHARACTERS WITH COMPLEX DESIGN:{' '}
-							<span className='text-priceColor'>+10-75 $</span>
+							<span className='text-priceColor'>+6 - 72$</span>
 						</p>
 						<p className='text-sm mt-3 lg:text-base'>
 							Characters with a complex design come with an extra cost depending
@@ -75,7 +75,7 @@ export default function AdditionPriceInfo() {
 					{star}
 						<p className='text-base lg:text-lg'>
 							ПЕРСОНАЖИ СО СЛОЖНЫМ ДИЗАЙНОМ:{' '}
-							<span className='text-priceColor'>+10-75 $</span>
+							<span className='text-priceColor'>+600 - 7200₽</span>
 						</p>
 						<p className='text-sm mt-3 lg:text-base'>
 							Персонажи со сложным дизайном оплачиваются дополнительно в
