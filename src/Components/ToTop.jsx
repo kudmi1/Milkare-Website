@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function ToTop({ position }) {
+export default function ToTop() {
 	const [showTopBtn, setShowTopBtn] = useState(false)
 
 	useEffect(() => {
@@ -21,7 +21,7 @@ export default function ToTop({ position }) {
 	}
 	return (
 		<div
-			className={`to-top-btn fixed right-6 active:bg-activeButton overflow-hidden bg-gradient-to-b from-[#191924ef] to-[#1600419a] backdrop-blur-[10px] ${position} z-[39] h-12 w-12 rounded-full md:h-16 md:w-16 transition-colors border-t border-thinLine ${
+			className={`to-top-btn sticky mb-6 bottom-6 left-[calc(100%-70px)] md:bottom-12 md:left-[calc(100%-100px)] xl:left-[calc(100%-148px)] active:bg-activeButton overflow-hidden bg-gradient-to-b from-[#191924ef] to-[#1600419a] backdrop-blur-[10px] $ z-[39] h-12 w-12 rounded-full md:h-16 md:w-16 transition-colors border-t border-thinLine ${
 				showTopBtn
 					? 'pointer-events-auto translate-y-0 opacity-100'
 					: 'pointer-events-none translate-y-20 opacity-0'
