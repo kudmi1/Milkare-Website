@@ -76,7 +76,7 @@ export default function InfoQuestions() {
 		triggerOnce: true,
 	})
 	return (
-		<div ref={ref} className='mb-8'>
+		<div ref={ref} className='mb-8 w-full'>
 			{infoQuestion.map((text, index) => (
 				<div
 					onClick={() => handleOpen(index)}
@@ -105,8 +105,7 @@ export default function InfoQuestions() {
 						} transition-[grid-template-rows] duration-300`}
 					>
 						<div className='overflow-hidden'>
-							{/* <div className='mt-6 select-none '>{infoContent[index]}</div> */}
-							<div className='mt-6 select-none '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus neque cumque recusandae quibusdam harum quaerat et. Vitae, id quisquam tenetur reprehenderit consequatur vero fugiat eius provident dolorum, fuga accusamus nam.</div>
+							<div className={`mt-6 select-none ${isOpen === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 `}>{infoContent[index]}</div>
 						</div>
 					</div>
 				</div>
