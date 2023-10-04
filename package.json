@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
     "lodash": "^4.17.21",
     "photoswipe": "^5.3.8",
     "photoswipe-dynamic-caption-plugin": "^1.2.7",
@@ -25,6 +26,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "@vovayatsyuk/photoswipe-object-position": "^1.0.0",
     "autoprefixer": "^10.4.14",
+    "daisyui": "^3.8.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",

@@ -5,14 +5,20 @@ export default function TOS({ loaded }) {
 	const { language } = useLanguageContext()
 	return (
 		<div className='flex w-full flex-col items-center rounded-lg border border-thinLine bg-gradient-to-t from-[#2c2649cc] to-[#1600419a] px-4 py-2 text-mainText md:w-2/3'>
-			<h4 className='mb-6 nav-text text-center'>
+			<h4 className='nav-text mb-6 text-center'>
 				{language === 'english'
 					? 'Terms of Service'
 					: 'Условия предоставления услуг'}
 			</h4>
 			<InfoQuestions />
 			{language === 'english' ? (
-				<div className={`w-full ${loaded ? 'opacity-100 delay-[500ms] translate-y-0' : 'opacity-0 -translate-y-3'} transition-all duration-300`}>
+				<div
+					className={`w-full ${
+						loaded
+							? 'translate-y-0 opacity-100 delay-[500ms]'
+							: '-translate-y-3 opacity-0'
+					} transition-all duration-300`}
+				>
 					<div className='mb-6 w-full'>
 						<p className='nav-text text-lg lg:text-xl'>PAYMENT METHOD: </p>
 						<p className='text-md lg:text-lg'>
@@ -45,13 +51,21 @@ export default function TOS({ loaded }) {
 					</div>
 				</div>
 			) : (
-				<div className={`w-full ${loaded ? 'opacity-100 delay-[500ms] translate-y-0' : 'opacity-0 -translate-y-3'} transition-all duration-300`}>
+				<div
+					className={`w-full ${
+						loaded
+							? 'translate-y-0 opacity-100 delay-[500ms]'
+							: '-translate-y-3 opacity-0'
+					} transition-all duration-300`}
+				>
 					<div className='mb-6 w-full'>
 						<p className='nav-text text-lg lg:text-xl'>СПОСОБ ОПЛАТЫ: </p>
-						<p className='text-md lg:text-lg'>Карта (Тинькофф), DonationAlerts</p>
+						<p className='text-md lg:text-lg'>
+							Карта (Тинькофф), DonationAlerts
+						</p>
 					</div>
 					<div className='text-sm lg:text-base'>
-						<ul className='list-disc list-inside'>
+						<ul className='list-inside list-disc'>
 							<li>
 								<span className='text-priceColor'>50%</span> оплаты до начала
 								работы, остальное после утверждения скетча.

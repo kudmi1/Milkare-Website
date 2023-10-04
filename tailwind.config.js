@@ -20,9 +20,9 @@ module.exports = {
         activeButton: 'hsl(240, 17%, 20%)',
 
         gradientBg: 'bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70'
-      }
+      },
     },
     
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 }
