@@ -21,7 +21,7 @@ export default function SectionHome() {
 								media='(max-width: 1024px)'
 							/>
 							<img
-								src='./images/milka-wide.webp'
+								src='./images/milka4x.webp'
 								alt='hero-image'
 								className={`h-full w-full rounded-b-lg object-cover object-center`}
 							/>

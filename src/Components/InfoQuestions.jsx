@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
+import { AccordionText } from './AccordionText'
 import Table from './Table'
 
 export default function InfoQuestions() {
 	const { language } = useLanguageContext()
 
-	const infoContent = [
+	const infoAnswer = [
 		<Table />,
 		<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
@@ -102,11 +103,13 @@ export default function InfoQuestions() {
 						} transition-all duration-200`}
 					>
 						<div className={`overflow-hidden`}>
-							<div className={`p-4`}>{infoContent[index]}</div>
+							<div className={`p-4`}>{infoAnswer[index]}</div>
 						</div>
 					</div>
 				</div>
 			))}
+
+			{/* <AccordionText question={infoQuestion} answer={infoAnswer}/> */}
 		</div>
 	)
 }
