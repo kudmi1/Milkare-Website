@@ -91,7 +91,7 @@ export default function InfoQuestions() {
 				active:bg-white/10 
 					${isOpen[index] ? ' border-b-secondaryText' : 'border-b-white/50'}
 					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-					style={{ transitionDelay: `${index * 100 + 100}ms` }}
+					// style={{ transitionDelay: `${index * 100 + 100}ms` }}
 				>
 					<div className='flex w-full items-center justify-between'>
 						<p className='subtitle-text select-none text-lg lg:text-lg'>
