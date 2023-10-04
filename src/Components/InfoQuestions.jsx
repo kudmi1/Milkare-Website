@@ -103,7 +103,8 @@ export default function InfoQuestions() {
 						} will-change-[transform] transition-all duration-200`}
 					>
 						<div className={`overflow-hidden`}>
-							<div className={`p-4`}>{infoContent[index]}</div>
+							{/* <div className={`p-4`}>{infoContent[index]}</div> */}
+							<div className={`p-4`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt reprehenderit praesentium, quam nisi laudantium dicta veritatis et iusto delectus, aperiam ex nemo ipsa veniam tempora voluptate dolores qui magni non.</div>
 						</div>
 					</div>
 				</div>
