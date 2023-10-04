@@ -1,5 +1,5 @@
 import { useLanguageContext } from '../Providers/LanguageContext'
-import InfoQuestions from './InfoQuestions2'
+import InfoQuestions from './InfoQuestions'
 
 export default function TOS({ loaded }) {
 	const { language } = useLanguageContext()
