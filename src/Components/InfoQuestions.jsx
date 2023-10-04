@@ -105,7 +105,7 @@ export default function InfoQuestions() {
 						} transition-[grid-template-rows] duration-300`}
 					>
 						<div className='overflow-hidden'>
-							<div className={`mt-6 select-none ${isOpen === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 `}>{infoContent[index]}</div>
+							<div className={`mt-6 select-none`}>{infoContent[index]}</div>
 						</div>
 					</div>
 				</div>
