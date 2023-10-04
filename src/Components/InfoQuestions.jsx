@@ -77,7 +77,7 @@ export default function InfoQuestions() {
 	})
 	return (
 		<div ref={ref} className='mb-8 w-full'>
-			{/* {infoQuestion.map((text, index) => (
+			{infoQuestion.map((text, index) => (
 				<div
 					onClick={() => handleOpen(index)}
 					key={index}
@@ -104,90 +104,7 @@ export default function InfoQuestions() {
 						</div>
 					</div>
 				</div>
-			))} */}
-				<div
-					onClick={() => handleOpen(0)}
-					key={0}
-					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
-				active:bg-white/10 
-					${isOpen === 0 ? ' border-b-secondaryText' : 'border-b-white/50'}
-					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-					style={{ transitionDelay: `${0 * 100 + 100}ms` }}
-				>
-					<div className='flex w-full items-center justify-between'>
-						<p className='subtitle-text select-none text-lg lg:text-lg'>
-							{infoQuestion[0]}
-						</p>
-						<img src='svg/eye-open.svg' alt='chevron' />
-					</div>
-
-					<div className={`${isOpen === 0 ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-500`}>
-						<Table/>
-					</div>
-				</div>
-
-				<div
-					onClick={() => handleOpen(1)}
-					key={1}
-					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
-				active:bg-white/10 
-					${isOpen === 1 ? ' border-b-secondaryText' : 'border-b-white/50'}
-					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-					style={{ transitionDelay: `${1 * 100 + 100}ms` }}
-				>
-					<div className='flex w-full items-center justify-between'>
-						<p className='subtitle-text select-none text-lg lg:text-lg'>
-						{infoQuestion[1]}
-						</p>
-						<img src='svg/eye-open.svg' alt='chevron' />
-					</div>
-
-					<div className={`${isOpen === 1 ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-500`}>
-					{infoContent[1]}
-					</div>
-				</div>
-
-				<div
-					onClick={() => handleOpen(2)}
-					key={2}
-					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
-				active:bg-white/10 
-					${isOpen === 2 ? ' border-b-secondaryText' : 'border-b-white/50'}
-					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-					style={{ transitionDelay: `${2 * 100 + 100}ms` }}
-				>
-					<div className='flex w-full items-center justify-between'>
-						<p className='subtitle-text select-none text-lg lg:text-lg'>
-						{infoQuestion[2]}
-						</p>
-						<img src='svg/eye-open.svg' alt='chevron' />
-					</div>
-
-					<div className={`${isOpen === 2 ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-500`}>
-					{infoContent[2]}
-					</div>
-				</div>
-
-				<div
-					onClick={() => handleOpen(3)}
-					key={3}
-					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
-				active:bg-white/10 
-					${isOpen === 3 ? ' border-b-secondaryText' : 'border-b-white/50'}
-					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-					style={{ transitionDelay: `${3 * 100 + 100}ms` }}
-				>
-					<div className='flex w-full items-center justify-between'>
-						<p className='subtitle-text select-none text-lg lg:text-lg'>
-						{infoQuestion[3]}
-						</p>
-						<img src='svg/eye-open.svg' alt='chevron' />
-					</div>
-
-					<div className={`${isOpen === 3 ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-500`}>
-						{infoContent[3]}
-					</div>
-				</div>
+			))}
 		</div>
 	)
 }
