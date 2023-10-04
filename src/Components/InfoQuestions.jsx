@@ -81,21 +81,21 @@ export default function InfoQuestions() {
 		<div ref={ref} className='mb-8 w-full'>
 			{infoQuestion.map((text, index) => (
 				<div
-					onClick={() => handleOpen(index)}
+					
 					key={index}
-					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
-					active:bg-blue-300/10
+					className={`info-panel my-2 w-full rounded-md border border-b-4  border-thinLine hover:border-b-secondaryText
+				
 				 
 					${isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'}
 					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					style={{ transitionDelay: `${index * 100 + 100}ms` }}
 				>
-					<div className='flex w-full items-center justify-between'>
+					<button className='flex w-full items-center justify-between p-4' onClick={() => handleOpen(index)}>
 						<p className='subtitle-text select-none text-lg lg:text-lg'>
 							{text}
 						</p>
 						<img src='svg/eye-open.svg' alt='chevron' />
-					</div>
+					</button>
 
 					<div
 						className={`grid ${
@@ -103,7 +103,7 @@ export default function InfoQuestions() {
 						} will-change-[transform] transition-all duration-200`}
 					>
 						<div className={`overflow-hidden`}>
-							<div className={`mt-6 select-none`}>{infoContent[index]}</div>
+							<div className={`p-4`}>{infoContent[index]}</div>
 						</div>
 					</div>
 				</div>
