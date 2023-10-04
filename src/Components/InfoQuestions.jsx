@@ -90,7 +90,7 @@ export default function InfoQuestions() {
 					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					style={{ transitionDelay: `${index * 100 + 100}ms` }}
 				>
-					<button className='flex w-full items-center justify-between p-4' onClick={() => handleOpen(index)}>
+					<button className='flex w-full items-center justify-between p-4 overflow-hidden' onClick={() => handleOpen(index)}>
 						<p className='subtitle-text select-none text-lg lg:text-lg'>
 							{text}
 						</p>
@@ -103,8 +103,7 @@ export default function InfoQuestions() {
 						} will-change-[transform] transition-all duration-200`}
 					>
 						<div className={`overflow-hidden`}>
-							{/* <div className={`p-4`}>{infoContent[index]}</div> */}
-							<div className={`p-4`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt reprehenderit praesentium, quam nisi laudantium dicta veritatis et iusto delectus, aperiam ex nemo ipsa veniam tempora voluptate dolores qui magni non.</div>
+							<div className={`p-4`}>{infoContent[index]}</div>
 						</div>
 					</div>
 				</div>
