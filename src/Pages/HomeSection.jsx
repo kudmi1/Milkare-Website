@@ -12,7 +12,6 @@ export default function SectionHome() {
 				>
 					<div className='relative h-full w-full'>
 						<picture>
-							
 							<source
 								srcSet='./images/milka.webp'
 								media='(max-width: 1024px)'

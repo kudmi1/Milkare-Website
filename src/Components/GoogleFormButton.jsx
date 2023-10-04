@@ -5,11 +5,17 @@ export default function GoogleFormButton() {
 	return (
 		<button className='overflow-hidden rounded-md border-2 border-[#92d9eb] bg-transparent text-xl text-[#92d9eb] transition-all duration-150 hover:shadow-lg hover:shadow-[#9562bede]'>
 			<a
-				href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
+				href={`${
+					language === 'english'
+						? 'https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
+						: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
+				} `}
 				target={'_blank'}
 				className='flex h-full w-full items-center px-4 py-2'
 			>
-				<p className='form-text'>{language === 'english' ? 'Google Form' : 'Гугл форма'}</p> 
+				<p className='form-text'>
+					{language === 'english' ? 'Google Form' : 'Гугл форма'}
+				</p>
 
 				<div className='ml-2'>
 					<svg
