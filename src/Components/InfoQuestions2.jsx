@@ -33,17 +33,12 @@ export default function InfoQuestions() {
 					</p>
 					<img src='svg/eye-open.svg' alt='chevron' />
 				</div>
-
 				<div
-					className={`grid ${
-						isOpen === 0 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-					} transition-[grid-template-rows] duration-300`}
+					className={`${
+						isOpen === 0 ? 'h-72 overflow-auto' : 'h-0 overflow-hidden'
+					} overflow-y-hidden transition-all duration-300`}
 				>
-					<div className='overflow-hidden'>
-						<p className='mt-6 select-none '>
-							<Table />
-						</p>
-					</div>
+					<Table />
 				</div>
 			</div>
 
@@ -65,29 +60,27 @@ export default function InfoQuestions() {
 				</div>
 
 				<div
-					className={`grid ${
-						isOpen === 1 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-					} transition-[grid-template-rows] duration-300`}
+					className={`${
+						isOpen === 1 ? 'h-32 overflow-auto' : 'h-0 overflow-hidden'
+					} overflow-y-hidden transition-all duration-300`}
 				>
-					<div className='overflow-hidden'>
-						<p className='mt-6 select-none '>
-							<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
-								{language === 'english' ? (
-									<>
-										- Character (name, title and fandom) <br />- Сommercial use
-										/ a drawing with detailed background / additional
-										character(s) / idea ( pose, angle, etc.).
-									</>
-								) : (
-									<>
-										- Персонаж (имя, фандом) <br />- Коммерческое использование
-										/ рисунок с детализированным фоном / дополнительный персонаж
-										/ идея (поза, ракурс и т.д.).
-									</>
-								)}
-							</div>
-						</p>
-					</div>
+					<p className='mt-6 select-none '>
+						<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
+							{language === 'english' ? (
+								<>
+									- Character (name, title and fandom) <br />- Сommercial use /
+									a drawing with detailed background / additional character(s) /
+									idea ( pose, angle, etc.).
+								</>
+							) : (
+								<>
+									- Персонаж (имя, фандом) <br />- Коммерческое использование /
+									рисунок с детализированным фоном / дополнительный персонаж /
+									идея (поза, ракурс и т.д.).
+								</>
+							)}
+						</div>
+					</p>
 				</div>
 			</div>
 
@@ -109,23 +102,20 @@ export default function InfoQuestions() {
 					</p>
 					<img src='svg/eye-open.svg' alt='chevron' />
 				</div>
-
 				<div
-					className={`grid ${
-						isOpen === 2 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-					} transition-[grid-template-rows] duration-300`}
+					className={`${
+						isOpen === 2 ? 'h-20 overflow-auto' : 'h-0 overflow-hidden'
+					} overflow-y-hidden transition-all duration-300`}
 				>
-					<div className='overflow-hidden'>
-						<p className='mt-6 select-none '>
-							<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
-								{language === 'english' ? (
-									<>Art, description, etc.</>
-								) : (
-									<>Арт, описание и т.д.</>
-								)}
-							</div>
-						</p>
-					</div>
+					<p className='mt-6 select-none '>
+						<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
+							{language === 'english' ? (
+								<>Art, description, etc.</>
+							) : (
+								<>Арт, описание и т.д.</>
+							)}
+						</div>
+					</p>
 				</div>
 			</div>
 
@@ -147,47 +137,43 @@ export default function InfoQuestions() {
 				</div>
 
 				<div
-					className={`grid ${
-						isOpen === 3 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-					} transition-[grid-template-rows] duration-300`}
+					className={`${
+						isOpen === 3 ? 'h-44 overflow-auto' : 'h-0 overflow-hidden'
+					} overflow-y-hidden transition-all duration-300`}
 				>
-					<div className='overflow-hidden'>
-						<p className='mt-6 select-none '>
-							<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
-								{language === 'english' ? (
-									<>
-										If you have a deadline, please let me know in advance. With
-										deadline <span className='text-priceColor'> +50%</span>
-										<br />☾ One art work takes from{' '}
-										<span className='text-priceColor'> 10</span> to{' '}
-										<span className='text-priceColor'>40</span> hours of work!{' '}
-										<br />
-										☾ Once payment is received, allow me up to two weeks to
-										finish. <br />☾ Feel free to tell me about any necessary
-										corrections while it's still a sketch. Slight revisions are
-										allowed throughout the whole process, major revisions are
-										only
-									</>
-								) : (
-									<>
-										Если у Вас есть дедлайн, пожалуйста, сообщите мне об этом
-										заранее. С дедлайном{' '}
-										<span className='text-priceColor'> +50%</span>
-										<br />☾ Работа над одним рисунок занимает от{' '}
-										<span className='text-priceColor'> 10</span> до{' '}
-										<span className='text-priceColor'>40</span> часов! <br />
-										☾ После получения оплаты, дайте мне до двух недель на
-										завершение работы. <br />☾ Не стесняйтесь сообщать мне о
-										любых необходимых исправлениях, пока это ещё скетч.
-										Незначительные изменения допускаются в течение всего
-										процесса работы, значительные - только в процессе работы над
-										скетчем. Однако за кардинальные изменения может взиматься
-										дополнительная плата.
-									</>
-								)}
-							</div>
-						</p>
-					</div>
+					<p className='mt-6 select-none '>
+						<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
+							{language === 'english' ? (
+								<>
+									If you have a deadline, please let me know in advance. With
+									deadline <span className='text-priceColor'> +50%</span>
+									<br />☾ One art work takes from{' '}
+									<span className='text-priceColor'> 10</span> to{' '}
+									<span className='text-priceColor'>40</span> hours of work!{' '}
+									<br />
+									☾ Once payment is received, allow me up to two weeks to
+									finish. <br />☾ Feel free to tell me about any necessary
+									corrections while it's still a sketch. Slight revisions are
+									allowed throughout the whole process, major revisions are only
+								</>
+							) : (
+								<>
+									Если у Вас есть дедлайн, пожалуйста, сообщите мне об этом
+									заранее. С дедлайном{' '}
+									<span className='text-priceColor'> +50%</span>
+									<br />☾ Работа над одним рисунок занимает от{' '}
+									<span className='text-priceColor'> 10</span> до{' '}
+									<span className='text-priceColor'>40</span> часов! <br />
+									☾ После получения оплаты, дайте мне до двух недель на
+									завершение работы. <br />☾ Не стесняйтесь сообщать мне о любых
+									необходимых исправлениях, пока это ещё скетч. Незначительные
+									изменения допускаются в течение всего процесса работы,
+									значительные - только в процессе работы над скетчем. Однако за
+									кардинальные изменения может взиматься дополнительная плата.
+								</>
+							)}
+						</div>
+					</p>
 				</div>
 			</div>
 		</div>
