@@ -34,10 +34,10 @@ export default function Footer() {
 	}
 
 	return (
-		<div className='footer flex h-52 w-full flex-col items-center border-t border-t-[#3b3b3b] bg-[#1600419a] backdrop-blur-sm'>
-			<div className='flex h-4/6 w-full items-center justify-center md:h-full'>
+		<div className='footer flex flex-col h-52 w-full items-center border-t border-t-[#3b3b3b] bg-[#1600419a]'>
+			<div className='flex h-1/2 w-full items-center justify-center md:h-4/6'>
 				<div className='relative flex h-full w-full max-w-7xl flex-row items-center justify-between px-6 '>
-					<div className='w-full '>
+					<div className='w-full'>
 						<img src='./images/Logo.webp' alt='' className={`h-6 md:h-8`} />
 					</div>
 					<div className='flex flex-col items-center justify-evenly gap-2'>
@@ -90,7 +90,7 @@ export default function Footer() {
 						menuVisible ? 'visible backdrop-blur-sm' : 'invisible'
 					} transition-all duration-300`}
 				></div>
-				<div className='flex w-full flex-col items-center justify-center'>
+				<div className='flex w-full flex-col items-center justify-center h-full'>
 					<p>2023 © milkare</p>
 					<p className='flex'>
 						website made by{' '}

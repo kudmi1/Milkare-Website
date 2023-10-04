@@ -34,8 +34,7 @@ function App() {
 
 
 	return (
-		// <div className='App relative flex min-h-screen flex-col md:bg-[url("/images/bg-transformed.webp")] bg-[url("/images/bg.webp")]'>
-		<div className='App relative flex min-h-screen flex-col '>
+		<div className='App relative flex min-h-screen flex-col md:bg-[url("/images/bg-transformed.webp")] bg-[url("/images/bg.webp")]'>
 			<header ref={headerRef}>
 				<Header page={page} setPage={setPage} />
 			</header>
