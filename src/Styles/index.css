@@ -563,3 +563,17 @@ ion-icon {
     margin: 0 3px;
   }
 }
+
+.hidden-text {
+  transition: max-height .3s linear ;
+  transition-delay: 0;
+  max-height: 0;
+  overflow: hidden;  
+}
+
+.hidden-text.expanded {
+  transition: max-height .3s linear ;
+  max-height: 29rem;
+  overflow: auto;
+  overflow-y: hidden;
+}

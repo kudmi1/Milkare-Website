@@ -81,9 +81,8 @@ export default function InfoQuestions() {
 		<div ref={ref} className='mb-8 w-full'>
 			{infoQuestion.map((text, index) => (
 				<div
-					
 					key={index}
-					className={`info-panel my-2 w-full rounded-md border border-b-4  border-thinLine hover:border-b-secondaryText
+					className={`info-panel my-2 w-full rounded-md border border-b-4 border-thinLine hover:border-b-secondaryText
 				
 				 
 					${isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'}
@@ -97,14 +96,18 @@ export default function InfoQuestions() {
 						<img src='svg/eye-open.svg' alt='chevron' />
 					</button>
 
-					<div
-						className={`grid ${
+					{/* <div
+						className={`hidden-text grid ${
 							isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
 						} will-change-[transform] transition-all duration-200`}
 					>
 						<div className={`overflow-hidden`}>
 							<div className={`p-4`}>{infoContent[index]}</div>
 						</div>
+					</div> */}
+
+					<div className={`hidden-text ${isOpen === index ? 'expanded' : ''}`}>
+						<div className='p-4'>{infoContent[index]}</div>
 					</div>
 				</div>
 			))}
