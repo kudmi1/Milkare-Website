@@ -90,12 +90,12 @@ export default function InfoQuestions() {
 				>
 					<div className='flex w-full items-center justify-between'>
 						<p className='select-none text-lg lg:text-lg subtitle-text'>{text}</p>
-						
-							
-						
+						{/* {isOpen === index ? (
+							<img src='svg/eye-close.svg' alt='chevron' />
+						) : (
+							<img src='svg/eye-open.svg' alt='chevron' />
+						)} */}
 						<img src='svg/eye-open.svg' alt='chevron' />
-						
-				
 						
 					</div>
 
@@ -104,8 +104,9 @@ export default function InfoQuestions() {
 							isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
 						} duration-300 transition-[grid-template-rows]`}
 					>
-						<div className='overflow-hidden '>
-							<p className='mt-6 select-none '>{infoContent[index]}</p>
+						<div className='overflow-hidden'>
+							{/* <p className='mt-6 select-none '>{infoContent[index]}</p> */}
+							<p className='mt-6 select-none '>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, aspernatur. Eligendi, distinctio voluptate cupiditate iusto temporibus delectus ut qui aut nulla, id debitis pariatur praesentium ducimus officia corrupti veniam alias!</p>
 						</div>
 					</div>
 				</div>
