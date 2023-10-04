@@ -67,7 +67,7 @@ export default function InfoQuestions() {
 			: ['Что я рисую', 'Стиль заказа', 'Референс персонажа', 'Сроки']
 
 
-  const [isOpen, setIsOpen] = useState(0)
+  const [isOpen, setIsOpen] = useState(null)
 
 	function handleOpen(index) {
 		setIsOpen(prev => prev === index ? null : index)
@@ -88,7 +88,7 @@ export default function InfoQuestions() {
 				 
 					${isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'}
 					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-					// style={{ transitionDelay: `${index * 100 + 100}ms` }}
+					style={{ transitionDelay: `${index * 100 + 100}ms` }}
 				>
 					<div className='flex w-full items-center justify-between'>
 						<p className='subtitle-text select-none text-lg lg:text-lg'>
