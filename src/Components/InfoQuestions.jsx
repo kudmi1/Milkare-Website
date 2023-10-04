@@ -66,21 +66,10 @@ export default function InfoQuestions() {
 			? ['What i draw', 'Commission style', 'Character reference', 'Deadline']
 			: ['Что я рисую', 'Стиль заказа', 'Референс персонажа', 'Сроки']
 
-	// const [isOpen, setIsOpen] = useState(0)
-	// function handleOpen(index) {
-	// 	setIsOpen((prev) => (prev === index ? null : index))
-	// }
 
-	// const [isOpen, setIsOpen] = useState(
-  //   infoQuestion.map(() => false) 
-  // )
-
-	const initialIsOpenState = infoQuestion.map((_, index) => index === 0)
-
-  const [isOpen, setIsOpen] = useState(initialIsOpenState)
+  const [isOpen, setIsOpen] = useState(infoQuestion.map(() => false))
 
   function handleOpen(index) {
-    // Toggle the open state of the clicked panel
     setIsOpen((prev) => {
       const newState = [...prev]
       newState[index] = !newState[index]
