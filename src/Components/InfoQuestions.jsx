@@ -106,7 +106,7 @@ export default function InfoQuestions() {
 					>
 						<div className='overflow-hidden'>
 							{/* <p className='mt-6 select-none '>{infoContent[index]}</p> */}
-							<p className='mt-6 select-none '>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, aspernatur. Eligendi, distinctio voluptate cupiditate iusto temporibus delectus ut qui aut nulla, id debitis pariatur praesentium ducimus officia corrupti veniam alias!</p>
+							<Table />
 						</div>
 					</div>
 				</div>
