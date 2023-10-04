@@ -96,18 +96,14 @@ export default function InfoQuestions() {
 						<img src='svg/eye-open.svg' alt='chevron' />
 					</button>
 
-					{/* <div
-						className={`hidden-text grid ${
+					<div
+						className={`grid ${
 							isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} will-change-[transform] transition-all duration-200`}
+						} transition-all duration-200`}
 					>
 						<div className={`overflow-hidden`}>
 							<div className={`p-4`}>{infoContent[index]}</div>
 						</div>
-					</div> */}
-
-					<div className={`hidden-text ${isOpen === index ? 'expanded' : ''}`}>
-						<div className='p-4'>{infoContent[index]}</div>
 					</div>
 				</div>
 			))}
