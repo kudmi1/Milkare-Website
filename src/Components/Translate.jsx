@@ -1,5 +1,6 @@
 import { useState, useEffect, useLayoutEffect } from 'react'
 import { useLanguageContext } from '../Providers/LanguageContext'
+import GoogleFormButton from './GoogleFormButton'
 
 export default function Translate() {
 	const { language, setLanguage } = useLanguageContext()

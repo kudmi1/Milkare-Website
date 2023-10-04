@@ -4,7 +4,8 @@ import NavigatorSmall from './NavigatorSmall'
 import NavigatorBig from './NavigatorBig'
 import Translate from './Translate'
 import HamburgerButton from './HamburgerButton'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import GoogleFormButton from './GoogleFormButton'
 
 export default function Header({ page, setPage }) {
 	const [showHamburger, setShowHamburger] = useState(false)
@@ -70,7 +71,7 @@ export default function Header({ page, setPage }) {
 			className={`header fixed z-[60] flex h-24 w-full flex-col justify-between shadow-lg lg:justify-center bg-homeColor opacity-100 lg:h-14 lg:flex-row ${ariaExpanded ? 'bg-opacity-100' : 'backdrop-blur-md bg-opacity-80'} `}
 		>
 			<div className='header-standart relative grid h-12 w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent lg:flex lg:h-full lg:px-6 xl:px-0'>
-				<Link
+				<NavLink
 					to={'/'}
 					className={`header-top effect-shine transition-all duration-500`}
 					onClick={() => {
@@ -85,7 +86,7 @@ export default function Header({ page, setPage }) {
 						alt=''
 						className={`h-8 pl-4 lg:pl-0 transition-all duration-500 lg:h-10`}
 					/>
-				</Link>
+				</NavLink>
 				<NavigatorBig page={page} setPage={setPage} />
 				<div className='hidden lg:block'>
 					<Translate />
