@@ -114,7 +114,7 @@ export default function InfoQuestions() {
 					<div
 						className={`grid ${
 							isOpen[index] ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-all duration-300`}
+						} will-change-[transform] transition-all duration-300`}
 					>
 						<div className='overflow-hidden'>
 							<div className={`mt-6 select-none`}>{infoContent[index]}</div>
