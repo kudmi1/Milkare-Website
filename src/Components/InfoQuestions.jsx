@@ -76,12 +76,12 @@ export default function InfoQuestions() {
 		triggerOnce: true,
 	})
 	return (
-		<div ref={ref} className='mb-8 w-full'>
+		<div ref={ref} className='mb-8'>
 			{infoQuestion.map((text, index) => (
 				<div
 					onClick={() => handleOpen(index)}
 					key={index}
-					className={`info-panel active:bg-[#644f9c60] my-2 w-full cursor-pointer rounded-md border border-b-4 p-4 border-thinLine  hover:border-b-secondaryText ${
+					className={`info-panel active:bg-[#644f9c60] my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText ${
 						isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'
 					} ${
 						inView ? 'opacity-100' : 'opacity-0'
@@ -90,17 +90,14 @@ export default function InfoQuestions() {
 				>
 					<div className='flex w-full items-center justify-between'>
 						<p className='select-none text-lg lg:text-lg subtitle-text'>{text}</p>
-						{isOpen === index ? (
+						{/* {isOpen === index ? (
 							<img src='svg/eye-close.svg' alt='chevron' />
 						) : (
 							<img src='svg/eye-open.svg' alt='chevron' />
-						)}
-					</div>
-					<div className={`${isOpen === index ? 'max-h-96' : 'max-h-0 opacity-0 overflow-hidden'} transition-all duration-300`}>
-						<p className='mt-6'>{infoContent[index]}</p>
+						)} */}
 					</div>
 
-					{/* <div
+					<div
 						className={`grid ${
 							isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
 						} duration-500 transition-[grid-template-rows]`}
@@ -108,7 +105,7 @@ export default function InfoQuestions() {
 						<div className='overflow-hidden '>
 							<p className='mt-6 select-none '>{infoContent[index]}</p>
 						</div>
-					</div> */}
+					</div>
 				</div>
 			))}
 		</div>
