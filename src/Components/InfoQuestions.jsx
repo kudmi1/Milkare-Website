@@ -66,10 +66,27 @@ export default function InfoQuestions() {
 			? ['What i draw', 'Commission style', 'Character reference', 'Deadline']
 			: ['Что я рисую', 'Стиль заказа', 'Референс персонажа', 'Сроки']
 
-	const [isOpen, setIsOpen] = useState(0)
-	function handleOpen(index) {
-		setIsOpen((prev) => (prev === index ? null : index))
-	}
+	// const [isOpen, setIsOpen] = useState(0)
+	// function handleOpen(index) {
+	// 	setIsOpen((prev) => (prev === index ? null : index))
+	// }
+
+	// const [isOpen, setIsOpen] = useState(
+  //   infoQuestion.map(() => false) 
+  // )
+
+	const initialIsOpenState = infoQuestion.map((_, index) => index === 0)
+
+  const [isOpen, setIsOpen] = useState(initialIsOpenState)
+
+  function handleOpen(index) {
+    // Toggle the open state of the clicked panel
+    setIsOpen((prev) => {
+      const newState = [...prev]
+      newState[index] = !newState[index]
+      return newState
+    })
+  }
 
 	const { ref, inView } = useInView({
 		threshold: 0.1,
@@ -83,7 +100,7 @@ export default function InfoQuestions() {
 					key={index}
 					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
 				active:bg-white/10 
-					${isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'}
+					${isOpen[index] ? ' border-b-secondaryText' : 'border-b-white/50'}
 					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					style={{ transitionDelay: `${index * 100 + 100}ms` }}
 				>
@@ -96,7 +113,7 @@ export default function InfoQuestions() {
 
 					<div
 						className={`grid ${
-							isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+							isOpen[index] ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
 						} transition-all duration-300`}
 					>
 						<div className='overflow-hidden'>
