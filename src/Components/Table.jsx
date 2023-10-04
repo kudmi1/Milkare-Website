@@ -2,6 +2,7 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 
 export default function Table() {
 	const { language } = useLanguageContext()
+	const commonProps = 'flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'
 	return (
 		<div className='grid grid-cols-2 gap-3 text-sm lg:text-base'>
 			<div className=' flex h-12 items-center justify-center rounded-sm border border-thinLine bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] text-xl text-secondaryText'>
@@ -48,55 +49,55 @@ export default function Table() {
 			</div>
 			{language === 'english' ? (
 				<>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						FanArts (anime, games)
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						OCs with not suitable for me design
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Slight NSFW (only women)
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Hentai
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						OCs
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Furries / Animals
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Real people
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Mecha
 					</div>
 				</>
 			) : (
 				<>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Фанарт (аниме, игры)
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Персонаж с неподходящим для меня дизайном
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Лёгкий NSFW (только жен.)
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Хентай
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Ваш персонаж
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Фурри / Животные
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Реальные люди
 					</div>
-					<div className='flex items-center justify-center rounded-lg bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] border border-thinLine px-4 py-2 text-center'>
+					<div className={commonProps}>
 						Меха
 					</div>
 				</>
