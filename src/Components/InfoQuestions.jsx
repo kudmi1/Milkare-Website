@@ -84,6 +84,7 @@ export default function InfoQuestions() {
 					onClick={() => handleOpen(index)}
 					key={index}
 					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
+					active:bg-blue-300/10
 				 
 					${isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'}
 					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
