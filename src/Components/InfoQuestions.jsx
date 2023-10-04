@@ -90,11 +90,13 @@ export default function InfoQuestions() {
 				>
 					<div className='flex w-full items-center justify-between'>
 						<p className='select-none text-lg lg:text-lg subtitle-text'>{text}</p>
-						{/* {isOpen === index ? (
-							<img src='svg/eye-close.svg' alt='chevron' />
-						) : (
-							<img src='svg/eye-open.svg' alt='chevron' />
-						)} */}
+						
+							
+						
+						<img src='svg/eye-open.svg' alt='chevron' />
+						
+				
+						
 					</div>
 
 					<div
