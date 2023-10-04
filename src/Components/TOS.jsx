@@ -19,7 +19,7 @@ export default function TOS({ loaded }) {
 							Boosty (PayPal / credit card), DonationAlerts
 						</p>
 					</div>
-					<p className='text-sm lg:text-base '>
+					<div className='text-sm lg:text-base '>
 						<ul className='list-inside list-disc'>
 							<li>
 								<span className='text-priceColor'>50%</span> payment before I
@@ -42,7 +42,7 @@ export default function TOS({ loaded }) {
 							</li>
 							<li>I have the right to refuse a commission.</li>
 						</ul>
-					</p>
+					</div>
 				</div>
 			) : (
 				<div className={`w-full ${loaded ? 'opacity-100 delay-[500ms] translate-y-0' : 'opacity-0 -translate-y-3'} transition-all duration-300`}>
@@ -50,7 +50,7 @@ export default function TOS({ loaded }) {
 						<p className='nav-text text-lg lg:text-xl'>СПОСОБ ОПЛАТЫ: </p>
 						<p className='text-md lg:text-lg'>Карта (Тинькофф), DonationAlerts</p>
 					</div>
-					<p className='text-sm lg:text-base'>
+					<div className='text-sm lg:text-base'>
 						<ul className='list-disc list-inside'>
 							<li>
 								<span className='text-priceColor'>50%</span> оплаты до начала
@@ -77,7 +77,7 @@ export default function TOS({ loaded }) {
 							</li>
 							<li>Я имею право отказать в выполнении заказа.</li>
 						</ul>
-					</p>
+					</div>
 				</div>
 			)}
 		</div>

@@ -66,7 +66,7 @@ export default function InfoQuestions() {
 			? ['What i draw', 'Commission style', 'Character reference', 'Deadline']
 			: ['Что я рисую', 'Стиль заказа', 'Референс персонажа', 'Сроки']
 
-	const [isOpen, setIsOpen] = useState()
+	const [isOpen, setIsOpen] = useState(0)
 	function handleOpen(index) {
 		setIsOpen((prev) => (prev === index ? null : index))
 	}
@@ -76,17 +76,20 @@ export default function InfoQuestions() {
 		triggerOnce: true,
 	})
 	return (
-		<div ref={ref} className='mb-8'>
+		<div ref={ref} className='mb-8 min-h-[600px]'>
 			{infoQuestion.map((text, index) => (
 				<div
 					onClick={() => handleOpen(index)}
 					key={index}
 					className={`info-panel active:bg-white/10 my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4
-				
+				hover:border-b-secondaryText 
+					${
+						isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'
+					}
 					${
 						inView ? 'opacity-100' : 'opacity-0'
 					} transition-opacity duration-500`}
-					// style={{ transitionDelay: `${index * 100 + 100}ms`}}
+					style={{ transitionDelay: `${index * 100 + 100}ms`}}
 				>
 					<div className='flex w-full items-center justify-between'>
 						<p className='select-none text-lg lg:text-lg subtitle-text'>{text}</p>
@@ -105,7 +108,7 @@ export default function InfoQuestions() {
 						} duration-300 transition-[grid-template-rows]`}
 					>
 						<div className='overflow-hidden'>
-							<p className='mt-6 select-none '>{infoContent[index]}</p>
+							<div className='mt-6 select-none '>{infoContent[index]}</div>
 						</div>
 					</div>
 				</div>
