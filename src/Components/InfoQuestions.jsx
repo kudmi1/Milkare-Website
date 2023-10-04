@@ -11,15 +11,15 @@ export default function InfoQuestions() {
 		<div className='rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'>
 			{language === 'english' ? (
 				<>
-					- Character (name, title and fandom) <br />- Сommercial use / a drawing
-					with detailed background / additional character(s) / idea ( pose, angle,
-					etc.).
+					- Character (name, title and fandom) <br />- Сommercial use / a
+					drawing with detailed background / additional character(s) / idea (
+					pose, angle, etc.).
 				</>
 			) : (
 				<>
-					- Персонаж (имя, фандом) <br />- Коммерческое использование / рисунок с
-					детализированным фоном / дополнительный персонаж / идея (поза, ракурс и
-					т.д.).
+					- Персонаж (имя, фандом) <br />- Коммерческое использование / рисунок
+					с детализированным фоном / дополнительный персонаж / идея (поза,
+					ракурс и т.д.).
 				</>
 			)}
 		</div>,
@@ -71,41 +71,38 @@ export default function InfoQuestions() {
 		setIsOpen((prev) => (prev === index ? null : index))
 	}
 
-  const { ref, inView } = useInView({
+	const { ref, inView } = useInView({
 		threshold: 0.1,
 		triggerOnce: true,
 	})
 	return (
-		<div ref={ref} className='mb-8 min-h-[600px]'>
+		<div ref={ref} className='mb-8'>
 			{infoQuestion.map((text, index) => (
 				<div
 					onClick={() => handleOpen(index)}
 					key={index}
-					className={`info-panel active:bg-white/10 my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4
-				hover:border-b-secondaryText 
-					${
-						isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'
-					}
-					${
-						inView ? 'opacity-100' : 'opacity-0'
-					} transition-opacity duration-500`}
-					style={{ transitionDelay: `${index * 100 + 100}ms`}}
+					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
+				active:bg-white/10 
+					${isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'}
+					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
+					style={{ transitionDelay: `${index * 100 + 100}ms` }}
 				>
 					<div className='flex w-full items-center justify-between'>
-						<p className='select-none text-lg lg:text-lg subtitle-text'>{text}</p>
+						<p className='subtitle-text select-none text-lg lg:text-lg'>
+							{text}
+						</p>
 						{/* {isOpen === index ? (
 							<img src='svg/eye-close.svg' alt='chevron' />
 						) : (
 							<img src='svg/eye-open.svg' alt='chevron' />
 						)} */}
 						<img src='svg/eye-open.svg' alt='chevron' />
-						
 					</div>
 
 					<div
 						className={`grid ${
 							isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} duration-300 transition-[grid-template-rows]`}
+						} transition-[grid-template-rows] duration-300`}
 					>
 						<div className='overflow-hidden'>
 							<div className='mt-6 select-none '>{infoContent[index]}</div>
