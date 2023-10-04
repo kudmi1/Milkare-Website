@@ -105,7 +105,8 @@ export default function InfoQuestions() {
 						} transition-[grid-template-rows] duration-300`}
 					>
 						<div className='overflow-hidden'>
-							<div className='mt-6 select-none '>{infoContent[index]}</div>
+							{/* <div className='mt-6 select-none '>{infoContent[index]}</div> */}
+							<div className='mt-6 select-none '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus neque cumque recusandae quibusdam harum quaerat et. Vitae, id quisquam tenetur reprehenderit consequatur vero fugiat eius provident dolorum, fuga accusamus nam.</div>
 						</div>
 					</div>
 				</div>
