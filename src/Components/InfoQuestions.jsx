@@ -118,22 +118,11 @@ export default function InfoQuestions() {
 						<p className='subtitle-text select-none text-lg lg:text-lg'>
 							{infoQuestion[0]}
 						</p>
-						{/* {isOpen === 0 ? (
-							<img src='svg/eye-close.svg' alt='chevron' />
-						) : (
-							<img src='svg/eye-open.svg' alt='chevron' />
-						)} */}
 						<img src='svg/eye-open.svg' alt='chevron' />
 					</div>
 
-					<div
-						className={`grid ${
-							isOpen === 0 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-all duration-300`}
-					>
-						<div className='overflow-hidden'>
-							<div className={`mt-6 select-none`}>{infoContent[0]}</div>
-						</div>
+					<div className={`${isOpen === 0 ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-500`}>
+						<Table/>
 					</div>
 				</div>
 
@@ -150,22 +139,11 @@ export default function InfoQuestions() {
 						<p className='subtitle-text select-none text-lg lg:text-lg'>
 						{infoQuestion[1]}
 						</p>
-						{/* {isOpen === 1 ? (
-							<img src='svg/eye-close.svg' alt='chevron' />
-						) : (
-							<img src='svg/eye-open.svg' alt='chevron' />
-						)} */}
 						<img src='svg/eye-open.svg' alt='chevron' />
 					</div>
 
-					<div
-						className={`grid ${
-							isOpen === 1 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-all duration-300`}
-					>
-						<div className='overflow-hidden'>
-							<div className={`mt-6 select-none`}>{infoContent[1]}</div>
-						</div>
+					<div className={`${isOpen === 1 ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-500`}>
+					{infoContent[1]}
 					</div>
 				</div>
 
@@ -182,22 +160,11 @@ export default function InfoQuestions() {
 						<p className='subtitle-text select-none text-lg lg:text-lg'>
 						{infoQuestion[2]}
 						</p>
-						{/* {isOpen === 2 ? (
-							<img src='svg/eye-close.svg' alt='chevron' />
-						) : (
-							<img src='svg/eye-open.svg' alt='chevron' />
-						)} */}
 						<img src='svg/eye-open.svg' alt='chevron' />
 					</div>
 
-					<div
-						className={`grid ${
-							isOpen === 2 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-all duration-300`}
-					>
-						<div className='overflow-hidden'>
-							<div className={`mt-6 select-none`}>{infoContent[2]}</div>
-						</div>
+					<div className={`${isOpen === 2 ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-500`}>
+					{infoContent[2]}
 					</div>
 				</div>
 
@@ -214,22 +181,11 @@ export default function InfoQuestions() {
 						<p className='subtitle-text select-none text-lg lg:text-lg'>
 						{infoQuestion[3]}
 						</p>
-						{/* {isOpen === 3 ? (
-							<img src='svg/eye-close.svg' alt='chevron' />
-						) : (
-							<img src='svg/eye-open.svg' alt='chevron' />
-						)} */}
 						<img src='svg/eye-open.svg' alt='chevron' />
 					</div>
 
-					<div
-						className={`grid ${
-							isOpen === 3 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-all duration-300`}
-					>
-						<div className='overflow-hidden'>
-							<div className={`mt-6 select-none`}>{infoContent[3]}</div>
-						</div>
+					<div className={`${isOpen === 3 ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-500`}>
+						{infoContent[3]}
 					</div>
 				</div>
 		</div>
