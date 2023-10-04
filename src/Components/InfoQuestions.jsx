@@ -88,7 +88,7 @@ export default function InfoQuestions() {
 					onClick={() => handleOpen(index)}
 					key={index}
 					className={`info-panel my-2 w-full cursor-pointer rounded-md border border-b-4 border-thinLine p-4 hover:border-b-secondaryText
-				active:bg-white/10 
+				 
 					${isOpen[index] ? ' border-b-secondaryText' : 'border-b-white/50'}
 					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
 					// style={{ transitionDelay: `${index * 100 + 100}ms` }}
@@ -105,7 +105,7 @@ export default function InfoQuestions() {
 							isOpen[index] ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
 						} will-change-[transform] transition-all duration-300`}
 					>
-						<div className={`${isOpen[index] ? 'block' : 'hidden'}`}>
+						<div className={`overflow-hidden`}>
 							<div className={`mt-6 select-none`}>{infoContent[index]}</div>
 						</div>
 					</div>
