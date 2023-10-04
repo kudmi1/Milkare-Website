@@ -110,42 +110,6 @@ export default function InfoQuestions() {
 					</div>
 				</div>
 			))}
-
-			<div className='collapse my-2 rounded-md border border-b-4 border-thinLine hover:border-b-secondaryText'>
-				<input type='radio' name='my-accordion-1'/>
-				<div className='collapse-title text-xl font-medium'>
-					<p className='subtitle-text select-none text-lg lg:text-lg'>
-						{infoQuestion[1]}
-					</p>
-				</div>
-				<div className='subtitle-text collapse-content select-none text-lg lg:text-lg'>
-					<p>{infoContent[1]}</p>
-				</div>
-			</div>
-
-			<div className='collapse my-2 rounded-md border border-b-4 border-thinLine hover:border-b-secondaryText'>
-				<input type='radio' name='my-accordion-1' />
-				<div className='collapse-title text-xl font-medium'>
-					<p className='subtitle-text select-none text-lg lg:text-lg'>
-						{infoQuestion[2]}
-					</p>
-				</div>
-				<div className='subtitle-text collapse-content select-none text-lg lg:text-lg'>
-					<p>{infoContent[2]}</p>
-				</div>
-			</div>
-
-			<div className='collapse my-2 rounded-md border border-b-4 border-thinLine hover:border-b-secondaryText'>
-				<input type='radio' name='my-accordion-1' />
-				<div className='collapse-title text-xl font-medium'>
-					<p className='subtitle-text select-none text-lg lg:text-lg'>
-						{infoQuestion[3]}
-					</p>
-				</div>
-				<div className='subtitle-text collapse-content select-none text-lg lg:text-lg'>
-					<p>{infoContent[3]}</p>
-				</div>
-			</div>
 		</div>
 	)
 }
