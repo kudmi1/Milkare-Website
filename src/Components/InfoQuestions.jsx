@@ -97,7 +97,7 @@ export default function InfoQuestions() {
 					<div
 						className={`grid ${
 							isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-[grid-template-rows] duration-300`}
+						} transition-all duration-300`}
 					>
 						<div className='overflow-hidden'>
 							<div className={`mt-6 select-none`}>{infoContent[index]}</div>
@@ -129,7 +129,7 @@ export default function InfoQuestions() {
 					<div
 						className={`grid ${
 							isOpen === 0 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-[grid-template-rows] duration-300`}
+						} transition-all duration-300`}
 					>
 						<div className='overflow-hidden'>
 							<div className={`mt-6 select-none`}>{infoContent[0]}</div>
@@ -161,7 +161,7 @@ export default function InfoQuestions() {
 					<div
 						className={`grid ${
 							isOpen === 1 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-[grid-template-rows] duration-300`}
+						} transition-all duration-300`}
 					>
 						<div className='overflow-hidden'>
 							<div className={`mt-6 select-none`}>{infoContent[1]}</div>
@@ -193,7 +193,7 @@ export default function InfoQuestions() {
 					<div
 						className={`grid ${
 							isOpen === 2 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-[grid-template-rows] duration-300`}
+						} transition-all duration-300`}
 					>
 						<div className='overflow-hidden'>
 							<div className={`mt-6 select-none`}>{infoContent[2]}</div>
@@ -225,7 +225,7 @@ export default function InfoQuestions() {
 					<div
 						className={`grid ${
 							isOpen === 3 ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-[grid-template-rows] duration-300`}
+						} transition-all duration-300`}
 					>
 						<div className='overflow-hidden'>
 							<div className={`mt-6 select-none`}>{infoContent[3]}</div>
