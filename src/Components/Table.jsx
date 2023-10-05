@@ -6,7 +6,7 @@ export default function Table() {
 	return (
 		<div className='grid grid-cols-2 gap-3 text-sm lg:text-base'>
 			<div className=' flex h-12 items-center justify-center rounded-sm border border-thinLine bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] text-xl text-secondaryText'>
-				<div className='relative'>
+				<div className='relative text-base md:text-xl'>
 					{'(╹◡╹๑)'}{' '}
 					<span className='absolute left-[100%]'>
 						<svg
@@ -27,7 +27,7 @@ export default function Table() {
 				</div>
 			</div>
 			<div className='flex h-12 items-center justify-center rounded-sm border border-thinLine bg-gradient-to-t from-[#644f9c60] to-[#35275aa2] text-xl text-red-500'>
-				<div className='relative'>
+				<div className='relative text-base md:text-xl'>
 					{'(￣ヘ￣ ;)'}{' '}
 					<span className='absolute left-[100%]'>
 						<svg
