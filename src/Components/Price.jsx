@@ -7,7 +7,7 @@ import AdditionPriceInfo from './AdditionPriceInfo'
 
 const panelData = [
 	{
-		names: ['makima', 'kokomi'],
+		names: ['kokomi', 'makima'],
 	},
 	{
 		names: ['lucy', 'purplegirl'],
