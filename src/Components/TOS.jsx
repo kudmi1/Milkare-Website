@@ -4,8 +4,9 @@ import InfoQuestions from './InfoQuestions'
 
 export default function TOS({ loaded }) {
 	const { language } = useLanguageContext()
+	const gradientBG = 'bg-gradient-to-t from-[#2c2649cc] to-[#1600419a]'
 	return (
-		<div className='flex w-full flex-col items-center rounded-lg border border-thinLine bg-gradient-to-t from-[#2c2649cc] to-[#1600419a] px-4 py-2 text-mainText md:w-2/3'>
+		<div className='flex w-full flex-col items-center rounded-lg border border-thinLine bg-[#1600419a] px-4 py-2 text-mainText md:w-2/3'>
 			<h4 className='nav-text mb-6 text-center'>
 				{language === 'english'
 					? 'Terms of Service'
