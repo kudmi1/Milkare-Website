@@ -68,7 +68,9 @@ export default function Header({ page, setPage }) {
 
 	return (
 		<header
-			className={`header fixed z-[60] flex h-24 w-full flex-col justify-between shadow-lg lg:justify-center bg-homeColor opacity-100 lg:h-14 lg:flex-row ${ariaExpanded ? 'bg-opacity-100' : 'backdrop-blur-md bg-opacity-80'} `}
+			className={`header fixed z-[60] flex h-24 w-full flex-col justify-between bg-homeColor opacity-100 shadow-lg lg:h-14 lg:flex-row lg:justify-center ${
+				ariaExpanded ? 'bg-opacity-100' : 'bg-opacity-80 backdrop-blur-md'
+			} `}
 		>
 			<div className='header-standart relative grid h-12 w-full max-w-7xl grid-cols-2 items-center justify-between bg-transparent lg:flex lg:h-full lg:px-6 xl:px-0'>
 				<NavLink
@@ -84,7 +86,7 @@ export default function Header({ page, setPage }) {
 					<img
 						src='./images/Logo.webp'
 						alt=''
-						className={`h-8 pl-4 lg:pl-0 transition-all duration-500 lg:h-10`}
+						className={`h-8 pl-4 transition-all duration-500 lg:h-10 lg:pl-0`}
 					/>
 				</NavLink>
 				<NavigatorBig page={page} setPage={setPage} />
@@ -107,6 +109,7 @@ export default function Header({ page, setPage }) {
 					page={page}
 				/>
 			</div>
+
 			<NavigatorSmall page={page} setPage={setPage} />
 		</header>
 	)

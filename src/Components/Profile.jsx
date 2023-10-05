@@ -20,6 +20,20 @@ export default function Profile() {
 					<h1 className='hero-text absolute hidden translate-y-1/2 text-mainText sm:bottom-[80px] sm:left-12 sm:block md:bottom-[120px] lg:bottom-[150px] lg:left-24'>
 						Commissions <br /> Open
 					</h1>
+					{/* <button className='effect-shine moon-btn nav-text group absolute z-40 mt-12 translate-y-1/2 rounded-full text-mainText sm:bottom-[80px]  sm:right-12 sm:block md:bottom-[120px] lg:bottom-[150px] lg:right-24'>
+						<a
+							href={`${
+								language === 'english'
+									? 'https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
+									: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
+							}`}
+							target='_blank'
+							className='flex h-full w-full items-center justify-center'
+						>
+							<p className='absolute z-20 text-2xl moon-text'>{language === 'english' ? 'Google Form' : 'Гугл Форма'}</p>
+							<img src='/images/moon.png' alt='' className='z-10 w-44' />
+						</a>
+					</button> */}
 				</div>
 			</div>
 			<h1 className='hero-text-mobile via-mainGray absolute bottom-full flex w-full justify-center bg-gradient-to-r from-[#19192456] to-[#19192456] py-3 sm:hidden'>
