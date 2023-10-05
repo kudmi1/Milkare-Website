@@ -1,6 +1,5 @@
 import { useLanguageContext } from '../Providers/LanguageContext'
 import FAQ from './FAQ'
-import InfoQuestions from './InfoQuestions'
 
 export default function TOS({ loaded }) {
 	const { language } = useLanguageContext()
@@ -12,11 +11,14 @@ export default function TOS({ loaded }) {
 					? 'Terms of Service'
 					: 'Условия предоставления услуг'}
 			</h4>
-			{/* <InfoQuestions /> */}
-			<FAQ/>
+			<FAQ />
 			{language === 'english' ? (
 				<div
-					className={`w-full transition-all duration-300`}
+					className={`w-full ${
+						loaded
+							? 'translate-y-0 opacity-100 delay-[500ms]'
+							: '-translate-y-3 opacity-0'
+					} transition-all duration-300`}
 				>
 					<div className='mb-6 w-full'>
 						<p className='nav-text text-lg lg:text-xl'>PAYMENT METHOD: </p>
