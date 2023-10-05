@@ -26,7 +26,7 @@ export default function SectionHome() {
 								src='./images/milka4x.webp'
 								alt='hero-image'
 								loading='lazy'
-								className={`h-full w-full rounded-b-lg object-cover ${loaded ? ' opacity-100 translate-y-0' : 'opacity-0 -translate-y-3'} transition-all duration-[.9s] object-center `}
+								className={`h-full w-full rounded-b-lg object-cover ${loaded ? ' opacity-100 translate-y-0' : 'opacity-0 -translate-y-1'} transition-all duration-[.9s] object-center `}
 							/>
 						</picture>
 					</div>
