@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import { useInView } from 'react-intersection-observer'
-import { useLanguageContext } from '../Providers/LanguageContext'
-import { AccordionText } from './AccordionText'
-import Table from './Table'
+import { useInView } from "react-intersection-observer"
+import { useLanguageContext } from "../Providers/LanguageContext"
+import { AccordionText } from "./AccordionText"
+import Table from "./Table"
 
-export default function InfoQuestions() {
-	const { language } = useLanguageContext()
-	const commonProps =
+export default function FAQ() {
+  const { language } = useLanguageContext()
+
+  const commonProps =
 		'rounded-lg border border-thinLine bg-[#35275aa2] px-4 py-2 text-sm lg:text-base'
 
-	const faq = [
+  const faq = [
 		{
 			question: language === 'english' ? 'What i draw' : 'Что я рисую',
 			answer: <Table />,
@@ -84,45 +84,14 @@ export default function InfoQuestions() {
 		},
 	]
 
-	const { ref, inView } = useInView({
+  const { ref, inView } = useInView({
 		threshold: 0.1,
 		triggerOnce: true,
 	})
-	return (
-		<div ref={ref} className='mb-8 w-full'>
-			{infoQuestion.map((text, index) => (
-				<div
-					key={index}
-					className={`info-panel my-2 w-full rounded-md border border-b-4 border-thinLine hover:border-b-secondaryText
-				
-				 
-					${isOpen === index ? ' border-b-secondaryText' : 'border-b-white/50'}
-					${inView ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-					style={{ transitionDelay: `${index * 100 + 100}ms` }}
-				>
-					<button
-						className='flex w-full items-center justify-between overflow-hidden p-4'
-						onClick={() => handleOpen(index)}
-					>
-						<p className='subtitle-text select-none text-lg lg:text-lg'>
-							{text}
-						</p>
-						<img src='svg/eye-open.svg' alt='chevron' />
-					</button>
 
-					<div
-						className={`grid ${
-							isOpen === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-						} transition-all duration-200`}
-					>
-						<div className={`overflow-hidden`}>
-							<div className={`p-4`}>{infoAnswer[index]}</div>
-						</div>
-					</div>
-				</div>
-			))}
-
-			<AccordionText faq={faq} />
-		</div>
-	)
+  return(
+    <div ref={ref} className='mb-8 w-full'>
+      <AccordionText faq={faq} />
+    </div>
+  )
 }
