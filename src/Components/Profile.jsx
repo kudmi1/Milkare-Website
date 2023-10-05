@@ -3,8 +3,7 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 import GoogleFormButton from './GoogleFormButton'
 import Socials from './Socials'
 
-export default function Profile() {
-	const [loaded, setLoaded] = useState(false)
+export default function Profile({ loaded }) {
 	const { language } = useLanguageContext()
 	const star = (
 		<img
@@ -16,8 +15,8 @@ export default function Profile() {
 	return (
 		<footer className='absolute bottom-0 flex h-[300px] w-full flex-col items-center rounded-b-lg border-b border-thinLine bg-gradient-to-b from-[#191924ef] to-[#1600419a] py-4 text-mainText backdrop-blur-md lg:h-[300px]'>
 			<div className='absolute bottom-[100%] left-0 flex h-[100dvh] w-full justify-center'>
-				<div className='relative h-full w-full max-w-[1920px]'>
-					<h1 className='hero-text absolute hidden translate-y-1/2 text-mainText sm:bottom-[80px] sm:left-12 sm:block md:bottom-[120px] lg:bottom-[150px] lg:left-24'>
+				<div className={`relative h-full w-full max-w-[1920px] ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-3'} transition-all duration-500`}>
+					<h1 className={`hero-text absolute hidden translate-y-1/2 text-mainText sm:bottom-[80px] sm:left-12 sm:block md:bottom-[120px] lg:bottom-[150px] lg:left-24 `}>
 						Commissions <br /> Open
 					</h1>
 					{/* <button className='effect-shine moon-btn nav-text group absolute z-40 mt-12 translate-y-1/2 rounded-full text-mainText sm:bottom-[80px]  sm:right-12 sm:block md:bottom-[120px] lg:bottom-[150px] lg:right-24'>
