@@ -14,7 +14,16 @@ export const AccordionItem = ({ faqItem, onClick, isOpen }) => {
 				onClick={() => onClick()}
 			>
 				{faqItem.question}
-				<img src='svg/eye-open.svg' alt='chevron' />
+				<div>
+					
+				</div>
+				{isOpen ? (
+				<img src='svg/eye-close.svg' alt='chevron' />
+
+				): (
+					<img src='svg/eye-open.svg' alt='chevron' />
+
+				)}
 			</button>
 			<div
 				className={`accordion-collapse h-0 overflow-hidden transition-[height] duration-300`}
