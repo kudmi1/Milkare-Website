@@ -90,7 +90,7 @@ export default function FAQ() {
 	})
 
   return(
-    <div ref={ref} className='mb-8 w-full h-[628px] sm:h-[610px]'>
+    <div ref={ref} className='mb-8 w-full'>
       <AccordionText faq={faq} />
     </div>
   )
