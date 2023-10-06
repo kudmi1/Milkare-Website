@@ -50,9 +50,11 @@ a {
   -moz-appearance: none;
 }
 
-button:active,
+@media (max-width: 1024px) {
+  button:active,
 a:active {
   background-color: #644f9c60;
+}
 }
 
 h1, h2, h3, h4, h5 {
@@ -90,13 +92,13 @@ img {
 .hero-text {
   font-family: 'macherie';
   text-shadow: 0px 0px 4px #c4b5fd;
-  font-size: clamp(30px, 8vw, 100px);
+  font-size: clamp(40px, 5vw, 100px);
 }
 
 .hero-text-mobile {
   font-family: 'macherie';
   text-shadow: 0px 0px 3px #c4b5fd;
-  font-size: clamp(20px, 7vw, 100px);
+  font-size: clamp(20px, 6vw, 100px);
 }
 
 .form-text {
@@ -565,5 +567,24 @@ ion-icon {
 }
 
 .moon-text {
+  font-family: 'Amsterdam';
+  /* color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #eae9e0 55%, #eae9e0, hsl(273, 93%, 22%) 72%, hsl(273, 93%, 22%), hsl(273, 93%, 22%)); */
   text-shadow: 2px 2px 3px black;
+}
+
+.moon-btn {
+  /* filter: drop-shadow(0px 0px 8px #e6b5fd); */
+  box-shadow: 0px 0px 8px #e6b5fd;
+}
+
+.moon-btn:hover > .moon-image {
+  filter: drop-shadow(0px 0px 8px #e6b5fd);
+  /* filter: drop-shadow(0px 0px 8px hsl(50, 100%, 78%)); */
+}
+
+.moon-btn:hover > .moon-text {
+  /* transform: scale(0.9); */
 }
