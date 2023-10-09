@@ -23,9 +23,9 @@ export default function Profile({ loaded }) {
 					<h1
 						className={`hero-text absolute hidden translate-y-1/2 text-mainText sm:bottom-[80px] sm:left-12 sm:block md:bottom-[120px] lg:bottom-[150px] 2xl:left-24 `}
 					>
-						Commissions <br /> Open
+						Commissions <br /> Closed
 					</h1>
-					{/* <button className=' nav-text group absolute z-40 mt-12 hidden translate-y-1/2 text-mainText sm:bottom-[80px] sm:right-12 sm:block md:bottom-[120px] lg:bottom-[150px] 2xl:right-24'>
+					<button className='hero-btn group absolute z-40 mt-12 hidden translate-y-1/2 items-center justify-center rounded-lg bg-homeColor bg-cover text-mainText outline outline-2 outline-offset-0 outline-thinLine transition-all duration-200  hover:shadow-lg hover:shadow-[#9562bebe] sm:bottom-[80px] sm:right-12 sm:flex md:bottom-[120px] lg:bottom-[150px] 2xl:right-24'>
 						<a
 							href={`${
 								language === 'english'
@@ -33,42 +33,42 @@ export default function Profile({ loaded }) {
 									: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
 							}`}
 							target='_blank'
-							className='moon-btn flex h-full w-full items-center justify-center'
+							className='hero-btn flex h-full w-full items-center justify-center rounded-lg px-4 py-4'
 						>
-							<p className='moon-text absolute z-20 min-w-max left-1/2 rounded-[2px] w-full -translate-x-1/2 top-1/2 -translate-y-1/2 text-sm md:text-base xl:text-2xl transition-all duration-200'>
+							<p className='hero-btn-text h-full w-full text-lg transition-all duration-200  lg:text-2xl'>
 								{language === 'english' ? 'Google Form' : 'Гугл Форма'}
 							</p>
 							<img
-								src='/images/moon-sticker.png'
+								src='/svg/chevron-right.svg'
 								alt=''
-								className='moon-image z-10 sm:w-32 md:w-40 lg:w-48 xl:w-60 transition-all duration-200  group-hover:scale-95 rounded-full'
+								className='hero-chevron ml-2 h-5 transition-all duration-300 group-hover:translate-x-1 lg:h-6'
 							/>
 						</a>
-					</button> */}
-					{/* <button className='moon-btn group absolute z-40 mt-12 hidden translate-y-1/2 items-center justify-center rounded-lg bg-[url(/images/bg.webp)] text-secondaryText bg-cover outline outline-2 outline-offset-0 outline-thinLine transition-all duration-200 hover:outline-offset-4 hover:outline-secondaryText sm:bottom-[80px] sm:right-12 sm:flex md:bottom-[120px] lg:bottom-[150px] 2xl:right-24 hover:shadow-lg hover:shadow-[#9562bede]'>
-						<a
-							href={`${
-								language === 'english'
-									? 'https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
-									: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
-							}`}
-							target='_blank'
-							className='moon-btn flex h-full w-full items-center justify-center px-4 py-4 rounded-lg'
-						>
-							<p className='moon-text w-full text-lg transition-all duration-200 md:text-2xl  h-full'>
-								{language === 'english' ? 'Google Form' : 'Гугл Форма'}
-							</p>
-							<img
-								src='/images/chevron.png'
-								alt=''
-								className='h-6 -rotate-90 ml-2'
-							/>
-						</a>
-					</button> */}
+					</button>
 				</div>
 			</div>
-			<div className='absolute bottom-full flex w-full items-center justify-center bg-gradient-to-r from-[#19192456] to-[#19192456]  py-3 sm:hidden'>
-				<h1 className='hero-text-mobile via-mainGray flex'>Commissions Open</h1>
+			<div className='absolute bottom-full flex w-full items-center justify-between bg-gradient-to-r from-[#191924b2] to-[#191924b2] px-6 py-2 sm:hidden'>
+				<h1 className='hero-text-mobile via-mainGray flex'>Commissions Closed</h1>
+				<button className='hero-btn-mobile min-w-[100px] rounded-md bg-homeColor active:bg-white/10'>
+					<a
+						href={`${
+							language === 'english'
+								? 'https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
+								: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
+						}`}
+						target='_blank'
+						className='flex items-center justify-between px-2 py-2 rounded-md'
+					>
+						<p className='hero-btn-text-mobile h-full w-full'>
+							<span className='hidden xs:inline-block'>Google </span>Form
+						</p>
+						<img
+							src='/svg/chevron-right.svg'
+							alt=''
+							className='hero-chevron ml-2 w-4 transition-all duration-300 group-hover:translate-x-1'
+						/>
+					</a>
+				</button>
 			</div>
 			<div className='footer-content relative z-40 flex h-full w-full max-w-7xl flex-col-reverse items-center'>
 				<div className='mt-4 flex h-2/3 w-[90%] items-center justify-between py-2 md:w-3/5 lg:w-1/2'>
