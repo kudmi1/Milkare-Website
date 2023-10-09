@@ -23,7 +23,7 @@ export default function Profile({ loaded }) {
 					<h1
 						className={`hero-text absolute hidden translate-y-1/2 text-mainText sm:bottom-[80px] sm:left-12 sm:block md:bottom-[120px] lg:bottom-[150px] 2xl:left-24 `}
 					>
-						Commissions <br /> Closed
+						Commission <br /> Closed
 					</h1>
 					<button className='hero-btn group absolute z-40 mt-12 hidden translate-y-1/2 items-center justify-center rounded-lg bg-homeColor bg-cover text-mainText outline outline-2 outline-offset-0 outline-thinLine transition-all duration-200  hover:shadow-lg hover:shadow-[#9562bebe] sm:bottom-[80px] sm:right-12 sm:flex md:bottom-[120px] lg:bottom-[150px] 2xl:right-24'>
 						<a
@@ -48,8 +48,8 @@ export default function Profile({ loaded }) {
 				</div>
 			</div>
 			<div className='absolute bottom-full flex w-full items-center justify-between bg-gradient-to-r from-[#191924b2] to-[#191924b2] px-6 py-2 sm:hidden'>
-				<h1 className='hero-text-mobile via-mainGray flex'>Commissions Closed</h1>
-				<button className='hero-btn-mobile min-w-[100px] rounded-md bg-homeColor active:bg-white/10'>
+				<h1 className='hero-text-mobile via-mainGray flex'>Commission Closed</h1>
+				<button className='hero-btn-mobile min-w-[100px] rounded-md bg-homeColor hover:shadow-lg hover:shadow-[#9562be77]'>
 					<a
 						href={`${
 							language === 'english'
@@ -60,7 +60,7 @@ export default function Profile({ loaded }) {
 						className='flex items-center justify-between px-2 py-2 rounded-md'
 					>
 						<p className='hero-btn-text-mobile h-full w-full'>
-							<span className='hidden xs:inline-block'>Google </span>Form
+							<span className='hidden xs:inline-block'>Google </span> Form
 						</p>
 						<img
 							src='/svg/chevron-right.svg'

@@ -3,7 +3,7 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 export default function GoogleFormButton() {
 	const { language } = useLanguageContext()
 	return (
-		<button className='overflow-hidden rounded-md border-2 border-[#92d9eb] bg-transparent text-xl text-[#92d9eb] transition-all duration-150 hover:shadow-lg hover:shadow-[#9562bede]'>
+		<button className='hero-btn-mobile outline outline-2 outline-offset-0 outline-thinLine overflow-hidden rounded-md text-xl text-mainText transition-all duration-150 hover:shadow-lg hover:shadow-[#9562be9c] bg-[#160041]'>
 			<a
 				href={`${
 					language === 'english'
