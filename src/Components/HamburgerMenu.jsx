@@ -129,7 +129,11 @@ export default function HamburgerMenu({
 
 								<button className='hover:border-secondaryText overflow-hidden relative flex h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'>
 									<a
-										href='https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
+										href={`${
+											language === 'english'
+												? 'https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
+												: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
+										} `}
 										target={'_blank'}
 										className='flex h-full w-full items-center justify-center'
 									>
