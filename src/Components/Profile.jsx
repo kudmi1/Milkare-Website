@@ -48,7 +48,9 @@ export default function Profile({ loaded }) {
 				</div>
 			</div>
 			<div className='absolute bottom-full flex w-full items-center justify-between bg-gradient-to-r from-[#191924b2] to-[#191924b2] px-6 py-2 sm:hidden'>
-				<h1 className='hero-text-mobile via-mainGray flex'>Commission Closed</h1>
+				<h1 className='hero-text-mobile via-mainGray flex'>
+					Commission Closed
+				</h1>
 				<button className='hero-btn-mobile min-w-[100px] rounded-md bg-homeColor hover:shadow-lg hover:shadow-[#9562be77]'>
 					<a
 						href={`${
@@ -57,10 +59,18 @@ export default function Profile({ loaded }) {
 								: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
 						}`}
 						target='_blank'
-						className='flex items-center justify-between px-2 py-2 rounded-md'
+						className='flex items-center justify-between rounded-md px-2 py-2'
 					>
 						<p className='hero-btn-text-mobile h-full w-full'>
-							<span className='hidden xs:inline-block'>Google </span> Form
+							{language === 'english' ? (
+								<>
+									<span className='hidden xs:inline-block'>Google </span> Form
+								</>
+							) : (
+								<>
+									<span className='hidden xs:inline-block'>Гугл </span> Форма
+								</>
+							)}
 						</p>
 						<img
 							src='/svg/chevron-right.svg'
