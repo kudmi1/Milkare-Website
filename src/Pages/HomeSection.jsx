@@ -14,7 +14,7 @@ export default function SectionHome() {
 				<section
 					
 					// className={`hero-section relative w-full md:h-[646px]`}
-					className={`hero-section relative h-[20vh] max-h-[1440px] min-h-[646px] w-full md:h-screen`}
+					className={`hero-section relative h-[70vh] max-h-[1440px] min-h-[646px] w-full lg:h-screen`}
 				>
 					<div className='relative h-full w-full'>
 						<picture>

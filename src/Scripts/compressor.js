@@ -6,7 +6,7 @@ const code_names = [
 
 code_names.map((name) => {
 	const input = `public/images-sm/${name}-sm.webp`
-	const output = `public/images-blur/${name}.webp`
+	const output = `public/images-blur/${name}-blur.webp`
 	const command = `ffmpeg -i ${input} -vf "scale=40:-1,boxblur=5" ${output}`
 
   exec(command, (error, stdout, stderr) => {
