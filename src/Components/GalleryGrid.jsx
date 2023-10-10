@@ -8,19 +8,20 @@ import { useInView } from 'react-intersection-observer'
 const names = [
 	'Lucy',
 	'Eleonora',
-	'Blade Runner 2049',
-	'Sangonomiya Kokomi',
-	'Makima',
-	'Alhaitam',
 	'Aqua Hoshino',
+	'Makima',
+	'Sangonomiya Kokomi',
+	'Alhaitam',
 	'My Birthday',
 	'Komi-san',
 	'Himeno',
 	'Pochita',
 	'2B & 9S',
 	'My workplace',
-	'Lady Nagant',
+	'Roadside Picnic',
 	'Edelgard',
+	'Blade Runner 2049',
+	'Lady Nagant',
 ]
 
 export default function GalleryGrid({ galleryID, images }) {
@@ -124,20 +125,12 @@ export default function GalleryGrid({ galleryID, images }) {
 			id={galleryID}
 		>
 			{images.map((image, index) => (
-				<div
-					key={index}
-					className={`${
-						index === 13 ? 'row-span-2 sm:row-auto' : ''
-					} rounded-md`}
-				>
-					
+				<div key={index} className={`rounded-md  ${index === 14 ? 'sm:col-span-2' : ''} ${index === 4 ? 'sm:col-span-2' : ''}`}>
 					<div
-						className={`grid-block group relative w-full focus:blur-md active:brightness-75 lg:h-80 lg:w-80 xl:h-96 xl:w-96 ${
-							index === 13
-								? 'h-full sm:aspect-square sm:h-auto'
-								: ' aspect-square'
-						} overflow-hidden rounded-md
-						transition-all duration-500`}
+						className={`grid-block group relative w-full overflow-hidden rounded-md transition-all duration-500 active:brightness-75 lg:min-h-[320px] lg:min-w-[320px] xl:min-h-[384px] xl:min-w-[384px]
+						${index === 14 ? 'sm:h-auto sm:aspect-[2/1]' : 'aspect-square'}
+						${index === 4 ? 'sm:h-auto sm:aspect-[2/1]' : 'aspect-square'}
+						`}
 						style={{
 							backgroundImage: `url(${image.blur})`,
 							backgroundRepeat: 'no-repeat',
@@ -163,7 +156,7 @@ export default function GalleryGrid({ galleryID, images }) {
 									/>
 									<img
 										onLoad={showImageWithDelay}
-										className={` h-full w-full rounded-md object-cover object-top
+										className={`h-full w-full rounded-md object-cover ${index === 4 || index === 14 ? '' : 'object-top'} 
 									${
 										showImage
 											? 'scale-100 opacity-100'
@@ -176,8 +169,8 @@ export default function GalleryGrid({ galleryID, images }) {
 								</picture>
 							) : null}
 
-							<div className='absolute bottom-3 left-3 z-20 hidden -translate-x-[50%] rounded-md opacity-0 transition-all border border-thinLine duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block text-mainText px-3 py-1 bg-gradient-to-b from-[#191924ef] to-[#160041f1] overflow-hidden'>
-								<p >{names[index]}</p>
+							<div className='absolute bottom-3 left-3 z-20 hidden -translate-x-[50%] overflow-hidden rounded-md border border-thinLine bg-gradient-to-b from-[#191924ef] to-[#160041f1] px-3 py-1 text-mainText opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block'>
+								<p>{names[index]}</p>
 							</div>
 						</a>
 					</div>

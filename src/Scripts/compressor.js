@@ -1,9 +1,7 @@
 import { exec } from 'child_process'
 
 const code_names = [
-	'eleonora',
-  'dtf',
-  'aqua'
+	'roadside-picnic'
 ]
 
 code_names.map((name) => {

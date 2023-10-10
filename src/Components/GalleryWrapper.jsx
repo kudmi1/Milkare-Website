@@ -6,36 +6,38 @@ import GalleryGrid from './GalleryGrid'
 const code_names = [
 	'lucy1',
 	'eleonora',
-	'bladerunner2049',
-	'kokomi',
-	'makima1',
-	'alhaitam',
 	'aqua',
+	'makima1',
+	'kokomi',
+	'alhaitam',
 	'mybirthday',
 	'komi',
 	'himeno',
 	'pochita',
 	'2b_9s1',
 	'milka',
-	'purplegirl',
+	'roadside-picnic',
 	'redgirl',
+	'bladerunner2049',
+	'purplegirl',
 ]
 
 const dimensions = [
 	{ width: 2480, height: 3508 },
 	{ width: 1536, height: 2048 },
-	{ width: 1920, height: 1080 },
+	{ width: 3001, height: 2720 },
 	{ width: 2048, height: 2048 },
 	{ width: 2720, height: 2720 },
 	{ width: 2048, height: 2048 },
-	{ width: 3001, height: 2720 },
 	{ width: 2048, height: 2048 },
 	{ width: 2388, height: 3196 },
 	{ width: 3000, height: 3000 },
 	{ width: 2706, height: 2706 },
 	{ width: 2480, height: 3508 },
 	{ width: 1429, height: 1904 },
+	{ width: 4967, height: 7022 },
 	{ width: 1080, height: 1920 },
+	{ width: 1920, height: 1080 },
 	{ width: 1080, height: 1920 },
 ]
 
@@ -58,7 +60,7 @@ export default function GalleryWrapper() {
 	return (
 		<div className='flex justify-center motion-reduce:transition-none'>
 			<div
-				className={`relative mt-12 flex w-full max-w-7xl flex-col items-center justify-center rounded-md border-t border-b lg:border border-thinLine bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 lg:w-max`}
+				className={`relative mt-12 flex w-full xl:min-w-[1280px] max-w-7xl flex-col items-center justify-center rounded-md border-t border-b lg:border border-thinLine bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 lg:w-max`}
 			>
 				<div ref={ref} className='w-full rounded-b-md p-4 '>
 					<h1
