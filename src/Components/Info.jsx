@@ -22,7 +22,7 @@ export default function Info() {
 					<p className='nav-text mb-6 text-2xl md:mb-0 lg:text-2xl'>
 						{language === 'english' ? 'Make a commission' : 'Сделать заказ'}
 					</p>
-					<GoogleFormButton />
+					<GoogleFormButton/>
 				</div>
 				<TOS loaded={loaded} />
 			</div>

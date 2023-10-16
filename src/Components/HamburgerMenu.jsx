@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { useCommissionContext } from '../Providers/CommissionContext'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import Translate from './Translate'
 
@@ -9,9 +10,10 @@ export default function HamburgerMenu({
 	showContactModal,
 	setShowContactModal,
 	page,
-	setPage,
+	setPage
 }) {
 	const { language, setLanguage } = useLanguageContext()
+	const { commissionStatus } = useCommissionContext()
 
 	function toggleContactModal() {
 		setShowContactModal((prev) => !prev)
@@ -30,7 +32,7 @@ export default function HamburgerMenu({
 	return (
 		<>
 			<div
-				className={`absolute bottom-0 left-0 right-0 top-0 z-30 h-[100dvh] w-screen transition-all duration-300 backdrop-blur-2xl
+				className={`absolute bottom-0 left-0 right-0 top-0 z-30 h-[100dvh] w-screen backdrop-blur-2xl transition-all duration-300
 			${
 				hamburgerState
 					? 'pointer-events-auto opacity-100'
@@ -42,13 +44,13 @@ export default function HamburgerMenu({
 					closeAllModals()
 				}}
 			>
-				<div className='relative h-full w-full subtitle-text '>
+				<div className='subtitle-text relative h-full w-full '>
 					<div
-						className={`slide-menu absolute right-0 top-0 z-40 w-full pt-12 py-4 ${
+						className={`slide-menu absolute right-0 top-0 z-40 w-full py-4 pt-12 ${
 							hamburgerState
 								? 'h-[440px] opacity-100 sm:h-[310px]'
 								: 'pointer-events-none h-0 opacity-0'
-						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine transition-all duration-300 lg:hidden bg-gradient-to-b from-[#191924ef] to-[#1600419a]`}
+						} overflow-y-auto rounded-b-xl border-b-2 border-thinLine bg-gradient-to-b from-[#191924ef] to-[#1600419a] transition-all duration-300 lg:hidden`}
 						onClick={(e) => {
 							e.stopPropagation()
 						}}
@@ -57,9 +59,13 @@ export default function HamburgerMenu({
 							<div className='w-2/3 '>
 								<Translate language={language} setLanguage={setLanguage} />
 							</div>
-							<div className='mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 text-md'>
+							<div className='text-md mb-6 grid h-full w-2/3 grid-cols-1 place-items-center gap-4 sm:grid-cols-2'>
 								<button
-									className={`hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine ${page === 'home' ? 'text-secondaryText border-secondaryText' : ''}`}
+									className={`h-12 min-h-[48px] w-full overflow-hidden rounded-lg border border-thinLine bg-cardFieldBg bg-opacity-90 text-mainText hover:border-secondaryText ${
+										page === 'home'
+											? 'border-secondaryText text-secondaryText'
+											: ''
+									}`}
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -74,7 +80,11 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className={`hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine ${page === 'price' ? 'text-secondaryText border-secondaryText' : ''}`}
+									className={`h-12 min-h-[48px] w-full overflow-hidden rounded-lg border border-thinLine bg-cardFieldBg bg-opacity-90 text-mainText hover:border-secondaryText ${
+										page === 'price'
+											? 'border-secondaryText text-secondaryText'
+											: ''
+									}`}
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -89,7 +99,11 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className={`hover:border-secondaryText overflow-hidden h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine ${page === 'info' ? 'text-secondaryText border-secondaryText' : ''}`}
+									className={`h-12 min-h-[48px] w-full overflow-hidden rounded-lg border border-thinLine bg-cardFieldBg bg-opacity-90 text-mainText hover:border-secondaryText ${
+										page === 'info'
+											? 'border-secondaryText text-secondaryText'
+											: ''
+									}`}
 									onClick={() => {
 										setHamburgerState(false)
 										setAriaExpanded(false)
@@ -104,7 +118,7 @@ export default function HamburgerMenu({
 									</NavLink>
 								</button>
 								<button
-									className='hover:border-secondaryText overflow-hidden relative flex h-12 min-h-[48px] w-full items-center justify-center rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'
+									className='relative flex h-12 min-h-[48px] w-full items-center justify-center overflow-hidden rounded-lg border border-thinLine bg-cardFieldBg bg-opacity-90 text-mainText hover:border-secondaryText'
 									onClick={toggleContactModal}
 								>
 									<p>{language === 'english' ? 'CONTACT' : 'СВЯЗЬ СО МНОЙ'}</p>
@@ -127,7 +141,13 @@ export default function HamburgerMenu({
 									</div>
 								</button>
 
-								<button className='hover:border-secondaryText overflow-hidden relative flex h-12 min-h-[48px] w-full rounded-lg bg-cardFieldBg text-mainText bg-opacity-90 border border-thinLine'>
+								<button
+									className={` relative flex h-12 min-h-[48px] w-full overflow-hidden rounded-lg  border border-thinLine ${
+										commissionStatus
+											? 'bg-cardFieldBg bg-opacity-90 text-mainText hover:border-secondaryText'
+											: 'cursor-not-allowed bg-slate-500 text-slate-600'
+									}`}
+								>
 									<a
 										href={`${
 											language === 'english'
@@ -135,7 +155,11 @@ export default function HamburgerMenu({
 												: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
 										} `}
 										target={'_blank'}
-										className='flex h-full w-full items-center justify-center'
+										className={`flex h-full w-full items-center justify-center ${
+											commissionStatus
+												? ''
+												: 'pointer-events-none cursor-not-allowed'
+										}`}
 									>
 										<p>
 											{language === 'english' ? 'COMMISSION' : 'СДЕЛАТЬ ЗАКАЗ'}
@@ -166,7 +190,7 @@ export default function HamburgerMenu({
 			</div>
 			{showContactModal ? (
 				<div
-					className='fixed top-0 left-0 z-[999] flex h-[100dvh] w-full items-center justify-center backdrop-blur-2xl '
+					className='fixed left-0 top-0 z-[999] flex h-[100dvh] w-full items-center justify-center backdrop-blur-2xl '
 					onClick={() => setShowContactModal(false)}
 				>
 					<div className='relative h-48 w-96 rounded-lg bg-gradient-to-br from-[#191924ef] to-[#1600419a]'>
@@ -197,7 +221,7 @@ export default function HamburgerMenu({
 							</button>
 							<button className='effect-shine flex h-16 w-16 items-center justify-center md:h-14 md:w-14'>
 								<a href='mailto:milkareart@gmail.com' target={'_blank'}>
-								<img
+									<img
 										src='./svg/gmail.svg'
 										alt='gmail-logo'
 										className='h-16 w-16 md:h-10 md:w-10'

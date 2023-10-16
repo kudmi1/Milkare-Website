@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
+import { useCommissionContext } from '../Providers/CommissionContext'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import GoogleFormButton from './GoogleFormButton'
 import Socials from './Socials'
 
 export default function Profile({ loaded }) {
 	const { language } = useLanguageContext()
+	const { commissionStatus } = useCommissionContext()
 	const star = (
 		<img
 			src='./svg/star-thin.svg'
@@ -23,9 +25,16 @@ export default function Profile({ loaded }) {
 					<h1
 						className={`hero-text absolute hidden translate-y-1/2 text-mainText sm:bottom-[80px] sm:left-12 sm:block md:bottom-[120px] lg:bottom-[150px] 2xl:left-24 `}
 					>
-						Commission <br /> Closed
+						Commission <br /> {commissionStatus ? 'Open' : 'Closed'}
 					</h1>
-					<button className='hero-btn group absolute z-40 mt-12 hidden translate-y-1/2 items-center justify-center rounded-lg bg-homeColor bg-cover text-mainText outline outline-2 outline-offset-0 outline-thinLine transition-all duration-200  hover:shadow-lg hover:shadow-[#9562bebe] sm:bottom-[80px] sm:right-12 sm:flex md:bottom-[120px] lg:bottom-[150px] 2xl:right-24'>
+					<button
+						className={`group absolute z-40 mt-12 hidden translate-y-1/2 items-center justify-center rounded-lg ${
+							commissionStatus
+								? 'hero-btn bg-homeColor text-mainText  hover:shadow-lg hover:shadow-[#9562bebe]'
+								: 'cursor-not-allowed bg-slate-500 text-slate-600'
+						} 
+						 bg-cover outline outline-2 outline-offset-0 outline-thinLine transition-all duration-200  sm:bottom-[80px] sm:right-12 sm:flex md:bottom-[120px] lg:bottom-[150px] 2xl:right-24`}
+					>
 						<a
 							href={`${
 								language === 'english'
@@ -33,16 +42,20 @@ export default function Profile({ loaded }) {
 									: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
 							}`}
 							target='_blank'
-							className='hero-btn flex h-full w-full items-center justify-center rounded-lg px-4 py-4'
+							className={`hero-btn flex h-full w-full items-center justify-center rounded-lg px-4 py-4 ${
+								commissionStatus ? '' : 'pointer-events-none cursor-not-allowed'
+							}`}
 						>
 							<p className='hero-btn-text h-full w-full text-lg transition-all duration-200  lg:text-2xl'>
 								{language === 'english' ? 'Google Form' : 'Гугл Форма'}
 							</p>
-							<img
-								src='/svg/chevron-right.svg'
-								alt=''
-								className='hero-chevron ml-2 h-5 transition-all duration-300 group-hover:translate-x-1 lg:h-6'
-							/>
+							{commissionStatus ? (
+								<img
+									src='/svg/chevron-right.svg'
+									alt=''
+									className='hero-chevron ml-2 h-5 transition-all duration-300 group-hover:translate-x-1 lg:h-6'
+								/>
+							) : null}
 						</a>
 					</button>
 				</div>
@@ -51,7 +64,13 @@ export default function Profile({ loaded }) {
 				<h1 className='hero-text-mobile via-mainGray flex'>
 					Commission Closed
 				</h1>
-				<button className='hero-btn-mobile min-w-[100px] rounded-md bg-homeColor hover:shadow-lg hover:shadow-[#9562be77]'>
+				<button
+					className={`${
+						commissionStatus
+							? 'hero-btn-mobile bg-homeColor hover:shadow-lg hover:shadow-[#9562be77]'
+							: 'cursor-not-allowed bg-slate-500 text-slate-600'
+					}  min-w-[100px] rounded-md `}
+				>
 					<a
 						href={`${
 							language === 'english'
@@ -59,7 +78,9 @@ export default function Profile({ loaded }) {
 								: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
 						}`}
 						target='_blank'
-						className='flex items-center justify-between rounded-md px-2 py-2'
+						className={`flex items-center justify-between rounded-md px-2 py-2 ${
+							commissionStatus ? '' : 'pointer-events-none cursor-not-allowed'
+						}`}
 					>
 						<p className='hero-btn-text-mobile h-full w-full'>
 							{language === 'english' ? (
@@ -72,11 +93,13 @@ export default function Profile({ loaded }) {
 								</>
 							)}
 						</p>
-						<img
-							src='/svg/chevron-right.svg'
-							alt=''
-							className='hero-chevron ml-2 w-4 transition-all duration-300 group-hover:translate-x-1'
-						/>
+						{commissionStatus ? (
+							<img
+								src='/svg/chevron-right.svg'
+								alt=''
+								className='hero-chevron ml-2 w-4 transition-all duration-300 group-hover:translate-x-1'
+							/>
+						) : null}
 					</a>
 				</button>
 			</div>

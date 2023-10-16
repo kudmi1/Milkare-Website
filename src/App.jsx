@@ -8,12 +8,12 @@ import { Route, RouterProvider, Routes, useLocation } from 'react-router-dom'
 import { NotFoundPage } from './Pages/NotFoundPage'
 import SectionHome from './Pages/HomeSection'
 
-
 function App() {
 	const location = useLocation()
 	const [page, setPage] = useState(null)
 	const headerRef = useRef(null)
 	const sectionRef = useRef(null)
+	// const [commissionStatus, setCommissionStatus] = useState(false)
 
 	useEffect(() => {
 		switch (location.pathname) {
@@ -31,18 +31,18 @@ function App() {
 		}
 	}, [location])
 
-
-
 	return (
-		<div className='App relative flex min-h-screen flex-col md:bg-[url("/images/bg-transformed.webp")] bg-[url("/images/bg.webp")]'>
-			
+		<div className='App relative flex min-h-screen flex-col bg-[url("/images/bg.webp")] md:bg-[url("/images/bg-transformed.webp")]'>
 			<header ref={headerRef}>
 				<Header page={page} setPage={setPage} />
 			</header>
 			<main ref={sectionRef}>
 				<Routes>
-					<Route path='/' element={<SectionHome />} />
-					<Route path='/price' element={<SectionPrice id={'price'} />} />
+					<Route
+						path='/'
+						element={<SectionHome />}
+					/>
+					<Route path='/price' element={<SectionPrice id={'price'}/>} />
 					<Route path='/info' element={<SectionInfo id={'info'} />} />
 					<Route path='*' element={<NotFoundPage />} />
 				</Routes>

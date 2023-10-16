@@ -1,9 +1,17 @@
+import { useCommissionContext } from '../Providers/CommissionContext'
 import { useLanguageContext } from '../Providers/LanguageContext'
 
 export default function GoogleFormButton() {
 	const { language } = useLanguageContext()
+	const { commissionStatus } = useCommissionContext()
 	return (
-		<button className='outline outline-2 outline-offset-0 outline-thinLine overflow-hidden rounded-md text-xl text-mainText transition-all duration-150 shadow-lg shadow-[#9562be9c] bg-[#160041] hover:outline-mainText/50'>
+		<button
+			className={`overflow-hidden rounded-md text-xl outline outline-2 outline-offset-0 outline-thinLine  transition-all duration-150  ${
+				commissionStatus
+					? 'bg-[#160041] text-mainText shadow-lg shadow-[#9562be9c] hover:outline-mainText/50'
+					: ' cursor-not-allowed bg-slate-500 text-slate-600'
+			}`}
+		>
 			<a
 				href={`${
 					language === 'english'
@@ -11,7 +19,9 @@ export default function GoogleFormButton() {
 						: 'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
 				} `}
 				target={'_blank'}
-				className='flex h-full w-full items-center px-4 py-2'
+				className={`flex h-full w-full items-center px-4 py-2 ${
+					commissionStatus ? '' : 'pointer-events-none cursor-not-allowed'
+				}`}
 			>
 				<p className='form-text'>
 					{language === 'english' ? 'Google Form' : 'Гугл форма'}
