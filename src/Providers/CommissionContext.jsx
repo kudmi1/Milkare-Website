@@ -7,7 +7,7 @@ export const useCommissionContext = () => {
 }
 
 export const CommissionProvider = ({children}) => {
-  const [commissionStatus] = useState(false)
+  const [commissionStatus] = useState(true)
 
   return (
     <CommissionContext.Provider value={{ commissionStatus }}>
