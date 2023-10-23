@@ -6,11 +6,12 @@ import ObjectPosition from '../Scripts/photoswipe-object-position'
 import { useInView } from 'react-intersection-observer'
 
 const names = [
+	'Frieren',
 	'Lucy',
 	'Eleonora',
 	'Aqua Hoshino',
-	'Makima',
 	'Sangonomiya Kokomi',
+	'Makima',
 	'Alhaitam',
 	'My Birthday',
 	'Komi-san',
@@ -22,6 +23,7 @@ const names = [
 	'Edelgard',
 	'Blade Runner 2049',
 	'Lady Nagant',
+	'WIP'
 ]
 
 export default function GalleryGrid({ galleryID, images }) {
@@ -125,11 +127,9 @@ export default function GalleryGrid({ galleryID, images }) {
 			id={galleryID}
 		>
 			{images.map((image, index) => (
-				<div key={index} className={`rounded-md  ${index === 14 ? 'sm:col-span-2' : ''} ${index === 4 ? 'sm:col-span-2' : ''}`}>
+				<div key={index} className={`rounded-md `}>
 					<div
-						className={`grid-block group relative w-full overflow-hidden rounded-md transition-all duration-500 active:brightness-75 lg:min-h-[320px] lg:min-w-[320px] xl:min-h-[384px] xl:min-w-[384px]
-						${index === 14 ? 'sm:h-auto sm:aspect-[2/1]' : 'aspect-square'}
-						${index === 4 ? 'sm:h-auto sm:aspect-[2/1]' : 'aspect-square'}
+						className={`grid-block group relative w-full overflow-hidden rounded-md transition-all duration-500 active:brightness-75 lg:min-h-[320px] lg:min-w-[320px] xl:min-h-[384px] xl:min-w-[384px] aspect-square
 						`}
 						style={{
 							backgroundImage: `url(${image.blur})`,
@@ -156,7 +156,7 @@ export default function GalleryGrid({ galleryID, images }) {
 									/>
 									<img
 										onLoad={showImageWithDelay}
-										className={`h-full w-full rounded-md object-cover ${index === 4 || index === 14 ? '' : 'object-top'} 
+										className={`h-full w-full rounded-md object-cover object-top
 									${
 										showImage
 											? 'scale-100 opacity-100'

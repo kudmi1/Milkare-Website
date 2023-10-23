@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import PanelComponent from './PanelComponent'
 
-const names = ['roadside-picnic', 'eleonora', 'bladerunner2049']
+const names = ['frieren','roadside-picnic', 'eleonora']
 
 export default function Accordion() {
 	const { language, content } = useLanguageContext()
@@ -47,6 +47,22 @@ export default function Accordion() {
 								>
 									<img
 										onLoad={showImageWithDelay}
+										src='images-accordion/frieren.webp'
+										alt=''
+										className={`grid-block h-full w-full rounded-md object-cover transition-all delay-0 duration-500 ease-linear hover:scale-110 hover:duration-[3s] ${
+											showImage
+												? 'scale-100 opacity-100 blur-0'
+												: 'opacity-50 blur-[2px]'
+										} `}
+									/>
+								</div>
+								<div
+									className={`bg-slate-600 ${
+										showImage ? '' : 'effect-shine-skeleton'
+									} overflow-hidden rounded-md`}
+								>
+									<img
+										onLoad={showImageWithDelay}
 										src='images-accordion/roadside-picnic.webp'
 										alt=''
 										className={`grid-block h-full w-full rounded-md object-cover transition-all delay-0 duration-500 ease-linear hover:scale-110 hover:duration-[3s] ${
@@ -72,22 +88,6 @@ export default function Accordion() {
 										} `}
 									/>
 								</div>
-								<div
-									className={`bg-slate-600 ${
-										showImage ? '' : 'effect-shine-skeleton'
-									} overflow-hidden rounded-md`}
-								>
-									<img
-										onLoad={showImageWithDelay}
-										src='images-accordion/bladerunner2049.webp'
-										alt=''
-										className={`grid-block h-full w-full rounded-md object-cover transition-all delay-0 duration-500 ease-linear hover:scale-110 hover:duration-[3s] ${
-											showImage
-												? 'scale-100 opacity-100 blur-0'
-												: 'opacity-50 blur-[2px]'
-										} `}
-									/>
-								</div>
 							</>
 						) : null}
 					</div>
@@ -102,7 +102,8 @@ export default function Accordion() {
 								setExpandedPanel={setExpandedPanel}
 								imageNames={names}
 								isText={false}
-								isObjectTop={index === 1 || index === 0 ? true : false}
+								// isObjectTop={index === 1 || index === 0 ? true : false}
+								isObjectTop={true}
 							/>
 						))}
 					</div>

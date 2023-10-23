@@ -4,11 +4,12 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 import GalleryGrid from './GalleryGrid'
 
 const code_names = [
+	'frieren',
 	'lucy1',
 	'eleonora',
 	'aqua',
-	'makima1',
 	'kokomi',
+	'makima1',
 	'alhaitam',
 	'mybirthday',
 	'komi',
@@ -20,15 +21,17 @@ const code_names = [
 	'redgirl',
 	'bladerunner2049',
 	'purplegirl',
+	// 'WIP'
 ]
 
 const dimensions = [
+	{ width: 2483, height: 3511 },
 	{ width: 2480, height: 3508 },
 	{ width: 1536, height: 2048 },
 	{ width: 3001, height: 2720 },
 	{ width: 2048, height: 2048 },
-	{ width: 2720, height: 2720 },
 	{ width: 2048, height: 2048 },
+	{ width: 2720, height: 2720 },
 	{ width: 2048, height: 2048 },
 	{ width: 2388, height: 3196 },
 	{ width: 3000, height: 3000 },
@@ -39,6 +42,7 @@ const dimensions = [
 	{ width: 1080, height: 1920 },
 	{ width: 1920, height: 1080 },
 	{ width: 1080, height: 1920 },
+	// { width: 1080, height: 1920 },
 ]
 
 export default function GalleryWrapper() {
