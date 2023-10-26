@@ -13,7 +13,7 @@ function App() {
 	const [page, setPage] = useState(null)
 	const headerRef = useRef(null)
 	const sectionRef = useRef(null)
-	const [isPageLoaded, setPageLoaded] = useState(false)
+	// const [isPageLoaded, setPageLoaded] = useState(false)
 
 	const loaderContainer = document.querySelector('.loader-container')
 	const loader = document.querySelector('.loader')
@@ -21,7 +21,7 @@ function App() {
 	useEffect(() => {
 		
 			setTimeout(() => {
-				setPageLoaded(true)
+				// setPageLoaded(true)
 				loaderContainer.style.opacity = 0
 				loader.style.transform = 'scale(0.5)'
 				loaderContainer.addEventListener(
@@ -48,7 +48,7 @@ function App() {
 	}, [location])
 
 	return (
-		<div className={`App relative min-h-screen flex-col bg-[url("/images/bg.webp")] md:bg-[url("/images/bg-transformed.webp")] ${isPageLoaded ? 'flex' : 'hidden'}`}>
+		<div className={`App relative min-h-screen flex-col bg-[url("/images/bg.webp")] md:bg-[url("/images/bg-transformed.webp")]`}>
 			<header ref={headerRef}>
 				<Header page={page} setPage={setPage} />
 			</header>
