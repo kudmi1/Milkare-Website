@@ -62,7 +62,7 @@ export default function Profile({ loaded }) {
 			</div>
 			<div className='absolute bottom-full flex w-full items-center justify-between bg-gradient-to-r from-[#191924b2] to-[#191924b2] px-6 py-2 sm:hidden'>
 				<h1 className='hero-text-mobile via-mainGray flex'>
-					Commission Closed
+					{commissionStatus ? 'Commission Open' : 'Commission Closed'}
 				</h1>
 				<button
 					className={`${
