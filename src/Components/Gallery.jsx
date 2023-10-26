@@ -5,7 +5,7 @@ import SpeedPaint from './SpeedPaint'
 export default function Gallery({ id }) {
 	return (
 		<section
-			className='section-entry relative mb-12 mt-6 w-full scroll-m-12 lg:mb-0 lg:mt-0 lg:scroll-m-0'
+			className='section-entry relative mt-6 w-full scroll-m-12 lg:mb-0 lg:mt-0 lg:scroll-m-0'
 			id={id}
 		>
 			<img

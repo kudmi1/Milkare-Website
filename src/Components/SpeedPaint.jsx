@@ -47,7 +47,7 @@ export default function SpeedPaint() {
 		>
 			{inView ? (
 				<div
-					className={`relative mx-auto mb-28 mt-24 flex max-w-7xl items-center justify-center px-4 lg:flex-row lg:items-start lg:px-14`}
+					className={`relative mx-auto mb-12 mt-24 flex max-w-7xl items-center justify-center px-4 lg:flex-row lg:items-start lg:px-14`}
 				>
 					{/* <div
 						className={`mb-6 mr-3 flex w-full flex-col items-center justify-between md:w-2/3 lg:mb-0 lg:h-[340px] lg:w-1/3 lg:items-start`}
