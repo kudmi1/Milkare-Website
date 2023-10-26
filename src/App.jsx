@@ -13,7 +13,6 @@ function App() {
 	const [page, setPage] = useState(null)
 	const headerRef = useRef(null)
 	const sectionRef = useRef(null)
-	// const [commissionStatus, setCommissionStatus] = useState(false)
 
 	useEffect(() => {
 		switch (location.pathname) {
@@ -32,27 +31,24 @@ function App() {
 	}, [location])
 
 	return (
-		<div className='App relative flex min-h-screen flex-col bg-[url("/images/bg.webp")] md:bg-[url("/images/bg-transformed.webp")]'>
-			<header ref={headerRef}>
-				<Header page={page} setPage={setPage} />
-			</header>
-			<main ref={sectionRef}>
-				<Routes>
-					<Route
-						path='/'
-						element={<SectionHome />}
-					/>
-					<Route path='/price' element={<SectionPrice id={'price'}/>} />
-					<Route path='/info' element={<SectionInfo id={'info'} />} />
-					<Route path='*' element={<NotFoundPage />} />
-				</Routes>
-				<ToTop />
-			</main>
-			<footer className='mt-auto'>
-				<Footer />
-			</footer>
-		</div>
-	)
+			<div className='App relative flex min-h-screen flex-col bg-[url("/images/bg.webp")] md:bg-[url("/images/bg-transformed.webp")]'>
+				<header ref={headerRef}>
+					<Header page={page} setPage={setPage} />
+				</header>
+				<main ref={sectionRef}>
+					<Routes>
+						<Route path='/' element={<SectionHome />} />
+						<Route path='/price' element={<SectionPrice id={'price'} />} />
+						<Route path='/info' element={<SectionInfo id={'info'} />} />
+						<Route path='*' element={<NotFoundPage />} />
+					</Routes>
+					<ToTop />
+				</main>
+				<footer className='mt-auto'>
+					<Footer />
+				</footer>
+			</div>
+		)
 }
 
 export default App
