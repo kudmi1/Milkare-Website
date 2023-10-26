@@ -67,11 +67,14 @@
 		</script>
 	</head>
 	<body>
-		<div class="loading-container">
-			<div class="loading"></div>
+		<div
+			class="loader-container fixed left-0 top-0 z-[1000] flex h-screen w-screen items-center justify-center bg-gradient-to-br from-[#191924] to-[#200061] transition-all duration-500"
+		>
+			<div class="loader z-[2000] w-52 h-52 flex items-center justify-center transition-all duration-500">
+				<img src="public/svg/hearts.svg" alt="" />
+			</div>
 		</div>
-		<div id="root">
-		</div>
+		<div id="root"></div>
 		<script type="module" src="/src/main.jsx"></script>
 	</body>
 </html>
