@@ -18,7 +18,7 @@ function App() {
 	const loader = document.querySelector('.loader')
 
 	useEffect(() => {
-		window.addEventListener('load', () => {
+		// window.onload = () => {
 			setTimeout(() => {
 				loaderContainer.style.opacity = 0
 				loader.style.transform = 'scale(0.5)'
@@ -27,7 +27,7 @@ function App() {
 					() => (loaderContainer.style.display = 'none')
 				)
 			}, 300)
-		})
+		// }
 	}, [])
 
 	useEffect(() => {
