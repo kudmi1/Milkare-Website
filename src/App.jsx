@@ -19,7 +19,7 @@ function App() {
 	const loader = document.querySelector('.loader')
 
 	useEffect(() => {
-		
+
 			setTimeout(() => {
 				// setPageLoaded(true)
 				loaderContainer.style.opacity = 0
@@ -27,8 +27,8 @@ function App() {
 				loaderContainer.addEventListener(
 					'transitionend',
 					() => (loaderContainer.style.display = 'none')
-				)
-			}, 300)
+					)
+				}, 500)
 	}, [])
 
 	useEffect(() => {

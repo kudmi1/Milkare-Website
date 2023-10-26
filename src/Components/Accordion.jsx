@@ -46,6 +46,7 @@ export default function Accordion() {
 									} overflow-hidden rounded-md`}
 								>
 									<img
+									onContextMenu={(e) => e.preventDefault()}
 										onLoad={showImageWithDelay}
 										src='images-accordion/frieren.webp'
 										alt=''
@@ -62,6 +63,8 @@ export default function Accordion() {
 									} overflow-hidden rounded-md`}
 								>
 									<img
+									onContextMenu={(e) => e.preventDefault()}
+
 										onLoad={showImageWithDelay}
 										src='images-accordion/roadside-picnic.webp'
 										alt=''
@@ -78,6 +81,8 @@ export default function Accordion() {
 									} overflow-hidden rounded-md`}
 								>
 									<img
+									onContextMenu={(e) => e.preventDefault()}
+
 										onLoad={showImageWithDelay}
 										src='images-accordion/eleonora.webp'
 										alt=''

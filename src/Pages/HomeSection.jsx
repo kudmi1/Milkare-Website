@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function SectionHome() {
 	const [loaded, setLoaded] = useState(false)
+	const [isImageLoaded, setImageLoaded] = useState(false)
 
 	useEffect(() => {
 		setLoaded(true)
@@ -16,8 +17,8 @@ export default function SectionHome() {
 				<img
 					src='/images/milka4x.webp'
 					alt='milka-banner-image'
-					className={`hidden h-full w-full object-cover lg:block`}
-					onContextMenu={false}
+					className={`hidden h-full w-full object-cover lg:block transition-opacity`}
+					onContextMenu={(e) => e.preventDefault()}
 				/>
 				<Profile loaded={loaded} />
 			</section>
