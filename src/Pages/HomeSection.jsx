@@ -1,10 +1,9 @@
 import Profile from '../Components/Profile'
 import Gallery from '../Components/Gallery'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function SectionHome() {
 	const [loaded, setLoaded] = useState(false)
-	const [isImageLoaded, setImageLoaded] = useState(false)
 
 	useEffect(() => {
 		setLoaded(true)

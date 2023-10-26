@@ -20,7 +20,7 @@ function App() {
 
 	useEffect(() => {
 
-			setTimeout(() => {
+			// setTimeout(() => {
 				// setPageLoaded(true)
 				loaderContainer.style.opacity = 0
 				loader.style.transform = 'scale(0.5)'
@@ -28,7 +28,7 @@ function App() {
 					'transitionend',
 					() => (loaderContainer.style.display = 'none')
 					)
-				}, 500)
+				// }, 500)
 	}, [])
 
 	useEffect(() => {

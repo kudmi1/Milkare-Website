@@ -25,8 +25,10 @@ export default function Profile({ loaded }) {
 					<h1
 						className={`hero-text absolute hidden translate-y-1/2 text-mainText sm:bottom-[80px] sm:left-12 sm:block md:bottom-[120px] lg:bottom-[150px] 2xl:left-24 `}
 					>
+						
 						Commission <br /> {commissionStatus ? 'Open' : 'Closed'}
 					</h1>
+					<div className='absolute rounded-full w-64 h-64 bg-black'>ds</div>
 					<button
 						className={`group absolute z-40 mt-12 hidden translate-y-1/2 items-center justify-center rounded-lg ${
 							commissionStatus

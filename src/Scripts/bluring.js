@@ -3,24 +3,13 @@ import { exec } from 'child_process'
 const gitTrigger = 'Some text'
 
 const code_names = [
-	'Lucy',
-	'kokomi',
-	'Makima2',
-	'alhaitam',
-	'mybirthday',
-	'komi',
-	'himeno',
-	'pochita2',
-	'2B_9S',
-	'milka',
-	'redgirl',
-	'purplegirl',
+	'milka-blur'
 ]
 
 code_names.map((name) => {
-	const input = `public/images-bg/${name}.webp`
-	const output = `public/images-bg/${name}-blur.webp`
-	const command = `ffmpeg -i ${input} -vf "boxblur=5" ${output}`
+	const input = `public/images/${name}.webp`
+	const output = `public/images/${name}-blur.webp`
+	const command = `ffmpeg -i ${input} -vf "boxblur=10" ${output}`
 
   exec(command, (error, stdout, stderr) => {
     if (error) {
