@@ -10,7 +10,7 @@ export default function Info() {
 	const gradientBG = 'bg-gradient-to-b from-[#191924ef] to-[#1600419a]'
 	return (
 		<div
-			className={`z-20 flex w-full max-w-6xl flex-col items-center pb-12 pt-24 text-mainText md:pb-24`}
+			className={`z-20 flex mt-6 w-full max-w-6xl flex-col items-center pt-24 text-mainText md:pb-24`}
 			onLoad={() => setLoaded(true)}
 		>
 			<div className='flex w-full flex-col items-center justify-center rounded-md border-b border-t border-thinLine bg-[#191924c9] px-4 py-4 pt-4 md:py-12 lg:border lg:bg-transparent lg:bg-gradient-to-b lg:from-[#191924ef] lg:to-[#1600419a] lg:px-0'>

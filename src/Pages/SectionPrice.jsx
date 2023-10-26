@@ -3,7 +3,7 @@ import Price from '../Components/Price'
 export default function SectionPrice({ id }) {
 	return (
 		<section
-			className='section-entry relative mb-12 mt-6 flex scroll-m-12 justify-center motion-reduce:transition-none lg:mb-0 lg:mt-0 lg:scroll-m-0'
+			className='section-entry relative mb-12 flex scroll-m-12 justify-center motion-reduce:transition-none lg:mb-0 lg:mt-0 lg:scroll-m-0'
 			id={id}
 		>
 			<img

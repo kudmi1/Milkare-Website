@@ -28,7 +28,6 @@ export default function Profile({ loaded }) {
 						
 						Commission <br /> {commissionStatus ? 'Open' : 'Closed'}
 					</h1>
-					<div className='absolute rounded-full w-64 h-64 bg-black'>ds</div>
 					<button
 						className={`group absolute z-40 mt-12 hidden translate-y-1/2 items-center justify-center rounded-lg ${
 							commissionStatus
