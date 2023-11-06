@@ -44,7 +44,7 @@ export default function BgPriceCard() {
 
 	return (
 		<div ref={ref}>
-			<div className='price-card-section mb-12 lg:mb-24 p-4 bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 rounded-md w-full border-t border-b sm:border border-thinLine'>
+			<div className='price-card-section mb-12 lg:mb-24 py-4 sm:px-4 bg-gradient-to-b from-[#191924ef] to-[#1600419a] bg-opacity-70 rounded-md w-full border-t border-b sm:border border-thinLine'>
 				<div
 					className={`flex h-full w-full flex-col items-center md:justify-between transition-opacity duration-500 ${
             inView ? 'opacity-100' : 'opacity-0'
