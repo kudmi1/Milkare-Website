@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import PriceCard from './PriceCard'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import AdditionPriceInfo from './AdditionPriceInfo'
+import BgPriceCard from './BgPriceCard'
 
 const panelData = [
 	{
@@ -16,7 +17,7 @@ const panelData = [
 		names: ['komi', 'redgirl'],
 	},
 	{
-		names: ['milka'],
+		names: ['milka', 'redgirl', 'makima'],
 	},
 ]
 
@@ -27,6 +28,7 @@ export default function Price() {
 	const [expandedPanel, setExpandedPanel] = useState(0)
 	const [expandedPanel1, setExpandedPanel1] = useState(0)
 	const [expandedPanel2, setExpandedPanel2] = useState(0)
+	const [expandedPanel3, setExpandedPanel3] = useState(0)
 
 	const { ref, inView } = useInView({
 		threshold: 0.2,
@@ -69,14 +71,17 @@ export default function Price() {
 					isObjectTop={true}
 				/>
 
-				<PriceCard
+				{/* <PriceCard
 					contentTitle={priceContent.background.title}
 					textContent={priceContent.background.content}
 					panelData={panelData[3].names}
-					state={0}
+					setState={setExpandedPanel3}
+					state={expandedPanel3}
 					textOnLeft={true}
-					isAccordionVertical={false}
-				/>
+					isAccordionVertical={true}
+				/> */}
+
+				<BgPriceCard panelData={panelData[3].names} textContent={priceContent.background.content} />
 
 				<AdditionPriceInfo/>
 			</div>
