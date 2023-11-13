@@ -17,7 +17,7 @@ export const BgPriceSmallCard = ({ image, header, price, description }) => {
 
 	return (
 		<div className='flex w-full flex-col text-mainText md:w-1/3'>
-			<div className='flex h-full min-h-max flex-col justify-between rounded-lg border border-thinLine bg-gradient-to-t from-[#2c2649cc] to-[#1600419a] px-4 sm:px-2 py-4 text-center  '>
+			<div className='flex h-full min-h-max flex-col justify-between rounded-lg border border-thinLine bg-gradient-to-t from-[#2c2649cc] to-[#1600419a] px-4 sm:px-2 py-4 text-center'>
 				<div className='rounded-lg bg-gradient-to-t from-[#2c2649cc] to-[#2c264991] px-2 py-2 md:min-h-[140px] lg:min-h-max'>
 					<p className='w-full text-lg lg:text-2xl '>
 						{header}

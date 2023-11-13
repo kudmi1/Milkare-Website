@@ -59,7 +59,7 @@ export default function FAQ() {
 					<span className='text-priceColor'> +50%</span>
 					<br />☾ One art work takes from{' '}
 					<span className='text-priceColor'> 10</span> to{' '}
-					<span className='text-priceColor'>40</span> hours of work! <br />
+					<span className='text-priceColor'>50</span> hours of work! <br />
 					☾ Once payment is received, allow me up to two weeks to finish. <br />
 					☾ Feel free to tell me about any necessary corrections while it's
 					still a sketch. Slight revisions are allowed throughout the whole
@@ -71,7 +71,7 @@ export default function FAQ() {
 					дедлайном <span className='text-priceColor'> +50%</span>
 					<br />☾ Работа над одним рисунок занимает от{' '}
 					<span className='text-priceColor'> 10</span> до{' '}
-					<span className='text-priceColor'>40</span> часов! <br />
+					<span className='text-priceColor'>50</span> часов! <br />
 					☾ После получения оплаты, дайте мне до двух недель на завершение
 					работы. <br />☾ Не стесняйтесь сообщать мне о любых необходимых
 					исправлениях, пока это ещё скетч. Незначительные изменения допускаются
