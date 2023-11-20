@@ -4,6 +4,7 @@ import { useLanguageContext } from '../Providers/LanguageContext'
 import GalleryGrid from './GalleryGrid'
 
 const code_names = [
+	'ineri-yorha',
 	'frieren',
 	'lucy1',
 	'eleonora',
@@ -25,6 +26,7 @@ const code_names = [
 ]
 
 const dimensions = [
+	{ width: 2483, height: 3511 },
 	{ width: 2483, height: 3511 },
 	{ width: 2480, height: 3508 },
 	{ width: 1536, height: 2048 },

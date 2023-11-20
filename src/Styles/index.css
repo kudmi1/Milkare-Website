@@ -120,15 +120,16 @@ img {
 }
 
 .pswp__custom-caption {
+  /* border: 2px solid white; */
+  max-width: 600px;
   font-family: 'Amsterdam';
   font-size: 3.5rem;
   text-shadow: #000 2px 1px 2px;
   color: #fcf3f3;
   height: min-content;
-  /* max-width: 600px; */
   padding: 4px 12px 4px 32px;
-  border-radius: 4px;
-  text-align: center;
+  /* border-radius: 12px; */
+  /* text-align: center; */
   position: fixed;
   left: 0;
   bottom: 2%;
@@ -139,17 +140,20 @@ img {
 
 @media (max-width: 1024px){
   .pswp__custom-caption {
+    /* border: 2px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #00000034;
     text-shadow: #000 1px 0.5px 0px;
-    padding: 0;
-    height: 60px;
+    padding: 0 80px ;
+    min-height: 60px;
     width: 100vw;
+    text-align: center;
+    max-width: none;
     font-size: clamp(0.7rem, 1.3rem, 3.6rem);
-    /* left: 50%;
-    transform: translateX(-50%); */
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
   }
 }

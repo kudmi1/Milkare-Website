@@ -1,7 +1,7 @@
 import { exec } from 'child_process'
 
 const code_names = [
-	'frieren'
+	'ineri-yorha'
 ]
 
 code_names.map((name) => {

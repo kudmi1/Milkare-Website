@@ -8,7 +8,7 @@ import BgPriceCard from './BgPriceCard'
 
 const panelData = [
 	{
-		names: ['kokomi', 'makima'],
+		names: ['ineri-yorha', 'kokomi'],
 	},
 	{
 		names: ['lucy', 'purplegirl'],
@@ -17,7 +17,7 @@ const panelData = [
 		names: ['komi', 'redgirl'],
 	},
 	{
-		names: ['milka', 'redgirl', 'makima'],
+		names: ['kokomi', 'ineri-yorha', 'eleonora'],
 	},
 ]
 
@@ -81,7 +81,7 @@ export default function Price() {
 					isAccordionVertical={true}
 				/> */}
 
-				<BgPriceCard panelData={panelData[3].names} textContent={priceContent.background.content} />
+				<BgPriceCard names={panelData[3].names} textContent={priceContent.background.content} />
 
 				<AdditionPriceInfo/>
 			</div>

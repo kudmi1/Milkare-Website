@@ -78,7 +78,7 @@ export default function PanelComponent({
 								isObjectTop ? 'object-top' : ''
 							} ${
 								showImage ? 'opacity-100 scale-100' : 'opacity-0 scale-[102%]'
-							} transition-all duration-500`}
+							} transition-all duration-500 `}
 							src={`images-accordion/${picname}.webp`}
 							alt={`image${index}`}
 						/>

@@ -31,7 +31,7 @@ export const BgPriceSmallCard = ({ image, header, price, description }) => {
 						onLoad={showImageWithDelay}
 						src={`images-accordion/${image}.webp`}
 						alt=''
-						className={`h-full w-full max-h-[300px] sm:max-h-[450px] rounded-md object-cover object-top md:max-h-[400px] ${
+						className={`h-full w-full max-h-[300px] sm:max-h-[450px] rounded-md object-cover  ${image === 'eleonora' ? 'object-top' : 'object-center'} md:max-h-[400px] ${
 							showImage ? 'scale-100 opacity-100' : 'scale-[102%] opacity-0'
 						} transition-all duration-500`}
 					/>

@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import { BgPriceSmallCard } from './BgPriceSmallCard'
 
-export default function BgPriceCard() {
+export default function BgPriceCard({ names }) {
 	const { ref, inView } = useInView({
 		threshold: 0.2,
 		triggerOnce: true,
@@ -63,21 +63,21 @@ export default function BgPriceCard() {
 							className={`flex h-full w-full justify-between flex-col md:flex-row gap-4`}
 						>
 							<BgPriceSmallCard
-								image={'kokomi'}
+								image={names[0]}
 								header={text.simple.header}
 								price={text.simple.price}
 								description={text.simple.description}
 							/>
               {star}
 							<BgPriceSmallCard
-								image={'makima'}
+								image={names[1]}
 								header={text.medium.header}
 								price={text.medium.price}
 								description={text.medium.description}
 							/>
               {star}
 							<BgPriceSmallCard
-								image={'eleonora'}
+								image={names[2]}
 								header={text.hard.header}
 								price={text.hard.price}
 								description={text.hard.description}

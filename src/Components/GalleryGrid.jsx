@@ -6,6 +6,7 @@ import ObjectPosition from '../Scripts/photoswipe-object-position'
 import { useInView } from 'react-intersection-observer'
 
 const names = [
+	'Ineri Yorha',
 	'Frieren',
 	'Lucy',
 	'Eleonora',
@@ -163,7 +164,7 @@ export default function GalleryGrid({ galleryID, images }) {
 											: 'scale-[101%] opacity-0'
 									} transition-all duration-500`}
 										src={image.thumbnailURL}
-										alt={names[index]}
+										alt={index === 0 ? 'Ineri Yorha from FFXIV Comission' : names[index]}
 										loading='lazy'
 									/>
 								</picture>
