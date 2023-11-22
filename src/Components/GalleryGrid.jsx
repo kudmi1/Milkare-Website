@@ -24,7 +24,7 @@ const names = [
 	'Edelgard',
 	'Blade Runner 2049',
 	'Lady Nagant',
-	'WIP'
+	'WIP',
 ]
 
 export default function GalleryGrid({ galleryID, images }) {
@@ -130,7 +130,7 @@ export default function GalleryGrid({ galleryID, images }) {
 			{images.map((image, index) => (
 				<div key={index} className={`rounded-md `}>
 					<div
-						className={`grid-block group relative w-full overflow-hidden rounded-md transition-all duration-500 active:brightness-75 lg:min-h-[320px] lg:min-w-[320px] xl:min-h-[384px] xl:min-w-[384px] aspect-square
+						className={`grid-block group relative aspect-square w-full overflow-hidden rounded-md transition-all duration-500 active:brightness-75 lg:min-h-[320px] lg:min-w-[320px] xl:min-h-[384px] xl:min-w-[384px]
 						`}
 						style={{
 							backgroundImage: `url(${image.blur})`,
@@ -157,14 +157,19 @@ export default function GalleryGrid({ galleryID, images }) {
 									/>
 									<img
 										onLoad={showImageWithDelay}
-										className={`h-full w-full rounded-md object-cover object-top
-									${
+										className={`h-full w-full rounded-md object-cover
+										${index === 0 ? 'object-center' : 'object-top'}
+										${
 										showImage
 											? 'scale-100 opacity-100'
 											: 'scale-[101%] opacity-0'
-									} transition-all duration-500`}
+										} transition-all duration-500`}
 										src={image.thumbnailURL}
-										alt={index === 0 ? 'Ineri Yorha from FFXIV Comission' : names[index]}
+										alt={
+											index === 0
+												? 'Ineri Yorha from FFXIV Comission'
+												: names[index]
+										}
 										loading='lazy'
 									/>
 								</picture>

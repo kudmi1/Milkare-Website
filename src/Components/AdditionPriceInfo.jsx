@@ -33,7 +33,7 @@ export default function AdditionPriceInfo() {
 						</p>
 						<p className='text-sm mt-3 lg:text-base'>
 							Characters with a complex design come with an extra cost depending
-							on the difficulty: many details, guns, weapons, very long hair,
+							on the difficulty: many details, tattoos, weapons, very long hair, fluffy tails / ears,
 							dynamic pose, bags, items, various skirt layers, wings, armor,
 							lace, complex clothing pattern, tattoos etc.
 						</p>
@@ -79,8 +79,8 @@ export default function AdditionPriceInfo() {
 						</p>
 						<p className='text-sm mt-3 lg:text-base'>
 							Персонажи со сложным дизайном оплачиваются дополнительно в
-							зависимости от сложности: множество деталей, пистолеты, оружие,
-							очень длинные волосы, динамичные позы, сумки, предметы, различные
+							зависимости от сложности: множество деталей, тату, оружие,
+							очень длинные волосы, пушистые хвосты / уши, динамичные позы, сумки, предметы, различные
 							слои юбки, крылья, доспехи, кружева, сложный рисунок одежды,
 							татуировки и т.д.
 						</p>
