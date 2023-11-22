@@ -137,6 +137,11 @@ img {
   user-select: none;
   z-index: -10;
 }
+@media (max-width: 1400px) {
+  .pswp__custom-caption {
+    max-width: 400px;
+  }
+}
 
 @media (max-width: 1024px){
   .pswp__custom-caption {
