@@ -127,7 +127,7 @@ export default function Footer() {
 											<img src='/svg/telegram.svg' alt='telegram-icon' />
 										</a>
 									</li>
-									<li className=' h-12 w-full hover:bg-accentColor'>
+									<li className='h-12 w-full hover:bg-accentColor'>
 										<a
 											href='mailto:dimarull00@gmail.com'
 											target={'_blank'}
