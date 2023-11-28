@@ -1,5 +1,4 @@
-import PanelComponent from './PanelComponent'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import PriceCard from './PriceCard'
 import { useLanguageContext } from '../Providers/LanguageContext'
@@ -28,7 +27,6 @@ export default function Price() {
 	const [expandedPanel, setExpandedPanel] = useState(0)
 	const [expandedPanel1, setExpandedPanel1] = useState(0)
 	const [expandedPanel2, setExpandedPanel2] = useState(0)
-	const [expandedPanel3, setExpandedPanel3] = useState(0)
 
 	const { ref, inView } = useInView({
 		threshold: 0.2,

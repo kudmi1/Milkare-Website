@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useLanguageContext } from '../Providers/LanguageContext'
 
 export default function NavigatorBig({ page }) {

@@ -4,8 +4,7 @@ import NavigatorSmall from './NavigatorSmall'
 import NavigatorBig from './NavigatorBig'
 import Translate from './Translate'
 import HamburgerButton from './HamburgerButton'
-import { Link, NavLink } from 'react-router-dom'
-import GoogleFormButton from './GoogleFormButton'
+import { NavLink } from 'react-router-dom'
 
 export default function Header({ page, setPage }) {
 	const [showHamburger, setShowHamburger] = useState(false)

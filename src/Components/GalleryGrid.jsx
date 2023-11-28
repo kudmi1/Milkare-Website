@@ -1,7 +1,7 @@
 import PhotoSwipeLightbox from '../Scripts/photoswipe-lightbox.esm'
 import '../Styles/photoswipe.css'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import ObjectPosition from '../Scripts/photoswipe-object-position'
 import GalleryGridBlock from './GalleryGridBlock'
 import { imageInfo } from '../Scripts/imagesInfo'

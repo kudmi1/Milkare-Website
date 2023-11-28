@@ -1,4 +1,3 @@
-import PanelComponent from './PanelComponent'
 import { useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import { BgPriceSmallCard } from './BgPriceSmallCard'
@@ -82,19 +81,6 @@ export default function BgPriceCard({ names }) {
 								price={text.hard.price}
 								description={text.hard.description}
 							/>
-
-							{/* {panelData.map((_, index) => (
-								<PanelComponent
-									key={index}
-									index={index}
-									expandedPanel={state}
-									setExpandedPanel={setState}
-									imageNames={panelData}
-									isText={false}
-									initialExpandedIndex={0}
-									isObjectTop={isObjectTop}
-								/>
-							))} */}
 						</div>
 					</div>
 				</div>

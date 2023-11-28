@@ -1,4 +1,4 @@
-import { useState, memo } from 'react'
+import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 export default function PanelComponent({

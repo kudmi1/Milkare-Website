@@ -1,4 +1,3 @@
-import React from 'react'
 
 const linkRussian =
 	'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'

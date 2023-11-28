@@ -1,6 +1,5 @@
 import { useCommissionContext } from '../Providers/CommissionContext'
 import { useLanguageContext } from '../Providers/LanguageContext'
-import Socials from './Socials'
 import CommissionMobile from './CommissionMobile'
 import Commission from './Commission'
 import ProfileContent from './ProfileContent'

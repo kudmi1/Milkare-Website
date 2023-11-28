@@ -4,7 +4,6 @@ const GalleryGridBlock = ({
 	image,
 	index,
 	galleryID,
-	names,
 	inView
 }) => {
 	const [showImage, setShowImage] = useState(false)

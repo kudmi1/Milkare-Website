@@ -1,12 +1,11 @@
 import 'photoswipe/dist/photoswipe.css'
-import { useEffect, useState } from 'react'
-import { InView, useInView } from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import GalleryGrid from './GalleryGrid'
 import { imageInfo } from '../Scripts/imagesInfo'
 
 export default function GalleryWrapper() {
-	const { content, language } = useLanguageContext()
+	const { language } = useLanguageContext()
 	const images = imageInfo.map(({ code_name }, index) => ({
 		largeURL: `images/${code_name}.webp`,
 		thumbnailURL: `images-md/${code_name}-md.webp`,

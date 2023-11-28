@@ -1,8 +1,8 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useLanguageContext } from '../Providers/LanguageContext'
 
 export default function NavigatorSmall({ page, setPage }) {
-	const { content, language } = useLanguageContext()
+	const { language } = useLanguageContext()
 
 	const scrollToTop = () => {
 		setTimeout(() => {

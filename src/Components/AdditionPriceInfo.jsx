@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import GoogleFormButton from './GoogleFormButton'
