@@ -43,7 +43,7 @@ const GalleryGridBlock = ({
 						<img
 							onLoad={showImageWithDelay}
 							className={`h-full w-full rounded-md object-cover
-						    ${index === 0 ? 'object-center' : 'object-top'}
+						    ${index === 1 ? 'object-center' : 'object-top'}
 						    ${
 						    	showImage
 						    		? 'scale-100 opacity-100'
@@ -51,7 +51,7 @@ const GalleryGridBlock = ({
 						    } transition-all duration-500`}
 							src={image.thumbnailURL}
 							alt={
-								index === 0 ? 'Ineri Yorha from FFXIV Commission' : name
+								index === 1 ? 'Ineri Yorha from FFXIV Commission' : name
 							}
 							loading='lazy'
 						/>
