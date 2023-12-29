@@ -1,18 +1,16 @@
-import { useEffect, useRef, useState, lazy, Suspense } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import ToTop from './Components/ToTop'
 import SectionPrice from './Pages/SectionPrice'
 import SectionInfo from './Pages/SectionInfo'
-import { Route, RouterProvider, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { NotFoundPage } from './Pages/NotFoundPage'
 import SectionHome from './Pages/HomeSection'
 
 function App() {
 	const location = useLocation()
 	const [page, setPage] = useState(null)
-	const headerRef = useRef(null)
-	const sectionRef = useRef(null)
 	// const [isPageLoaded, setPageLoaded] = useState(false)
 
 	const loaderContainer = document.querySelector('.loader-container')
@@ -48,11 +46,9 @@ function App() {
 	}, [location])
 
 	return (
-		<div className={`App relative min-h-screen flex-col bg-[url("/images/bg.webp")] md:bg-[url("/images/bg-transformed.webp")]`}>
-			<header ref={headerRef}>
-				<Header page={page} setPage={setPage} />
-			</header>
-			<main ref={sectionRef}>
+		<div className={`App min-h-screen flex flex-col bg-[url("/images/bg.webp")] md:bg-[url("/images/bg-transformed.webp")]`}>
+			<Header page={page} setPage={setPage} />
+			<main>
 				<Routes>
 					<Route path='/' element={<SectionHome />} />
 					<Route path='/price' element={<SectionPrice id={'price'} />} />
@@ -61,9 +57,7 @@ function App() {
 				</Routes>
 				<ToTop />
 			</main>
-			<footer className='mt-auto'>
 				<Footer />
-			</footer>
 		</div>
 	)
 }

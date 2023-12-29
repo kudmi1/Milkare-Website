@@ -34,7 +34,7 @@ export default function Footer() {
 	}
 
 	return (
-		<div className='footer flex flex-col h-52 w-full items-center border-t border-t-[#3b3b3b] bg-[#1600419a]'>
+		<footer className='footer mt-auto flex flex-col h-52 w-full items-center border-t border-t-[#3b3b3b] bg-[#1600419a]'>
 			<div className='flex h-1/2 w-full items-center justify-center md:h-4/6'>
 				<div className='relative flex h-full w-full max-w-7xl flex-row items-center justify-between px-6 '>
 					<div className='w-full'>
@@ -142,6 +142,6 @@ export default function Footer() {
 					</p>
 				</div>
 			</div>
-		</div>
+		</footer>
 	)
 }
