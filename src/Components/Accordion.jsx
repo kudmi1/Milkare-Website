@@ -107,8 +107,7 @@ export default function Accordion() {
 								setExpandedPanel={setExpandedPanel}
 								imageNames={names}
 								isText={false}
-								// isObjectTop={index === 1 || index === 0 ? true : false}
-								isObjectTop={index === 0 ? false : true}
+								isObjectTop={index === 1 ? false : true}
 							/>
 						))}
 					</div>
