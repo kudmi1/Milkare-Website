@@ -13,7 +13,8 @@ export const CommissionProvider = ({ children }) => {
 		// При монтировании компонента, получаем текущий статус с сервера
 		const fetchCommissionStatus = async () => {
 			try {
-				const response = await fetch('http://localhost:3000/commission-status')
+				// const response = await fetch('http://localhost:3000/commission-status')
+				const response = await fetch('https://milkare.art/commission-status')
 				if (response.ok) {
 					const data = await response.json()
 					setCommissionStatus(data.status)
@@ -30,7 +31,8 @@ export const CommissionProvider = ({ children }) => {
 
 	const updateCommissionStatus = async (newStatus) => {
 		try {
-			const response = await fetch('http://localhost:3000/commission-status', {
+			// const response = await fetch('http://localhost:3000/commission-status', {
+			const response = await fetch('https://milkare.art/commission-status', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
