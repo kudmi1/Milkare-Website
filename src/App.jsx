@@ -7,6 +7,7 @@ import SectionInfo from './Pages/SectionInfo'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { NotFoundPage } from './Pages/NotFoundPage'
 import SectionHome from './Pages/HomeSection'
+import SettingsPage from './Pages/SettingsPage'
 
 function App() {
 	const location = useLocation()
@@ -53,6 +54,7 @@ function App() {
 					<Route path='/' element={<SectionHome />} />
 					<Route path='/price' element={<SectionPrice id={'price'} />} />
 					<Route path='/info' element={<SectionInfo id={'info'} />} />
+					<Route path='/settings' element={<SettingsPage id={'settings'} />} />
 					<Route path='*' element={<NotFoundPage />} />
 				</Routes>
 				<ToTop />
