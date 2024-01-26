@@ -8,8 +8,7 @@ const SettingsPage = () => {
 
 	useEffect(() => {
 		// При загрузке компонента, получаем текущий статус с сервера
-		// fetch('http://localhost:3000/commission-status')
-		fetch('/commission-status')
+		fetch('https://milkare-server.onrender.com/commission-status')
 			.then((response) => response.json())
 			.then((data) => updateCommissionStatus(data.status))
 			.catch((error) =>
@@ -19,8 +18,7 @@ const SettingsPage = () => {
 
 	const toggleCommissions = () => {
 		// При нажатии кнопки, отправляем запрос на сервер для изменения статуса
-		// fetch('http://localhost:3000/commission-status', {
-		fetch('/commission-status', {
+		fetch('https://milkare-server.onrender.com/commission-status', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
