@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-const envPassword = process.env.REACT_APP_VITE_MILKA_PASSWORD
+const milkaPassword = 'TaehyungandmiLy'
 
 const SettingsLogin = ({ setLogged }) => {
 	const [password, setPassword] = useState('')
@@ -7,14 +7,13 @@ const SettingsLogin = ({ setLogged }) => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-		if (password === envPassword) {
+		if (password === milkaPassword) {
 			setLogged(true)
 		} else {
 			setShowError(true)
       setPassword('')
 		}
 	}
-  console.log(envPassword);
 	return (
 		<div className='rounded-lg border border-thinLine bg-gradient-to-b from-[#191924ef] to-[#1600419a] px-12 py-4'>
 			<form className='flex flex-col items-center gap-3'>
