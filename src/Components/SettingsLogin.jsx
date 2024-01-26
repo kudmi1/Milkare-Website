@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+// TT9S28LK4QHP
+// EA8BKR4JL93T
 const envPassword = import.meta.env.VITE_MILKA_PASSWORD
 
 const SettingsLogin = ({ setLogged }) => {
@@ -15,6 +16,7 @@ const SettingsLogin = ({ setLogged }) => {
       setPassword('')
 		}
 	}
+  console.log(import.meta.env.VITE_MILKA_PASSWORD);
 	return (
 		<div className='rounded-lg border border-thinLine bg-gradient-to-b from-[#191924ef] to-[#1600419a] px-12 py-4'>
 			<form className='flex flex-col items-center gap-3'>
