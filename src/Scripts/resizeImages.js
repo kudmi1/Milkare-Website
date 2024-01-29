@@ -31,14 +31,14 @@ function blurAndResizeImage(inputPath, outputPath, blurRadius, size) {
 }
 
 // Example paths and sizes
-const name = 'clara' // Replace with the actual name
-const inputImagePath = `public/images/${name}.jpg`
+const name = 'alan_wake2' // Replace with the actual name
+const inputImagePath = `client/public/images/${name}.jpg`
 const outputPaths = [
-	{ path: `public/images-sm/${name}-sm.webp`, size: 320 },
-	{ path: `public/images-md/${name}-md.webp`, size: 768 },
-	{ path: `public/images-accordion/${name}.webp`, size: 1080 },
-	{ path: `public/images-accordion/${name}-small.webp`, size: 480 },
-	{ path: `public/images-blur/${name}-blur.webp`, size: 40 },
+	{ path: `client/public/images-sm/${name}-sm.webp`, size: 320 },
+	{ path: `client/public/images-md/${name}-md.webp`, size: 768 },
+	{ path: `client/public/images-accordion/${name}.webp`, size: 1080 },
+	{ path: `client/public/images-accordion/${name}-small.webp`, size: 480 },
+	{ path: `client/public/images-blur/${name}-blur.webp`, size: 40 },
 ]
 
 // Resize and save images to specified paths
