@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import { useLanguageContext } from '../Providers/LanguageContext'
 import PanelComponent from './PanelComponent'
 
-const names = ['alan_wake2','clara', 'ineri-yorha']
+const names = ['fern','alan_wake2', 'clara']
 
 export default function Accordion() {
 	const { language, content } = useLanguageContext()
@@ -48,6 +48,24 @@ export default function Accordion() {
 									<img
 									onContextMenu={(e) => e.preventDefault()}
 										onLoad={showImageWithDelay}
+										src='images-accordion/fern.webp'
+										alt=''
+										className={`grid-block h-full w-full rounded-md object-cover transition-all delay-0 duration-500 ease-linear hover:scale-110 hover:duration-[3s] ${
+											showImage
+												? 'scale-100 opacity-100 blur-0'
+												: 'opacity-50 blur-[2px]'
+										} `}
+									/>
+								</div>
+								<div
+									className={`bg-slate-600 ${
+										showImage ? '' : 'effect-shine-skeleton'
+									} overflow-hidden rounded-md`}
+								>
+									<img
+									onContextMenu={(e) => e.preventDefault()}
+
+										onLoad={showImageWithDelay}
 										src='images-accordion/alan_wake2.webp'
 										alt=''
 										className={`grid-block h-full w-full rounded-md object-cover transition-all delay-0 duration-500 ease-linear hover:scale-110 hover:duration-[3s] ${
@@ -75,29 +93,11 @@ export default function Accordion() {
 										} `}
 									/>
 								</div>
-								<div
-									className={`bg-slate-600 ${
-										showImage ? '' : 'effect-shine-skeleton'
-									} overflow-hidden rounded-md`}
-								>
-									<img
-									onContextMenu={(e) => e.preventDefault()}
-
-										onLoad={showImageWithDelay}
-										src='images-accordion/ineri-yorha.webp'
-										alt=''
-										className={`grid-block h-full w-full rounded-md object-cover transition-all delay-0 duration-500 ease-linear hover:scale-110 hover:duration-[3s] ${
-											showImage
-												? 'scale-100 opacity-100 blur-0'
-												: 'opacity-50 blur-[2px]'
-										} `}
-									/>
-								</div>
 							</>
 						) : null}
 					</div>
 					<div
-						className={`mx-auto flex h-[600px] w-full max-w-3xl flex-col gap-4 md:flex-row xl:hidden`}
+						className={`mx-auto flex h-[600px] w-full max-w-3xl flex-col gap-4 sm:flex-row xl:hidden`}
 					>
 						{names.map((_, index) => (
 							<PanelComponent
@@ -107,7 +107,7 @@ export default function Accordion() {
 								setExpandedPanel={setExpandedPanel}
 								imageNames={names}
 								isText={false}
-								isObjectTop={index === 2 ? false : true}
+								isObjectTop={index === 1 ? false : true}
 							/>
 						))}
 					</div>

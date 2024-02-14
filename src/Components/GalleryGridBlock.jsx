@@ -51,7 +51,8 @@ const GalleryGridBlock = ({
 						    } transition-all duration-500`}
 							src={image.thumbnailURL}
 							alt={
-								index === 1 ? 'Ineri Yorha from FFXIV Commission' : name
+								// index === 1 ? 'Ineri Yorha from FFXIV Commission' : name
+								name
 							}
 							loading='lazy'
 						/>

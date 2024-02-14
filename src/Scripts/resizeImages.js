@@ -31,8 +31,8 @@ function blurAndResizeImage(inputPath, outputPath, blurRadius, size) {
 }
 
 // Example paths and sizes
-const name = 'alan_wake2' // Replace with the actual name
-const inputImagePath = `client/public/images/${name}.jpg`
+const name = 'fern' // Replace with the actual name
+const inputImagePath = `client/public/images/${name}.webp`
 const outputPaths = [
 	{ path: `client/public/images-sm/${name}-sm.webp`, size: 320 },
 	{ path: `client/public/images-md/${name}-md.webp`, size: 768 },
