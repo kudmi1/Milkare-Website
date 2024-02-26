@@ -1,8 +1,8 @@
 
 const linkRussian =
-	'https://docs.google.com/forms/d/e/1FAIpQLSdMrGRP2JTpwU4VkqhPhsYqKAk-c4XNz3SwnECJ2hJgWh5IZA/viewform'
+	'https://docs.google.com/forms/d/e/1FAIpQLSdrOU24svdQmsWdWPuXI9JL9ZEj1BtEq0HX7szUjU_MwaVaMg/viewform'
 const linkEnglish =
-	'https://docs.google.com/forms/d/e/1FAIpQLSdKLe0F1y2OMIlAqpVCzP7wjb3a-83MXBjvB_XeIs84xaGsQA/viewform'
+	'https://docs.google.com/forms/d/e/1FAIpQLScMtnQm8ZwWmlKhVttIbN7cjKSQglqyukuUINlBvIhbvRHGCA/viewform'
 
 const CommissionMobile = ({ commissionStatus, language }) => {
 	return (
