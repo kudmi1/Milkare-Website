@@ -43,7 +43,8 @@ const GalleryGridBlock = ({
 						<img
 							onLoad={showImageWithDelay}
 							className={`h-full w-full rounded-md object-cover
-						    ${index === 1 ? 'object-center' : 'object-top'}
+						    ${index === 0 || index === 1 ? 'object-center' : 'object-top'}
+
 						    ${
 						    	showImage
 						    		? 'scale-100 opacity-100'
