@@ -91,7 +91,7 @@ export default function Footer() {
 					} transition-all duration-300`}
 				></div>
 				<div className='flex w-full flex-col items-center justify-center h-full'>
-					<p>2023 © milkare</p>
+					<p>2023-2024© milkare</p>
 					<p className='flex'>
 						website made by{' '}
 						<button
