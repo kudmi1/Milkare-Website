@@ -569,7 +569,7 @@ ion-icon {
 
 @media (max-width: 1024px){
   .pswp__bullet {
-    width: 12px;
+    width: 8px;
     height: 8px;
     margin: 0 3px;
   }
