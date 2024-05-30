@@ -7,7 +7,7 @@ import BgPriceCard from './BgPriceCard'
 
 const panelData = [
 	{
-		names: ['ineri-yorha', 'kokomi'],
+		names: ['ineri-yorha', 'frieren_narcissus'],
 	},
 	{
 		names: ['lucy', 'purplegirl'],

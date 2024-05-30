@@ -2,6 +2,8 @@
 // import fs from 'fs/promises'
 
 export const imageInfo = [
+	{ width: 1748, height: 2480, code_name: 'frieren_narcissus',  name: 'Frieren'},
+	{ width: 2151, height: 1210, code_name: 'everlasting_summer',  name: 'Everlasting Summer Commission'}, 
 	{ width: 1685, height: 2390, code_name: 'maomao',  name: 'Maomao'},
 	{ width: 1748, height: 2480, code_name: 'fern',  name: 'Fern'},
 	{ width: 2448, height: 1724, code_name: 'alan_wake2',  name: 'Alan Wake 2'},

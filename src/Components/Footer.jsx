@@ -129,7 +129,7 @@ export default function Footer() {
 									</li>
 									<li className='h-12 w-full hover:bg-accentColor'>
 										<a
-											href='mailto:dimarull00@gmail.com'
+											href='mailto:dimar00ull00@gmail.com'
 											target={'_blank'}
 											className='flex h-full w-full items-center justify-center transition-all duration-300'
 										>
