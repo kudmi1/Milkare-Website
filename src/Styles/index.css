@@ -566,14 +566,23 @@ ion-icon {
   background: #e2e2e2;
 }
 
-
 @media (max-width: 1024px){
+  .pswp__bullet {
+    width: 14px;
+    height: 8px;
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 640px){
   .pswp__bullet {
     width: 8px;
     height: 8px;
     margin: 0 3px;
   }
 }
+
+
 
 .hero-btn-text {
   font-family: 'amsterdam';
